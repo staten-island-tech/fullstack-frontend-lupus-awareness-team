@@ -1,15 +1,17 @@
 <template>
   <div class="home">
-    <h1>This is a home page</h1>
+    <DashboardAUTH/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import DashboardAUTH from "@/components/DashboardAUTH.vue"
 
 export default {
   name: 'Home',
   components: {
+    DashboardAUTH,
   }
 }
 </script>
