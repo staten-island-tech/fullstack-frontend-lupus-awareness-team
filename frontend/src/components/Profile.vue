@@ -24,7 +24,7 @@ name:"Profile",
   align-items: center;
   width: 100%;
   padding-top: 5rem;
-  
+  padding-bottom: 10rem;
 }
 
 .profile_text_container {
@@ -34,28 +34,23 @@ name:"Profile",
   justify-content: center;
   width: 100%;
   margin-top: 1.5rem;
+  z-index: 2;
+
 }
 
 .profile_image {
   border-radius: 50%;
   border: solid 0.5rem white;
+  z-index: 2;
 }
 
 .profile_image_container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile_curve {
-  width: 100vw;
-  height: 20%;
-  border:solid 5px #000;
-  border-color: #000 transparent transparent transparent ;
-  border-radius: 50%/ 100px 100px 0 0;
-  position: absolute;
-  z-index: 0;
-  top: 20rem;
-  
-}
 
 .profile_name {
   font-weight: 700;
