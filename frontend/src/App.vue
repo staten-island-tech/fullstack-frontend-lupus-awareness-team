@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">Dashboard</router-link>
     <router-view/>
   </div>
 </template>
@@ -28,7 +28,7 @@ font-family: 'Inter', sans-serif;
 :root {
 /* base theme */
  --primary: #cdcee4;
- --secondary: #E5E5E5;
+ --secondary: #ffffff;
  --accent: #4d51a1;
  --text: #000000;
  

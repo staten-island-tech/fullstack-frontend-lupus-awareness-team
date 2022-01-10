@@ -24,7 +24,8 @@ name:"Profile",
   align-items: center;
   width: 100%;
   padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
+  z-index: 2;
 }
 
 .profile_text_container {
@@ -34,14 +35,14 @@ name:"Profile",
   justify-content: center;
   width: 100%;
   margin-top: 1.5rem;
-  z-index: 2;
+  z-index: 3;
 
 }
 
 .profile_image {
   border-radius: 50%;
   border: solid 0.5rem white;
-  z-index: 2;
+  z-index: 3;
 }
 
 .profile_image_container {
