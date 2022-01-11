@@ -11,7 +11,6 @@
 
 #app {
 font-family: 'Inter', sans-serif;
-  text-align: center;
 }
 
 *, html, body {
@@ -29,11 +28,10 @@ font-family: 'Inter', sans-serif;
 /* base theme */
  --primary: #cdcee4;
  --secondary: #ffffff;
- --accent: #4d51a1;
+ --dark: #4d51a1;
+ --accent: #9397D8;
  --text: #000000;
  
-
-
 /* main themes */
 
 /* font sizes */
