@@ -1,7 +1,7 @@
 <template>
   <div class="calendar-date-selector">
-    <span @click="selectPrevious"><strong>﹤</strong></span>
-    <span @click="selectNext"><strong>﹥</strong></span>
+    <span @click="selectPrevious"><strong class="date-selector-button">﹤</strong></span>
+    <span @click="selectNext"><strong class="date-selector-button">﹥</strong></span>
   </div>
 </template>
 
@@ -60,6 +60,10 @@ export default {
 .calendar-date-selector {
   cursor: pointer;
   user-select: none;
+}
+
+.date-selector-button {
+  z-index: 3;
 }
 
 .selector-text {

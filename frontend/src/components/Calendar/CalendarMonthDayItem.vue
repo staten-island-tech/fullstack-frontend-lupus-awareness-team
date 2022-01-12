@@ -39,8 +39,8 @@ export default {
 <style scoped>
 .calendar-day {
   position: relative;
-  height: 4rem;
-  font-size: 16px;
+  height: 8rem;
+  font-size: 2rem;
   background-color: #fff;
   color: var(--grey-800);
   padding: 5px;

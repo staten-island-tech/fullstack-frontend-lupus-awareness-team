@@ -1,6 +1,6 @@
 <template>
   <ol class="day-of-week">
-    <li v-for="weekday in weekdays" :key="weekday">{{ weekday }}</li>
+    <li class="day-of-week-title" v-for="weekday in weekdays" :key="weekday">{{ weekday }}</li>
   </ol>
 </template>
 
@@ -27,5 +27,9 @@ export default {
 .day-of-week > * {
   text-align: right;
   padding-right: 5px;
+}
+
+.day-of-week-title {
+  font-size: 1.5rem;
 }
 </style>

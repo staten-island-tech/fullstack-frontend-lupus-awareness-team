@@ -31,7 +31,14 @@ font-family: 'Inter', sans-serif;
  --dark: #4d51a1;
  --accent: #9397D8;
  --text: #000000;
- 
+
+   --grey-100: #e4e9f0;
+  --grey-200: #cfd7e3;
+  --grey-300: #b5c0cd;
+  --grey-800: #3e4e63;
+  --grid-gap: 1px;
+  --day-label-size: 20px;
+
 /* main themes */
 
 /* font sizes */
@@ -56,6 +63,13 @@ h4 {
 }
 h5 {
   font-size: var(--h5);
+}
+
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 </style>

@@ -20,8 +20,9 @@ export default {
 
 <style scoped>
 .calendar-date-indicator {
-  font-size: 24px;
+  font-size: 2.5rem;
   font-weight: 600;
   margin-right: 1rem;
+  z-index: 3;
 }
 </style>

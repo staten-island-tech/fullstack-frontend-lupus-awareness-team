@@ -16,8 +16,8 @@
       <h4 class="events_text"></h4>
     </div>
 
-    <div class="calendar-container">
-
+    <div class="calendar_container">
+      <CalendarMonth/>
     </div>
 
   </section>
@@ -25,13 +25,13 @@
 
 <script>
 import Profile from "@/components/Profile.vue";
-import CalendarMonth from "@/Calendar/CalendarMonth.vue";
+import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 
 export default {
   name: "DashbardAUTH",
 components: {
-  Profile
-
+  Profile,
+  CalendarMonth
 }
 }
 </script>
@@ -43,6 +43,7 @@ components: {
   flex-direction: column;
   align-items: center;
 }
+
 
 .profile_component {
 display: flex;
@@ -70,7 +71,6 @@ align-items: center;
   flex-direction: column;
   z-index: 2;
   background-color: var(--primary);
-  position: relative;
   padding: 2rem 0rem 15rem 2rem;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 2px;
@@ -107,6 +107,9 @@ align-items: center;
  border-radius: 1rem 1rem 0rem 0rem;
 }
 
+.calendar_container {
+  width: 40vw;
+}
 
 
 </style>

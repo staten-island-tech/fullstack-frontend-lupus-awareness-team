@@ -164,9 +164,9 @@ export default {
   justify-content: center;
   background-color: var(--grey-200);
   border: solid 1px var(--grey-300);
-  width: 40vw;
+  width: 100%;
+  z-index: 3;
 }
-
 
 .day-of-week {
   color: var(--grey-800);
@@ -174,17 +174,27 @@ export default {
   background-color: #fff;
   padding-bottom: 5px;
   padding-top: 10px;
+  z-index: 3;
 }
 
 .day-of-week,
 .days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  z-index: 3;
 }
 
 .day-of-week > * {
   text-align: right;
   padding-right: 5px;
+}
+
+.calendar-month-header {
+  z-index: 3;
+}
+
+.calenar-month-header-selected-month {
+  z-index: 3;
 }
 
 .days-grid {
