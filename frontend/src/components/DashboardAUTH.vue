@@ -1,6 +1,13 @@
 <template>
   <section id="dashboard_section">
     <div class="curved_container">
+
+<div class="custom-shape-divider-top-1642094560">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+    </svg>
+</div>
+
     <div class="profile_component">
       <Profile />
     </div>
@@ -52,15 +59,9 @@ components: {
   flex-direction: column;
   align-items: center;
   width: 100%;
+    background-color: white;
 }
 
-.container::before {
-  bottom: 100%;
-  content: '';
-  height: 103px;
-  position: absolute;
-  width: 100%;
-}
 
 
 .profile_component {
@@ -115,6 +116,27 @@ align-items: center;
 .calendar_container {
   width: 40vw;
   margin-top: 7rem;
+}
+
+.custom-shape-divider-top-1642094560 {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1642094560 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 240px;
+}
+
+.custom-shape-divider-top-1642094560 .shape-fill {
+    fill: #E2D9EC;
 }
 
 

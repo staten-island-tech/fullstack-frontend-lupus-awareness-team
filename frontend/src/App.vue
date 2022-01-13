@@ -22,6 +22,7 @@ font-family: 'Inter', sans-serif;
 
 #nav {
   font-size: 3rem;
+  
 }
 
 :root {
