@@ -1,5 +1,6 @@
 <template>
   <section id="dashboard_section">
+    <div class="curved_container">
     <div class="profile_component">
       <Profile />
     </div>
@@ -18,6 +19,8 @@
 
     <div class="calendar_container">
       <CalendarMonth/>
+    </div>
+
     </div>
 
   </section>
@@ -44,24 +47,26 @@ components: {
   align-items: center;
 }
 
+.curved_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.container::before {
+  bottom: 100%;
+  content: '';
+  height: 103px;
+  position: absolute;
+  width: 100%;
+}
+
 
 .profile_component {
 display: flex;
 flex-direction: column;
 align-items: center;
-}
-
-
-.profile_component:after {
-  content: '';
-  border-top-left-radius: 50% 40%;
-  border-top-right-radius: 50% 40%;
-  position: absolute;
-  bottom: 0;
-  height: 75%;
-  width: 100%;
-  background-color: var(--secondary);
-  z-index: 1;
 }
 
 
@@ -109,6 +114,7 @@ align-items: center;
 
 .calendar_container {
   width: 40vw;
+  margin-top: 7rem;
 }
 
 
