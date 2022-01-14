@@ -24,5 +24,6 @@ export default {
   font-weight: 600;
   margin-right: 1rem;
   z-index: 3;
+  padding: 1rem 1rem;
 }
 </style>

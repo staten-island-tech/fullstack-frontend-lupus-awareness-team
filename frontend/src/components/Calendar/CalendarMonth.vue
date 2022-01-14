@@ -189,14 +189,6 @@ export default {
   padding-right: 5px;
 }
 
-.calendar-month-header {
-  z-index: 3;
-}
-
-.calenar-month-header-selected-month {
-  z-index: 3;
-}
-
 .days-grid {
   height: 100%;
   position: relative;
