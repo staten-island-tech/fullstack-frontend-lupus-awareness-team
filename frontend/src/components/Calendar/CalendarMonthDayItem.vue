@@ -40,7 +40,7 @@ export default {
 .calendar-day {
   position: relative;
   height: 8rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   background-color: #fff;
   color: var(--grey-800);
   padding: 5px;
@@ -67,8 +67,8 @@ export default {
 
 .calendar-day--today > span {
   color: #fff;
-  padding: 0.2rem;
+  padding: 1.2rem;
   border-radius: 50%;
-  background-color: #42b983;
+  background-color: var(--dark);
 }
 </style>

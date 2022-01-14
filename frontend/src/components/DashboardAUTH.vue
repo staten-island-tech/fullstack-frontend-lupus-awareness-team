@@ -1,10 +1,20 @@
 <template>
   <section id="dashboard_section">
-    <div class="curved_container">
-    <div class="profile_component">
-      <Profile />
-    </div>
 
+      <div class="curved_container">
+        <div class="profile_component">
+            <Profile />
+        </div>
+
+        <div class="custom-shape-divider-top-1642094560">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+          </svg>
+        </div>
+      </div>
+
+
+  <div class="events_container">
     <div class="events_tab">
       <ul>
         <li>Interested</li>
@@ -13,15 +23,17 @@
       </ul>
     </div>
 
-    <div class="events_container">
+    <div class="events_wrapper">
       <h4 class="events_text"></h4>
     </div>
+  </div>
 
-    <div class="calendar_container">
+   <div class="calendar-list-container">
+    <div class="calendar_wrapper">
       <CalendarMonth/>
     </div>
-
     </div>
+
 
   </section>
 </template>
@@ -45,21 +57,12 @@ components: {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 
 .curved_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-}
-
-.container::before {
-  bottom: 100%;
-  content: '';
-  height: 103px;
-  position: absolute;
-  width: 100%;
+  background-color: #E2D9EC;
 }
 
 
@@ -69,8 +72,16 @@ flex-direction: column;
 align-items: center;
 }
 
-
 .events_container {
+  padding-top: 5rem;
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.events_wrapper {
   width: 70%;
   display: inline-flex;
   flex-direction: column;
@@ -112,9 +123,33 @@ align-items: center;
  border-radius: 1rem 1rem 0rem 0rem;
 }
 
-.calendar_container {
+.calendar_wrapper {
   width: 40vw;
   margin-top: 7rem;
+  margin-bottom: 10rem;
+}
+
+.custom-shape-divider-top-1642094560 {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background-color: white;
+
+}
+
+.custom-shape-divider-top-1642094560 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 240px;
+}
+
+.custom-shape-divider-top-1642094560 .shape-fill {
+    fill: #E2D9EC;
 }
 
 

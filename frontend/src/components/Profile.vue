@@ -24,7 +24,6 @@ name:"Profile",
   align-items: center;
   width: 100%;
   padding-top: 5rem;
-  padding-bottom: 5rem;
   z-index: 2;
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="calendar-date-selector">
-    <span @click="selectPrevious"><strong class="date-selector-button">﹤</strong></span>
-    <span @click="selectNext"><strong class="date-selector-button">﹥</strong></span>
+    <span @click="selectPrevious">﹤</span>
+    <span @click="selectNext">﹥</span>
   </div>
 </template>
 
@@ -53,8 +53,8 @@ export default {
 
 .calendar-date-selector {
   display: flex;
-  justify-content: space-between;
-  color: var(--grey-800);
+  font-size: 5rem;
+  font-weight: 400;
 }
 
 .calendar-date-selector {
@@ -62,11 +62,4 @@ export default {
   user-select: none;
 }
 
-.date-selector-button {
-  z-index: 3;
-}
-
-.selector-text {
-  font-weight: bold;
-}
 </style>
