@@ -1,7 +1,7 @@
 <template>
 <div class="event-container">
-    <div class="event-image">
-    <img class="event-image" scr="event-placeholder.jpg">
+    <div class="event-image-container">
+    <img class="event-image" src="../assets/event-placeholder.jpg">
     </div>
     <div class="event-info">
         <h3 class="event-title">Insert Event Name</h3>
@@ -20,4 +20,25 @@ name:"Event",
 </script>
 
 <style>
+
+.event-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+}
+
+img {
+    width: 65%;
+}
+
+.event-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 2rem;
+}
+
+
 </style>
