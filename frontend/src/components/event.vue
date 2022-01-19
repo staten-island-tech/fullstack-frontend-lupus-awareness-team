@@ -34,11 +34,18 @@ img {
 
 .event-info {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column; 
     padding: 2rem;
 }
+
+.event-title {
+    margin: 2rem;
+} 
+
+.event-time, .event-location, .event-date, .event-description {
+    margin: 1rem 2rem;
+}
+
 
 
 </style>
