@@ -30,6 +30,7 @@ name:"Event",
 
 img {
     width: 65%;
+    border-radius: 3rem;
 }
 
 .event-info {
@@ -39,13 +40,19 @@ img {
 }
 
 .event-title {
-    margin: 2rem;
+    margin: 1rem 16rem;
+    font-size: 2.25rem;
 } 
 
 .event-time, .event-location, .event-date, .event-description {
-    margin: 1rem 2rem;
+    margin: .5rem 16rem;
+    font-size: 1.75rem;
 }
 
+
+.event-time, .event-date {
+    font-style: italic;
+}
 
 
 </style>
