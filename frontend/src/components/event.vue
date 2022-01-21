@@ -1,7 +1,14 @@
 <template>
 <div class="event-container">
+    <div class="event-info">
+        <h4 class="service-hour-info">#Service Hours</h4>
+    </div>
     <div class="event-image-container">
     <img class="event-image" src="../assets/event-placeholder.jpg">
+    </div>
+    <div class="user-info">
+        <h3 class="username">User1234</h3>
+        <h4 class="user-type">User Type</h4>
     </div>
     <div class="event-info">
         <h3 class="event-title">Insert Event Name</h3>
@@ -10,7 +17,7 @@
         <h4 class="event-date">Insert Event Date</h4>
         <h5 class="event-description">Insert Event Description</h5>
     </div>
-</div>  
+</div>    
 </template>
 
 <script>
@@ -23,35 +30,11 @@ name:"Event",
 
 .event-image-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3rem;
+
 }
 
 img {
     width: 65%;
-    border-radius: 3rem;
-}
-
-.event-info {
-    display: flex;
-    flex-direction: column; 
-    padding: 2rem;
-}
-
-.event-title {
-    margin: 1rem 16rem;
-    font-size: 2.25rem;
-} 
-
-.event-time, .event-location, .event-date, .event-description {
-    margin: .5rem 16rem;
-    font-size: 1.75rem;
-}
-
-
-.event-time, .event-date {
-    font-style: italic;
 }
 
 
