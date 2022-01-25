@@ -6,6 +6,7 @@
     <div class="event-image-container">
     <img class="event-image" src="../assets/event-placeholder.jpg">
     </div>
+    <div class="words">
     <div class="user-info">
         <h3 class="username">User1234</h3>
         <h4 class="user-type">User Type</h4>
@@ -17,7 +18,13 @@
         <h4 class="event-date">Insert Event Date</h4>
         <h5 class="event-description">Insert Event Description</h5>
     </div>
-</div>    
+    <div class="event-buttons">
+        <btn class="tag">Tag</btn>
+        <btn class="interest">I'm Interested</btn>
+        <btn class="details">Details</btn>
+    </div>
+    </div>
+</div>
 </template>
 
 <script>
@@ -31,6 +38,11 @@ name:"Event",
 .event-image-container {
     display: flex;
 
+}
+
+.event-buttons {
+    display: flex;
+    flex-direction: column;
 }
 
 img {
