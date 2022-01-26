@@ -3,8 +3,29 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">Dashboard</router-link>
     <router-view/>
+        <div v-if="!$auth.loading.value">
+      <button v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
+      <button v-if="$auth.isAuthenticated.value" @click="logout">Log out</button>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  methods: {
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+      });
+      this.$router.push({ path: '/' });
+    }
+  }
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

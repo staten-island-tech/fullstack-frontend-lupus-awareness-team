@@ -131,7 +131,7 @@ align-items: center;
 
 .custom-shape-divider-top-1642094560 {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 0;
     width: 100%;
     overflow: hidden;
