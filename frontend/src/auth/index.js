@@ -72,7 +72,7 @@ const authPlugin = {
   logout,
 };
 
-export const routeGuard = (to, from, next) => {
+export const authenticationGuard = (to, from, next) => {
   const { isAuthenticated, loading, loginWithRedirect } = authPlugin;
 
   const verify = () => {

@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import Callback from "@/views/Callback";
 import ErrorPage from "@/views/Error";
 
-import { routeGuard } from "@/auth";
+import { authenticationGuard } from "@/auth";
 
 const routes = [
   {
@@ -15,7 +15,7 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    beforeEnter: routeGuard,
+    beforeEnter: authenticationGuard,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
