@@ -3,14 +3,19 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">Dashboard</router-link>
     <router-view/>
-        <div v-if="!$auth.loading.value">
+    <div v-if="!$auth.loading.value">
       <button v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
       <button v-if="$auth.isAuthenticated.value" @click="logout">Log out</button>
     </div>
+
+    <Navbar />
+
   </div>
 </template>
 
 <script>
+import Navbar from "@/components/Nav.vue"
+
 export default {
   name: 'App',
   methods: {
@@ -23,6 +28,9 @@ export default {
       });
       this.$router.push({ path: '/' });
     }
+  },
+  components: {
+    Navbar
   }
 }
 </script>
