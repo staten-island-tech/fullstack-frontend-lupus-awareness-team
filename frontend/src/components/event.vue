@@ -81,4 +81,19 @@ img {
     margin-top: 2rem;
     margin-left: 4rem;
 }
+
+.event-title {
+    font-size: 2.5rem;
+}
+
+.event-time, .event-location, .event-date, .service-hour-info {
+    font-size: 1.5rem;
+    padding: .5rem 0rem;
+}
+
+.event-description {
+    font-size: 1rem;
+    padding: .5rem 0rem;
+}
+
 </style>
