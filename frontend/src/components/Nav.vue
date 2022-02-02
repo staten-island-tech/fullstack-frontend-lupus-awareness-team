@@ -1,7 +1,7 @@
 <template>
     <div id="main">
-        <i class="fas fa-angle-double-left"></i>
-        <div class="side_nav">
+        <i ref="bar" class="fas fa-bars" @click="toggle"></i>
+        <div ref="nav" class="side_nav">
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Clients</a>
@@ -17,6 +17,11 @@ data() {
     return {
     }
 },
+methods: {
+    toggle() {
+        this.$refs.nav.classList.toggle("active");
+    },
+}
 }
 </script>
 
@@ -37,6 +42,10 @@ data() {
     align-items: center;
 }
 
+.side_nav.active {
+    width: 15%;
+}
+
 .side_nav a {
     padding: 1.2rem;
   text-decoration: none;
@@ -49,7 +58,7 @@ data() {
   color: var(--secondary);
 }
 
-.fa-angle-double-left {
+.fa-bars {
     color: var(--dark);
     font-size: 3rem;
     position: absolute;
@@ -57,5 +66,6 @@ data() {
     right: 2rem;
     z-index: 11;
 }
+
 
 </style>
