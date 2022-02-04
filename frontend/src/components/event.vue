@@ -35,6 +35,11 @@ name:"Event",
 </script>
 
 <style>
+
+body {
+    background-color: #E9EBF1;
+}
+
 .user-info {
     display: flex;
     flex-direction: row;
@@ -52,9 +57,14 @@ name:"Event",
   border-radius: 50%;
 }
 
-.username , .user-type {
+.username {
     font-size: 1.5rem;
     margin: .75rem;
+}
+
+.user-type {
+    margin: .10rem .75rem .75rem; 
+    font-size: 1.2rem;
 }
 
 .event-container {
@@ -68,6 +78,16 @@ name:"Event",
     flex-direction: row;
 }
 
+.tag, .interest, .details {
+    font-size: .75rem;
+    background-color: whitesmoke;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 3rem;
+}
+    
+
+
 img {
     max-width: 40rem;
     height: 25rem; 
@@ -80,6 +100,8 @@ img {
     flex-direction: column;
     margin-top: 2rem;
     margin-left: 4rem;
+    background-color: white;
+   
 }
 
 .event-title {
@@ -95,5 +117,7 @@ img {
     font-size: 1rem;
     padding: .5rem 0rem;
 }
+
+
 
 </style>
