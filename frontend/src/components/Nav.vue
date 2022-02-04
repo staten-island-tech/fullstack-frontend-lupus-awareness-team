@@ -1,6 +1,9 @@
 <template>
     <div id="main">
-        <i ref="bar" class="fas fa-bars" @click="toggle"></i>
+        <div class="nav-button">
+            <i class="fas fa-bars" @click="toggle"></i>
+        </div>
+            <i class="fas fa-times"></i>
         <div ref="nav" class="side_nav">
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -33,7 +36,7 @@ methods: {
     right: 0;
     width: 0;
     z-index: 10;
-    background-color: var(--text);
+    background-color: var(--dark);
     transition: 0.5s;
     overflow-x: hidden;
     padding-top: 5rem;
@@ -50,7 +53,7 @@ methods: {
     padding: 1.2rem;
   text-decoration: none;
   font-size: 2.5rem;
-  color: #818181;
+  color: var(--secondary);
   transition: 0.3s;
 }
 
@@ -58,13 +61,28 @@ methods: {
   color: var(--secondary);
 }
 
+.nav-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    z-index: 11;
+    position: fixed;
+}
+
 .fa-bars {
     color: var(--dark);
     font-size: 3rem;
+}
+
+.fa-times {
+    color: var(--secondary);
+    font-size: 3rem;
     position: absolute;
-    top: 2rem;
+    top: 0.5rem;
     right: 2rem;
     z-index: 11;
+    position: fixed;
+    display: none;
 }
 
 
