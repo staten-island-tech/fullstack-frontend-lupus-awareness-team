@@ -1,15 +1,19 @@
 <template>
     <div id="main">
-        <div class="nav-button">
+        <div class="nav-button" v-if="nav">
             <i class="fas fa-bars" @click="toggle"></i>
+        </div> 
+
+        <div class="close-button" v-else>
+            <i class="far fa-window-close" @click="close"></i>
         </div>
-            <i class="fas fa-times"></i>
-        <div ref="nav" class="side_nav">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
+
+        <ul ref="nav" class="side_nav">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
 </template>
 
@@ -18,12 +22,18 @@ export default {
 name: "Navbar",
 data() {
     return {
+        nav: true,
     }
 },
 methods: {
     toggle() {
         this.$refs.nav.classList.toggle("active");
+        this.nav = false;
     },
+    close() {
+        this.$refs.nav.classList.toggle("active");
+        this.nav = true;
+    }
 }
 }
 </script>
@@ -39,7 +49,7 @@ methods: {
     background-color: var(--dark);
     transition: 0.5s;
     overflow-x: hidden;
-    padding-top: 5rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,19 +59,38 @@ methods: {
     width: 15%;
 }
 
+.side_nav li {
+    text-align: center;
+    padding: 0.5rem;
+    margin: 1rem;
+    width: 100%;
+    border: 0.1rem white solid;
+}
+
 .side_nav a {
-    padding: 1.2rem;
   text-decoration: none;
   font-size: 2.5rem;
   color: var(--secondary);
   transition: 0.3s;
 }
 
-.side_nav a:hover {
-  color: var(--secondary);
+.side_nav li:hover .side_nav a{
+        color: black;
+}
+
+.side_nav li:hover {
+    background-color: white;
 }
 
 .nav-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    z-index: 11;
+    position: fixed;
+}
+
+.close-button {
     position: absolute;
     top: 0.5rem;
     right: 2rem;
@@ -74,15 +103,9 @@ methods: {
     font-size: 3rem;
 }
 
-.fa-times {
+.fa-window-close {
     color: var(--secondary);
     font-size: 3rem;
-    position: absolute;
-    top: 0.5rem;
-    right: 2rem;
-    z-index: 11;
-    position: fixed;
-    display: none;
 }
 
 
