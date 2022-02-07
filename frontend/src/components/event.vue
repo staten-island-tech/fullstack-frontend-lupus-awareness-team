@@ -1,6 +1,10 @@
 <template>
 <div class="event-container">
-    <div class="event-image-container">
+    <h1>x</h1>    
+</div>
+    
+    
+    <!-- <div class="event-image-container">
     <img class="event-image" src="../assets/event-placeholder.jpg">
     </div>
     <div class="words">
@@ -24,8 +28,7 @@
         <btn class="interest">I'm Interested</btn>
         <btn class="details">Details</btn>
     </div>
-    </div>
-</div>
+    </div> -->
 </template>
 
 <script>
@@ -40,7 +43,7 @@ body {
     background-color: #E9EBF1;
 }
 
-.user-info {
+/* .user-info {
     display: flex;
     flex-direction: row;
 }
@@ -116,8 +119,11 @@ img {
 .event-description {
     font-size: 1rem;
     padding: .5rem 0rem;
+} */
+
+.event-container {
+    background-color: white;
+    width: 10rem;
 }
-
-
 
 </style>
