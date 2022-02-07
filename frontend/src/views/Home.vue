@@ -8,10 +8,17 @@
 <script>
 // @ is an alias to /src
 import Event from "@/components/Event.vue"
+
 export default {
   name: 'Home',
   components: {
-    Event
+    Event,
   }
 }
 </script>
+
+<style>
+.home {
+  margin-top: 1rem;
+}
+</style>
