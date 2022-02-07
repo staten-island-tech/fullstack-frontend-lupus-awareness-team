@@ -1,6 +1,5 @@
 <template>
   <section id="dashboard_section">
-
       <div class="curved_container">
         <div class="profile_component">
             <Profile />

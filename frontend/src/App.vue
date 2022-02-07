@@ -1,7 +1,5 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">Dashboard</router-link>
     <router-view/>
     <div v-if="!$auth.loading.value">
       <button v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
@@ -51,6 +49,7 @@ font-family: 'Inter', sans-serif;
 
 #nav {
   font-size: 3rem;
+
   
 }
 
@@ -61,6 +60,8 @@ font-family: 'Inter', sans-serif;
  --dark: #4d51a1;
  --accent: #9397D8;
  --text: #000000;
+ 
+  --navhover: #7A7ED5;
 
    --grey-100: #e4e9f0;
   --grey-200: #cfd7e3;

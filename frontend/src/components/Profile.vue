@@ -5,8 +5,8 @@
       <img class="profile_image" src="../assets/placeholder.jpg">
     </div>
     <div class="profile_text_container">
-      <h3 class="profile_name">{{ $auth.user.name }}</h3>
-      <h4 class="profile_sub">{{ $auth.user.email }}</h4>
+      <h3 class="profile_name"> Insert Username </h3>
+      <h4 class="profile_sub"> 51 Subscribers</h4>
     </div>
   </div>
 </template>
