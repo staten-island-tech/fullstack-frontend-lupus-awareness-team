@@ -1,12 +1,13 @@
 <template>
-  <div id="nav">
-    <router-view/>
-    <div v-if="!$auth.loading.value">
-      <button v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
-      <button v-if="$auth.isAuthenticated.value" @click="logout">Log out</button>
+  <div id="app">
+    <div class="nav">
+    <div class="login-container" v-if="!$auth.loading.value">
+      <button class="login-button" v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
+      <button class="login-button" v-if="$auth.isAuthenticated.value" @click="logout">Log out</button>
     </div>
-
     <Navbar />
+    </div>
+    <router-view/>
 
   </div>
 </template>
@@ -33,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 #app {
@@ -47,11 +48,44 @@ font-family: 'Inter', sans-serif;
   font-size: 62.5%;
 }
 
-#nav {
+.nav {
   font-size: 3rem;
-
-  
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  background-color: var(--accent);
 }
+
+.login-container {
+  margin-right: 6rem;
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* CSS */
+.login-button {
+  font-size: 1.8rem;
+  background-color: var(--dark);
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  height: 80%;
+  line-height: 1.15;
+  outline: none;
+  overflow: hidden;
+  padding: 0 2.5rem;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s;
+}
+
 
 :root {
 /* base theme */
@@ -60,8 +94,11 @@ font-family: 'Inter', sans-serif;
  --dark: #4d51a1;
  --accent: #9397D8;
  --text: #000000;
+ --red: #D53434;
  
+  --nav: #4d51a1;
   --navhover: #7A7ED5;
+  --navtext: #ffffff;
 
    --grey-100: #e4e9f0;
   --grey-200: #cfd7e3;

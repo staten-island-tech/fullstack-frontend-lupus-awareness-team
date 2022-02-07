@@ -13,3 +13,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.home {
+  margin-top: 1rem;
+}
+</style>

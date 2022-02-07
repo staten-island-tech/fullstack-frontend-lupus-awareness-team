@@ -39,7 +39,6 @@ data() {
     return {
         nav: true,
         expand: false,
-
     }
 },
 methods: {
@@ -64,7 +63,7 @@ methods: {
     left: 0;
     width: 0;
     z-index: 10;
-    background-color: var(--dark);
+    background-color: var(--nav);
     transition: 0.5s;
     overflow-x: hidden;
     padding-top: 4rem;
@@ -80,7 +79,7 @@ methods: {
 
 .side_nav i {
     font-size: 3rem;
-    color: var(--secondary);
+    color: var(--navtext);
 }
 
 .side_nav li {
@@ -98,7 +97,7 @@ methods: {
 .side_nav a {
   text-decoration: none;
   font-size: 2.5rem;
-  color: var(--secondary);
+  color: var(--navtext);
   transition: 0.3s;
   margin-left: 1rem;
   display: block;
@@ -109,17 +108,11 @@ methods: {
 background-color: var(--navhover);
 }
 
-
-.side_nav li:hover > svg {
-    color: var(--text);
-}
-
 .nav-button {
     position: absolute;
     top: 0.5rem;
     right: 2rem;
     z-index: 11;
-    position: fixed;
 }
 
 .close-button {
@@ -131,17 +124,17 @@ background-color: var(--navhover);
 }
 
 .fa-bars {
-    color: var(--dark);
+    color: var(--nav);
     font-size: 3rem;
 }
 
 .fa-window-close {
-    color: var(--secondary);
+    color: var(--navtext);
     font-size: 3rem;
 }
 
 .fa-times-circle {
-    color: var(--dark);
+    color: var(--nav);
     font-size: 3rem;
 }
 
