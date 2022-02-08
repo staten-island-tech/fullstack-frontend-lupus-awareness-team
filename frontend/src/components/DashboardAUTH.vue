@@ -136,7 +136,7 @@ align-items: center;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    background-color: white;
+    background-color: var(--secondary);
 
 }
 
