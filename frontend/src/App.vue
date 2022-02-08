@@ -54,6 +54,7 @@ font-family: 'Inter', sans-serif;
  --text: #000000;
  --red: #D53434;
  --topnav: white;
+ --background: #E9EBF1;
  
   --nav: #4d51a1;
   --navhover: #7A7ED5;

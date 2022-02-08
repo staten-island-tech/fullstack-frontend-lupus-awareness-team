@@ -69,6 +69,10 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: var(--background);
+}
+
 .event_details_container {
   background-color: aliceblue;
   width: 90vw;
