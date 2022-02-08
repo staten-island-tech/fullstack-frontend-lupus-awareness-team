@@ -26,12 +26,26 @@ export default {
       this.$auth.logout({
       });
       this.$router.push({ path: '/' });
+    },
+    fetchData: async () => {
+      try {
+        const res = await fetch('localhost:3000/')
+        const data = await res.json()
+        console.log(data)
+      } catch (error) {
+        console.log(error)
+      }
     }
   },
   components: {
     Navbar
+  },
+  created: function() {
+    this.fetchData()
   }
 }
+
+
 </script>
 
 <style >
