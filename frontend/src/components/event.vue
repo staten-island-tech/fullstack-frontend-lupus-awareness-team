@@ -31,10 +31,12 @@
 <script>
 export default {
 name:"Event",
+methods: {
+}
 }
 </script>
 
-<style>
+<style >
 
 body {
     background-color: #E9EBF1;
@@ -88,7 +90,7 @@ body {
     
 
 
-img {
+.event-image {
     max-width: 40rem;
     height: 25rem; 
     border-radius: 12px;
