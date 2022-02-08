@@ -1,12 +1,11 @@
 <template>
   <div class="profile_container">
     <div class="profile_image_container">
-      <div class="profile_curve"></div>
       <img class="profile_image" :src="this.user.picture">
     </div>
     <div class="profile_text_container">
       <h3 class="profile_name"> {{ this.user.name }} </h3>
-      <h4 class="profile_sub"> {{this.user.email}}</h4>
+      <h4 class="profile_sub"> {{this.user.email }}</h4>
     </div>
   </div>
 </template>
@@ -50,6 +49,7 @@ data() {
   border-radius: 50%;
   border: solid 0.5rem white;
   z-index: 3;
+  width: 10%;
 }
 
 .profile_image_container {
@@ -57,6 +57,7 @@ data() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 

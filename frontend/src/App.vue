@@ -6,7 +6,6 @@
     </div>
     <div class="login-container" v-if="!$auth.loading.value">
       <button class="login-button" v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
-      <button class="login-button" v-if="$auth.isAuthenticated.value" @click="logout">Log out</button>
     </div>
     <Navbar />
     </div>
@@ -25,11 +24,6 @@ export default {
       this.$auth.loginWithRedirect();
     },
     // Log the user out
-    logout() {
-      this.$auth.logout({
-      });
-      this.$router.push({ path: '/' });
-    }
   },
   components: {
     Navbar
@@ -59,10 +53,12 @@ font-family: 'Inter', sans-serif;
  --accent: #9397D8;
  --text: #000000;
  --red: #D53434;
+ --topnav: white;
  
   --nav: #4d51a1;
   --navhover: #7A7ED5;
   --navtext: #ffffff;
+  --navdark: #404383;
 
    --grey-100: #e4e9f0;
   --grey-200: #cfd7e3;
@@ -109,7 +105,7 @@ li {
   display: flex;
   height: 4rem;
   width: 100%;
-  background-color: var(--accent);
+  background-color: var(--topnav);
 }
 
 .login-container {
@@ -144,7 +140,7 @@ li {
 .logo-container {
   display: flex;
   align-items: center;
-  color: black;
+  color: var(--dark);
   margin-left: 1rem;
 }
 
