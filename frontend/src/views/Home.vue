@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <EventLong/>
+    <Event />
   </div>
 </template>
 <script>
@@ -11,7 +11,7 @@ import EventLong from '../components/EventDetails.vue'
 export default {
   name: 'Home',
   components: {
-    EventLong
+    Event
   }
 }
 </script>
