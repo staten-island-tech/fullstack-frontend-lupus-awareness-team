@@ -46,19 +46,23 @@ font-family: 'Inter', sans-serif;
 }
 
 :root {
-/* base theme */
+/* Base Colors */
  --light: #cdcee4;
  --white: #ffffff;
  --dark: #4d51a1;
  --accent: #9397D8;
  --text: #000000;
  --background: #E9EBF1;
+ --pink : #E2D9EC;
  
-  --nav: var(--dark);
-  --navhover: #7A7ED5;
-  --navtext: var(--white);
-  --navdark: #404383;
-  --topnav: var(--white);
+--nav: var(--dark);
+--navhover: #7A7ED5;
+--navtext: var(--white);
+--navdark: #404383;
+--topnav: var(--white);
+
+
+/* Themes */
 
    --grey-100: #e4e9f0;
   --grey-200: #cfd7e3;
@@ -99,6 +103,11 @@ li {
   margin: 0;
   list-style: none;
 }
+
+.main {
+  --nav: black;
+}
+
 
 .nav {
   font-size: 3rem;
