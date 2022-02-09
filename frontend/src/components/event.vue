@@ -1,6 +1,14 @@
 <template>
 <div class="event-container">
-    <h1>x</h1>    
+<div class="background-image"></div>    
+<div class="event-info">
+    <h1 class="event-title">Insert Event Name</h1>
+    <h1 class="event-time">Insert Event Time</h1>
+    <h1 class="event-location">Insert Event Location</h1>
+    <h1 class="event-date">Insert Event Date</h1>
+    <h1 class="service-hour-info">#Service Hours</h1>
+    <h1 class="event-description">Insert Event Description</h1>
+</div>
 </div>
     
     
@@ -125,7 +133,7 @@ body {
 
 .event-container {
     background-color: white;
-    width: 10rem;
+    width: 100rem;
 }
 
 </style>
