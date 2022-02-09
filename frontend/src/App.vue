@@ -47,19 +47,18 @@ font-family: 'Inter', sans-serif;
 
 :root {
 /* base theme */
- --primary: #cdcee4;
- --secondary: #ffffff;
+ --light: #cdcee4;
+ --white: #ffffff;
  --dark: #4d51a1;
  --accent: #9397D8;
  --text: #000000;
- --red: #D53434;
- --topnav: white;
  --background: #E9EBF1;
  
-  --nav: #4d51a1;
+  --nav: var(--dark);
   --navhover: #7A7ED5;
-  --navtext: #ffffff;
+  --navtext: var(--white);
   --navdark: #404383;
+  --topnav: var(--white);
 
    --grey-100: #e4e9f0;
   --grey-200: #cfd7e3;

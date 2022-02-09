@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import EventLong from '../components/EventDetails.vue'
+import EventLong from '@/components/EventDetails.vue'
 
 export default {
   name: 'Home',
