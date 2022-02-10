@@ -28,7 +28,7 @@
     <div class="column">
       <div class="user_info_brief">
         <div class="user_profile_picture">
-          <img src="../assets/dogPark.jpg" alt="temporary">
+          <img src="../assets/placeholder.jpg" alt="temporary">
         </div>
         <h4 class="user_name">user1123</h4>
       </div>
@@ -48,6 +48,8 @@
         </div>
       </div>
       <div class="interested_bar">
+        <img  class="interested_svg" src="../assets/placeholder.jpg" alt="">
+        <!-- it will be an svg latrer -->
         <h5>3 Interested</h5>
         <button class="interested_btn">
           <h5>I'm Interested</h5>
@@ -69,7 +71,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap');
+
 .event_details_container {
+  font-family: 'Merriweather Sans', sans-serif;
   background-color: aliceblue;
   width: 90vw;
   height: 90vh;
@@ -86,7 +91,9 @@ export default {
   background-color: antiquewhite;
   padding: 2rem;
 }
-
+.event_image {
+  font-size: 3rem;
+}
 .event_image img{
   margin: 2rem auto;
   width: 90%;
@@ -96,7 +103,6 @@ export default {
 }
 .event_image_bar {
   width: 80%;
-  height: 20%;
   margin: .25rem auto;
   display: flex;
   justify-content: center;
@@ -111,12 +117,17 @@ export default {
 }
 .event_details {
   padding: 2rem;
-  height: 40%;
+  height: 20%;
   width: 90%;
   font-size: 2.5rem;
   background-color: lightgray;
   border-radius: 1.5rem;
   margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+
 }
 
 .event_image_preview img:hover {
@@ -127,10 +138,13 @@ export default {
   flex-direction: row;
   width: 50%;
   margin: 0 auto;
+  align-items: center;
 }
 .user_profile_picture img{
-  width: 60%;
-  clip-path: circle(2rem);
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  clip-path: circle(40% at 50% 50%);
 }
 
 .organization_info {
@@ -149,8 +163,27 @@ export default {
 }
 .event_desc {
   font-size: 2rem;
-  background-color: cornflowerblue;
+  background-color: lightgray;
   padding: 2rem;
   margin: 3rem auto;
+}
+.interested_bar {
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+.interested_svg {
+  height: 100%;
+}
+.interested_btn {
+  border: .25rem solid gray;
+  border-radius: 2rem;
+  padding: .5rem;
+  margin-left: 3rem;
+}
+.interested_btn:hover {
+  background-color: lightgray;
 }
 </style>
