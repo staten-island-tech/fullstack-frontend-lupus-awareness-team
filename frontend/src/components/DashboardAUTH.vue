@@ -55,12 +55,12 @@ components: {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: var(--white)
 }
 
 .curved_container {
   width: 100%;
-  background-color: var(--pink);
+  background-color: var(--dbSecondary);
 }
 
 
@@ -135,7 +135,7 @@ align-items: center;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    background-color: var(--white);
+    background-color: white;
 
 }
 
@@ -147,7 +147,7 @@ align-items: center;
 }
 
 .custom-shape-divider-top-1642094560 .shape-fill {
-    fill: var(--pink);
+    fill: var(--dbSecondary);
 }
 
 

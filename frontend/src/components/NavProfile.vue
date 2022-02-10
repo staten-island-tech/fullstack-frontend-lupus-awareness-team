@@ -76,7 +76,6 @@ methods: {
     font-size: 2rem;
     color:var(--navtext);
     font-weight: 500;
-
 }
 
 
