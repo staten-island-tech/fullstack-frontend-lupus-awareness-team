@@ -1,6 +1,8 @@
 <template>
 <div class="event-container">
-<div class="background-image"></div>    
+<div class="image-container">
+    <img class="event-image" src="../assets/event-placeholder.jpg"> 
+</div>    
 <div class="event-info">
     <h1 class="event-title">Insert Event Name</h1>
     <h1 class="event-time">Insert Event Time</h1>
@@ -52,6 +54,24 @@ methods: {
 body {
     background-color: #E9EBF1;
 }
+
+.event-container {
+    background-color: white;
+    width: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.event-image {
+    width: 80%;
+}
+
+.event-info {
+    width: 40%; 
+}
+
 
 /* .user-info {
     display: flex;
@@ -131,9 +151,5 @@ body {
     padding: .5rem 0rem;
 } */
 
-.event-container {
-    background-color: white;
-    width: 100rem;
-}
 
 </style>
