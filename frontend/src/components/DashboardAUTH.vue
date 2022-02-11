@@ -55,12 +55,12 @@ components: {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--white)
+    background-color: var(--dbPrimary);
 }
 
 .curved_container {
   width: 100%;
-  background-color: var(--dbSecondary);
+  background-color: var(--dbTertriary);
 }
 
 
@@ -84,7 +84,7 @@ align-items: center;
   display: inline-flex;
   flex-direction: column;
   z-index: 2;
-  background-color: var(--light);
+  background-color: var(--black-secondary);
   padding: 2rem 0rem 15rem 2rem;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 2px;
@@ -116,7 +116,7 @@ align-items: center;
   text-decoration: none;
   list-style: none;
   padding: 1rem 1rem;
-  background-color: var(--accent);
+  background-color: var(--black-tertriary);
  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 2px;
  border-radius: 1rem 1rem 0rem 0rem;
 }
@@ -135,7 +135,7 @@ align-items: center;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    background-color: white;
+    background-color: var(--dbPrimary);
 
 }
 
@@ -147,7 +147,7 @@ align-items: center;
 }
 
 .custom-shape-divider-top-1642094560 .shape-fill {
-    fill: var(--dbSecondary);
+    fill: var(--dbTertriary);
 }
 
 

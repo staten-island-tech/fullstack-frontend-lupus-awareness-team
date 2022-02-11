@@ -134,13 +134,13 @@ background-color: var(--navhover);
 }
 
 .fa-bars {
-    color: var(--navtext);
+    color: var(--navopen);
     font-size: 3rem;
 }
 
 
 .fa-times-circle {
-    color: var(--nav);
+    color: var(--navopen);
     font-size: 3rem;
 }
 

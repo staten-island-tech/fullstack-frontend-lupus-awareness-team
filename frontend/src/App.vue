@@ -51,19 +51,25 @@ font-family: 'Inter', sans-serif;
  --white: #ffffff;
  --dark: #4d51a1;
  --accent: #9397D8;
- --text: #000000;
  --background: #E9EBF1;
  --pink : #E2D9EC;
  --darkgray: #211D1D;
  --black: #1C1515;
+
+ --black-primary: #1E1E1E;
+ --black-secondary: #2D2D2D;
+ --black-tertiary: #121212;
+
+
  
 --nav: var(--dark);
 --navhover: #7A7ED5;
 --navtext: var(--white);
 --navdark: #404383;
 --topnav: var(--white);
---dbSecondary: var(--pink);
---dbPrimary: var(--white);
+--dbPrimary: var(--black-primary);
+--dbSecondary: var(--black-secondary);
+--dbTertriary: var(--black-tertiary);
 
 
 /* Themes */
@@ -109,22 +115,29 @@ li {
 }
 
 .main {
-  --topnav: #2B2B2B;
-  --nav: var(--darkgray);
-  --navtext: var(--white);
-  --navhover: #585353;
-  --navdark: #161414;
-  --dbSecondary: #171010;
-    
-}
-
-.secondary {
   --topnav: var(--white);
   --nav: var(--dark);
   --navtext: var(--white);
   --navhover: #7A7ED5;
   --navdark: #404383;
+  --navopen: var(--nav);
   --dbSecondary: var(--pink);
+  --dbPrimary: white;
+  --dbTertriary: var(--pink);
+
+    
+}
+
+.dark {
+  --topnav: var(--black-secondary);
+  --nav: var(--darkgray);
+  --navtext: var(--white);
+  --navhover: #585353;
+  --navdark: #161414;
+  --navopen: var(--white);
+--dbPrimary: var(--black-primary);
+--dbSecondary: var(--black-secondary);
+--dbTertriary: var(--black-tertiary);
 
 }
 
