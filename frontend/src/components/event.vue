@@ -4,12 +4,24 @@
     <img class="event-image" src="../assets/event-placeholder.jpg"> 
 </div>    
 <div class="event-info">
-    <h1 class="event-title">Insert Event Name</h1>
-    <h1 class="event-time">Insert Event Time</h1>
-    <h1 class="event-location">Insert Event Location</h1>
-    <h1 class="event-date">Insert Event Date</h1>
-    <h1 class="service-hour-info">#Service Hours</h1>
-    <h1 class="event-description">Insert Event Description</h1>
+    <div class="user-info">
+        <img class="user-pfp" src="">
+        <h1 class="username">User1234</h1>
+        <h1 class="user-type">User Type</h1>
+    </div>
+    <div class="event-desc">
+        <h1 class="event-title">Insert Event Name</h1>
+        <h1 class="event-time">Insert Event Time</h1>
+        <h1 class="event-location">Insert Event Location</h1>
+        <h1 class="event-date">Insert Event Date</h1>
+        <h1 class="service-hour-info">#Service Hours</h1>
+        <h1 class="event-description">Insert Event Description</h1>
+    </div>
+    <div class="event-buttons">
+        <btn class="tag">Tag</btn>
+        <btn class="interest">I'm Interested</btn>
+        <btn class="details">Details</btn>
+    </div> 
 </div>
 </div>
     
@@ -59,18 +71,28 @@ body {
     background-color: white;
     width: 80rem;
     display: flex;
-    justify-content: center;
     align-items: center;
     margin: 0 auto;
+    height: 24vh;
+    overflow: hidden; 
+}
+
+.image-container {
+    width: 40%;
+   
 }
 
 .event-image {
-    width: 80%;
+    width: 100%;
+   
 }
 
-.event-info {
-    width: 40%; 
+h1 {
+    font-size: 2rem;
 }
+
+
+
 
 
 /* .user-info {
