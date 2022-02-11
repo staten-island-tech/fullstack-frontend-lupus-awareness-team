@@ -3,20 +3,20 @@
     <div class="column">
       <h3>Volunteer</h3>
       <div class="event_image">
-        <img src="../assets/dogPark.jpg" alt="">
+        <img src="../assets/dogPark.jpg" alt="" />
       </div>
       <ul class="event_image_bar">
         <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="">
+          <img src="../assets/dogPark.jpg" alt="" />
         </li>
         <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="">
+          <img src="../assets/dogPark.jpg" alt="" />
         </li>
         <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="">
+          <img src="../assets/dogPark.jpg" alt="" />
         </li>
         <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="">
+          <img src="../assets/dogPark.jpg" alt="" />
         </li>
       </ul>
       <div class="event_details">
@@ -28,7 +28,7 @@
     <div class="column">
       <div class="user_info_brief">
         <div class="user_profile_picture">
-          <img src="../assets/placeholder.jpg" alt="temporary">
+          <img src="../assets/placeholder.jpg" alt="temporary" />
         </div>
         <h4 class="user_name">user1123</h4>
       </div>
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="interested_bar">
-        <img  class="interested_svg" src="../assets/placeholder.jpg" alt="">
+        <img class="interested_svg" src="../assets/placeholder.jpg" alt="" />
         <!-- it will be an svg latrer -->
         <h5>3 Interested</h5>
         <button class="interested_btn">
@@ -57,24 +57,31 @@
       </div>
       <div class="event_desc">
         <h5>Event Description:</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor non quo quam aspernatur mollitia sapiente molestias eaque qui magni. Qui, expedita.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
+          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
+          Qui, expedita.
+        </p>
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
 export default {
-  name: 'EventDetails',
-}
+  name: "EventDetails",
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap");
+body {
+  background-color: var(--background);
+}
 
 .event_details_container {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   background-color: aliceblue;
   width: 90vw;
   height: 90vh;
@@ -94,7 +101,7 @@ export default {
 .event_image {
   font-size: 3rem;
 }
-.event_image img{
+.event_image img {
   margin: 2rem auto;
   width: 90%;
   display: flex;
@@ -103,7 +110,7 @@ export default {
 }
 .event_image_bar {
   width: 80%;
-  margin: .25rem auto;
+  margin: 0.25rem auto;
   display: flex;
   justify-content: center;
   background-color: cadetblue;
@@ -113,7 +120,7 @@ export default {
   display: flex;
   justify-content: space-evenly;
   margin: 1rem auto;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 .event_details {
   padding: 2rem;
@@ -127,11 +134,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: left;
-
 }
 
 .event_image_preview img:hover {
-  outline: white solid .35rem;
+  outline: white solid 0.35rem;
 }
 .user_info_brief {
   display: flex;
@@ -140,7 +146,7 @@ export default {
   margin: 0 auto;
   align-items: center;
 }
-.user_profile_picture img{
+.user_profile_picture img {
   width: 90%;
   height: 90%;
   border-radius: 50%;
@@ -159,7 +165,7 @@ export default {
 }
 .organization_detail {
   padding: 1rem;
-  border-bottom: .1rem solid gray;
+  border-bottom: 0.1rem solid gray;
 }
 .event_desc {
   font-size: 2rem;
@@ -178,9 +184,9 @@ export default {
   height: 100%;
 }
 .interested_btn {
-  border: .25rem solid gray;
+  border: 0.25rem solid gray;
   border-radius: 2rem;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-left: 3rem;
 }
 .interested_btn:hover {

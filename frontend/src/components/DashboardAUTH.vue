@@ -1,6 +1,5 @@
 <template>
   <section id="dashboard_section">
-
       <div class="curved_container">
         <div class="profile_component">
             <Profile />
@@ -131,13 +130,13 @@ align-items: center;
 
 .custom-shape-divider-top-1642094560 {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    background-color: white;
+    background-color: var(--secondary);
 
 }
 
