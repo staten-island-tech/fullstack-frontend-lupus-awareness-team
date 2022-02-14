@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-center" class="item">1</div>
-    <div data-aos="fade-up" class="item">2</div>
-    <div data-aos="fade-up" class="item">3</div>
-    <div data-aos="fade-up" class="item">4</div>
+    <div data-aos="fade-up" data-aos-duration="2000" class="item">1</div>
+    <div data-aos="fade-up" data-aos-duration="2000" class="item">2</div>
+    <div data-aos="fade-up" data-aos-duration="2000" class="item">3</div>
+    <div data-aos="fade-up" data-aos-duration="2000" class="item">4</div>
+
   </div>
 </template>
 
@@ -22,6 +22,6 @@ name: 'Test',
   width: 80vw;
   height: 30vh;
   margin: 2rem auto;
-  background-color: darkgray;
+  background-color: lightgray;
 }
 </style>

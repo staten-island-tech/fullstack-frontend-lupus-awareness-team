@@ -6,12 +6,10 @@ import store from "./store";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-createApp(App).use(store).use(router).use(AOS.init()).mount("#app");
-
 import authConfig from "../auth_config.json";
 import { setupAuth } from "./auth";
 
-let app = createApp(App).use(store).use(router);
+let app = createApp(App).use(store).use(router).use(AOS.init());
 
 function callbackRedirect(appState) {
   router.push(appState && appState.targetUrl ? appState.targetUrl : "/");

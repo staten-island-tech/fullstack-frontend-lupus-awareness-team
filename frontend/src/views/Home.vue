@@ -3,8 +3,6 @@
     <h4>This is the Home/Splash Page</h4>
     <!-- <EventLong/> -->
     <Test />
-
-    <EventLong />
   </div>
 </template>
 <script>
@@ -12,7 +10,6 @@
 import Test from "@/components/Testing.vue";
 
 // @ is an alias to /src
-import EventLong from "../components/EventDetails.vue";
 
 export default {
   name: "Home",
