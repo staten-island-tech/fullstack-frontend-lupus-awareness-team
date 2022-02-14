@@ -63,13 +63,13 @@ data() {
 
 .profile_name {
   font-weight: 700;
-  color: var(--navtext);
+  color: var(--profiletext);
   
 }
 
 .profile_sub {
   font-weight: 600;
-  color: var(--navtext)
+  color: var(--profiletext)
 }
 
 </style>

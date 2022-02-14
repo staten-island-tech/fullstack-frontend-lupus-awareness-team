@@ -84,7 +84,7 @@ align-items: center;
   display: inline-flex;
   flex-direction: column;
   z-index: 2;
-  background-color: var(--black-secondary);
+  background-color: var(--dbLight);
   padding: 2rem 0rem 15rem 2rem;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 2px;
@@ -110,13 +110,13 @@ align-items: center;
 }
 
 .events_tab li {
-  color: var(--text);
+  color: var(--grey-100);
   font-size: 2rem;
   z-index: 3;
   text-decoration: none;
   list-style: none;
   padding: 1rem 1rem;
-  background-color: var(--black-tertriary);
+  background-color: var(--dbAccent);
  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 2px;
  border-radius: 1rem 1rem 0rem 0rem;
 }

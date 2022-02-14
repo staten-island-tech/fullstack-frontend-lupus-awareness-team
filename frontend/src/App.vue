@@ -1,5 +1,5 @@
 <template >
-  <div id="app" class="main">
+  <div id="app" class="dark">
     <div class="nav" >
     <div class="logo-container">
       <h4>LOGO</h4>
@@ -60,18 +60,6 @@ font-family: 'Inter', sans-serif;
  --black-secondary: #2D2D2D;
  --black-tertiary: #121212;
 
-
- 
---nav: var(--dark);
---navhover: #7A7ED5;
---navtext: var(--white);
---navdark: #404383;
---topnav: var(--white);
---dbPrimary: var(--black-primary);
---dbSecondary: var(--black-secondary);
---dbTertriary: var(--black-tertiary);
-
-
 /* Themes */
 
    --grey-100: #e4e9f0;
@@ -124,21 +112,26 @@ li {
   --dbSecondary: var(--pink);
   --dbPrimary: white;
   --dbTertriary: var(--pink);
+  --dbAccent: var(--accent);
+  --dbLight: #CDCEE4;
+  --profiletext: black;
 
     
 }
 
 .dark {
   --topnav: var(--black-secondary);
-  --nav: var(--darkgray);
-  --navtext: var(--white);
+  --nav: var(--black);
+  --navtext: var(--background);
   --navhover: #585353;
-  --navdark: #161414;
+  --navdark: black;
   --navopen: var(--white);
---dbPrimary: var(--black-primary);
---dbSecondary: var(--black-secondary);
---dbTertriary: var(--black-tertiary);
-
+  --dbPrimary: var(--black-primary);
+  --dbSecondary: var(--black-secondary);
+  --dbTertriary: var(--black-tertiary);
+  --dbAccent: var(--black-tertriary);
+  --dbLight: var(--black-secondary);
+  --profiletext: var(--background);
 }
 
 
@@ -182,7 +175,7 @@ li {
 .logo-container {
   display: flex;
   align-items: center;
-  color: var(--navtext);
+  color: var(--navopen);
   margin-left: 1rem;
 }
 
