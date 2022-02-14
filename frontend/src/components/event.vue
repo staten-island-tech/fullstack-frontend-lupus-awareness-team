@@ -73,8 +73,12 @@ body {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    height: 24vh;
+    height: 23vh;
     overflow: hidden; 
+}
+
+.event-info {
+    padding-left: 1rem;
 }
 
 .image-container {
