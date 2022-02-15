@@ -47,7 +47,7 @@ data() {
 
 .profile_image {
   border-radius: 50%;
-  border: solid 0.5rem white;
+  border: solid 0.5rem #C4C4C4;
   z-index: 3;
   width: 10%;
 }
@@ -63,11 +63,13 @@ data() {
 
 .profile_name {
   font-weight: 700;
+  color: var(--profiletext);
   
 }
 
 .profile_sub {
   font-weight: 600;
+  color: var(--profiletext)
 }
 
 </style>

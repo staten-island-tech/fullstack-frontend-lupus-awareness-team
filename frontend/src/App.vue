@@ -1,6 +1,6 @@
-<template>
-  <div id="app">
-    <div class="nav">
+<template >
+  <div id="app" class="dark">
+    <div class="nav" >
     <div class="logo-container">
       <h4>LOGO</h4>
     </div>
@@ -65,20 +65,21 @@ font-family: 'Inter', sans-serif;
 }
 
 :root {
-/* base theme */
- --primary: #cdcee4;
- --secondary: #ffffff;
+/* Base Colors */
+ --light: #cdcee4;
+ --white: #ffffff;
  --dark: #4d51a1;
  --accent: #9397D8;
- --text: #000000;
- --red: #D53434;
- --topnav: white;
  --background: #E9EBF1;
- 
-  --nav: #4d51a1;
-  --navhover: #7A7ED5;
-  --navtext: #ffffff;
-  --navdark: #404383;
+ --pink : #E2D9EC;
+ --darkgray: #211D1D;
+ --black: #1C1515;
+
+ --black-primary: #1E1E1E;
+ --black-secondary: #2D2D2D;
+ --black-tertiary: #121212;
+
+/* Themes */
 
    --grey-100: #e4e9f0;
   --grey-200: #cfd7e3;
@@ -120,6 +121,39 @@ li {
   list-style: none;
 }
 
+.main {
+  --topnav: var(--white);
+  --nav: var(--dark);
+  --navtext: var(--white);
+  --navhover: #7A7ED5;
+  --navdark: #404383;
+  --navopen: var(--nav);
+  --dbSecondary: var(--pink);
+  --dbPrimary: white;
+  --dbTertriary: var(--pink);
+  --dbAccent: var(--accent);
+  --dbLight: #CDCEE4;
+  --profiletext: black;
+
+    
+}
+
+.dark {
+  --topnav: var(--black-secondary);
+  --nav: var(--black);
+  --navtext: var(--background);
+  --navhover: #585353;
+  --navdark: black;
+  --navopen: var(--white);
+  --dbPrimary: var(--black-primary);
+  --dbSecondary: var(--black-secondary);
+  --dbTertriary: var(--black-tertiary);
+  --dbAccent: var(--black-tertriary);
+  --dbLight: var(--black-secondary);
+  --profiletext: var(--background);
+}
+
+
 .nav {
   font-size: 3rem;
   display: flex;
@@ -160,7 +194,7 @@ li {
 .logo-container {
   display: flex;
   align-items: center;
-  color: var(--dark);
+  color: var(--navopen);
   margin-left: 1rem;
 }
 
