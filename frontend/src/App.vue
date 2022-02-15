@@ -31,7 +31,7 @@ export default {
     },
     fetchData: async () => {
       try {
-        const res = await fetch('localhost:3000/')
+        const res = await fetch('http://localhost:3000/')
         const data = await res.json()
         console.log(data)
       } catch (error) {
@@ -42,8 +42,9 @@ export default {
   components: {
     Navbar
   },
-  created: function() {
-    this.fetchData()
+  created: async function() {
+    await this.fetchData()
+    console.log('asdf')
   }
 }
 
