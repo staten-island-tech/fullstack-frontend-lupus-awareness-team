@@ -115,6 +115,7 @@ li {
   --dbAccent: var(--accent);
   --dbLight: #CDCEE4;
   --profiletext: black;
+  --eventTab: black;
 
     
 }
@@ -132,6 +133,7 @@ li {
   --dbAccent: var(--black-tertriary);
   --dbLight: var(--black-secondary);
   --profiletext: var(--background);
+  --eventTab: var(--grey-100)
 }
 
 

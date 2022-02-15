@@ -110,7 +110,7 @@ align-items: center;
 }
 
 .events_tab li {
-  color: var(--grey-100);
+  color: var(--eventTab);
   font-size: 2rem;
   z-index: 3;
   text-decoration: none;
