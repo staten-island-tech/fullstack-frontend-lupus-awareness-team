@@ -1,5 +1,5 @@
 <template>
-    <div ref="main">
+    <div>
         <div class="nav-button" v-if="nav">
             <i class="fas fa-bars" @click="toggle"></i>
         </div> 
@@ -25,17 +25,19 @@
             </li>
                 <span v-if="active" class="dropdown">
                     <div class="dropdown-item">
-                        <h4 class="dropdown-text">Main</h4>
+                        <div class="circle" id="purple"></div>
+                        <h4 class="dropdown-text" @click="main">Main</h4>
                     </div>
 
                     <div class="dropdown-item">
-                        <h4 class="dropdown-text">Dark</h4>
+                        <div class="circle" id="black"></div>
+                        <h4 class="dropdown-text" @click="dark">Dark</h4>
                     </div>
 
                     <div class="dropdown-item">
-                        <h4 class="dropdown-text">White</h4>
+                        <div class="circle" id="white"></div>
+                        <h4 class="dropdown-text" @click="light">White</h4>
                     </div>
-
                 </span>
 
             <li>
@@ -64,6 +66,7 @@ data() {
 },
 components: {
     NavProfile,
+
 },
 methods: {
     toggle() {
@@ -76,6 +79,10 @@ methods: {
     },
     theme() {
         this.active = !this.active
+    },
+    main() {
+        this.$el.app.classList.add("main");
+        this.$el.app.classList.remove("dark");
     }
 }
 }
@@ -83,19 +90,40 @@ methods: {
 
 <style scoped>
 
+.circle {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+#purple {
+    background-color: var(--accent);
+}
+
+#black {
+    background-color: #1f1f1f;
+}
+
+#white {
+    background-color: var(--white);
+}
+
+
 .dropdown {
-  background-color: #1f1f1f;
+  background-color: var(--navdark);
   width: 80%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 15;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-left: 3rem;
   justify-content: center;
 }
 
 .dropdown-item {
     display: flex;
+    align-items: center;
+    height: 100%;
+
 }
 
 .dropdown-text {
@@ -103,6 +131,7 @@ methods: {
     font-weight: 400;
     padding: 1rem;
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .side_nav {
