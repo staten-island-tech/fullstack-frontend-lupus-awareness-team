@@ -4,6 +4,7 @@
       <h3>Volunteer</h3>
       <div class="event_image">
         <img src="../assets/dogPark.jpg" alt="" />
+        
       </div>
       <ul class="event_image_bar">
         <li class="event_image_preview">
@@ -23,6 +24,15 @@
         <div class="event_time">2:00 PM - 4:00 PM</div>
         <div class="event_location">Dog Park, Full Address</div>
         <div class="event_date">Saturday, April 2</div>
+      </div>
+      <div class="event_desc">
+        <h5>Event Description:</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
+          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
+          Qui, expedita.
+        </p>
       </div>
     </div>
     <div class="column">
@@ -55,15 +65,7 @@
           <h5>I'm Interested</h5>
         </button>
       </div>
-      <div class="event_desc">
-        <h5>Event Description:</h5>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
-          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
-          Qui, expedita.
-        </p>
-      </div>
+      
     </div>
   </div>
 </template>
@@ -78,11 +80,11 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap");
 body {
   background-color: var(--background);
+  box-sizing: border-box;
 }
 
 .event_details_container {
   font-family: "Merriweather Sans", sans-serif;
-  background-color: aliceblue;
   width: 90vw;
   height: 90vh;
   padding: 5rem;
@@ -95,7 +97,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 45%;
-  background-color: antiquewhite;
+  background-color: var(--primary);
   padding: 2rem;
 }
 .event_image {
@@ -109,11 +111,11 @@ body {
   border-radius: 1.5rem;
 }
 .event_image_bar {
-  width: 80%;
+  width: 85%;
+  height: 10%;
   margin: 0.25rem auto;
   display: flex;
   justify-content: center;
-  background-color: cadetblue;
 }
 .event_image_preview img {
   width: 90%;
@@ -127,7 +129,7 @@ body {
   height: 20%;
   width: 90%;
   font-size: 2.5rem;
-  background-color: lightgray;
+  background-color: var(--accent);
   border-radius: 1.5rem;
   margin: 2rem auto;
   display: flex;
@@ -137,7 +139,8 @@ body {
 }
 
 .event_image_preview img:hover {
-  outline: white solid 0.35rem;
+  border: .25rem solid white;
+  outline: var(--dark) solid 0.35rem;
 }
 .user_info_brief {
   display: flex;
@@ -159,17 +162,17 @@ body {
   height: 70%;
   width: 80%;
   font-size: 2.5rem;
-  background-color: lightgray;
+  background-color: var(--accent);
   border-radius: 1.5rem;
   margin: 2rem auto;
 }
 .organization_detail {
   padding: 1rem;
-  border-bottom: 0.1rem solid gray;
+  border-bottom: 0.1rem solid var(--dark);
 }
 .event_desc {
   font-size: 2rem;
-  background-color: lightgray;
+  background-color: var(--accent);
   padding: 2rem;
   margin: 3rem auto;
 }
