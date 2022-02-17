@@ -81,8 +81,12 @@ methods: {
         this.active = !this.active
     },
     main() {
-        this.$el.app.classList.add("main");
-        this.$el.app.classList.remove("dark");
+        this.$parent.$refs.theme.classList.remove("dark");
+        this.$parent.$refs.theme.classList.add("main");
+    },
+    dark() {
+        this.$parents.$refs.theme.classList.remove("main");
+        this.$parents.$refs.theme.classList.add("dark");
     }
 }
 }
