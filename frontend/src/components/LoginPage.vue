@@ -9,7 +9,10 @@
             </div>
         </div>  
         <div class="login-page-right">
-            <div class="create-account"></div>
+            <div class="create-account">
+                <h5 class="create-username"></h5>
+                <h5 class="create-password"></h5>
+            </div>
         </div>
     </div>
 </template>
