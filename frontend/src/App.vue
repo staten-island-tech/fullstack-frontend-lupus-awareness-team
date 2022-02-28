@@ -1,5 +1,5 @@
 <template >
-  <div id="app" class="dark" ref="theme">
+  <div id="app" class="main" ref="theme">
     <div class="nav" >
     <div class="logo-container">
       <h4>LOGO</h4>
