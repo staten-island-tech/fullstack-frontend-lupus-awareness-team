@@ -1,5 +1,5 @@
 <template >
-  <div id="app" class="dark">
+  <div id="app" class="main" ref="theme">
     <div class="nav" >
     <div class="logo-container">
       <h4>LOGO</h4>
@@ -135,6 +135,7 @@ li {
   --dbAccent: var(--accent);
   --dbLight: #CDCEE4;
   --profiletext: black;
+  --eventTab: black;
 
     
 }
@@ -152,6 +153,7 @@ li {
   --dbAccent: var(--black-tertriary);
   --dbLight: var(--black-secondary);
   --profiletext: var(--background);
+  --eventTab: var(--grey-100)
 }
 
 

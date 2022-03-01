@@ -68,7 +68,7 @@ data() {
 }
 
 .profile_sub {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--profiletext)
 }
 

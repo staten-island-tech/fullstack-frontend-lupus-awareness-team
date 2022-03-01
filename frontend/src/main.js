@@ -3,11 +3,13 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import authConfig from "../auth_config.json";
 import { setupAuth } from "./auth";
 
-let app = createApp(App).use(store).use(router);
+let app = createApp(App).use(store).use(router).use(AOS.init());
 
 function callbackRedirect(appState) {
   router.push(appState && appState.targetUrl ? appState.targetUrl : "/");
