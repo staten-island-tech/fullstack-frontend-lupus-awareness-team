@@ -42,7 +42,7 @@ export default {
   components: {
     Navbar
   },
-  created: async function() {
+  created: async function() { 
     await this.fetchData()
     console.log('asdf')
   }
