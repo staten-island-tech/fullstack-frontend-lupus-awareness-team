@@ -162,8 +162,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--grey-200);
-  border: solid 1px var(--grey-300);
+  background-color: var(--calendarMonth);
+  border: solid 1px var(--calendarMonthBorder);
   width: 100%;
   z-index: 3;
 }
