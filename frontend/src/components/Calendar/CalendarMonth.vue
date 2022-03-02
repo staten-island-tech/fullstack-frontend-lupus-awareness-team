@@ -169,9 +169,9 @@ export default {
 }
 
 .day-of-week {
-  color: var(--grey-800);
+  background-color: var(--dayofweek);
+  color: var(--calendarDayText);
   font-size: 20px;
-  background-color: #fff;
   padding-bottom: 5px;
   padding-top: 10px;
   z-index: 3;
@@ -194,6 +194,6 @@ export default {
   position: relative;
   grid-column-gap: var(--grid-gap);
   grid-row-gap: var(--grid-gap);
-  border-top: solid 1px var(--grey-200);
+  border-top: solid 1px var(--border-top);
 }
 </style>

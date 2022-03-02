@@ -21,9 +21,10 @@ export default {
 <style scoped>
 .calendar-date-indicator {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-right: 1rem;
   z-index: 3;
   padding: 1rem 1rem;
+  color: var(--calendarDayText)
 }
 </style>
