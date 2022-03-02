@@ -129,6 +129,7 @@ li {
   --navhover: #7A7ED5;
   --navdark: #404383;
   --navopen: var(--nav);
+  
   --dbSecondary: var(--pink);
   --dbPrimary: white;
   --dbTertriary: var(--pink);
@@ -137,6 +138,11 @@ li {
   --profiletext: black;
   --eventTab: black;
 
+  --calendarMonth: var(--grey-200);
+  --calendarMonthBorder: var(--grey-300);
+  --calendarDay: var(--white);
+  --calendarDayText: var(--grey-800);
+  --calendarDayNot: var(--grey-100);
     
 }
 
@@ -147,13 +153,20 @@ li {
   --navhover: #585353;
   --navdark: black;
   --navopen: var(--white);
+
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
   --dbTertriary: var(--black-tertiary);
   --dbAccent: var(--black-tertriary);
   --dbLight: var(--black-secondary);
   --profiletext: var(--background);
-  --eventTab: var(--grey-100)
+  --eventTab: var(--grey-100);
+
+  --calendarMonth: var(--black--tertriary);
+  --calendarMonthBorder: black;
+  --calendarDay: var(--black-secondary);
+  --calendarDayText: var(--background);
+  --calendarDayNot: var(--black-tertriary);
 }
 
 
