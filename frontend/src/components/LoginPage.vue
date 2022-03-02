@@ -36,19 +36,35 @@ methods: {}
     display: flex;
     flex-direction: row;
     justify-content: center;
+    color: white;
 }
 
 .login-page-left {
-    background-color:rgb(103, 27, 150, 0.6);
-    background-image: url(../assets/login-page-background.jpg);
+    background-image:
+    linear-gradient( rgba(103, 27, 150, 0.5), 
+    rgba(103, 27, 150, 0.5)), 
+    url(../assets/login-page-background.jpg) ; 
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     padding: 20rem;
 }
 
 .login-page-right {
-    background: rgb(29,28,94);
     background: linear-gradient(180deg, rgba(29,28,94,1) 14%, rgba(51,50,114,1) 41%, rgba(96,94,205,1) 100%);
+    padding: 5rem;
+}
+
+
+.account-header, .login-header {
+    margin: 4rem 0rem;
+}
+
+.confirm-button, .login-page-button {
+    padding: .4rem 4rem;
+    font-size: 15px;
+    
 }
 
 </style>
