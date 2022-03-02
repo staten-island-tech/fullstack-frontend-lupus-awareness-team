@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 
 import Callback from "@/views/Callback";
 import ErrorPage from "@/views/Error";
+import Event from '@/components/event'
 
 import { authenticationGuard } from "@/auth";
 
@@ -22,6 +23,11 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ "../views/About.vue");
     },
+  },
+  {
+    path: '/event',
+    name: "Event",
+    component: Event
   },
   {
     path: "/callback",

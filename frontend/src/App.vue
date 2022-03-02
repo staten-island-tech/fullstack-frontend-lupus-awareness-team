@@ -29,23 +29,23 @@ export default {
       });
       this.$router.push({ path: '/' });
     },
-    fetchData: async () => {
-      try {
-        const res = await fetch('http://localhost:3000/')
-        const data = await res.json()
-        console.log(data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
+    // fetchData: async () => {
+    //   try {
+    //     const res = await fetch('http://localhost:3000/')
+    //     const data = await res.json()
+    //     console.log(data)
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    // }
   },
   components: {
     Navbar
   },
-  created: async function() { 
-    await this.fetchData()
-    console.log('asdf')
-  }
+  // created: async function() { 
+  //   await this.fetchData()
+  //   console.log('asdf')
+  // }
 }
 
 
