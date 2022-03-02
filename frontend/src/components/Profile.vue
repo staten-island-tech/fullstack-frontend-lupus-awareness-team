@@ -24,7 +24,7 @@ data() {
 }
 </script>
 
-<style>
+<style scoped>
 .profile_container {
   display: flex;
   flex-direction: column;
@@ -42,6 +42,7 @@ data() {
   width: 100%;
   margin-top: 1.5rem;
   z-index: 3;
+  margin-bottom: 2rem;
 
 }
 
