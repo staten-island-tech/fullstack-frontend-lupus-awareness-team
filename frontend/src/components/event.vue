@@ -36,6 +36,7 @@ methods: {
       try {
         const res = await fetch('http://localhost:3000/profile')
         const data = await res.json()
+        console.log('adsfadfadf')
         console.log(data)
       } catch (error) {
         console.log(error)
