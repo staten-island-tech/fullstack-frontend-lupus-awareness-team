@@ -26,7 +26,7 @@
       </div>
 
       <div class="list_wrapper">
-
+        <ToDoList/>
       </div>
     </div>
 
@@ -37,12 +37,14 @@
 <script>
 import Profile from "@/components/Profile.vue";
 import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
+import ToDoList from "@/components/ToDoList.vue";
 
 export default {
-  name: "DashbardAUTH",
+name: "DashbardAUTH",
 components: {
   Profile,
-  CalendarMonth
+  CalendarMonth,
+  ToDoList,
 }
 }
 </script>
@@ -114,8 +116,8 @@ align-items: center;
   list-style: none;
   padding: 1rem 1rem;
   background-color: var(--dbAccent);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 1px;
- border-radius: 1rem 1rem 0rem 0rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 1px;
+ border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 
 .calendar_container {
@@ -131,9 +133,9 @@ align-items: center;
 }
 
 .list_wrapper {
-  width: 40%;
+  width: 35%;
   background-color: var(--dbLight);
-  height: 60vh;
+  border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 1px;
 }
 
