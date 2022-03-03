@@ -37,6 +37,9 @@ methods: {}
     flex-direction: row;
     justify-content: center;
     color: white;
+    height: 60rem;
+    width: 90rem;
+    margin: auto;
 }
 
 .login-page-left {
@@ -49,6 +52,13 @@ methods: {}
     background-position: center center;
     background-size: cover;
     padding: 20rem;
+}
+
+.login-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .login-page-right {
@@ -64,7 +74,12 @@ methods: {}
 .confirm-button, .login-page-button {
     padding: .4rem 4rem;
     font-size: 15px;
-    
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    margin-top: 6rem;
 }
 
 </style>
