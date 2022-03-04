@@ -4,8 +4,8 @@
             <img class="background-image">   
             <div class="login-info">
                 <h4 class="login-header">Login</h4>
-                <h5 class="username">Username</h5>
-                <h5 class="password">Password</h5>
+                <h5 class="login-username">Username</h5>
+                <h5 class="login-password">Password</h5>
                 <button class="login-page-button">Login</button>
             </div>
         </div>  
@@ -16,8 +16,8 @@
                 <h5 class="enter-email">Email</h5>
                 <h5 class="create-password">Password</h5>
                 <h5 class="confirm-password">Confirm Password</h5>
-                <button class="confirm-button">Continue</button>
-            </div>
+                </div>
+             <button class="confirm-button">Continue</button>
         </div>
     </div>
 </template>
@@ -52,6 +52,8 @@ methods: {}
     background-position: center center;
     background-size: cover;
     padding: 20rem;
+    display: flex;
+    justify-content: center;
 }
 
 .login-info {
@@ -60,6 +62,7 @@ methods: {}
     align-items: center;
     flex-direction: column;
 }
+
 
 .login-page-right {
     background: linear-gradient(180deg, rgba(29,28,94,1) 14%, rgba(51,50,114,1) 41%, rgba(96,94,205,1) 100%);
@@ -81,5 +84,10 @@ methods: {}
     border-color: white;
     margin-top: 6rem;
 }
+
+.login-username, .login-password {
+    margin: 1rem 0rem;
+}
+
 
 </style>
