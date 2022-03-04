@@ -68,7 +68,7 @@ data() {
     height: 20%;
     margin: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background-color: var(--white);
+    background-color: var(--dbPrimary);
 }
 
 .list_image {
@@ -83,6 +83,16 @@ data() {
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem;
+    color: var(--eventTab);
+}
+
+.list_time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dbTertriary);
+    color: var(--eventTab);
+    width: 30%;
 }
 
 .list_src {

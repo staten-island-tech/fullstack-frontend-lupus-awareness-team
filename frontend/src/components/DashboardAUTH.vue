@@ -9,13 +9,12 @@
   <div class="events_container">
     <div class="events_tab">
       <ul>
-        <li>Interested</li>
-        <li>Hosting</li>
-        <li>Past Events</li>
+        <button v-for="tab in tabs" :key="tab" @click="selected = tab;">{{ tab }}</button>
       </ul>
     </div>
 
     <div class="events_wrapper">
+      <component :is="selected"></component>
       <h4 class="events_text"></h4>
     </div>
   </div>
@@ -38,13 +37,23 @@
 import Profile from "@/components/Profile.vue";
 import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 import ToDoList from "@/components/ToDoList.vue";
+import Hosting from "@/components/Hosting.vue";
+import PastEvents from "@/components/PastEvents.vue";
 
 export default {
 name: "DashbardAUTH",
+data() {
+  return {
+    tabs: ["Hosting", "PastEvents"],
+    selected: "Hosting",
+  }
+},
 components: {
   Profile,
   CalendarMonth,
   ToDoList,
+  Hosting,
+  PastEvents,
 }
 }
 </script>

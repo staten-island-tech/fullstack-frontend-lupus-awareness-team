@@ -24,9 +24,6 @@ import Navbar from "@/components/Nav.vue"
 
 export default {
   name: 'App',
- //   created: function () {
- //   this.doSomethingwithToken();
- //   },
   methods: {
     login() {
       this.$auth.loginWithRedirect();
