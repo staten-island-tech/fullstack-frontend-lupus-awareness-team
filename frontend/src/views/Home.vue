@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <h4>This is the Home/Splash Page</h4>
-    <EventLong/>
+    <!-- <EventLong/> -->
     <Test />
   </div>
 </template>
 <script>
-import EventLong from '../components/EventDetails.vue'
+// import EventLong from '../components/EventDetails.vue'
 import Test from "@/components/Testing.vue";
 
 // @ is an alias to /src
@@ -14,7 +14,7 @@ import Test from "@/components/Testing.vue";
 export default {
   name: "Home",
   components: {
-    EventLong,
+    // EventLong,
     Test,
   },
 };
