@@ -3,7 +3,6 @@ import Home from "../views/Home.vue";
 
 import Callback from "@/views/Callback";
 import ErrorPage from "@/views/Error";
-import ExternalAPI from "@/views/ExternalAPI";
 
 import { authenticationGuard } from "@/auth";
 
@@ -23,12 +22,6 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ "../views/About.vue");
     },
-  },
-  {
-    path: "/external-api",
-    name: "external-api",
-    component: ExternalAPI,
-    beforeEnter: authenticationGuard,
   },
   {
     path: "/callback",

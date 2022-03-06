@@ -9,7 +9,7 @@
   <div class="events_container">
     <div class="events_tab">
       <ul>
-        <button v-for="tab in tabs" :key="tab" @click="selected = tab;">{{ tab }}</button>
+        <button v-for="tab in tabs" :key="tab" @click="selected = tab;" class="event_tab_switch">{{ tab }}</button>
       </ul>
     </div>
 
@@ -117,7 +117,8 @@ align-items: center;
   margin-bottom: 2px;
 }
 
-.events_tab li {
+.event_tab_switch {
+  border: none;
   color: var(--eventTab);
   font-size: 2rem;
   z-index: 3;

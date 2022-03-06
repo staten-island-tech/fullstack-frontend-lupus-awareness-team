@@ -5,10 +5,6 @@
       <h4>LOGO</h4>
     </div>
 
-    <div class="api_container">
-      <router-link to="/external-api">External Api</router-link>
-    </div>
-
     <div class="login-container" v-if="!$auth.loading.value">
       <button class="login-button" v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
     </div>
@@ -168,12 +164,6 @@ li {
   height: 4rem;
   width: 100%;
   background-color: var(--topnav);
-}
-
-.api_container {
-  position: absolute;
-  margin-left: 10rem;
-  font-size: 2.5rem;
 }
 
 .login-container {
