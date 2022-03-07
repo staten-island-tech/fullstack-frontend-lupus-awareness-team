@@ -3,10 +3,19 @@
         <div class="login-page-left">
             <img class="background-image">   
             <div class="login-info">
-                <h4 class="login-header">Login</h4>
-                <h5 class="login-username">Username</h5>
-                <h5 class="login-password">Password</h5>
-                <button class="login-page-button">Login</button>
+               <form action="action_page.php" method="post">
+                    <div class="login-content-container">
+                        <label class="login-username"
+                        for="login-username"><b>Username</b></label>
+                        <input class="login-username" type="text" placeholder="Enter Username" name="login-username" required>
+                        <label class="login-password" for="login-password"><b>Password</b></label>
+                        <input class="login-password" type="password" placeholder="Enter Password" name="login-password" required>
+                        <button type="submit">Login</button>
+                        <label>
+                        <input type="checkbox" checked="checked" name="login-remember"> Remember me
+                        </label>
+                    </div>
+                </form>
             </div>
         </div>  
         <div class="login-page-right">
@@ -71,7 +80,7 @@ methods: {}
 
 
 .account-header, .login-header {
-    margin: 4rem 0rem;
+    margin: 1rem 0rem;
 }
 
 .confirm-button, .login-page-button {
@@ -86,8 +95,38 @@ methods: {}
 }
 
 .login-username, .login-password {
-    margin: 1rem 0rem;
+    margin: 4rem 0rem;
 }
+
+/* Bordered form */
+form {
+  border: 1px solid #f1f1f1;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: transparent;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: solid;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Add padding to containers */
+.login-content-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 
 </style>
