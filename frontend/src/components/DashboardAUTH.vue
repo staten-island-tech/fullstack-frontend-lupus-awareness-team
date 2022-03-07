@@ -49,7 +49,7 @@ data() {
   }
 },
 created() {
-  fetch('https://jsonplaceholder.typicode.com/todos/1')
+  fetch('https://my-json-server.typicode.com/staten-island-tech/fullstack-frontend-lupus-awareness-team')
   .then(response => response.json())
   .then(json => console.log(json))
 },
