@@ -69,6 +69,6 @@ export default {
   color: #fff;
   padding: 1.2rem;
   border-radius: 50%;
-  background-color: var(--dark);
+  background-color: var(--today);
 }
 </style>

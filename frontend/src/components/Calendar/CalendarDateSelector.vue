@@ -55,6 +55,7 @@ export default {
   display: flex;
   font-size: 5rem;
   font-weight: 400;
+  color: var(--calendarDayText);
 }
 
 .calendar-date-selector {

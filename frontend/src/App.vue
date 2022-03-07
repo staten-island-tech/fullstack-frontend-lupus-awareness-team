@@ -4,6 +4,7 @@
     <div class="logo-container">
       <h4>LOGO</h4>
     </div>
+
     <div class="login-container" v-if="!$auth.loading.value">
       <button class="login-button" v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
     </div>
@@ -23,6 +24,7 @@ export default {
     login() {
       this.$auth.loginWithRedirect();
     },
+
     // Log the user out
     logout() {
       this.$auth.logout({
@@ -150,6 +152,9 @@ li {
   --calendarDay: var(--white);
   --calendarDayText: var(--grey-800);
   --calendarDayNot: var(--grey-100);
+  --dayofweek: var(--white);
+  --border-top: var(--grey-200);
+  --today: var(--dark);
     
 }
 
@@ -169,11 +174,14 @@ li {
   --profiletext: var(--background);
   --eventTab: var(--grey-100);
 
-  --calendarMonth: var(--black--tertriary);
+  --calendarMonth: var(--black-primary);
   --calendarMonthBorder: black;
-  --calendarDay: var(--black-secondary);
+  --calendarDay: #353535;
   --calendarDayText: var(--background);
-  --calendarDayNot: var(--black-tertriary);
+  --calendarDayNot: var(--black-secondary);
+  --dayofweek: var(--black-secondary);
+  --border-top: var(--black-primary);
+  --today: var(--grey-800);
 }
 
 
