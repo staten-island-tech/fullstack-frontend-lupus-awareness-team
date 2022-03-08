@@ -162,16 +162,16 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--grey-200);
-  border: solid 1px var(--grey-300);
+  background-color: var(--calendarMonth);
+  border: solid 1px var(--calendarMonthBorder);
   width: 100%;
   z-index: 3;
 }
 
 .day-of-week {
-  color: var(--grey-800);
+  background-color: var(--dayofweek);
+  color: var(--calendarDayText);
   font-size: 20px;
-  background-color: #fff;
   padding-bottom: 5px;
   padding-top: 10px;
   z-index: 3;
@@ -194,6 +194,6 @@ export default {
   position: relative;
   grid-column-gap: var(--grid-gap);
   grid-row-gap: var(--grid-gap);
-  border-top: solid 1px var(--grey-200);
+  border-top: solid 1px var(--border-top);
 }
 </style>

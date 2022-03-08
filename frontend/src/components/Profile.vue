@@ -1,11 +1,11 @@
 <template>
   <div class="profile_container">
     <div class="profile_image_container">
-      <img class="profile_image" :src="this.user.picture">
+      <img class="profile_image" src="../assets/placeholder.jpg">
     </div>
     <div class="profile_text_container">
-      <h3 class="profile_name"> {{ this.user.name }} </h3>
-      <h4 class="profile_sub"> {{this.user.email }}</h4>
+      <h3 class="profile_name"> Placeholder Name </h3>
+      <h4 class="profile_sub"> Placeholder Email</h4>
     </div>
   </div>
 </template>
@@ -15,16 +15,13 @@ export default {
 name:"Profile",
 data() {
   return {
-    user: []
+    user: [],
   }
 },
-  mounted: function () {
-    this.user = this.$auth.user;
-    },
 }
 </script>
 
-<style>
+<style scoped>
 .profile_container {
   display: flex;
   flex-direction: column;
@@ -42,6 +39,7 @@ data() {
   width: 100%;
   margin-top: 1.5rem;
   z-index: 3;
+  margin-bottom: 2rem;
 
 }
 

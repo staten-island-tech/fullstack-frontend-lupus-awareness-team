@@ -41,8 +41,8 @@ export default {
   position: relative;
   height: 8rem;
   font-size: 2.5rem;
-  background-color: #fff;
-  color: var(--grey-800);
+  background-color: var(--calendarDay);
+  color: var(--calendarDayText);
   padding: 5px;
 }
 
@@ -57,7 +57,7 @@ export default {
 }
 
 .calendar-day--not-current {
-  background-color: var(--grey-100);
+  background-color: var(--calendarDayNot);
   color: var(--grey-300);
 }
 
@@ -69,6 +69,6 @@ export default {
   color: #fff;
   padding: 1.2rem;
   border-radius: 50%;
-  background-color: var(--dark);
+  background-color: var(--today);
 }
 </style>

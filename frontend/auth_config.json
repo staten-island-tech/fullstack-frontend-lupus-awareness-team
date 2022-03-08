@@ -1,6 +1,0 @@
-{
-  "domain": "https://lupusawareness.us.auth0.com",
-  "client_id": "W27qMzcn1MeFLgZFreqtfjYLppDKeUcK",
-  "redirect_uri": "http://localhost:8081/callback",
-  "audience": ""
-}

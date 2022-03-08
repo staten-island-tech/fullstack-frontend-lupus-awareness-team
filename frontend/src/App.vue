@@ -4,8 +4,9 @@
     <div class="logo-container">
       <h4>LOGO</h4>
     </div>
-    <div class="login-container" v-if="!$auth.loading.value">
-      <button class="login-button" v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
+
+    <div class="login-container">
+      <button class="login-button">Log in</button>
     </div>
     <Navbar />
     </div>
@@ -20,32 +21,10 @@ import Navbar from "@/components/Nav.vue"
 export default {
   name: 'App',
   methods: {
-    login() {
-      this.$auth.loginWithRedirect();
-    },
-    // Log the user out
-    logout() {
-      this.$auth.logout({
-      });
-      this.$router.push({ path: '/' });
-    },
-    // fetchData: async () => {
-    //   try {
-    //     const res = await fetch('http://localhost:3000/')
-    //     const data = await res.json()
-    //     console.log(data)
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
   },
   components: {
     Navbar
   },
-  // created: async function() { 
-  //   await this.fetchData()
-  //   console.log('asdf')
-  // }
 }
 
 
@@ -129,6 +108,7 @@ li {
   --navhover: #7A7ED5;
   --navdark: #404383;
   --navopen: var(--nav);
+  
   --dbSecondary: var(--pink);
   --dbPrimary: white;
   --dbTertriary: var(--pink);
@@ -137,6 +117,14 @@ li {
   --profiletext: black;
   --eventTab: black;
 
+  --calendarMonth: var(--grey-200);
+  --calendarMonthBorder: var(--grey-300);
+  --calendarDay: var(--white);
+  --calendarDayText: var(--grey-800);
+  --calendarDayNot: var(--grey-100);
+  --dayofweek: var(--white);
+  --border-top: var(--grey-200);
+  --today: var(--dark);
     
 }
 
@@ -147,13 +135,23 @@ li {
   --navhover: #585353;
   --navdark: black;
   --navopen: var(--white);
+
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
   --dbTertriary: var(--black-tertiary);
   --dbAccent: var(--black-tertriary);
   --dbLight: var(--black-secondary);
   --profiletext: var(--background);
-  --eventTab: var(--grey-100)
+  --eventTab: var(--grey-100);
+
+  --calendarMonth: var(--black-primary);
+  --calendarMonthBorder: black;
+  --calendarDay: #353535;
+  --calendarDayText: var(--background);
+  --calendarDayNot: var(--black-secondary);
+  --dayofweek: var(--black-secondary);
+  --border-top: var(--black-primary);
+  --today: var(--grey-800);
 }
 
 
