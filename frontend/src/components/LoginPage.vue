@@ -5,15 +5,13 @@
             <div class="login-info">
                <form action="action_page.php" method="post">
                     <div class="login-content-container">
-                        <label class="login-username"
+                        <label class="login-username-label"
                         for="login-username"><b>Username</b></label>
                         <input class="login-username" type="text" placeholder="Enter Username" name="login-username" required>
-                        <label class="login-password" for="login-password"><b>Password</b></label>
+                        <label class="login-password-label" for="login-password"><b>Password</b></label>
                         <input class="login-password" type="password" placeholder="Enter Password" name="login-password" required>
-                        <button type="submit">Login</button>
-                        <label>
-                        <input type="checkbox" checked="checked" name="login-remember"> Remember me
-                        </label>
+                        <button class="submit-button" type="submit">Login</button>
+                        
                     </div>
                 </form>
             </div>
@@ -83,7 +81,7 @@ methods: {}
     margin: 1rem 0rem;
 }
 
-.confirm-button, .login-page-button {
+.confirm-button, .submit-button {
     padding: .4rem 4rem;
     font-size: 15px;
     border-radius: 15px;
@@ -91,11 +89,20 @@ methods: {}
     color: white;
     border-style: solid;
     border-color: white;
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 
 .login-username, .login-password {
-    margin: 4rem 0rem;
+    margin: 5px 0rem;
+    font-size: 15px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: white;
+}
+
+.login-username-label, .login-password-label {
+    margin: 5px 0rem;
+    font-size: 25px;
 }
 
 /* Bordered form */
