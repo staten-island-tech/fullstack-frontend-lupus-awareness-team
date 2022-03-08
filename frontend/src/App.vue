@@ -5,8 +5,8 @@
       <h4>LOGO</h4>
     </div>
 
-    <div class="login-container" v-if="!$auth.loading.value">
-      <button class="login-button" v-if="!$auth.isAuthenticated.value" @click="login">Log in</button>
+    <div class="login-container">
+      <button class="login-button">Log in</button>
     </div>
     <Navbar />
     </div>
@@ -21,32 +21,7 @@ import Navbar from "@/components/Nav.vue"
 export default {
   name: 'App',
   methods: {
-    login() {
-      this.$auth.loginWithRedirect();
-    },
 
-    // Log the user out
-    logout() {
-      this.$auth.logout({
-      });
-      this.$router.push({ path: '/' });
-    },
-    fetchData: async () => {
-      try {
-        // const token = await this.$auth.getTokenSilently();
-        // const res = await fetch('http://localhost:3000/', {
-        //   headers: {
-        //     Authorization: `Bearer ${token}`,
-        //   },
-        //   })
-        const res = await fetch('http://localhost:3000/')
-        const data = await res.json()
-        console.log(data)
-  
-      } catch (error) {
-        console.log(error)
-      }
-    }
   },
   components: {
     Navbar
