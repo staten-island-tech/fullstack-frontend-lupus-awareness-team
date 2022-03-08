@@ -1,15 +1,15 @@
 <template>
-    <div>
-            <div class="list_image">
-                <img :src="event.eventImage" alt="" class="list_src">
-            </div>
-            <div class="list_text">
-                <h4 class=""> {{event.eventName}} </h4>
-                <h5 class=""> {{event.eventDate}} </h5>
-            </div>
-            <div class="list_time">
-                <h4 class=""> {{event.eventTime}}</h4>
-            </div>
+    <div class="flex">
+        <div class="list_image">
+            <img :src="eventInfo[1].eventImage" alt="" class="list_src">
+        </div>
+        <div class="list_text">
+            <h4 class=""> {{eventInfo[1].eventName}} </h4>
+            <h5 class=""> {{eventInfo[1].eventDate}} </h5>
+        </div>
+        <div class="list_time">
+            <h4 class=""> {{eventInfo[1].eventTime}}</h4>
+        </div>
     </div>
 </template>
 
@@ -27,7 +27,11 @@ created() {
 }
 </script>
 
-<style>
+<style scoped> 
+
+.flex  {
+    display: flex;
+}
 
 .list_image {
     width: 30%;

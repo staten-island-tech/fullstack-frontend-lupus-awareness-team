@@ -21,14 +21,14 @@
 
    <div class="calendar_container">
       <div class="calendar_wrapper">
-        <CalendarMonth :eventInfo="eventArr"/>
+        <CalendarMonth/>
       </div>
 
       <div class="list_wrapper">
         <ul class="list_container">
             <li v-for="event in eventArr" :key="event.eventName" class="list_item">
-                      <ToDoList/>
-            </li>s
+                <ToDoList :eventInfo="eventArr"/>
+            </li>
         </ul>
       </div>
     </div>
@@ -85,18 +85,13 @@ methods: {
                 eventTime: '8:00 - 9:00'
             }
         ],
-      "profile": {
-  "userName": "Evan Yang",
-	"email": "evany15@nycstudents.net",
-  }
-
   }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
 const data = await response.json();
-this.eventArr = data;
+this.eventArr = data.eventList;
 console.log(this.eventArr)
       } catch(error) {
           console.log(error)
