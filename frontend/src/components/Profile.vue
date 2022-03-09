@@ -19,7 +19,7 @@ data() {
   }
 },
   mounted: function () {
-    this.user = this.$auth.user;
+    // this.user = this.$auth.user;
     },
 }
 </script>
