@@ -1,17 +1,18 @@
 <template>
   <div class="event_images_container">
-
-        <div class="image_view" v-for="img in [currentIndex]" transition="fade"  :key="img">
+    <div class="view_container">
+      <div class="image_view" v-for="img in [currentIndex]" transition="fade"  :key="img">
             <img class="slide-image" :src="currentImg" alt="">
-        </div>
+      </div>
    
-    <div class="image_buttons">
+      <div class="image_buttons">
         <button @click="prev" class="prev">&#10094;</button>
         <button  @click="next" class="next">&#10095;</button>
+      </div>
     </div>
     <ul class="event_image_bar">
         <li class="event_image_preview" v-for="img in images" :key="img">
-          <img :src="img" alt=""/>
+          <img @click="test(img)" :src="img" alt=""/>
         </li>
       </ul>
   </div>
@@ -27,23 +28,31 @@ export default {
         "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
         "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
       ],
-            currentIndex: 0
+            currentIndex: 0,
+            imgIndex:0
+            
         }
     },
     methods: {
         next: function() {
             this.currentIndex +=1
         },
-         prev: function() {
-      this.currentIndex -= 1;
+        prev: function() {
+            this.currentIndex -= 1;
+        },
+        test: function(img) {
+          this.imgIndex = this.images.indexOf(img),
+          this.currentIndex=this.imgIndex
         }
     },
 
     computed: {
         currentImg: function() {
         return this.images[Math.abs(this.currentIndex) % this.images.length];
+      },
+        
+
     }
-  }
 
 
 }
@@ -73,8 +82,8 @@ img {
 }
 .image_view{
   background-color: darkgray;
-  width: 50%;
-  height: 30vh;
+  width: 100%;
+  height: 40vh;
   border: .25rem solid gray;
   border-radius: 5rem;
   box-sizing: border-box;
@@ -83,14 +92,17 @@ img {
   display: flex;
   align-items: center;
 }
+.view_container {
+  height: 40vh;
+}
 .image_buttons{
-  width: 50%;
+  width: 100%;
   display: flex;
   position: absolute;
   flex-direction: row;
   justify-content: space-between;
   z-index: 10;
-  height: 100%;
+  height: 40vh;
   align-items: center;
   transform: translateY(-100%);
 }
@@ -121,30 +133,28 @@ img {
   background-color: rgba(0,0,0,0.8);
 }
 .event_image_bar {
+  position: relative;
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  height: 10vh;
 }
 
 .event_image_preview img {
-  width: 90%;
+  height: 80%;
   display: flex;
-  justify-content: space-evenly;
-  margin: .55rem;
-  border-radius: 0.5rem;
+  padding: .45rem;
+  border-radius: 1rem;
 }
 .event_image_preview img:hover {
-  border:  .35rem solid var(--dark);
+  border:  .25rem solid var(--dark);
   background-color: white;
-  padding: .25rem;
 }
 .event_image_preview {
-  width: 10vw;
-  height: 10vh;
-  display: flex;
+  height: 100%;
+  display: flex; 
   align-items: center;
-  transition: all 3s;
+  justify-content: center;
 }
 </style>
