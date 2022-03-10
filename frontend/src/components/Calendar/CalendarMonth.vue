@@ -166,6 +166,7 @@ export default {
   border: solid 1px var(--calendarMonthBorder);
   width: 100%;
   z-index: 3;
+
 }
 
 .day-of-week {

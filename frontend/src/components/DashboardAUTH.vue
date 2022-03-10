@@ -166,7 +166,7 @@ align-items: center;
   background-color: var(--dbLight);
   padding: 2rem 0rem 20rem 2rem;
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 0.5px;
 }
 
 .events_text {
@@ -197,7 +197,7 @@ align-items: center;
   list-style: none;
   padding: 1rem 1rem;
   background-color: var(--dbAccent);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 0.5px;
  border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 
@@ -214,10 +214,10 @@ align-items: center;
 }
 
 .list_wrapper {
-  width: 35%;
+  width: 32%;
   background-color: var(--dbLight);
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 0.5px;
 }
 
 

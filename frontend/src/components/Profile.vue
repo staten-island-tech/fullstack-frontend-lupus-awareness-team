@@ -4,8 +4,8 @@
       <img class="profile_image" src="../assets/placeholder.jpg">
     </div>
     <div class="profile_text_container">
-      <h3 class="profile_name"> Placeholder Name </h3>
-      <h4 class="profile_sub"> Placeholder Email</h4>
+      <h3 class="profile_name"> {{ this.userArr[1].userName }} </h3>
+      <h4 class="profile_sub"> {{ this.userArr[1].userEmail }} </h4>
     </div>
   </div>
 </template>
@@ -15,8 +15,45 @@ export default {
 name:"Profile",
 data() {
   return {
-    user: [],
+    userArr: [],
   }
+},
+methods: {
+    fetchUser: async function () {
+        try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      users: [
+            {
+                userName: "John Doe",
+                userEmail: "johndoe17@gmail.com"
+            },
+            {
+                userName: "Jane Doe",
+                userEmail: "janedoe45@yahoo.com"
+            },
+            {
+                userName: "John Wick",
+                userEmail: "johnwick1337@gmail.com"
+            },
+
+        ],
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+const data = await response.json();
+this.userArr = data.users
+console.log(this.userArr)
+      } catch(error) {
+          console.log(error)
+      }
+    },
+},
+created() {
+  this.fetchUser();
 },
 }
 </script>
