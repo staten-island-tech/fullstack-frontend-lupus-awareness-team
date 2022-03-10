@@ -18,13 +18,22 @@
         </div>  
         <div class="login-page-right">
             <div class="create-account">
-                <h4 class="account-header">Create Your Account</h4>
-                <h5 class="create-username">Username</h5>
-                <h5 class="enter-email">Email</h5>
-                <h5 class="create-password">Password</h5>
-                <h5 class="confirm-password">Confirm Password</h5>
+                <form action="action_page.php" method="post">
+                    <div class="create-account-container">
+                        <label class="create-username-label"
+                        for="create-username"><b>Username</b></label>
+                        <input class="create-username" type="text" placeholder="Enter Username" name="create-username" required>
+                        <label class="create-password-label" for="create-password"><b>Password</b></label>
+                        <input class="create-password" type="password" placeholder="Enter Password" name="create-password" required> 
+
+                        <label class="confirm-password-label" for="confirm-password"><b>Confirm Password</b></label>
+                        <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" required>
+
+                        <button class="confirm-button" type="submit">Login</button>
+                        
+                    </div>
+                </form>
                 </div>
-             <button class="confirm-button">Continue</button>
         </div>
     </div>
 </template>
@@ -92,7 +101,7 @@ methods: {}
     margin-top: 3rem;
 }
 
-.login-username, .login-password {
+.login-username, .login-password, .create-username, .create-password, .confirm-password {
     margin: 5px 0rem;
     font-size: 15px;
     border-style: solid;
@@ -100,7 +109,7 @@ methods: {}
     border-color: white;
 }
 
-.login-username-label, .login-password-label {
+.login-username-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label {
     margin: 5px 0rem;
     font-size: 25px;
 }
@@ -127,7 +136,7 @@ button:hover {
 }
 
 /* Add padding to containers */
-.login-content-container {
+.login-content-container, .create-account-container{
   padding: 16px;
   display: flex;
   flex-direction: column;
