@@ -4,8 +4,8 @@
       <img class="profile_image" src="../assets/placeholder.jpg">
     </div>
     <div class="profile_text_container">
-      <h3 class="profile_name"> {{ this.userArr[1].userName }} </h3>
-      <h4 class="profile_sub"> {{ this.userArr[1].userEmail }} </h4>
+      <h3 class="profile_name"> {{ userArr[0].userName }} </h3>
+      <h4 class="profile_sub"> {{ userArr[0].userEmail }} </h4>
     </div>
   </div>
 </template>
