@@ -23,13 +23,17 @@
                         <label class="create-username-label"
                         for="create-username"><b>Username</b></label>
                         <input class="create-username" type="text" placeholder="Enter Username" name="create-username" required>
+
+                        <label class="email-label" for="email"><b>Email</b></label>
+                        <input class="email" type="email" placeholder="Enter Email" name="email" required>
+
                         <label class="create-password-label" for="create-password"><b>Password</b></label>
                         <input class="create-password" type="password" placeholder="Enter Password" name="create-password" required> 
 
                         <label class="confirm-password-label" for="confirm-password"><b>Confirm Password</b></label>
                         <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" required>
 
-                        <button class="confirm-button" type="submit">Login</button>
+                        <button class="confirm-button" type="submit">Confirm</button>
                         
                     </div>
                 </form>
@@ -53,8 +57,6 @@ methods: {}
     flex-direction: row;
     justify-content: center;
     color: white;
-    height: 60rem;
-    width: 90rem;
     margin: auto;
 }
 
@@ -90,6 +92,12 @@ methods: {}
     margin: 1rem 0rem;
 }
 
+.create-account {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .confirm-button, .submit-button {
     padding: .4rem 4rem;
     font-size: 15px;
@@ -101,7 +109,7 @@ methods: {}
     margin-top: 3rem;
 }
 
-.login-username, .login-password, .create-username, .create-password, .confirm-password {
+.login-username, .login-password, .create-username, .create-password, .confirm-password, .email {
     margin: 5px 0rem;
     font-size: 15px;
     border-style: solid;
@@ -109,7 +117,7 @@ methods: {}
     border-color: white;
 }
 
-.login-username-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label {
+.login-username-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label, .email-label {
     margin: 5px 0rem;
     font-size: 25px;
 }
@@ -141,8 +149,5 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
-
-
-
 
 </style>
