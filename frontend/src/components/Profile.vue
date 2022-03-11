@@ -4,8 +4,8 @@
       <img class="profile_image" src="../assets/placeholder.jpg">
     </div>
     <div class="profile_text_container">
-      <h3 class="profile_name"> {{ userArr[0].userName }} </h3>
-      <h4 class="profile_sub"> {{ userArr[0].userEmail }} </h4>
+      <h3 class="profile_name"> {{ name }}  </h3>
+      <h4 class="profile_sub"> {{ email }} </h4>
     </div>
   </div>
 </template>
@@ -16,6 +16,8 @@ name:"Profile",
 data() {
   return {
     userArr: [],
+    name: "John Doe",
+    email: "johndoe17@gmail.com"
   }
 },
 methods: {
@@ -45,8 +47,7 @@ methods: {
   },
 })
 const data = await response.json();
-this.userArr = data.users
-console.log(this.userArr)
+console.log(data)
       } catch(error) {
           console.log(error)
       }

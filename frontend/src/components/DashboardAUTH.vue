@@ -111,7 +111,16 @@ components: {
 }
 </script>
 
-<style scoped>
+<style>
+.hosting_list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
 .list_container {
     width: 100%;
     height: 100%;
@@ -159,7 +168,7 @@ align-items: center;
 
 
 .events_wrapper {
-  width: 70%;
+  width: 60%;
   display: inline-flex;
   flex-direction: column;
   z-index: 2;
@@ -183,7 +192,7 @@ align-items: center;
 .events_tab ul{
   display: flex;
   z-index: 3;
-  width: 70%;
+  width: 60%;
   padding-left: 2rem;
   margin-bottom: 2px;
 }
