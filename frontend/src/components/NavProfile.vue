@@ -5,7 +5,7 @@
         </div>
         <div class="nav_profile_name_container">
             <h4 class="nav_profile_name"> Full Name </h4>
-            <svg class="logout-button" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
+            <h5 class="nav_profile_text">Student</h5>
         </div>
     </div>
 </template>
@@ -29,11 +29,7 @@ methods: {
 
 <style scoped>
 
-.logout-button {
-    margin-right: 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-}
+
 .nav_profile_container {
     margin-top: auto;
     margin-bottom: 3rem;
@@ -62,14 +58,19 @@ methods: {
     width: 60%;
     height: 80%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .nav_profile_name {
-    font-size: 2rem;
     color:var(--navtext);
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.nav_profile_text {
+    color: var(--navtext);
+    font-weight: 400;
+    font-size: 1.8rem
 }
 
 

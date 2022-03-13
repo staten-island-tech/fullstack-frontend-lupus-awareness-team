@@ -2,7 +2,7 @@
       <ul class="hosting_list">
         <li class="hosting_list_item" v-for="host in hostArr" :key="host.eventName">
           <div class="hosting_text">
-            <h4 class="hosting_name"> {{ host.eventName }} </h4>
+            <h4 class="hosting_name">  </h4>
           </div>
         </li>
       </ul>

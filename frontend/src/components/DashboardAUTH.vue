@@ -112,6 +112,9 @@ components: {
 </script>
 
 <style>
+
+
+
 .hosting_list {
   width: 100%;
   height: 100%;
@@ -135,7 +138,7 @@ components: {
     height: 20%;
     margin: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background-color: var(--dbPrimary);
+    background-color: var(--dbTertiary);
 }
 
 
@@ -148,7 +151,7 @@ components: {
 
 .profile_container {
   width: 100%;
-  background-color: var(--dbTertriary);
+  background-color: var(--dbTertiary);
 }
 
 
@@ -223,8 +226,8 @@ align-items: center;
 }
 
 .list_wrapper {
-  width: 32%;
-  background-color: var(--dbLight);
+  width: 35%;
+  background-color: var(--dbSecondary);
   border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 0.5px;
 }

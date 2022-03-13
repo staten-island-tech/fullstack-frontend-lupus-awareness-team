@@ -62,19 +62,18 @@ created() {
 <style scoped>
 .profile_container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  padding-top: 5rem;
+  margin: 5rem 0rem;
   z-index: 2;
 }
 
 .profile_text_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 20%;
   margin-top: 1.5rem;
   z-index: 3;
   margin-bottom: 2rem;
@@ -85,7 +84,7 @@ created() {
   border-radius: 50%;
   border: solid 0.5rem #C4C4C4;
   z-index: 3;
-  width: 10%;
+  width: 50%;
 }
 
 .profile_image_container {
@@ -93,7 +92,7 @@ created() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 20%;
 }
 
 

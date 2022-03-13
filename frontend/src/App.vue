@@ -30,10 +30,10 @@ export default {
 </script>
 
 <style >
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 #app {
-font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;;
 }
 
 *, html, body {
@@ -47,12 +47,13 @@ font-family: 'Inter', sans-serif;
 /* Base Colors */
  --light: #cdcee4;
  --white: #ffffff;
- --dark: #4d51a1;
- --accent: #9397D8;
+ --dark: #4f45b8;
+ --purple: #673AB7;
+ --accent: #BAA6EF;
  --background: #E9EBF1;
  --pink : #E2D9EC;
  --darkgray: #211D1D;
- --black: #1C1515;
+ --black: #2A2626;
 
  --black-primary: #1E1E1E;
  --black-secondary: #2D2D2D;
@@ -101,26 +102,27 @@ li {
 }
 
 .main {
-  --topnav: var(--white);
+  --topnav: #512DA8;
   --nav: var(--dark);
   --navtext: var(--white);
   --navhover: #7A7ED5;
-  --navdark: #404383;
-  --navopen: var(--nav);
+  --navdark: #3E3998;
+  --navopen: var(--white);
+  --login: #7C4DFF;
   
   --dbSecondary: var(--pink);
-  --dbPrimary: white;
-  --dbTertriary: var(--pink);
+  --dbPrimary: #f6f4f2;
+  --dbTertiary: var(--white);
   --dbAccent: var(--accent);
-  --dbLight: #CDCEE4;
+  --dbLight: var(--white);
   --profiletext: black;
   --eventTab: black;
 
-  --calendarMonth: var(--grey-200);
+  --calendarMonth: var(--pink);
   --calendarMonthBorder: var(--grey-300);
   --calendarDay: var(--white);
   --calendarDayText: var(--grey-800);
-  --calendarDayNot: var(--grey-100);
+  --calendarDayNot: #EBE9F2;
   --dayofweek: var(--white);
   --border-top: var(--grey-200);
   --today: var(--dark);
@@ -132,14 +134,15 @@ li {
   --nav: var(--black);
   --navtext: var(--background);
   --navhover: #585353;
-  --navdark: black;
+  --navdark: var(--black-tertiary);
   --navopen: var(--white);
+  --login: var(--black-tertiary);
 
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
-  --dbTertriary: var(--black-tertiary);
-  --dbAccent: var(--black-tertriary);
-  --dbLight: var(--black-secondary);
+  --dbTertiary: var(--black-tertiary);
+  --dbAccent: var(--black-primary);
+  --dbLight: var(--black-tertiary);
   --profiletext: var(--background);
   --eventTab: var(--grey-100);
 
@@ -172,12 +175,13 @@ li {
 
 .login-button {
   font-size: 1.8rem;
-  background-color: var(--dark);
+  background-color: var(--login);
   border-radius: 6px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--navopen);
+  font-weight: 600;
   cursor: pointer;
   height: 80%;
   line-height: 1.15;

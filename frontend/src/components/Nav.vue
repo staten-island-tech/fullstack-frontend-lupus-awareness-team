@@ -46,6 +46,11 @@
                 <a href="#">Settings</a>
             </li>
 
+            <li id="logout">
+                <a href="#" id="logout_button">Log out</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #E25A55;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
+            </li>
+
 
             <NavProfile />
 
@@ -117,6 +122,22 @@ methods: {
     background-color: var(--white);
 }
 
+#logout {
+    background-color: var(--navdark);
+    width: 100%;
+    display: flex; 
+    padding: 1rem 0rem;
+    border-radius: 0;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#logout_button {
+    color: #E25A55;
+    font-weight: 600;
+    margin-right: 1rem;
+}
 
 .dropdown {
   background-color: var(--navdark);
@@ -134,6 +155,7 @@ methods: {
     height: 100%;
 
 }
+
 
 .dropdown-text {
     color: var(--navtext);
@@ -181,6 +203,7 @@ methods: {
     margin: 1rem;
     width: 80%;
     border-radius: 1rem;
+
 }
 
 .side_nav a {
@@ -194,6 +217,7 @@ methods: {
 
 .side_nav li:hover {
 background-color: var(--navhover);
+transition: 0.3s;
 }
 
 .nav-button {
@@ -208,7 +232,7 @@ background-color: var(--navhover);
     top: 0.5rem;
     right: 2rem;
     z-index: 11;
-    position: fixed;
+
 }
 
 .fa-bars {
