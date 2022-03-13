@@ -112,7 +112,7 @@ li {
   
   --dbSecondary: var(--pink);
   --dbPrimary: #f6f4f2;
-  --dbTertiary: var(--white);
+  --dbTertiary: #fff7f7;
   --dbAccent: var(--accent);
   --dbLight: var(--white);
   --profiletext: black;
@@ -163,6 +163,7 @@ li {
   height: 4rem;
   width: 100%;
   background-color: var(--topnav);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .login-container {
@@ -181,7 +182,7 @@ li {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
   color: var(--navopen);
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   height: 80%;
   line-height: 1.15;

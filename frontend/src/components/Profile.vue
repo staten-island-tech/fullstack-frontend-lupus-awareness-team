@@ -65,7 +65,7 @@ created() {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 5rem 0rem;
+  margin: 3rem 0rem;
   z-index: 2;
 }
 
@@ -82,9 +82,8 @@ created() {
 
 .profile_image {
   border-radius: 50%;
-  border: solid 0.5rem #C4C4C4;
   z-index: 3;
-  width: 50%;
+  width: 40%;
 }
 
 .profile_image_container {

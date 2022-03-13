@@ -1,14 +1,17 @@
 <template>
     <div>
-        <div class="nav-button" v-if="nav">
+        <div class="nav_button" v-if="nav">
             <i class="fas fa-bars" @click="toggle"></i>
         </div> 
 
-        <div class="close-button" v-else>
+        <div class="close_button" v-else>
             <i class="far fa-times-circle" @click="close"></i>
         </div>
 
         <ul ref="nav" class="side_nav" :class="{ width: expand }" >
+            <div class="logo_container">
+                <h3 id="logo">LOGO</h3>
+            </div>
             <li>
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path></svg>
                 <router-link to="/">Home</router-link>
@@ -122,6 +125,19 @@ methods: {
     background-color: var(--white);
 }
 
+#logo {
+    color: var(--navtext);
+    font-size: 3.5rem;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
 #logout {
     background-color: var(--navdark);
     width: 100%;
@@ -156,7 +172,6 @@ methods: {
 
 }
 
-
 .dropdown-text {
     color: var(--navtext);
     font-weight: 400;
@@ -186,7 +201,7 @@ methods: {
 }
 
 .width {
-    width: 18%;
+    width: 20%;
 }
 
 
@@ -220,14 +235,14 @@ background-color: var(--navhover);
 transition: 0.3s;
 }
 
-.nav-button {
+.nav_button {
     position: absolute;
     top: 0.5rem;
     right: 2rem;
     z-index: 11;
 }
 
-.close-button {
+.close_button {
     position: absolute;
     top: 0.5rem;
     right: 2rem;

@@ -6,6 +6,8 @@
         </div>
       </div>
 
+  <div class="divider"></div>
+
   <div class="events_container">
     <div class="events_tab">
       <ul>
@@ -131,6 +133,12 @@ components: {
     flex-direction: column;
 }
 
+.divider {
+  border: solid 0.01rem 
+#a7a6a6;
+  width: 90%;
+}
+
 .list_item {
     display: flex;
     font-size: 3rem;
@@ -138,7 +146,7 @@ components: {
     height: 20%;
     margin: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background-color: var(--dbTertiary);
+    background-color: var(--dbLight);
 }
 
 
@@ -146,7 +154,7 @@ components: {
   display: flex;
   flex-direction: column;
   align-items: center;
-    background-color: var(--dbPrimary);
+    background-color: var(--dbLight);
 }
 
 .profile_container {
@@ -175,7 +183,7 @@ align-items: center;
   display: inline-flex;
   flex-direction: column;
   z-index: 2;
-  background-color: var(--dbLight);
+  background-color: var(--dbSecondary);
   padding: 2rem 0rem 20rem 2rem;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 0.5px;
