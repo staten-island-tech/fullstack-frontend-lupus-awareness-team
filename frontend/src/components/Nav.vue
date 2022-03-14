@@ -201,7 +201,7 @@ methods: {
 }
 
 .width {
-    width: 20%;
+    width: 18%;
 }
 
 

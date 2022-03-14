@@ -134,7 +134,7 @@ li {
   --nav: var(--black);
   --navtext: var(--background);
   --navhover: #585353;
-  --navdark: var(--black-tertiary);
+  --navdark: var(--darkgray);
   --navopen: var(--white);
   --login: var(--black-tertiary);
 
