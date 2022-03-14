@@ -20,9 +20,9 @@
         </li>
       </ul>
       <div class="event_details">
-        <div class="event_time">2:00 PM - 4:00 PM</div>
-        <div class="event_location">Dog Park, Full Address</div>
-        <div class="event_date">Saturday, April 2</div>
+        <h3 class="event_time">2:00 PM - 4:00 PM</h3>
+        <h3 class="event_location">Dog Park, Full Address</h3>
+        <h3 class="event_date">Saturday, April 2</h3>
       </div>
     </div>
     <div class="column">

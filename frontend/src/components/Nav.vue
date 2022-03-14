@@ -1,5 +1,5 @@
 <template>
-    <div ref="main" id="main">
+    <nav ref="main" id="main">
         <div class="nav-button" v-if="nav">
             <i class="fas fa-bars" @click="toggle"></i>
         </div> 
@@ -33,7 +33,7 @@
             <NavProfile />
 
         </ul>
-    </div>
+    </nav>
 </template>
 
 <script>

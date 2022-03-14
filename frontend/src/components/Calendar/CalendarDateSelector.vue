@@ -1,7 +1,7 @@
 <template>
   <div class="calendar-date-selector">
-    <span @click="selectPrevious">﹤</span>
-    <span @click="selectNext">﹥</span>
+    <button @click="selectPrevious">﹤</button>
+    <button @click="selectNext">﹥</button>
   </div>
 </template>
 

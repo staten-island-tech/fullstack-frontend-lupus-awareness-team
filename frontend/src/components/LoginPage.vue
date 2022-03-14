@@ -23,16 +23,12 @@
                         <label class="create-username-label"
                         for="create-username"><b>Username</b></label>
                         <input class="create-username" type="text" placeholder="Enter Username" name="create-username" required>
-
                         <label class="email-label" for="email"><b>Email</b></label>
                         <input class="email" type="email" placeholder="Enter Email" name="email" required>
-
                         <label class="create-password-label" for="create-password"><b>Password</b></label>
                         <input class="create-password" type="password" placeholder="Enter Password" name="create-password" required> 
-
                         <label class="confirm-password-label" for="confirm-password"><b>Confirm Password</b></label>
                         <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" required>
-
                         <button class="confirm-button" type="submit">Confirm</button>
                         
                     </div>
@@ -113,8 +109,9 @@ methods: {}
     margin: 5px 0rem;
     font-size: 15px;
     border-style: solid;
-    border-radius: 4px;
+    border-radius: 7px;
     border-color: white;
+    padding: 3px;
 }
 
 .login-username-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label, .email-label {
@@ -122,10 +119,6 @@ methods: {}
     font-size: 25px;
 }
 
-/* Bordered form */
-form {
-  border: 1px solid #f1f1f1;
-}
 
 /* Set a style for all buttons */
 button {
