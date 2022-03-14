@@ -1,32 +1,15 @@
 <template>
   <div class="event_details_container">
     <div class="column">
-      <h3>Volunteer</h3>
-      <div class="event_image">
-        <img src="../assets/dogPark.jpg" alt="" />
-        
-      </div>
-      <ul class="event_image_bar">
-        <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="" />
-        </li>
-        <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="" />
-        </li>
-        <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="" />
-        </li>
-        <li class="event_image_preview">
-          <img src="../assets/dogPark.jpg" alt="" />
-        </li>
-      </ul>
+      <h3 class="event_name">Volunteer</h3>
+      <EventImageView/>
       <div class="event_details">
         <div class="event_time">2:00 PM - 4:00 PM</div>
         <div class="event_location">Dog Park, Full Address</div>
         <div class="event_date">Saturday, April 2</div>
       </div>
       <div class="event_desc">
-        <h5>Event Description:</h5>
+        <h4>Event Description:</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
           assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
@@ -44,16 +27,16 @@
       </div>
       <div class="organization_info">
         <div class="organization_name organization_detail">
-          <h5>Organization:</h5>
+          <h4>Organization:</h4>
           <p>abc animals</p>
         </div>
         <div class="organization_contact organization_detail">
-          <h5>Contact Information</h5>
+          <h4>Contact Information</h4>
           <p>example@email.com</p>
           <p>111-111-1111</p>
         </div>
         <div class="organization_address organization_detail">
-          <h5>Organization Address</h5>
+          <h4>Organization Address</h4>
           <p>99 place, new york, ny</p>
         </div>
       </div>
@@ -71,22 +54,29 @@
 </template>
 
 <script>
+import EventImageView from '../components/EventImageView.vue'
 export default {
   name: "EventDetails",
+  components: {
+    EventImageView,
+  }
 };
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather+Sans:wght@700&display=swap');
 body {
   background-color: var(--background);
   box-sizing: border-box;
 }
-
+.event_name {
+  margin: 3rem;
+}
 .event_details_container {
   font-family: "Merriweather Sans", sans-serif;
   width: 90vw;
-  height: 90vh;
+  height: 90%;
   padding: 5rem;
   margin: 5rem auto;
   display: flex;
@@ -98,10 +88,7 @@ body {
   flex-direction: column;
   width: 45%;
   background-color: var(--primary);
-  padding: 2rem;
-}
-.event_image {
-  font-size: 3rem;
+  padding: 3rem;
 }
 .event_image img {
   margin: 2rem auto;
@@ -125,6 +112,7 @@ body {
   border-radius: 0.5rem;
 }
 .event_details {
+  font-family: 'Inter', sans-serif;
   padding: 2rem;
   height: 20%;
   width: 90%;
@@ -194,5 +182,8 @@ body {
 }
 .interested_btn:hover {
   background-color: lightgray;
+}
+.event_time , .event_date {
+  font-style: italic;
 }
 </style>
