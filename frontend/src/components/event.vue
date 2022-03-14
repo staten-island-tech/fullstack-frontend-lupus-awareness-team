@@ -1,31 +1,37 @@
 <template>
 <div class="event-container">
-    <div class="event-image-container">
-    <img class="event-image" src="../assets/event-placeholder.jpg">
-    </div>
-    <div class="words">
+<div class="image-container">
+    <img class="event-image" src="../assets/event-placeholder.jpg"> 
+</div>    
+<div class="event-info">
     <div class="user-info">
-    <div class="circle"></div>
-        <div class="user-profile">
-        <h3 class="username">User1234</h3>
-        <h4 class="user-type">User Type</h4>
+        <div class="user">
+            <img class="user-pfp" src="../assets/placeholder.jpg">
+        <div class="user-display">
+            <h5 class="username">User1234</h5>
+            <h6 class="user-type">User Type</h6>
+        </div>   
         </div>
+       
     </div>
-    <div class="event-info">
-        <h3 class="event-title">Insert Event Name</h3>
-        <h4 class="event-time">Insert Event Time</h4>
-        <h4 class="event-location">Insert Event Location</h4>
-        <h4 class="event-date">Insert Event Date</h4>
-        <h4 class="service-hour-info">#Service Hours</h4>
-        <h5 class="event-description">Insert Event Description</h5>
+    <div class="event-desc">
+    <div class="top-section">
+        <h5 class="event-title">Insert Event Name</h5>
+        <h6 class="event-description">Insert Event Description</h6>
+    </div>
+        <h5 class="event-time">Insert Event Time</h5>
+        <h5 class="event-location">Insert Event Location</h5>
+        <h5 class="event-date">Insert Event Date</h5>
+        <h6 class="service-hour-info">#Service Hours</h6>
     </div>
     <div class="event-buttons">
         <btn class="tag">Tag</btn>
         <btn class="interest">I'm Interested</btn>
         <btn class="details">Details</btn>
-    </div>
-    </div>
+    </div> 
 </div>
+</div>
+    
 </template>
 
 <script>
@@ -42,84 +48,66 @@ body {
     background-color: #E9EBF1;
 }
 
-.user-info {
-    display: flex;
-    flex-direction: row;
-}
-
-.user-profile {
-    display: flex;
-    flex-direction: column;
-}
-
-.circle {
-  height: 35px;
-  width: 35px;
-  background-color: #555;
-  border-radius: 50%;
-}
-
-.username {
-    font-size: 1.5rem;
-    margin: .75rem;
-}
-
-.user-type {
-    margin: .10rem .75rem .75rem; 
-    font-size: 1.2rem;
-}
-
 .event-container {
+    background-color: white;
+    width: 80rem;
     display: flex;
-    flex-direction: row;
-    padding: 6rem;
+    align-items: center;
+    margin: 0 auto;
+    height: 23vh;
+    overflow: hidden; 
+    border-radius: 15px; 
 }
 
-.event-buttons {
-    display: flex;
-    flex-direction: row;
+.event-info {
+    padding-left: 3rem;
 }
 
-.tag, .interest, .details {
-    font-size: .75rem;
-    background-color: whitesmoke;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    margin: 0.5rem 3rem;
+.image-container {
+    width: 40%;  
 }
-    
-
 
 .event-image {
-    max-width: 40rem;
-    height: 25rem; 
-    border-radius: 12px;
-    margin: 2rem;
+    width: 100%;
+    border-radius: 4% 0 0 4% ;  
 }
 
-.words {
+.user-info {
+    margin-bottom: 1rem; 
+}
+.user-pfp {
+    border-radius: 50%;
+    width: 10%;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-display {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-    margin-left: 4rem;
-    background-color: white;
-   
+    margin-left: 1rem;
 }
 
-.event-title {
-    font-size: 2.5rem;
+.top-section {
+    margin-bottom: 1rem;
 }
 
-.event-time, .event-location, .event-date, .service-hour-info {
-    font-size: 1.5rem;
-    padding: .5rem 0rem;
+.event-buttons{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+ 
 }
 
-.event-description {
-    font-size: 1rem;
-    padding: .5rem 0rem;
+.tag ,.interest, .details {
+    background-color: rgb(172, 172, 172);
+    padding: 4px;
+    border-radius: 12px;
 }
-
-
 
 </style>

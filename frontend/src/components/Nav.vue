@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="nav_button" v-if="nav">
+    <nav ref="main" id="main">
+        <div class="nav-button" v-if="nav">
             <i class="fas fa-bars" @click="toggle"></i>
         </div> 
 
@@ -58,7 +58,7 @@
             <NavProfile />
 
         </ul>
-    </div>
+    </nav>
 </template>
 
 <script>
