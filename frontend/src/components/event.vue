@@ -42,7 +42,7 @@ methods: {
 }
 </script>
 
-<style >
+<style scoped>
 
 body {
     background-color: #E9EBF1;

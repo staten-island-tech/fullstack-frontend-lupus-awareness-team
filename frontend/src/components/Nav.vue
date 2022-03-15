@@ -1,6 +1,6 @@
 <template>
     <nav ref="main" id="main">
-        <div class="nav-button" v-if="nav">
+        <div class="nav_button" v-if="nav">
             <i class="fas fa-bars" @click="toggle"></i>
         </div> 
 
@@ -39,8 +39,8 @@
                     </div>
 
                     <div class="dropdown-item">
-                        <div class="circle" id="white"></div>
-                        <h4 class="dropdown-text" @click="light">White</h4>
+                        <div class="circle" id="shrek"></div>
+                        <h4 class="dropdown-text" @click="shrek">Shrek</h4>
                     </div>
                 </span>
 
@@ -111,6 +111,7 @@ methods: {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+    border: solid 0.2rem white;
 }
 
 #purple {
@@ -121,8 +122,8 @@ methods: {
     background-color: #1f1f1f;
 }
 
-#white {
-    background-color: var(--white);
+#shrek {
+    background-color: #3A9F49;
 }
 
 #logo {

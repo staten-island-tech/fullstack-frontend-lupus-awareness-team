@@ -46,7 +46,7 @@ methods: {}
 
 </script>
 
-<style>
+<style scoped>
 
 .login-page {
     display: flex;
