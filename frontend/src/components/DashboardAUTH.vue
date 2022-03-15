@@ -7,7 +7,6 @@
       </div>
 
   <div class="divider"></div>
-
   <div class="events_container">
     <div class="events_tab">
       <ul>

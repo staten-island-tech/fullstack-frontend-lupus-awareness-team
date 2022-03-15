@@ -1,14 +1,11 @@
 <template>
   <div class="home">
-    <EventDetails />
     <Event />
-    <Login />
-    <!-- <Test /> -->
   </div>
 </template>
 <script>
-import EventDetails from "../components/EventDetails.vue";
-import Login from '@/components/LoginPage.vue'
+//import EventDetails from "../components/EventDetails.vue";
+//import Login from '@/components/LoginPage.vue'
 import Event from '@/components/Event.vue'
 
 // import Test from "@/components/Testing.vue";
@@ -16,9 +13,9 @@ import Event from '@/components/Event.vue'
 export default {
   name: "Home",
   components: {
-    EventDetails,
+    //EventDetails,
     Event,
-    Login,
+    //Login,
     // Test,
   },
 };
@@ -28,5 +25,8 @@ export default {
 <style>
 .home {
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
