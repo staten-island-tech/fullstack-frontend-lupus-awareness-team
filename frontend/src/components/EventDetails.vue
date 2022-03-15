@@ -4,9 +4,9 @@
       <h3 class="event_name">Volunteer</h3>
       <EventImageView/>
       <div class="event_details">
-        <h3 class="event_time">2:00 PM - 4:00 PM</h3>
-        <h3 class="event_location">Dog Park, Full Address</h3>
-        <h3 class="event_date">Saturday, April 2</h3>
+        <h4 class="event_time">2:00 PM - 4:00 PM</h4>
+        <h4 class="event_location">Dog Park, Full Address</h4>
+        <h4 class="event_date">Saturday, April 2</h4>
       </div>
       <div class="event_desc">
         <h4>Event Description:</h4>
@@ -75,10 +75,9 @@ body {
 }
 .event_details_container {
   font-family: "Merriweather Sans", sans-serif;
-  width: 90vw;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   padding: 5rem;
-  margin: 5rem auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -87,7 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 45%;
-  background-color: var(--primary);
+  background-color: var(--pink);
   padding: 3rem;
 }
 .event_image img {
