@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <Event />
+    <div class="event-wrapper">
+        <Event />
+        <Event />
+        <Event />
+    </div>
   </div>
 </template>
 <script>
@@ -25,6 +29,12 @@ export default {
 <style>
 .home {
   margin-top: 1rem;
+  background-color: var(--background);
+}
+
+.event-wrapper {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

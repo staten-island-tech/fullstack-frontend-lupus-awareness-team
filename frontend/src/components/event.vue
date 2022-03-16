@@ -1,6 +1,5 @@
 <template>
 <div class="event-container">
-
     <div class="top-container">
         <div class="user">
             <div class="user-image">
@@ -20,19 +19,21 @@
     <div class="image-container">
         <img class="event-image" src="../assets/event-placeholder.jpg"> 
     </div>    
-    
-    <div class="event-info">
-        <div class="event-desc">
-        <div class="top-section">
-            <h5 class="event-title">Insert Event Name</h5>
-            <h6 class="event-description">Insert Event Description</h6>
+
+    <div class="info-container">
+        <div class="info-column">
+            <h3>Park Cleanup Volunteering</h3>
         </div>
-            <h5 class="event-time">Insert Event Time</h5>
-            <h5 class="event-location">Insert Event Location</h5>
-            <h5 class="event-date">Insert Event Date</h5>
-            <h6 class="service-hour-info">#Service Hours</h6>
+
+        <div class="info-column">
+            <div class="info-text">
+                <h4 class="info-time"> 2:00 PM - 4:00 PM</h4>
+                <h4 class="info-address"> Insert Address Here </h4>
+                <h4 class="info-date"> Saturday, April 2nd </h4>
+            </div>
         </div>
     </div>
+    
 </div>
     
 </template>
@@ -52,13 +53,13 @@ components: {
 
 
 .event-container {
-    margin-top: 5rem;
-    background-color: gray;
-    width: 70%;
+    margin: 5rem 0rem;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60%;
+    width: 70%;
+    border-radius: 2rem;
 }
 
 .top-container {
@@ -94,6 +95,7 @@ components: {
     width: 70%;
     display: flex;
     align-items: center;
+    margin-left: 3rem;
 }
 
 .user-image{
@@ -117,18 +119,35 @@ components: {
 }
 
 .service-container {
-    background-color: white;
+    background-color: var(--background);
     padding: 1rem 1.5rem;
 }
 
-.top-section {
-    margin-bottom: 1rem;
+
+.info-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 4rem 0rem;
 }
 
-.tag ,.interest, .details {
-    background-color: rgb(172, 172, 172);
-    padding: 4px;
-    border-radius: 12px;
+.info-column {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
+.info-time {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.info-address {
+    font-size: 3rem;
+}
+
+.info-date {
+    font-weight: 500;
+}
 </style>
