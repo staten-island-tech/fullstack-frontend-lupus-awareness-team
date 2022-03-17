@@ -21,11 +21,22 @@ import Navbar from "@/components/Nav.vue"
 export default {
   name: 'App',
   methods: {
-
+    // fetchData: async function() {
+    //   try {
+    //     const res = await fetch('http://localhost:3000')
+    //     const data = await res.json()
+    //     console.log(data)
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    // }
   },
   components: {
     Navbar
   },
+  created: function() {
+    // this.fetchData()
+  }
 }
 </script>
 

@@ -3,14 +3,14 @@
         <div class="login-page-left">
             <img class="background-image">   
             <div class="login-info">
-               <form action="action_page.php" method="post">
+               <form method="post">
                     <div class="login-content-container">
                         <label class="login-username-label"
                         for="login-username"><b>Username</b></label>
-                        <input class="login-username" type="text" placeholder="Enter Username" name="login-username" required>
+                        <input class="login-username" type="text" placeholder="Enter Username" name="login-username" v-model="username" required>
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
                         <input class="login-password" type="password" placeholder="Enter Password" name="login-password" required>
-                        <button class="submit-button" type="submit">Login</button>
+                        <button class="submit-button" type="submit" @submit=test()>Login</button>
                         
                     </div>
                 </form>
@@ -40,8 +40,17 @@
 
 <script>
 export default {
+    data() {
+        return {
+            username: null
+        }
+    },
 name:"Login",
-methods: {}
+methods: {
+    test: function() {
+        console.log(this.username)
+    } 
+}
 }
 
 </script>
