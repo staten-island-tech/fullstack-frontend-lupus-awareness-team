@@ -28,8 +28,13 @@ export default {
 
 <style>
 .home {
-  margin-top: 1rem;
+    background-image: url("../assets/dogPark.jpg");
   background-color: var(--background);
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
 .event-wrapper {

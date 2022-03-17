@@ -21,8 +21,9 @@
     </div>    
 
     <div class="info-container">
-        <div class="info-column">
+        <div class="info-column"> 
             <h3>Park Cleanup Volunteering</h3>
+            <button class="int-button"> I'm Interested</button>
         </div>
 
         <div class="info-column">
@@ -150,4 +151,27 @@ components: {
 .info-date {
     font-weight: 500;
 }
+
+.int-button {
+  background-color: var(--purple);
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 0.5rem;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+    font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  margin: 1.5rem 0rem;
+}
+
+
+
+
+
+
 </style>

@@ -1,15 +1,15 @@
 <template >
   <div id="app" class="main" ref="theme">
     <div class="nav" >
-    <div class="logo-container">
-      <h4>LOGO</h4>
-    </div>
+      <div class="logo-container">
+        <h4>LOGO</h4>
+      </div>
 
-    <div class="login-container">
-      <button class="login-button">Log in</button>
-    </div>
-    <Navbar />
-    </div>
+      <div class="login-container">
+        <button class="login-button">Log in</button>
+      </div>
+      <Navbar />
+      </div>
     <router-view/>
 
   </div>
@@ -160,6 +160,7 @@ li {
 .nav {
   font-size: 3rem;
   display: flex;
+  align-items: center;
   height: 4rem;
   width: 100%;
   background-color: var(--topnav);
@@ -184,7 +185,7 @@ li {
   color: var(--navopen);
   font-weight: 500;
   cursor: pointer;
-  height: 80%;
+  height: 70%;
   line-height: 1.15;
   outline: none;
   overflow: hidden;
