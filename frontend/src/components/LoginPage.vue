@@ -3,11 +3,11 @@
         <div class="login-page-left">
             <img class="background-image">   
             <div class="login-info">
-               <form action="action_page.php" method="post">
+               <form method="post">
                     <div class="login-content-container">
-                        <label class="login-username-label"
-                        for="login-username"><b>Username</b></label>
-                        <input class="login-username" type="text" placeholder="Enter Username" name="login-username" required>
+                        <label class="login-email-label"
+                        for="login-email"><b>Email</b></label>
+                        <input class="login-email" type="text" placeholder="Enter Email" name="login-email" required>
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
                         <input class="login-password" type="password" placeholder="Enter Password" name="login-password" required>
                         <button class="submit-button" type="submit">Login</button>
@@ -18,7 +18,7 @@
         </div>  
         <div class="login-page-right">
             <div class="create-account">
-                <form action="action_page.php" method="post">
+                <form method="post">
                     <div class="create-account-container">
                         <label class="create-username-label"
                         for="create-username"><b>Username</b></label>
@@ -60,7 +60,7 @@ methods: {}
     background-image:
     linear-gradient( rgba(103, 27, 150, 0.5), 
     rgba(103, 27, 150, 0.5)), 
-    url(../assets/login-page-background.jpg) ; 
+    url(../assets/background-pic.jpg) ; 
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -105,7 +105,7 @@ methods: {}
     margin-top: 3rem;
 }
 
-.login-username, .login-password, .create-username, .create-password, .confirm-password, .email {
+.login-email, .login-password, .create-username, .create-password, .confirm-password, .email {
     margin: 5px 0rem;
     font-size: 15px;
     border-style: solid;
@@ -114,7 +114,7 @@ methods: {}
     padding: 3px;
 }
 
-.login-username-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label, .email-label {
+.login-email-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label, .email-label {
     margin: 5px 0rem;
     font-size: 25px;
 }
