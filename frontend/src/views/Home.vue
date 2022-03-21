@@ -1,5 +1,8 @@
 <template>
-  <div class="home">
+  <div class="home"> 
+    <div class="text-container">
+      <h2 id="browse">Browse Events</h2>
+    </div> 
     <div class="event-wrapper">
         <Event />
         <Event />
@@ -35,6 +38,13 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  padding-top: 3rem;
+}
+
+.text-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

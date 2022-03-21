@@ -71,7 +71,7 @@ font-family: 'Montserrat', sans-serif;;
 /* main themes */
 
 /* font sizes */
-  --h1: 7.594rem;
+  --h1: 7rem;
   --h2: 5.063rem;
   --h3: 3.375rem;
   --h4: 2.25rem;
