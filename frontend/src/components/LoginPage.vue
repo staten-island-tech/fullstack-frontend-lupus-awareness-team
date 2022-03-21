@@ -5,12 +5,12 @@
             <div class="login-info">
                <form method="post">
                     <div class="login-content-container">
-                        <label class="login-username-label"
-                        for="login-username"><b>Username</b></label>
-                        <input class="login-username" type="text" placeholder="Enter Username" name="login-username" v-model="username" required>
+                        <label class="login-email-label"
+                        for="login-email"><b>Email</b></label>
+                        <input class="login-email" type="text" placeholder="email" name="login-email" v-model="email" required>
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
-                        <input class="login-password" type="password" placeholder="Enter Password" name="login-password" required>
-                        <button class="submit-button" type="submit" @submit=test()>Login</button>
+                        <input class="login-password" type="password" placeholder="password" name="login-password" v-model="password" required>
+                        <button class="submit-button" type="submit" @submit="login(email, password)">Login</button>
                         
                     </div>
                 </form>
@@ -20,9 +20,9 @@
             <div class="create-account">
                 <form action="action_page.php" method="post">
                     <div class="create-account-container">
-                        <label class="create-username-label"
-                        for="create-username"><b>Username</b></label>
-                        <input class="create-username" type="text" placeholder="Enter Username" name="create-username" required>
+                        <label class="create-email-label"
+                        for="create-email"><b>Email</b></label>
+                        <input class="create-email" type="text" placeholder="Enter Username" name="create-username" required>
                         <label class="email-label" for="email"><b>Email</b></label>
                         <input class="email" type="email" placeholder="Enter Email" name="email" required>
                         <label class="create-password-label" for="create-password"><b>Password</b></label>
@@ -42,13 +42,22 @@
 export default {
     data() {
         return {
-            username: null
         }
     },
 name:"Login",
 methods: {
-    test: function() {
-        console.log(this.username)
+    login: async function(email, password) {
+        try {
+            fetch('http://localhost:3000/login', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(email, password)
+        })
+        } catch (error) {
+           throw new error
+        }
     } 
 }
 }
@@ -114,7 +123,7 @@ methods: {
     margin-top: 3rem;
 }
 
-.login-username, .login-password, .create-username, .create-password, .confirm-password, .email {
+.login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
     margin: 5px 0rem;
     font-size: 15px;
     border-style: solid;
@@ -123,7 +132,7 @@ methods: {
     padding: 3px;
 }
 
-.login-username-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label, .email-label {
+.login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
     margin: 5px 0rem;
     font-size: 25px;
 }
