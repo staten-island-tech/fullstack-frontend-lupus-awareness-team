@@ -29,7 +29,7 @@
         <div class="info-column">
             <div class="info-text">
                 <h4 class="info-time"> 2:00 PM - 4:00 PM</h4>
-                <h4 class="info-address"> Insert Address Here </h4>
+                <h4 class="info-address">485 Clawson St, Staten Island, NY 10306</h4>
                 <h4 class="info-date"> Saturday, April 2nd </h4>
             </div>
         </div>
@@ -60,7 +60,7 @@ components: {
     flex-direction: column;
     align-items: center;
     width: 70%;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .top-container {
@@ -77,7 +77,7 @@ components: {
 }
 
 .image-container {
-    width: 60%;  
+    width: 70%;  
 }
 
 .event-image {

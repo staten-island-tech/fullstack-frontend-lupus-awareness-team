@@ -37,6 +37,7 @@ export default {
   height: 100%;
 }
 
+
 .event-wrapper {
   height: 100%;
   width: 100%;
