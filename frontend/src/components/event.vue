@@ -21,12 +21,22 @@
     </div>    
 
     <div class="info-container">
-        <div class="info-column"> 
-            <h3>Park Cleanup Volunteering</h3>
-            <button class="int-button"> I'm Interested</button>
+        <div class="info-column-1"> 
+            <div class="info-row">
+                <h3>Park Cleanup Volunteering</h3>
+            </div>
+
+            <div class="info-row">
+                <div class="info-tags">
+                    <h5 class="tag">Animals</h5>
+                    <h5 class="tag">Parks</h5>
+                    <h5 class="tag">Volunteer</h5>
+                </div>
+                <button class="int-button"> I'm Interested</button>
+            </div>
         </div>
 
-        <div class="info-column">
+        <div class="info-column-2">
             <div class="info-text">
                 <h4 class="info-time"> 2:00 PM - 4:00 PM</h4>
                 <h4 class="info-address">485 Clawson St, Staten Island, NY 10306</h4>
@@ -61,6 +71,7 @@ components: {
     align-items: center;
     width: 70%;
     border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .top-container {
@@ -83,12 +94,14 @@ components: {
 .event-image {
     width: 100%;
     height: 100%;
+    border-radius: 2.5rem;
 }
 
 .user-pfp {
     border-radius: 50%;
     width: 100%;
     height: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .user {
@@ -122,6 +135,8 @@ components: {
 .service-container {
     background-color: var(--background);
     padding: 1rem 1.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
 }
 
 
@@ -130,14 +145,6 @@ components: {
     display: flex;
     align-items: center;
     margin: 4rem 0rem;
-}
-
-.info-column {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .info-time {
@@ -157,22 +164,63 @@ components: {
   background-color: var(--purple);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0.5rem;
-  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
     font-size: 1.5rem;
   font-weight: 600;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2.5rem;
   text-align: center;
   text-decoration: none;
   user-select: none;
   margin: 1.5rem 0rem;
 }
 
+.int-button:hover {
+   background-color: #9153FE;
+   transition: 0.3s;
+}
 
+.info-text {
+    width: 90%;
+}
 
+.info-column-1 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
 
+}
+
+.info-column-2 {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-right: 2rem;
+}
+
+.tag {
+    padding: 0.5rem 1rem;
+    background-color: var(--background);
+    border: 0.1rem solid gray;
+}
 
 
 </style>

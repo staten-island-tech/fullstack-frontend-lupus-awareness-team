@@ -2,7 +2,7 @@
   <div id="app" class="main" ref="theme">
     <div class="nav" >
       <div class="logo-container">
-        <h4>LOGO</h4>
+        <router-link to="/" id="logo"><h4>LOGO</h4></router-link>
       </div>
 
       <div class="login-container">
@@ -200,8 +200,17 @@ li {
 .logo-container {
   display: flex;
   align-items: center;
-  color: var(--navopen);
   margin-left: 1rem;
+}
+
+#logo {
+   color: var(--navopen);
+   text-decoration: none;
+   cursor: pointer;
+}
+
+#logo:hover {
+  display: none;
 }
 
 

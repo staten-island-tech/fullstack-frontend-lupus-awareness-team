@@ -111,7 +111,7 @@ methods: {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
-    border: solid 0.2rem white;
+    border: solid 0.1rem white;
 }
 
 #purple {

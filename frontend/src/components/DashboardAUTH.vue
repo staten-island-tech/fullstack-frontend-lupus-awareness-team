@@ -190,7 +190,7 @@ align-items: center;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center
 }
 
 .events_tab ul{
@@ -202,6 +202,7 @@ align-items: center;
 }
 
 .event_tab_switch {
+    cursor: pointer;
   border: none;
   color: var(--eventTab);
   font-size: 2rem;
