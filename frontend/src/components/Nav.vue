@@ -202,7 +202,7 @@ methods: {
 }
 
 .width {
-    width: 18%;
+    width: 15%;
 }
 
 

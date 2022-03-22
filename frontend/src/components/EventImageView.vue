@@ -141,7 +141,7 @@ export default {
   position: absolute;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 5;
   height: 40vh;
   align-items: center;
   transform: translateY(-100%);
@@ -151,7 +151,7 @@ export default {
   cursor: pointer;
   position: static;
   top: 40%;
-  width: 15%;
+  width: 10%;
   padding: 1rem;
   height: 20%;
   color: white;
@@ -194,9 +194,10 @@ export default {
   font-weight: bold;
   width: 5rem;
   height: 5rem;
+  transition: 0.5s ease;
 }
 .event_image_bar button:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.2);
 }
 .event_image_preview img {
   height: 80%;
