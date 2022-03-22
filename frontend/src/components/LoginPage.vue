@@ -47,17 +47,13 @@ export default {
 name:"Login",
 methods: {
     login: async function(email, password) {
-        try {
-            fetch('http://localhost:3000/login', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(email, password)
-        })
-        } catch (error) {
-           throw new error
-        }
+     try {
+         await fetch('http://localhost:3000/login', {
+             
+         })
+     } catch (error) {
+         console.log(error)
+     }
     } 
 }
 }
