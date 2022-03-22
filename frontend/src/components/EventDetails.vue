@@ -8,15 +8,6 @@
         <h4 class="event_location">Dog Park, Full Address</h4>
         <h5 class="event_date">Saturday, April 2</h5>
       </div>
-      <div class="event_desc">
-        <h4>Event Description:</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
-          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
-          Qui, expedita.
-        </p>
-      </div>
     </div>
     <div class="column">
       <div class="user_info_brief">
@@ -39,6 +30,15 @@
           <h4>Organization Address</h4>
           <p>99 place, new york, ny</p>
         </div>
+      </div>
+      <div class="event_desc">
+        <h4>Event Description:</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
+          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
+          Qui, expedita.
+        </p>
       </div>
       <div class="interested_bar">
         <img class="interested_svg" src="../assets/placeholder.jpg" alt="" />
@@ -116,7 +116,6 @@ body {
   height: 20%;
   width: 90%;
   font-size: 2.5rem;
-  background-color: var(--accent);
   border-radius: 1.5rem;
   margin: 2rem auto;
   display: flex;
@@ -146,10 +145,11 @@ body {
 .organization_info {
   font-size: 2rem;
   padding: 2rem;
-  height: 70%;
+  height: 40%;
   width: 80%;
   font-size: 2.5rem;
-  background-color: var(--accent);
+  /* background-color: var(--accent); */
+  background-color: #673AB7  ;
   border-radius: 1.5rem;
   margin: 2rem auto;
 }
@@ -159,9 +159,10 @@ body {
 }
 .event_desc {
   font-size: 2rem;
-  background-color: var(--accent);
+  
   padding: 2rem;
-  margin: 3rem auto;
+  margin:  0rem 4rem 4rem;
+  border-radius: 1.5rem;
 }
 
 .interested_bar {
