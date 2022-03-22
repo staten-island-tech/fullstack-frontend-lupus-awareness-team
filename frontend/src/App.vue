@@ -103,7 +103,7 @@ li {
 
 .main {
   --topnav: #512DA8;
-  --nav: var(--dark);
+  --nav: #512DA8;
   --navtext: var(--white);
   --navhover: #7A7ED5;
   --navdark: #3E3998;

@@ -1,7 +1,7 @@
 <template>
   <div class="event_details_container">
     <div class="column">
-      <h3 class="event_name">Volunteer</h3>
+      <h2 class="event_name">Volunteer</h2>
       <EventImageView/>
       <div class="event_details">
         <h4 class="event_time">2:00 PM - 4:00 PM</h4>
@@ -23,7 +23,7 @@
         <div class="user_profile_picture">
           <img src="../assets/placeholder.jpg" alt="temporary" />
         </div>
-        <h4 class="user_name">user1123</h4>
+        <h3 class="user_name">user1123</h3>
       </div>
       <div class="organization_info">
         <div class="organization_name organization_detail">
@@ -163,6 +163,7 @@ body {
   padding: 2rem;
   margin: 3rem auto;
 }
+
 .interested_bar {
   height: 5%;
   display: flex;
