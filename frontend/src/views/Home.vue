@@ -45,7 +45,16 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
+
+#browse {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
 
 
 .event-wrapper {
@@ -55,4 +64,5 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
 </style>

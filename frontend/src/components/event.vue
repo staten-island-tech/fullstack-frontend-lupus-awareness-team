@@ -163,7 +163,7 @@ components: {
 .int-button {
   background-color: var(--purple);
   border: 1px solid rgba(27, 31, 35, .15);
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -179,6 +179,7 @@ components: {
 .int-button:hover {
    background-color: #9153FE;
    transition: 0.3s;
+   transform: translateY(-3px);
 }
 
 .info-text {
@@ -219,7 +220,7 @@ components: {
 .tag {
     padding: 0.5rem 1rem;
     background-color: var(--background);
-    border: 0.1rem solid gray;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 

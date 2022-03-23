@@ -234,7 +234,7 @@ methods: {
 .side_nav li:hover {
 background-color: #Fff;
 transition: all 0.3s;
-margin-left: 6rem;
+transform: translateX(1rem);
 }
 
 .side_nav li:hover .nav_text {
