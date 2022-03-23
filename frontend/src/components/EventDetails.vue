@@ -6,7 +6,7 @@
       <div class="event_details">
         <h4 class="event_time">2:00 PM - 4:00 PM</h4>
         <h4 class="event_location">Dog Park, Full Address</h4>
-        <h5 class="event_date">Saturday, April 2</h5>
+        <h4 class="event_date">Saturday, April 2</h4>
       </div>
     </div>
     <div class="column">
@@ -113,6 +113,7 @@ body {
 .event_details {
   font-family: 'Inter', sans-serif;
   padding: 2rem;
+  padding-left: 3rem;
   height: 20%;
   width: 90%;
   font-size: 2.5rem;
