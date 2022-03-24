@@ -3,17 +3,14 @@
         <div class="login-page-left">
             <img class="background-image">   
             <div class="login-info">
-               <form method="post">
                     <div class="login-content-container">
                         <label class="login-email-label"
                         for="login-email"><b>Email</b></label>
                         <input class="login-email" type="text" placeholder="email" name="login-email" v-model="email" required>
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
                         <input class="login-password" type="password" placeholder="password" name="login-password" v-model="password" required>
-                        <button class="submit-button" type="submit" @submit="login(email, password)">Login</button>
-                        
+                        <button class="submit-button" @click="login()">Login</button>
                     </div>
-                </form>
             </div>
         </div>  
         <div class="login-page-right">
@@ -36,25 +33,48 @@
                 </div>
         </div>
     </div>
+    
 </template>
 
 <script>
+import axios from 'axios'
+
+export const HTTP = axios.create({
+    baseURL: 'http://localhost:3000',
+    headers: {
+        Authorization: 'Bearer {token}'
+    }
+})
+
 export default {
     data() {
         return {
+            email: null,
+            password: null
+        }
+    },
+    async created() {
+        try {
+            const res = await HTTP.get('/')
+            console.log(res.data)
+        } catch (error) {
+            console.log(error)
         }
     },
 name:"Login",
 methods: {
-    login: async function(email, password) {
-     try {
-         await fetch('http://localhost:3000/login', {
-             
-         })
-     } catch (error) {
-         console.log(error)
-     }
+     login: async function() {
+        try {
+            await HTTP.post('/login', {
+                email: this.email,
+                password: this.password
+            })
+
+        } catch (error) {
+            console.log(error)
+        }
     } 
+    
 }
 }
 
