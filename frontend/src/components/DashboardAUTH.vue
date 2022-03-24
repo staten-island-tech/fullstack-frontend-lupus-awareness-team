@@ -57,11 +57,10 @@ data() {
 methods: {
     fetchData: async function () {
         try {
-        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/events');
+        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/eventList');
         const data = await response.json();
-        this.eventArr = data.eventList;
+        this.eventArr = data;
         console.log(data);
-
       } catch(error) {
           console.log(error)
       }
