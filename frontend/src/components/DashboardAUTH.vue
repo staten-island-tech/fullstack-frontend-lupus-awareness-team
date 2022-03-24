@@ -57,43 +57,11 @@ data() {
 methods: {
     fetchData: async function () {
         try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-      eventList: [
-            {
-                eventName: 'Event 1',
-                eventDate: 'Tuesday, March 1st',
-                eventImage: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-                eventTime: '4:00 - 5:00'
-            },
-            {
-                eventName: 'Event 2',
-                eventDate: 'Thursday, March 10th',
-                eventImage: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-                eventTime: '5:00 - 6:00'
-            },
-            {
-                eventName: 'Event 3',
-                eventDate: 'Friday, March 18th',
-                eventImage: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-                eventTime: '7:00 - 8:00'
-            },
-            {
-                eventName: 'Event 4',
-                eventDate: 'Wednesday, March 23th',
-                eventImage: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-                eventTime: '8:00 - 9:00'
-            }
-        ],
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-const data = await response.json();
-this.eventArr = data.eventList;
-console.log(this.eventArr)
+        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/events');
+        const data = await response.json();
+        this.eventArr = data.eventList;
+        console.log(data);
+
       } catch(error) {
           console.log(error)
       }
