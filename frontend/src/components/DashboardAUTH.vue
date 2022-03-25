@@ -27,7 +27,7 @@
 
       <div class="list_wrapper">
         <ul class="list_container">
-            <li v-for="event in eventArr" :key="event.eventName" class="list_item">
+            <li v-for="(event) in eventArr" :key="event.eventName" class="list_item">
                 <ToDoList :eventInfo="eventArr"/>
             </li>
         </ul>
@@ -60,7 +60,8 @@ methods: {
         const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/eventList');
         const data = await response.json();
         this.eventArr = data;
-        console.log(data);
+        console.log(this.eventArr)
+        console.log(this.eventArr[1])
       } catch(error) {
           console.log(error)
       }
