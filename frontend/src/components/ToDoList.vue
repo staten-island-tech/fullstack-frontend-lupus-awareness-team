@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
         <div class="list_image">
-            <img :src="eventInfo.eventImage" alt="" class="list_src">
+            <img :src="eventInfo.eventName" alt="" class="list_src">
         </div>
         <div class="list_text">
             <h4 class=""> {{eventInfo.eventName}} </h4>
@@ -22,7 +22,13 @@ data() {
 
     }
 },
-created() {
+methods: {
+    hello: function() {
+        console.log(this.eventInfo)
+    }
+},
+mounted() {
+    this.hello();
 },
 computed: {
 
@@ -30,7 +36,7 @@ computed: {
 }
 </script>
 
-<style scoped> 
+<style> 
 
 .flex  {
     display: flex;

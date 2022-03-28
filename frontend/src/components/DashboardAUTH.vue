@@ -27,8 +27,8 @@
 
       <div class="list_wrapper">
         <ul class="list_container">
-            <li v-for="(event) in eventArr" :key="event.eventName" class="list_item">
-                <ToDoList :eventInfo="eventArr"/>
+            <li v-for="(event) in eventArr" :key="event.id" class="list_item">
+              <ToDoList :eventInfo="eventArr" />
             </li>
         </ul>
       </div>
@@ -61,11 +61,11 @@ methods: {
         const data = await response.json();
         this.eventArr = data;
         console.log(this.eventArr)
-        console.log(this.eventArr[1])
       } catch(error) {
           console.log(error)
       }
     },
+    
 },
 created() {
   this.fetchData();
