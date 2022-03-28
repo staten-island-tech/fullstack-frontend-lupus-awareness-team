@@ -58,11 +58,14 @@ name:"Login",
 methods: {
      login: async function() {
         try {
-            await HTTP.post('/login', {
+            this.$store.dispatch('login', {
                 email: this.email,
                 password: this.password
             })
-
+            // await HTTP.post('/login', {
+            //     email: this.email,
+            //     password: this.password
+            // })
         } catch (error) {
             console.log(error)
         }
