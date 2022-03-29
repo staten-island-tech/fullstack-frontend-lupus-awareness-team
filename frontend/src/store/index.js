@@ -1,5 +1,5 @@
 // import Vue from 'vue'
-import axios from 'axios'
+// import axios from 'axios'
 import Vuex from 'vuex'
 import HTTP from '../axiosConfig'
 
@@ -9,11 +9,11 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_USER_DATA(state, userData) {
-      state.user = userData,
-      localStorage.setItem('user', JSON.stringify(userData))
-      axios.defaults.headers.common['Authorization'] = `Bearer ${userData.token}`
+      state.user = userData
+      console.log(userData)
+      // localStorage.setItem('user', JSON.stringify(userData))
+      // axios.defaults.headers.common['Authorization'] = `Bearer ${userData.token}`
     }
-
   },
   actions: {
     async login({commit}, credentials) {
