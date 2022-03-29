@@ -1,14 +1,14 @@
 <template>
     <div class="flex">
         <div class="list_image">
-            <img :src="eventInfo.eventName" alt="" class="list_src">
+            <img :src="eventInfo[1].eventImage" alt="" class="list_src">
         </div>
         <div class="list_text">
-            <h4 class=""> {{eventInfo.eventName}} </h4>
-            <h5 class=""> {{eventInfo.eventDate}} </h5>
+            <h4 class=""> {{eventInfo[1].eventName}} </h4>
+            <h5 class=""> {{eventInfo[1].eventDate}} </h5>
         </div>
         <div class="list_time">
-            <h4 class=""> {{eventInfo.eventTime}}</h4>
+            <h4 class=""> {{eventInfo[1].eventTime}}</h4>
         </div>
     </div>
 </template>
@@ -23,12 +23,9 @@ data() {
     }
 },
 methods: {
-    hello: function() {
-        console.log(this.eventInfo)
-    }
 },
 mounted() {
-    this.hello();
+
 },
 computed: {
 

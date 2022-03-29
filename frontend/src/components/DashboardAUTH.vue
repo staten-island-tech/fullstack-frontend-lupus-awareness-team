@@ -16,7 +16,6 @@
 
     <div class="events_wrapper">
       <component :is="selected"></component>
-      <h4 class="events_text"></h4>
     </div>
   </div>
 
@@ -27,7 +26,7 @@
 
       <div class="list_wrapper">
         <ul class="list_container">
-            <li v-for="(event) in eventArr" :key="event.id" class="list_item">
+            <li v-for="event in eventArr" :key="event.id" class="list_item">
               <ToDoList :eventInfo="eventArr" />
             </li>
         </ul>
@@ -148,10 +147,6 @@ align-items: center;
   background-color: var(--dbSecondary);
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 0.5px;
-}
-
-.events_text {
-  z-index: 3;
 }
 
 .events_tab {

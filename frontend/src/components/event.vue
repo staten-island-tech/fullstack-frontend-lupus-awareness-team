@@ -32,7 +32,7 @@
                     <h5 class="tag">Parks</h5>
                     <h5 class="tag">Volunteer</h5>
                 </div>
-                <button class="int-button"> I'm Interested</button>
+                <button class="detail-button"> Details </button>
             </div>
         </div>
 
@@ -160,23 +160,22 @@ components: {
     font-weight: 500;
 }
 
-.int-button {
+.detail-button {
   background-color: var(--purple);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0rem;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   font-weight: 600;
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 4rem;
   text-align: center;
   text-decoration: none;
-  user-select: none;
   margin: 1.5rem 0rem;
 }
 
-.int-button:hover {
+.detail-button:hover {
    background-color: #9153FE;
    transition: 0.3s;
    transform: translateY(-3px);

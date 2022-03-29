@@ -45,6 +45,7 @@ font-family: 'Montserrat', sans-serif;;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;;
 }
 
 :root {
@@ -165,7 +166,7 @@ li {
   font-size: 3rem;
   display: flex;
   align-items: center;
-  height: 4rem;
+  height: 4vh;
   width: 100%;
   background-color: var(--topnav);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -179,10 +180,17 @@ li {
   align-items: center;
 }
 
+.login-container:hover .login-button {
+     background-color: #9153FE;
+   transition: 0.3s;
+   transform: translateY(2px);
+   font-weight: 600;
+}
+
 .login-button {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   background-color: var(--login);
-  border-radius: 6px;
+  border-radius: 2px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;

@@ -19,28 +19,24 @@ export default {
   },
   data() {
     return {
-      hostArr: [
-          {
-                eventName: 'Event 1',
-                eventDate: 'Tuesday, March 1st',
-                eventImage: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80",
-                eventTime: '4:00 - 5:00'
-            },
-            {
-                eventName: 'Event 2',
-                eventDate: 'Thursday, March 10th',
-                eventImage: "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-                eventTime: '5:00 - 6:00'
-            },
-            {
-                eventName: 'Event 3',
-                eventDate: 'Friday, March 18th',
-                eventImage: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW91bnRhaW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                eventTime: '7:00 - 8:00'
-            },
-      ]
+      hostArr: []
     }
   },
+  methods: {
+        fetchHost: async function () {
+        try {
+        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/hosted');
+        const data = await response.json();
+        this.hostArr = data;
+        console.log(this.hostArr)
+      } catch(error) {
+          console.log(error)
+      }
+    },
+  },
+  created() {
+    this.fetchHost();
+  }
 }
 </script>
 

@@ -18,28 +18,24 @@ export default {
 name:"PastEvents",
 data() {
   return {
-    pastArr: [
-          {
-                eventName: 'Event 1',
-                eventDate: 'Monday, January 3rd',
-                eventImage: "https://images.unsplash.com/photo-1455577380025-4321f1e1dca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cml2ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                eventTime: '4:00 - 5:00'
-            },
-            {
-                eventName: 'Event 2',
-                eventDate: 'Wednesday, February 16th',
-                eventImage: "https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cml2ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                eventTime: '5:00 - 6:00'
-            },
-            {
-                eventName: 'Event 3',
-                eventDate: 'Thursday, January 20th',
-                eventImage: "https://images.unsplash.com/photo-1506355683710-bd071c0a5828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cml2ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                eventTime: '7:00 - 8:00'
-            },
-      ]
+    pastArr: []
   }
 },
+methods: {
+          fetchPast: async function () {
+        try {
+        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/pastArr');
+        const data = await response.json();
+        this.pastArr = data;
+        console.log(this.pastArr)
+      } catch(error) {
+          console.log(error)
+      }
+    },
+},
+created() {
+  this.fetchPast();
+}
 }
 </script>
 
