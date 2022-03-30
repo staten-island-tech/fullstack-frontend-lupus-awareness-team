@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import HTTP from '../axiosConfig'
+
 
 export default {
     data() {
@@ -46,14 +46,14 @@ export default {
             password: null
         }
     },
-    async created() {
-        try {
-            const res = await HTTP.get('/')
-            console.log(res.data)
-        } catch (error) {
-            console.log(error)
-        }
-    },
+    // async created() {
+    //     try {
+    //         const res = await HTTP.get('/')
+    //         console.log(res.data)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // },
 name:"Login",
 methods: {
      login: async function() {
