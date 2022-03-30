@@ -14,6 +14,8 @@
       </div>
       <Navbar />
       </div>
+
+
     <router-view/>
 
   </div>
@@ -160,7 +162,6 @@ li {
   --border-top: var(--black-primary);
   --today: var(--grey-800);
 }
-
 
 .nav {
   font-size: 3rem;

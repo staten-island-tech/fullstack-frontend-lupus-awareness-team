@@ -33,7 +33,7 @@ computed: {
 }
 </script>
 
-<style> 
+<style > 
 
 .flex  {
     display: flex;

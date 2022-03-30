@@ -80,6 +80,7 @@ components: {
 </script>
 
 <style>
+
 .list_wrapper {
   width: 35%;
   background-color: var(--dbSecondary);
