@@ -2,21 +2,14 @@
  <div class="modal-backdrop">
     <div class="modal">
       <header class="modal-header">
-        <slot name="header">
-          This is the default title!
-        </slot>
-        <button
-          type="button"
-          class="btn-close"
-          @click="close"
-        >
-          x
-        </button>
+          <h2 class="header-text"> Create an Event!</h2>
+        <button type="button" class="btn-close" @click="close"> x </button>
+        
       </header>
 
       <section class="modal-body">
         <slot name="body">
-          This is the default body!
+          <h3>This is the default body!</h3>
         </slot>
        </section>
 
@@ -36,6 +29,7 @@
 </script>
 
 <style>
+
  .modal-backdrop {
     position: fixed;
     top: 0;
@@ -55,18 +49,20 @@
     overflow-x: auto;
     display: flex;
     flex-direction: column;
+    border-radius: 0.5rem;
   }
 
   .modal-header {
-    padding: 1.5rem;
     display: flex;
-  }
-
-  .modal-header {
+    align-items: center;
+    justify-content: center;
     position: relative;
     border-bottom: 1px solid #eeeeee;
-    color: #4AAE9B;
-    justify-content: space-between;
+    color: var(--purple);
+  }
+
+  .header-text {
+    padding: 2rem 0rem;
   }
 
   .modal-body {
@@ -75,11 +71,12 @@
   }
 
   .btn-close {
+    font-family: Montserrat, sans-serif;
     position: absolute;
     top: 0;
     right: 0;
     border: none;
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 1rem;
     cursor: pointer;
     font-weight: bold;
