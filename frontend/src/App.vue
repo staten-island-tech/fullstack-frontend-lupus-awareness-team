@@ -144,14 +144,14 @@ li {
   --navhover: #585353;
   --navdark: var(--darkgray);
   --navopen: var(--white);
-  --login: var(--black-tertiary);
+  --login: #7C4DFF;
 
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
   --dbTertiary: var(--black-tertiary);
   --dbAccent: var(--black-primary);
   --dbLight: var(--black-tertiary);
-  --profiletext: var(--background);
+  --profiletext: rgba(255,255,255,.87);
   --eventTab: var(--grey-100);
 
   --calendarMonth: var(--black-primary);
