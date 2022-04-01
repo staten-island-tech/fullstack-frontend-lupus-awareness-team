@@ -60,7 +60,7 @@ components: {
 }
 </script>
 
-<style scoped>
+<style>
 
 
 .event-container {
@@ -221,6 +221,47 @@ components: {
     background-color: var(--background);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
+@media (min-width:320px)  { 
+
+    .event-container {
+        width: 80%;
+    }
+
+    #browse {
+        font-size: 3rem;
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+
+    .tag {
+        margin: 0rem 0.5rem;
+    }
+ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  {
+    .event-container {
+        width: 90%;
+    }
+
+    #browse {
+        font-size: 4rem;
+    }
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+    .event-container {
+        width:70%;
+    }
+
+    .info-row {
+        flex-direction: row;
+    }
+ }
+
 
 
 </style>

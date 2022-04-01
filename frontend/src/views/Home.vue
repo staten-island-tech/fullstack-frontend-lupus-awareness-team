@@ -70,6 +70,7 @@ export default {
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    text-align: center;
 }
 
 .create-button {
@@ -95,4 +96,35 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
+@media (min-width:320px)  {
+
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  {
+    *, html,body {
+    font-size: 50%;
+  }
+
+
+  .info-row {
+    padding-top: 1.5rem;
+  }
+ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+  *,html,body {
+    font-size: 62.5%;
+  }
+
+  .info-row {
+    padding: 0;
+  } 
+
+
+ }
+
+
+
 </style>

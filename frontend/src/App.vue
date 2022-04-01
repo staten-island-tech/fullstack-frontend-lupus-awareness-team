@@ -109,11 +109,11 @@ li {
 }
 
 .main {
-  --topnav: #512DA8;
+  --topnav: #542FAD;
   --nav: #512DA8;
   --navtext: var(--white);
   --navhover: #7A7ED5;
-  --navdark: #3E3998;
+  --navdark: #431F9B;
   --navopen: var(--white);
   --login: #7C4DFF;
   
@@ -243,6 +243,9 @@ li {
 
 #logo:hover #logo-home {
   display: block;
+}
+
+@media (min-width:320px)  { 
 }
 
 </style>
