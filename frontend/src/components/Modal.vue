@@ -4,10 +4,13 @@
       <header class="modal-header">
           <h2 class="header-text"> Create an Event!</h2>
         <button type="button" class="btn-close" @click="close"> X </button>
-        
       </header>
 
       <section class="modal-body">
+        <div class="form-header">
+          <h2 class="title">upload Your Information Here</h2>
+          
+        </div>
       </section>
 
     </div>
