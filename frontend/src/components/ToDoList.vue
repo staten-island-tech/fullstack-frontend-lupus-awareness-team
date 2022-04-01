@@ -22,12 +22,18 @@ data() {
 
     }
 },
-created() {
+methods: {
+},
+mounted() {
+
+},
+computed: {
+
 }
 }
 </script>
 
-<style scoped> 
+<style > 
 
 .flex  {
     display: flex;
