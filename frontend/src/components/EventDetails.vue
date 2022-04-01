@@ -1,29 +1,20 @@
 <template>
   <div class="event_details_container">
-    <div class="column">
-      <h3 class="event_name">Volunteer</h3>
+    <div class="left-column">
+      <h2 class="event_name">Volunteer</h2>
       <EventImageView/>
       <div class="event_details">
         <h4 class="event_time">2:00 PM - 4:00 PM</h4>
         <h4 class="event_location">Dog Park, Full Address</h4>
-        <h5 class="event_date">Saturday, April 2</h5>
-      </div>
-      <div class="event_desc">
-        <h4>Event Description:</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
-          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
-          Qui, expedita.
-        </p>
+        <h4 class="event_date">Saturday, April 2</h4>
       </div>
     </div>
-    <div class="column">
+    <div class="right-column">
       <div class="user_info_brief">
         <div class="user_profile_picture">
           <img src="../assets/placeholder.jpg" alt="temporary" />
         </div>
-        <h4 class="user_name">user1123</h4>
+        <h3 class="user_name">user1123</h3>
       </div>
       <div class="organization_info">
         <div class="organization_name organization_detail">
@@ -39,6 +30,15 @@
           <h4>Organization Address</h4>
           <p>99 place, new york, ny</p>
         </div>
+      </div>
+      <div class="event_desc">
+        <h4>Event Description:</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
+          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
+          Qui, expedita.
+        </p>
       </div>
       <div class="interested_bar">
         <img class="interested_svg" src="../assets/placeholder.jpg" alt="" />
@@ -82,13 +82,22 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-.column {
+.left-column  {
   display: flex;
   flex-direction: column;
   width: 45%;
   background-color: var(--pink);
   padding: 3rem;
 }
+
+.right-column  {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: var(--pink);
+  padding: 3rem;
+  flex-direction: row;
+} 
 .event_image img {
   margin: 2rem auto;
   width: 90%;
@@ -113,10 +122,10 @@ body {
 .event_details {
   font-family: 'Inter', sans-serif;
   padding: 2rem;
+  padding-left: 3rem;
   height: 20%;
   width: 90%;
   font-size: 2.5rem;
-  background-color: var(--accent);
   border-radius: 1.5rem;
   margin: 2rem auto;
   display: flex;
@@ -146,10 +155,11 @@ body {
 .organization_info {
   font-size: 2rem;
   padding: 2rem;
-  height: 70%;
+  height: 40%;
   width: 80%;
   font-size: 2.5rem;
-  background-color: var(--accent);
+  /* background-color: var(--accent); */
+  background-color: #673AB7  ;
   border-radius: 1.5rem;
   margin: 2rem auto;
 }
@@ -159,10 +169,12 @@ body {
 }
 .event_desc {
   font-size: 2rem;
-  background-color: var(--accent);
+  
   padding: 2rem;
-  margin: 3rem auto;
+  margin:  0rem 4rem 4rem;
+  border-radius: 1.5rem;
 }
+
 .interested_bar {
   height: 5%;
   display: flex;
@@ -185,4 +197,31 @@ body {
 .event_time , .event_date {
   font-style: italic;
 }
-</style>
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  
+  * {
+    font-size: 5%;
+  }
+  .event_details_container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    width: 100%;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+
+
+  .image_buttons{
+    height: 5vh;
+  }
+}
+
+
+</style> 
