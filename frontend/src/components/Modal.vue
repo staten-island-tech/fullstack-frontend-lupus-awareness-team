@@ -3,15 +3,12 @@
     <div class="modal">
       <header class="modal-header">
           <h2 class="header-text"> Create an Event!</h2>
-        <button type="button" class="btn-close" @click="close"> x </button>
+        <button type="button" class="btn-close" @click="close"> X </button>
         
       </header>
 
       <section class="modal-body">
-        <slot name="body">
-          <h3>This is the default body!</h3>
-        </slot>
-       </section>
+      </section>
 
     </div>
   </div>
@@ -77,7 +74,8 @@
     right: 0;
     border: none;
     font-size: 3rem;
-    padding: 1rem;
+    padding: 0rem;
+    margin-right: 1rem;
     cursor: pointer;
     font-weight: bold;
     color: red;
