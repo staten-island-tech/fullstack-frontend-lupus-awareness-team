@@ -33,7 +33,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 #app {
-font-family: 'Montserrat', sans-serif;;
+font-family: 'Montserrat', sans-serif;
+background-color: var(--dbTertiary);
 }
 
 *, html, body {
@@ -41,6 +42,8 @@ font-family: 'Montserrat', sans-serif;;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  
+  
 }
 
 :root {
