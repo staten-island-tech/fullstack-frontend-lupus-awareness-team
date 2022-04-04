@@ -4,8 +4,8 @@
       <img class="profile_image" src="../assets/placeholder.jpg">
     </div>
     <div class="profile_text_container">
-      <h3 class="profile_name"> {{ name }}  </h3>
-      <h4 class="profile_sub"> {{ email }} </h4>
+      <h3 class="profile_name"> {{ this.userArr.userName }}</h3>
+      <h4 class="profile_sub"> {{ this.userArr.userEmail }} </h4>
     </div>
   </div>
 </template>
@@ -23,31 +23,10 @@ data() {
 methods: {
     fetchUser: async function () {
         try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-      users: [
-            {
-                userName: "John Doe",
-                userEmail: "johndoe17@gmail.com"
-            },
-            {
-                userName: "Jane Doe",
-                userEmail: "janedoe45@yahoo.com"
-            },
-            {
-                userName: "John Wick",
-                userEmail: "johnwick1337@gmail.com"
-            },
-
-        ],
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-const data = await response.json();
-console.log(data)
+          const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/users')
+          const data = await response.json();
+          this.userArr = data[1];
+          console.log(this.userArr)
       } catch(error) {
           console.log(error)
       }

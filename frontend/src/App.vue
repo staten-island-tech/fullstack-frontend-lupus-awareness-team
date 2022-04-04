@@ -1,15 +1,21 @@
 <template >
   <div id="app" class="main" ref="theme">
     <div class="nav" >
-    <div class="logo-container">
-      <h4>LOGO</h4>
-    </div>
+      <div class="logo-container">
+        <router-link to="/" id="logo">
+          <h4 id="logo-text">LOGO</h4>
+          <svg id="logo-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: white;transform: ;msFilter:;"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path></svg>
+        </router-link>
+        <i class="fa-regular fa-house"></i>
+      </div>
 
-    <div class="login-container">
-      <button class="login-button">Log in</button>
-    </div>
-    <Navbar />
-    </div>
+      <div class="login-container">
+        <button class="login-button">Log in</button>
+      </div>
+      <Navbar />
+      </div>
+
+
     <router-view/>
 
   </div>
@@ -52,6 +58,7 @@ font-family: 'Montserrat', sans-serif;;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;;
 }
 
 :root {
@@ -82,7 +89,7 @@ font-family: 'Montserrat', sans-serif;;
 /* main themes */
 
 /* font sizes */
-  --h1: 7.594rem;
+  --h1: 7rem;
   --h2: 5.063rem;
   --h3: 3.375rem;
   --h4: 2.25rem;
@@ -113,11 +120,11 @@ li {
 }
 
 .main {
-  --topnav: #512DA8;
-  --nav: var(--dark);
+  --topnav: #542FAD;
+  --nav: #512DA8;
   --navtext: var(--white);
   --navhover: #7A7ED5;
-  --navdark: #3E3998;
+  --navdark: #431F9B;
   --navopen: var(--white);
   --login: #7C4DFF;
   
@@ -167,11 +174,11 @@ li {
   --today: var(--grey-800);
 }
 
-
 .nav {
   font-size: 3rem;
   display: flex;
-  height: 4rem;
+  align-items: center;
+  height: 4vh;
   width: 100%;
   background-color: var(--topnav);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -185,17 +192,24 @@ li {
   align-items: center;
 }
 
+.login-container:hover .login-button {
+     background-color: #9153FE;
+   transition: 0.3s;
+   transform: translateY(2px);
+   font-weight: 600;
+}
+
 .login-button {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   background-color: var(--login);
-  border-radius: 6px;
+  border-radius: 2px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
   color: var(--navopen);
   font-weight: 500;
   cursor: pointer;
-  height: 80%;
+  height: 70%;
   line-height: 1.15;
   outline: none;
   overflow: hidden;
@@ -210,9 +224,39 @@ li {
 .logo-container {
   display: flex;
   align-items: center;
-  color: var(--navopen);
-  margin-left: 1rem;
+  justify-content: center;
+  height: 100%;
 }
 
+#logo {
+   color: var(--navopen);
+   text-decoration: none;
+   cursor: pointer;
+   padding-left: 1rem;
+}
+
+#logo-home {
+  position: relative;
+  display: flex;
+  margin-left: 2rem;
+  display: none;
+}
+
+#logo-text {
+  position: relative;
+    transform-style: preserve-3d;
+}
+
+#logo:hover #logo-text{
+  display: none;
+  transition: all 0.5s;
+}
+
+#logo:hover #logo-home {
+  display: block;
+}
+
+@media (min-width:320px)  { 
+}
 
 </style>

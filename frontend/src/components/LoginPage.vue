@@ -15,7 +15,7 @@
         </div>  
         <div class="login-page-right">
             <div class="create-account">
-                <form action="action_page.php" method="post">
+                <form method="post">
                     <div class="create-account-container">
                         <label class="create-email-label"
                         for="create-email"><b>Email</b></label>
@@ -90,7 +90,7 @@ methods: {
     background-image:
     linear-gradient( rgba(103, 27, 150, 0.5), 
     rgba(103, 27, 150, 0.5)), 
-    url(../assets/login-page-background.jpg) ; 
+    url(../assets/background-pic.jpg) ; 
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
