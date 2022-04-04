@@ -136,7 +136,6 @@ methods: {
     align-items: center;
     padding: 0;
     margin: 0;
-    margin-bottom: 1rem;
 }
 
 #logout {
@@ -203,7 +202,7 @@ methods: {
 }
 
 .width {
-    width: 18%;
+    width: 18vw;
 }
 
 
@@ -264,13 +263,13 @@ transform: translateX(1rem);
 
 .fa-bars {
     color: var(--navopen);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 
 .fa-times-circle {
     color: var(--navopen);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 

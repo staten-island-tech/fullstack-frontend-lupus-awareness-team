@@ -12,6 +12,7 @@
       <div class="login-container">
         <button class="login-button">Log in</button>
       </div>
+
       <Navbar />
       </div>
 
@@ -210,10 +211,9 @@ li {
   font-weight: 500;
   cursor: pointer;
   height: 70%;
-  line-height: 1.15;
   outline: none;
   overflow: hidden;
-  padding: 0 2.5rem;
+  padding: 0rem 2.5rem;
   position: relative;
   text-align: center;
   text-transform: none;
