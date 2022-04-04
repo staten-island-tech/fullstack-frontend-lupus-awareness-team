@@ -29,8 +29,8 @@ export default new Vuex.Store({
       if(cookie) {
         const userPayload = VueJwtDecode.decode(cookie)
         this.state.user = userPayload
-        return
       }
+      console.log(this.state.user)
     },
     async login({commit}, credentials) {
         const res = await HTTP.post('login', credentials)

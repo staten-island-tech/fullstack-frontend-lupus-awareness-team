@@ -5,7 +5,6 @@
             <Profile />
         </div>
       </div>
-<h1>{{this.user}}</h1>
   <div class="divider"></div>
   <div class="events_container">
     <div class="events_tab">
@@ -52,7 +51,7 @@ data() {
     tabs: ["Hosting", "PastEvents"],
     selected: "Hosting",
     eventArr: [],
-    user: this.$store.state.user.firstName
+    user: this.$store.state.user
   }
 },
 methods: {
