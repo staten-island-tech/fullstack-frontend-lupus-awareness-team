@@ -97,34 +97,5 @@ export default {
   align-items: center;
 }
 
-@media (min-width:320px)  {
-  *,html,body {
-    font-size: 25%;
-  }
-
-}
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  {
-    *, html,body {
-    font-size: 50%;
-  }
-
-
-  .info-row {
-    padding-top: 1.5rem;
-  }
- }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { 
-  *,html,body {
-    font-size: 62.5%;
-  }
-
-  .info-row {
-    padding: 0;
-  } 
-
- }
 
 </style>

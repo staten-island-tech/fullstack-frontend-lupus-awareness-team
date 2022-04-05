@@ -272,7 +272,29 @@ transform: translateX(1rem);
     font-size: 2.5rem;
 }
 
+@media (min-width:320px) {
+    .width {
+        width: 30%;
+    }
 
+}
+@media (min-width:481px) {
+    
+}
+@media (min-width:641px) {
+    
+}
+@media (min-width:961px) {
+    
+}
+@media (min-width:1025px) {
+    
+}
+@media (min-width:1281px) {
+    .width {
+        width: 18%;
+    }
+}
 
 
 </style>

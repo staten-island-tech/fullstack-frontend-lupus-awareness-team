@@ -81,9 +81,12 @@ methods: {
 .login-page {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
+    margin-top: 6rem;
     color: white;
-    margin: auto;
+    width: 100%;
+    height: 80vh;
 }
 
 .login-page-left {
@@ -95,9 +98,10 @@ methods: {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 20rem;
     display: flex;
     justify-content: center;
+    width: 50%;
+    height: 100%;
 }
 
 .login-info {
@@ -110,7 +114,11 @@ methods: {
 
 .login-page-right {
     background: linear-gradient(180deg, rgba(29,28,94,1) 14%, rgba(51,50,114,1) 41%, rgba(96,94,205,1) 100%);
-    padding: 5rem;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

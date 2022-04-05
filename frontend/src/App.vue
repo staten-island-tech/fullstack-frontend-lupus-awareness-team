@@ -10,7 +10,7 @@
       </div>
 
       <div class="login-container">
-        <button class="login-button">Log in</button>
+        <button class="login-button"><router-link to="/Login" class="login-text">Log in</router-link></button>
       </div>
 
       <Navbar />
@@ -201,14 +201,11 @@ li {
 }
 
 .login-button {
-  font-size: 1.75rem;
   background-color: var(--login);
   border-radius: 2px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
-  color: var(--navopen);
-  font-weight: 500;
   cursor: pointer;
   height: 70%;
   outline: none;
@@ -216,9 +213,16 @@ li {
   padding: 0rem 2.5rem;
   position: relative;
   text-align: center;
-  text-transform: none;
   transform: translateZ(0);
   transition: all .2s;
+}
+
+.login-text {
+  text-decoration: none;
+  text-transform: none;
+  color: var(--navopen);
+  font-weight: 500;
+    font-size: 1.75rem;
 }
 
 .logo-container {
@@ -256,7 +260,51 @@ li {
   display: block;
 }
 
-@media (min-width:320px)  { 
+@media (min-width:320px)  {
+  *,html,body {
+    font-size: 25%;
+  }
+
+  .nav {
+    height: 4rem;
+  }
+
+  .login-button {
+    height: 60%;
+  }
+
 }
+@media (min-width:481px)  { 
+   *,html,body {
+     font-size: 35%;
+   }
+ }
+@media (min-width:641px)  {
+    *, html,body {
+    font-size: 50%;
+  }
+
+
+ }
+@media (min-width:961px)  { 
+  .login-button {
+    height: 70%;
+  }
+
+  *,html,body {
+    font-size: 55%;
+  }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+  *,html,body {
+    font-size: 62.5%;
+  }
+  
+  .nav {
+    height: 4vh;
+  }
+
+ }
 
 </style>

@@ -12,7 +12,7 @@
         </div>
 
         <div class="service-container">
-            <h4>Service Hours: 10</h4>
+            <h4 class="service-text">Service Hours: 10</h4>
         </div>
     </div>
 
@@ -239,27 +239,89 @@ components: {
     .tag {
         margin: 0rem 0.5rem;
     }
- }
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  {
-    .event-container {
-        width: 90%;
+
+    .service-text {
+        font-size: 1.5rem;
     }
 
-    #browse {
-        font-size: 4rem;
+    .info-container {
+        flex-direction: column;
     }
-}
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { 
-    .event-container {
-        width:70%;
+
+    .info-column-1 {
+        width: 100%;
+        padding: 1rem 0rem;
+    }
+
+    .info-column-2 {
+        width: 100%;
+        text-align: center;
     }
 
     .info-row {
         flex-direction: row;
     }
+
+    .info-tags {
+        width: 35%;
+    }
+
+
+ }
+@media (min-width:481px)  { 
+    .service-text {
+        font-size: 1.8rem;
+    }
+}
+@media (min-width:641px)  {
+    .event-container {
+        width: 90%;
+    }
+
+    .service-text {
+        font-size: 2rem;
+    }
+
+    #browse {
+        font-size: 4rem;
+    }
+
+    .info-row {
+    padding-top: 1.5rem;
+  }
+}
+@media (min-width:961px)  { 
+    .info-container {
+        flex-direction: row;
+    }
+
+    .info-column-1 {
+        width: 100%;
+        padding: 0rem;
+    }
+
+    .info-tags {
+        width: 50%;
+    }
+
+    .info-row {
+        flex-direction: row;
+        padding: 0rem;
+    }
+
+    .service-text {
+        font-size: 2.25rem;
+    }
+
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+
+    .event-container {
+        width:70%;
+    }
+
+
  }
 
 
