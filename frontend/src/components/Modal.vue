@@ -11,7 +11,8 @@
         <h2 class="form-title">Upload Your Information Here</h2>
         </div>
         <div class="upload-info">
-          <form >
+          <form class="form">
+          <div>
           <label class="enter-event-name"
           for="enter-event-name"><b>Enter Event Name</b></label>
           <input class="event-name" type="text" placeholder="Event Name" name="event-name" required>
@@ -37,8 +38,8 @@
           <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
 
           <input type="file" id="myFile" name="filename" class="upload-file-button">
-          <input class="upload-file" type="submit"> 
-
+          <input class="upload" type="submit"> 
+          </div>
         </form>
         </div>
         </section>
@@ -120,8 +121,14 @@
   flex-direction: column;
 }
 
+.form-header {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
 .form-title {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 .enter-event-tags, .enter-event-name, .enter-event-time, .enter-event-date, .enter-event-hours, .enter-event-address {
   font-size: 3rem;
@@ -137,9 +144,18 @@
   width: 40rem;
 } 
 
-form {
+.upload-file-button {
+  font-size: 2rem;
+}
+
+.upload {
+  font-size: 1.5rem;
+}
+
+.form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 </style>
