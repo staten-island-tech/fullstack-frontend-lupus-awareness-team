@@ -1,12 +1,13 @@
 <template>
   <div class="profile_container">
-    <div class="profile_image_container">
-      <img class="profile_image" src="../assets/placeholder.jpg">
-    </div>
-    <div class="profile_text_container">
-      <h3 class="profile_name"> {{ this.userArr.userName }}</h3>
-      <h4 class="profile_sub"> {{ this.userArr.userEmail }} </h4>
-    </div>
+      <div class="profile_image_container">
+        <img class="profile_image" src="../assets/placeholder.jpg">
+      </div>
+      <div class="profile_text_container">
+        <h3 class="profile_name"> {{ this.userArr.userName }}</h3>
+        <h4 class="profile_sub"> {{ this.userArr.userEmail }} </h4>
+      </div>
+
   </div>
 </template>
 
@@ -52,7 +53,7 @@ created() {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 20%;
+  width: 30%;
   margin-top: 1.5rem;
   z-index: 3;
   margin-bottom: 2rem;
@@ -72,7 +73,6 @@ created() {
   align-items: center;
   width: 20%;
 }
-
 
 .profile_name {
   font-weight: 700;

@@ -274,20 +274,30 @@ transform: translateX(1rem);
 
 @media (min-width:320px) {
     .width {
-        width: 30%;
+        width: 40%;
     }
 
 }
 @media (min-width:481px) {
+        .width {
+        width: 30%;
+    }
     
 }
 @media (min-width:641px) {
-    
+        .width {
+        width: 30%;
+    }
 }
 @media (min-width:961px) {
-    
+        .width {
+        width: 25%;
+    }
 }
 @media (min-width:1025px) {
+    .width {
+        width: 20%;
+    }
     
 }
 @media (min-width:1281px) {
