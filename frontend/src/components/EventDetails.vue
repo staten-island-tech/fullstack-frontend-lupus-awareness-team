@@ -3,6 +3,7 @@
     <div class="left-column">
       <h2 class="event_name">Volunteer</h2>
       <EventImageView/>
+      
       <div class="event_details">
         <h4 class="event_time">2:00 PM - 4:00 PM</h4>
         <h4 class="event_location">Dog Park, Full Address</h4>
@@ -69,6 +70,7 @@ export default {
 body {
   background-color: var(--background);
   box-sizing: border-box;
+
 }
 .event_name {
   margin: 3rem;
@@ -124,10 +126,9 @@ body {
   padding: 2rem;
   padding-left: 3rem;
   height: 20%;
-  width: 90%;
+  width: 80%;
   font-size: 2.5rem;
   border-radius: 1.5rem;
-  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

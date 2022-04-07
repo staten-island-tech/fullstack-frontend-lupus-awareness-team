@@ -44,6 +44,7 @@ export default {
 
 
 
+
             
             
         }
@@ -58,6 +59,7 @@ export default {
         selectImg: function(img) {
           this.imgIndex = this.images.indexOf(img),
           this.currentIndex = this.imgIndex
+
         },
         sliceForward: function() {
           this.sliceBegin = this.sliceBegin +3
@@ -190,23 +192,24 @@ export default {
   border: none;
   border-radius: 50%;
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   transition: 0.5s ease;
 }
 .event_image_bar button:hover {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(12,12,12,0.5);
 }
 .event_image_preview img {
   height: 80%;
   display: flex;
-  padding: .45rem;
+  padding: .35rem;
   border-radius: 1rem;
+  margin: .3rem;
 }
 .event_image_preview img:hover {
-  border:  .25rem solid var(--dark);
+  outline:  .45rem solid var(--dark);
   background-color: white;
 }
 .event_image_preview {
@@ -214,5 +217,9 @@ export default {
   display: flex; 
   align-items: center;
   justify-content: center;
+}
+.selected {
+  outline:  .45rem solid var(--dark);
+  background-color: white;
 }
 </style>

@@ -65,7 +65,8 @@ components: {
 
 .event-container {
     margin: 5rem 0rem;
-    background-color: var(--white);
+    background-color: var(--dbTertiary);
+    color: var(--profiletext);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,7 +134,7 @@ components: {
 }
 
 .service-container {
-    background-color: var(--background);
+    background-color: var(--dbSecondary);
     padding: 1rem 1.5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
@@ -218,7 +219,7 @@ components: {
 
 .tag {
     padding: 0.5rem 1rem;
-    background-color: var(--background);
+    background-color: var(--dbSecondary);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 

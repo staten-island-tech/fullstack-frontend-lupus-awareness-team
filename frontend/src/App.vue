@@ -51,7 +51,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 #app {
-font-family: 'Montserrat', sans-serif;;
+font-family: 'Montserrat', sans-serif;
+background-color: var(--dbTertiary);
 }
 
 *, html, body {
@@ -155,14 +156,14 @@ li {
   --navhover: #585353;
   --navdark: var(--darkgray);
   --navopen: var(--white);
-  --login: var(--black-tertiary);
+  --login: #7C4DFF;
 
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
   --dbTertiary: var(--black-tertiary);
   --dbAccent: var(--black-primary);
   --dbLight: var(--black-tertiary);
-  --profiletext: var(--background);
+  --profiletext: rgba(255,255,255,.87);
   --eventTab: var(--grey-100);
 
   --calendarMonth: var(--black-primary);
