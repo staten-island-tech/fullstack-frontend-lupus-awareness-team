@@ -98,7 +98,6 @@ body {
   width: 45%;
   background-color: var(--pink);
   padding: 3rem;
-  flex-direction: row;
 } 
 .event_image img {
   margin: 2rem auto;
@@ -197,31 +196,6 @@ body {
 }
 .event_time , .event_date {
   font-style: italic;
-}
-
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-  
-  * {
-    font-size: 5%;
-  }
-  .event_details_container {
-    flex-direction: column;
-  }
-
-  .left-column {
-    width: 100%;
-  }
-
-  .right-column {
-    width: 100%;
-  }
-
-
-  .image_buttons{
-    height: 5vh;
-  }
 }
 
 

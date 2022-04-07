@@ -16,7 +16,6 @@
 </template>
 <script>
 //import EventDetails from "../components/EventDetails.vue";
-//import Login from '@/components/LoginPage.vue'
 import Event from "@/components/Event.vue";
 import Modal from "@/components/Modal.vue";
 
@@ -28,7 +27,6 @@ export default {
     //EventDetails,
     Event,
     Modal,
-    //Login,
     // Test,
   },
   data() {
@@ -66,11 +64,12 @@ export default {
 }
 
 #browse {
-  background-color: var(--white);
+  background-color: var(--dbTertiary);
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     text-align: center;
+    color: var(--profiletext);
 }
 
 .create-button {

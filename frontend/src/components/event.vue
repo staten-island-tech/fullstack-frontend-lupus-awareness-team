@@ -32,7 +32,7 @@
                     <h5 class="tag">Parks</h5>
                     <h5 class="tag">Volunteer</h5>
                 </div>
-                <button class="detail-button"> Details </button>
+                <router-link to="/event-details" id="details"> Details </router-link>
             </div>
         </div>
 
@@ -65,7 +65,7 @@ components: {
 
 .event-container {
     margin: 5rem 0rem;
-    background-color: var(--dbTertiary);
+    background-color: var(--eventBody);
     color: var(--profiletext);
     display: flex;
     flex-direction: column;
@@ -134,7 +134,7 @@ components: {
 }
 
 .service-container {
-    background-color: var(--dbSecondary);
+    background-color: var(--service);
     padding: 1rem 1.5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
@@ -161,22 +161,25 @@ components: {
     font-weight: 500;
 }
 
-.detail-button {
+#details {
   background-color: var(--purple);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0rem;
   box-sizing: border-box;
-  color: #fff;
   cursor: pointer;
-    font-size: 1.8rem;
-  font-weight: 600;
-  padding: 0.8rem 4rem;
   text-align: center;
-  text-decoration: none;
   margin: 1.5rem 0rem;
+  padding: 0.5rem 0rem;
+      font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 4rem;
 }
 
-.detail-button:hover {
+
+
+#details:hover {
    background-color: #9153FE;
    transition: 0.3s;
    transform: translateY(-3px);
@@ -219,7 +222,7 @@ components: {
 
 .tag {
     padding: 0.5rem 1rem;
-    background-color: var(--dbSecondary);
+    background-color: var(--service);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 

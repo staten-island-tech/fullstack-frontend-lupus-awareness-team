@@ -238,7 +238,7 @@ transform: translateX(1rem);
 }
 
 .side_nav li:hover .nav_text {
-    color: #512DA8;
+    color: var(--navdark);
     font-weight: 600;
 }
 

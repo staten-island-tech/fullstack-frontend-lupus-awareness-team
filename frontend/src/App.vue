@@ -129,6 +129,7 @@ li {
   --navdark: #431F9B;
   --navopen: var(--white);
   --login: #7C4DFF;
+  --loginhover: #9153FE;
   
   --dbSecondary: var(--pink);
   --dbPrimary: #f6f4f2;
@@ -146,6 +147,9 @@ li {
   --dayofweek: var(--white);
   --border-top: var(--grey-200);
   --today: var(--dark);
+
+    --service: var(--background);
+    --eventBody: var(--white);
     
 }
 
@@ -156,7 +160,8 @@ li {
   --navhover: #585353;
   --navdark: var(--darkgray);
   --navopen: var(--white);
-  --login: #7C4DFF;
+  --login: #000;
+  --loginhover: var(--dbTertiary);
 
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
@@ -174,6 +179,9 @@ li {
   --dayofweek: var(--black-secondary);
   --border-top: var(--black-primary);
   --today: var(--grey-800);
+
+  --service: var(--dbSecondary);
+  --eventBody: var(--dbPrimary)
 }
 
 .nav {
@@ -195,7 +203,7 @@ li {
 }
 
 .login-container:hover .login-button {
-     background-color: #9153FE;
+     background-color: var(--loginhover);
    transition: 0.3s;
    transform: translateY(2px);
    font-weight: 600;
