@@ -12,7 +12,6 @@
         </div>
         <div class="upload-info">
           <form class="form">
-          <div>
           <label class="enter-event-name"
           for="enter-event-name"><b>Enter Event Name</b></label>
           <input class="event-name" type="text" placeholder="Event Name" name="event-name" required>
@@ -37,9 +36,11 @@
           for="enter-event-tags"><b>Enter Event Tags</b></label>
           <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
 
-          <input type="file" id="myFile" name="filename" class="upload-file-button">
-          <input class="upload" type="submit"> 
-          </div>
+          <label for="file-upload" class="custom-file-upload"> 
+            <i class="upload"></i> Custom Upload
+          </label>
+          <input type="file" id="file-upload" name="filename" class="upload-file-button">
+          <input class="submit-button" type="submit"> 
         </form>
         </div>
         </section>
@@ -60,6 +61,26 @@
 </script>
 
 <style>
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+font-size: 2rem;
+background-color: var(--purple);
+border: 1px solid rgba(27, 31, 35, .15);
+border-radius: 0rem;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+font-size: 1.8rem;
+font-weight: 600;
+padding: 0.8rem 4rem;
+text-align: center;
+text-decoration: none;
+margin: 1.5rem 0rem;
+}
 
  .modal-backdrop {
     position: fixed;
@@ -119,6 +140,9 @@
 .upload-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 40rem;
+  margin: 0 auto;
 }
 
 .form-header {
@@ -145,12 +169,44 @@
 } 
 
 .upload-file-button {
-  font-size: 2rem;
+font-size: 2rem;
+background-color: var(--purple);
+border: 1px solid rgba(27, 31, 35, .15);
+border-radius: 0rem;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+font-size: 1.8rem;
+font-weight: 600;
+padding: 0.8rem 4rem;
+text-align: center;
+text-decoration: none;
+margin: 1.5rem 0rem;
 }
 
-.upload {
-  font-size: 1.5rem;
+
+.uplaod-file-button {
+  font-size: 1rem;
+  background-color: brown;
 }
+
+
+.submit-button {
+  font-size: 1.5rem;
+  background-color: var(--purple);
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 0rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 0.8rem 4rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 1.5rem 0rem;
+}
+
 
 .form {
   display: flex;
