@@ -6,12 +6,14 @@ import HTTP from "../axiosConfig";
 export default new Vuex.Store({
   state: {
     user: null,
+    cookie: null,
   },
   mutations: {
     SET_USER_DATA(state, userData) {
       state.user = userData;
       VueCookies.set("auth-token", state.user, "1h");
       const cookie = VueCookies.get("auth-token");
+      this.state.cookie = cookie
       const userPayload = VueJwtDecode.decode(cookie);
       this.state.user = userPayload;
     },
