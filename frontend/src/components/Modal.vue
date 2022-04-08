@@ -37,7 +37,8 @@
           <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
 
           <label for="file-upload" class="custom-file-upload"> 
-            <i class="upload"></i> Custom Upload
+            <img class="upload-icon" src="../assets/upload-icon.png">
+             <i class="upload"></i> Upload File
           </label>
           <input type="file" id="file-upload" name="filename" class="upload-file-button">
           <input class="submit-button" type="submit"> 
@@ -80,6 +81,8 @@ padding: 0.8rem 4rem;
 text-align: center;
 text-decoration: none;
 margin: 1.5rem 0rem;
+border-style: solid;
+border-radius: 7px;
 }
 
  .modal-backdrop {
@@ -163,26 +166,10 @@ margin: 1.5rem 0rem;
   font-size: 15px;
   border-style: solid;
   border-radius: 7px;
-  border-color: black;
+  border-color: #c4c4c4;
   padding: 3px;
   width: 40rem;
 } 
-
-.upload-file-button {
-font-size: 2rem;
-background-color: var(--purple);
-border: 1px solid rgba(27, 31, 35, .15);
-border-radius: 0rem;
-box-sizing: border-box;
-color: #fff;
-cursor: pointer;
-font-size: 1.8rem;
-font-weight: 600;
-padding: 0.8rem 4rem;
-text-align: center;
-text-decoration: none;
-margin: 1.5rem 0rem;
-}
 
 
 .uplaod-file-button {
@@ -205,6 +192,8 @@ margin: 1.5rem 0rem;
   text-align: center;
   text-decoration: none;
   margin: 1.5rem 0rem;
+  border-style: solid;
+  border-radius: 7px;
 }
 
 
@@ -212,6 +201,16 @@ margin: 1.5rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.custom-file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-icon {
+  width: 10%;
+  margin-right: 2rem;
 }
 
 </style>
