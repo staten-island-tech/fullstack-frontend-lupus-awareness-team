@@ -99,7 +99,7 @@ methods: {
         if (this.$parent.$refs.theme.classList.contains("main")) {
         this.$parent.$refs.theme.classList.remove("main");
         this.$parent.$refs.theme.classList.add("dark");
-        this.$parent.$refs.home.classLIst.add("home-dark")
+        this.$root.$emit('changeIt',)
         }
     }
 }
