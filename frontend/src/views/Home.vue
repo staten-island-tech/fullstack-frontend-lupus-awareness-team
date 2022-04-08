@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" ref="home">
     <div class="create-button" @click="showModal">+</div>
 
     <Modal v-show="isModalVisible" @close="closeModal" />
@@ -46,6 +46,18 @@ export default {
 </script>
 
 <style>
+
+.home-dark{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.4)), url("../assets/dogPark.jpg");
+  background-color: var(--background);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding-top: 3rem;
+}
+
 .home {
   background-image: url("../assets/dogPark.jpg");
   background-color: var(--background);
