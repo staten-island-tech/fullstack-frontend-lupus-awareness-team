@@ -10,8 +10,9 @@
       </div>
 
       <div class="login-container">
-        <button class="login-button">Log in</button>
+        <button class="login-button"><router-link to="/Login" class="login-text">Log in</router-link></button>
       </div>
+
       <Navbar />
       </div>
 
@@ -23,15 +24,26 @@
 
 <script>
 import Navbar from "@/components/Nav.vue"
-
 export default {
   name: 'App',
   methods: {
-
+    // fetchData: async function() {
+    //   try {
+    //     const res = await fetch('http://localhost:3000')
+    //     const data = await res.json()
+    //     console.log(data)
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    // }
   },
   components: {
     Navbar
   },
+  created: function() {
+    this.$store.dispatch('checkCookie')
+    // this.fetchData()
+  }
 }
 </script>
 
@@ -39,7 +51,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 #app {
-font-family: 'Montserrat', sans-serif;;
+font-family: 'Montserrat', sans-serif;
+background-color: var(--dbTertiary);
 }
 
 *, html, body {
@@ -109,13 +122,14 @@ li {
 }
 
 .main {
-  --topnav: #512DA8;
+  --topnav: #542FAD;
   --nav: #512DA8;
   --navtext: var(--white);
   --navhover: #7A7ED5;
-  --navdark: #3E3998;
+  --navdark: #431F9B;
   --navopen: var(--white);
   --login: #7C4DFF;
+  --loginhover: #9153FE;
   
   --dbSecondary: var(--pink);
   --dbPrimary: #f6f4f2;
@@ -133,6 +147,9 @@ li {
   --dayofweek: var(--white);
   --border-top: var(--grey-200);
   --today: var(--dark);
+
+    --service: var(--background);
+    --eventBody: var(--white);
     
 }
 
@@ -143,14 +160,15 @@ li {
   --navhover: #585353;
   --navdark: var(--darkgray);
   --navopen: var(--white);
-  --login: var(--black-tertiary);
+  --login: #000;
+  --loginhover: var(--dbTertiary);
 
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
   --dbTertiary: var(--black-tertiary);
   --dbAccent: var(--black-primary);
   --dbLight: var(--black-tertiary);
-  --profiletext: var(--background);
+  --profiletext: rgba(255,255,255,.87);
   --eventTab: var(--grey-100);
 
   --calendarMonth: var(--black-primary);
@@ -161,6 +179,9 @@ li {
   --dayofweek: var(--black-secondary);
   --border-top: var(--black-primary);
   --today: var(--grey-800);
+
+  --service: var(--dbSecondary);
+  --eventBody: var(--dbPrimary)
 }
 
 .nav {
@@ -182,32 +203,35 @@ li {
 }
 
 .login-container:hover .login-button {
-     background-color: #9153FE;
+     background-color: var(--loginhover);
    transition: 0.3s;
    transform: translateY(2px);
    font-weight: 600;
 }
 
 .login-button {
-  font-size: 1.75rem;
   background-color: var(--login);
   border-radius: 2px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
-  color: var(--navopen);
-  font-weight: 500;
   cursor: pointer;
   height: 70%;
-  line-height: 1.15;
   outline: none;
   overflow: hidden;
-  padding: 0 2.5rem;
+  padding: 0rem 2.5rem;
   position: relative;
   text-align: center;
-  text-transform: none;
   transform: translateZ(0);
   transition: all .2s;
+}
+
+.login-text {
+  text-decoration: none;
+  text-transform: none;
+  color: var(--navopen);
+  font-weight: 500;
+    font-size: 1.75rem;
 }
 
 .logo-container {
@@ -244,5 +268,52 @@ li {
 #logo:hover #logo-home {
   display: block;
 }
+
+@media (min-width:320px)  {
+  *,html,body {
+    font-size: 25%;
+  }
+
+  .nav {
+    height: 4rem;
+  }
+
+  .login-button {
+    height: 60%;
+  }
+
+}
+@media (min-width:481px)  { 
+   *,html,body {
+     font-size: 35%;
+   }
+ }
+@media (min-width:641px)  {
+    *, html,body {
+    font-size: 50%;
+  }
+
+
+ }
+@media (min-width:961px)  { 
+  .login-button {
+    height: 70%;
+  }
+
+  *,html,body {
+    font-size: 55%;
+  }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+  *,html,body {
+    font-size: 62.5%;
+  }
+  
+  .nav {
+    height: 4vh;
+  }
+
+ }
 
 </style>

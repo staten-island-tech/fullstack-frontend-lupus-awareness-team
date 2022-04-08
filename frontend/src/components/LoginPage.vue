@@ -3,26 +3,23 @@
         <div class="login-page-left">
             <img class="background-image">   
             <div class="login-info">
-               <form method="post">
                     <div class="login-content-container">
                         <label class="login-email-label"
                         for="login-email"><b>Email</b></label>
-                        <input class="login-email" type="text" placeholder="Enter Email" name="login-email" required>
+                        <input class="login-email" type="text" placeholder="email" name="login-email" v-model="email" required>
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
-                        <input class="login-password" type="password" placeholder="Enter Password" name="login-password" required>
-                        <button class="submit-button" type="submit">Login</button>
-                        
+                        <input class="login-password" type="password" placeholder="password" name="login-password" v-model="password" required>
+                        <button class="submit-button" @click="login()">Login</button>
                     </div>
-                </form>
             </div>
         </div>  
         <div class="login-page-right">
             <div class="create-account">
                 <form method="post">
                     <div class="create-account-container">
-                        <label class="create-username-label"
-                        for="create-username"><b>Username</b></label>
-                        <input class="create-username" type="text" placeholder="Enter Username" name="create-username" required>
+                        <label class="create-email-label"
+                        for="create-email"><b>Email</b></label>
+                        <input class="create-email" type="text" placeholder="Enter Username" name="create-username" required>
                         <label class="email-label" for="email"><b>Email</b></label>
                         <input class="email" type="email" placeholder="Enter Email" name="email" required>
                         <label class="create-password-label" for="create-password"><b>Password</b></label>
@@ -35,12 +32,45 @@
                 </div>
         </div>
     </div>
+    
 </template>
 
 <script>
+
+
 export default {
+    data() {
+        return {
+            email: null,
+            password: null
+        }
+    },
+    // async created() {
+    //     try {
+    //         const res = await HTTP.get('/')
+    //         console.log(res.data)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // },
 name:"Login",
-methods: {}
+methods: {
+     login: async function() {
+        try {
+            this.$store.dispatch('login', {
+                email: this.email,
+                password: this.password
+            })
+            // await HTTP.post('/login', {
+            //     email: this.email,
+            //     password: this.password
+            // })
+        } catch (error) {
+            console.log(error)
+        }
+    } 
+    
+}
 }
 
 </script>
@@ -50,9 +80,12 @@ methods: {}
 .login-page {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
+    margin-top: 6rem;
     color: white;
-    margin: auto;
+    width: 100%;
+    height: 85vh;
 }
 
 .login-page-left {
@@ -64,9 +97,10 @@ methods: {}
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 20rem;
     display: flex;
     justify-content: center;
+    width: 50%;
+    height: 100%;
 }
 
 .login-info {
@@ -79,7 +113,11 @@ methods: {}
 
 .login-page-right {
     background: linear-gradient(180deg, rgba(29,28,94,1) 14%, rgba(51,50,114,1) 41%, rgba(96,94,205,1) 100%);
-    padding: 5rem;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -104,7 +142,7 @@ methods: {}
     margin-top: 3rem;
 }
 
-.login-email, .login-password, .create-username, .create-password, .confirm-password, .email {
+.login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
     margin: 5px 0rem;
     font-size: 15px;
     border-style: solid;
@@ -113,7 +151,7 @@ methods: {}
     padding: 3px;
 }
 
-.login-email-label, .login-password-label, .create-username-label, .create-password-label, .confirm-password-label, .email-label {
+.login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
     margin: 5px 0rem;
     font-size: 25px;
 }

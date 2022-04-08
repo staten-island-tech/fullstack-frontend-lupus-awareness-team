@@ -5,7 +5,6 @@
             <Profile />
         </div>
       </div>
-
   <div class="divider"></div>
   <div class="events_container">
     <div class="events_tab">
@@ -51,6 +50,7 @@ data() {
     tabs: ["Hosting", "PastEvents"],
     selected: "Hosting",
     eventArr: [],
+    user: this.$store.state.user
   }
 },
 methods: {
@@ -190,6 +190,76 @@ align-items: center;
 .calendar_wrapper {
   width: 40%;
 }
+
+@media (min-width:320px)  {
+    .calendar_container {
+    flex-direction: column;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  .calendar-month {
+    margin-bottom: 5rem;
+  }
+
+    .list_wrapper {
+    width: 80%;
+  }
+
+  .calendar_wrapper {
+    width: 70%;
+  }
+}
+@media (min-width:481px)  { 
+  .list_wrapper {
+    width: 75%;
+  }
+
+ }
+@media (min-width:641px)  {
+
+  .list_wrapper {
+    width: 65%;
+  }
+
+ }
+@media (min-width:961px)  { 
+  .list_wrapper {
+    width: 65%;
+  }
+
+  .calendar_wrapper {
+    width: 70%;
+  }
+}
+@media (min-width:1025px) { 
+  .calendar_container {
+    flex-direction: row;
+  }
+
+    .calendar-month {
+    margin-bottom: 0rem;
+  }
+
+  .list_wrapper {
+    width: 50%;
+  }
+
+  .calendar_wrapper {
+    width: 35%
+  }
+
+  span {
+    font-size: 1.25rem;
+  }
+ }
+@media (min-width:1281px) { 
+    .list_wrapper {
+    width: 35%;
+  }
+ }
 
 
 

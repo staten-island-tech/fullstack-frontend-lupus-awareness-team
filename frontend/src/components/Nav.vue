@@ -51,7 +51,7 @@
 
             <li id="logout">
                 <a href="#" id="logout_button">Log out</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #E25A55;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
             </li>
 
 
@@ -136,7 +136,6 @@ methods: {
     align-items: center;
     padding: 0;
     margin: 0;
-    margin-bottom: 1rem;
 }
 
 #logout {
@@ -151,7 +150,7 @@ methods: {
 }
 
 #logout_button {
-    color: #E25A55;
+    color: #DC3623;
     font-weight: 600;
     margin-right: 1rem;
 }
@@ -195,6 +194,7 @@ methods: {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .side_nav li:lastchild {
@@ -202,7 +202,7 @@ methods: {
 }
 
 .width {
-    width: 15%;
+    width: 18vw;
 }
 
 
@@ -238,7 +238,7 @@ transform: translateX(1rem);
 }
 
 .side_nav li:hover .nav_text {
-    color: #6357E3;
+    color: var(--navdark);
     font-weight: 600;
 }
 
@@ -263,16 +263,48 @@ transform: translateX(1rem);
 
 .fa-bars {
     color: var(--navopen);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 
 .fa-times-circle {
     color: var(--navopen);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
+@media (min-width:320px) {
+    .width {
+        width: 40%;
+    }
 
+}
+@media (min-width:481px) {
+        .width {
+        width: 30%;
+    }
+    
+}
+@media (min-width:641px) {
+        .width {
+        width: 30%;
+    }
+}
+@media (min-width:961px) {
+        .width {
+        width: 25%;
+    }
+}
+@media (min-width:1025px) {
+    .width {
+        width: 20%;
+    }
+    
+}
+@media (min-width:1281px) {
+    .width {
+        width: 18%;
+    }
+}
 
 
 </style>
