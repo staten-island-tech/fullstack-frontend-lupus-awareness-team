@@ -58,6 +58,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   border-radius: 0.5rem;
 }
 

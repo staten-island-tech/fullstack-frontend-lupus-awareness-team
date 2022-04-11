@@ -51,7 +51,7 @@
 
             <li id="logout">
                 <a href="#" id="logout_button">Log out</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
             </li>
 
 
@@ -195,6 +195,7 @@ methods: {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -275,7 +276,16 @@ transform: translateX(1rem);
 
 @media (min-width:320px) {
     .width {
-        width: 40%;
+        width: 30%;
+    }
+
+    .icon {
+        transform: scale(0.5);
+    }
+
+    .side_nav li {
+        height: 5%;
+        margin: 0rem;
     }
 
 }
@@ -294,10 +304,23 @@ transform: translateX(1rem);
         .width {
         width: 25%;
     }
+
+        .icon {
+        transform: scale(0.75);
+    }
 }
 @media (min-width:1025px) {
     .width {
         width: 20%;
+    }
+
+    
+    .side_nav li {
+        margin: 1rem;
+    }
+
+    .icon {
+        transform: scale(0.8);
     }
     
 }
@@ -305,6 +328,7 @@ transform: translateX(1rem);
     .width {
         width: 18%;
     }
+
 }
 
 
