@@ -27,7 +27,6 @@
                         <label class="confirm-password-label" for="confirm-password"><b>Confirm Password</b></label>
                         <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" required>
                         <button class="confirm-button" type="submit">Confirm</button>
-                        
                     </div>
                 </form>
                 </div>
