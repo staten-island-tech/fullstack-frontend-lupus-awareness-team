@@ -67,7 +67,7 @@ export default {
 
 .calendar-day--today > span {
   color: #fff;
-  padding: 0rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 50%;
   background-color: var(--today);
 }
