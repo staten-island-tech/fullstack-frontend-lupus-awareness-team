@@ -67,8 +67,8 @@ methods: {
     },
     fetchEvents: async function() {
       try {
-        console.log(this.$store.state.user._id)
-        const res = await HTTP.get("getEvents", this.$store.state.cookie)
+        const cookie = this.$store.state.cookie
+        const res = await HTTP.get("getEvents", {params: {cookie}})
         console.log(res.data)
       } catch (error) {
         console.log(error)
