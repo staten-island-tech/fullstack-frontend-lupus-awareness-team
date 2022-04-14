@@ -184,6 +184,7 @@ li {
   --eventBody: var(--dbPrimary)
 }
 
+
 .nav {
   font-size: 3rem;
   display: flex;

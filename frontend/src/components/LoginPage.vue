@@ -6,9 +6,9 @@
                     <div class="login-content-container">
                         <label class="login-email-label"
                         for="login-email"><b>Email</b></label>
-                        <input class="login-email" type="text" placeholder="email" name="login-email" v-model="email" required>
+                        <input class="login-email" type="text" placeholder="Email" name="login-email" v-model="email" required>
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
-                        <input class="login-password" type="password" placeholder="password" name="login-password" v-model="password" required>
+                        <input class="login-password" type="password" placeholder="Password" name="login-password" v-model="password" required>
                         <button class="submit-button" @click="login()">Login</button>
                     </div>
             </div>

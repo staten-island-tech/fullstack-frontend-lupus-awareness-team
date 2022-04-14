@@ -49,10 +49,10 @@
                 <a href="#" class="nav_text">Settings</a>
             </li>
 
-            <li id="logout">
+            <div id="logout">
                 <a href="#" id="logout_button">Log out</a>
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
-            </li>
+            </div>
 
 
             <NavProfile />
@@ -148,6 +148,7 @@ methods: {
     margin-top: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #logout_button {
@@ -279,7 +280,7 @@ transform: translateX(1rem);
 @media (min-width:320px) {
     .width {
         width: 100%;
-        height: 40%;
+        height: 38%;
     }
 
     .icon {
@@ -288,30 +289,32 @@ transform: translateX(1rem);
 
     .side_nav li {
         height: 5%;
-        margin: 1rem;
+        margin: 2rem;
         justify-content: center;
     }
 
     .nav_profile_container {
         width: 50%;
+        margin-top: 2rem;
     }
 
     #logout {
         width: 30%;
-        padding: 2rem 0rem;
+        padding: 0rem 0rem;
+        margin-top: 2rem;
     }
 
 }
 @media (min-width:481px) {
         .width {
         width: 100%;
-        height: 40%;
+        height: 45%;
     }
     
 }
 @media (min-width:641px) {
         .width {
-        width: 30%;
+        width: 35%;
         height: 100%;
     }
 
@@ -331,7 +334,8 @@ transform: translateX(1rem);
 
     #logout {
         width: 100%;
-        padding: 2rem 0rem;
+        padding: 1rem 0rem;
+        margin: auto;
     }
 }
 @media (min-width:961px) {
@@ -342,6 +346,13 @@ transform: translateX(1rem);
         .icon {
         transform: scale(0.75);
     }
+
+    #logout {
+        margin: auto;
+        padding: 0.5rem 0rem;
+    }
+
+    
 }
 @media (min-width:1025px) {
     .width {
