@@ -68,8 +68,8 @@ export default {
         sliceBackward: function() {
           this.sliceBegin = this.sliceBegin -3
  
-        }
-        
+        },
+       
        
     },
     
