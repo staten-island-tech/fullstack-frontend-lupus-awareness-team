@@ -10,7 +10,7 @@
         <h4 class="event_date">Saturday, April 2</h4>
       </div>
     </div>
-    <div class="right-column">
+    <div class="right-columun">
       <div class="user_info_brief">
         <div class="user_profile_picture">
           <img src="../assets/placeholder.jpg" alt="temporary" />
@@ -67,11 +67,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather+Sans:wght@700&display=swap');
-body {
-  background-color: var(--background);
-  box-sizing: border-box;
 
-}
 .event_name {
   margin: 3rem;
 }
@@ -83,12 +79,18 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-image: url("../assets/dogPark.jpg");
+  background-color: var(--background);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 .left-column  {
   display: flex;
   flex-direction: column;
   width: 45%;
-  background-color: var(--pink);
   padding: 3rem;
 }
 
@@ -96,7 +98,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 45%;
-  background-color: var(--pink);
   padding: 3rem;
 } 
 .event_image img {
