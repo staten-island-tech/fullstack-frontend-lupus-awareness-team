@@ -64,7 +64,7 @@ computed: {
 }
 
 .list_src {
-    width: 60%;
+    width: 70%;
     border-radius: 0.5rem;
 }
 
