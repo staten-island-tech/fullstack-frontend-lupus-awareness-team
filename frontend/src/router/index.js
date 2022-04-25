@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Login from "../components/LoginPage.vue";
 import DashboardAUTH from "../components/DashboardAUTH.vue";
 import EventInfo from "../views/EventInfo.vue";
+import LoginPageView from "../views/LoginPageView.vue";
 
 const routes = [
   {
@@ -21,9 +21,9 @@ const routes = [
     },
   },
   {
-    path: "/login",
-    name: "Login",
-    component: Login,
+    path: "/Login",
+    name: "LoginPage",
+    component: LoginPageView,
   },
   {
     path: "/event-details",
