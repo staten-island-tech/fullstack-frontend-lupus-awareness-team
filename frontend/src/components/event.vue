@@ -149,16 +149,17 @@ components: {
 }
 
 .info-time {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 .info-address {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .info-date {
     font-weight: 500;
+    font-size: 2.5rem;
 }
 
 #details {

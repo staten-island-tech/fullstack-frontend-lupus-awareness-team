@@ -116,7 +116,7 @@ components: {
   display: flex;
   flex-direction: column;
   align-items: center;
-    background-color: var(--dbTertiary);
+    background-color: var(--dbLight);
 }
 
 .profile_container {
@@ -154,29 +154,30 @@ align-items: center;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center
+  position: relative;
 }
 
 .events_tab ul{
   display: flex;
+  justify-content: center;
   z-index: 3;
-  width: 60%;
-  padding-left: 2rem;
+  width: 100%;
   margin-bottom: 2px;
+  
 }
 
 .event_tab_switch {
     cursor: pointer;
   border: none;
   color: var(--eventTab);
-  font-size: 2rem;
+  font-size: 1.8rem;
   z-index: 3;
   text-decoration: none;
   list-style: none;
   padding: 1rem 1rem;
   background-color: var(--dbAccent);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 0.5px;
- border-radius: 0.8rem 0.8rem 0rem 0rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 0.5px;
+ border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
 .calendar_container {

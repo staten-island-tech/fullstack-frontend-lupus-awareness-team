@@ -143,7 +143,7 @@ methods: {
 
 .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
     margin: 5px 0rem;
-    font-size: 15px;
+    font-size: 2rem;
     border-style: solid;
     border-radius: 7px;
     border-color: white;
@@ -152,7 +152,7 @@ methods: {
 
 .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
     margin: 5px 0rem;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 
@@ -178,5 +178,62 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+
+@media (min-width:320px)  {
+    .login-page {
+        flex-direction: column;
+    }
+
+    .login-page-right {
+        height: 45%;
+        width: 100%;
+    }
+
+    .login-page-left {
+        height: 45%;
+        width: 100%;
+    }
+
+    .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
+    font-size: 100%;
+}
+
+.login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
+    font-size: 3rem;
+}
+}
+@media (min-width:481px)  { 
+ }
+@media (min-width:641px)  {
+
+ }
+@media (min-width:961px)  { 
+    .login-page {
+        flex-direction: row;
+    }
+
+    .login-page-left {
+        height: 90%;
+        width: 45%;
+    }
+
+    .login-page-right {
+        height: 90%;
+        width: 45%;
+    }
+
+    .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
+        font-size: 2rem;
+    }
+
+    .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
+        font-size: 1.5rem;
+        padding: 1rem 3rem;
+        padding-left: 1rem;
+}
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+ }
 
 </style>
