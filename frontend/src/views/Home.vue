@@ -66,7 +66,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  padding-top: 3rem;
+  padding-top: 6rem;
 }
 
 .text-container {
@@ -76,7 +76,7 @@ export default {
 }
 
 #browse {
-  background-color: var(--dbTertiary);
+  background-color: var(--dbLight);
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;

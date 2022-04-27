@@ -41,13 +41,13 @@ import Profile from "@/components/Profile.vue";
 import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 import ToDoList from "@/components/ToDoList.vue";
 import Hosting from "@/components/Hosting.vue";
-import PastEvents from "@/components/PastEvents.vue";
+import Previous from "@/components/PastEvents.vue";
 
 export default {
 name: "DashbardAUTH",
 data() {
   return {
-    tabs: ["Hosting", "PastEvents"],
+    tabs: ["Hosting", "Previous"],
     selected: "Hosting",
     eventArr: [],
     user: this.$store.state.user
@@ -74,7 +74,7 @@ components: {
   CalendarMonth,
   ToDoList,
   Hosting,
-  PastEvents,
+  Previous,
 }
 }
 </script>
@@ -117,11 +117,13 @@ components: {
   flex-direction: column;
   align-items: center;
     background-color: var(--dbLight);
+    padding-top: 6rem;
 }
 
 .profile_container {
   width: 100%;
   background-color: var(--dbLight);
+
 }
 
 
@@ -174,11 +176,12 @@ align-items: center;
   z-index: 3;
   text-decoration: none;
   list-style: none;
-  padding: 1rem 1rem;
+  padding: 1rem 2.5rem;
   background-color: var(--dbAccent);
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 0.5px;
- border-radius: 0.5rem 0.5rem 0rem 0rem;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px, rgba(0, 0, 1, 1) 0px 2px 4px -1px;
 }
+
 
 .calendar_container {
   width: 100%;

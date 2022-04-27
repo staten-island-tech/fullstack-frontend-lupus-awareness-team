@@ -19,8 +19,7 @@ export default {
 .page {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( rgba(103, 27, 150, 0.5), 
-    rgba(103, 27, 150, 0.5)), 
+    padding-top: 6rem;
 }
 
 </style>

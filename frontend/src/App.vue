@@ -193,6 +193,8 @@ li {
   width: 100%;
   background-color: var(--topnav);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+  z-index: 10;
 }
 
 .login-container {

@@ -15,7 +15,7 @@
 <script>
 
 export default {
-name:"PastEvents",
+name:"Previous",
 data() {
   return {
     pastArr: []

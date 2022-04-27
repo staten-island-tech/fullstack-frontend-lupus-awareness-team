@@ -1,8 +1,8 @@
 <template>
     <div class="login-page">
         <div class="login-page-left">
-            <img class="background-image">   
             <div class="login-info">
+                    <h3 class="login-title">Login</h3>
                     <div class="login-content-container">
                         <label class="login-email-label"
                         for="login-email"><b>Email</b></label>
@@ -14,6 +14,7 @@
             </div>
         </div>  
         <div class="login-page-right">
+            <h3 class="login-title">Create Account</h3>
             <div class="create-account">
                 <form method="post">
                     <div class="create-account-container">
@@ -26,7 +27,7 @@
                         <input class="create-password" type="password" placeholder="Enter Password" name="create-password" required> 
                         <label class="confirm-password-label" for="confirm-password"><b>Confirm Password</b></label>
                         <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" required>
-                        <button class="confirm-button" type="submit">Confirm</button>
+                        <button class="submit-button" type="submit">Confirm</button>
                     </div>
                 </form>
                 </div>
@@ -100,6 +101,12 @@ methods: {
     justify-content: center;
     width: 50%;
     height: 90%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.login-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
 }
 
 .login-info {
@@ -111,12 +118,18 @@ methods: {
 
 
 .login-page-right {
-    background: linear-gradient(180deg, rgba(29,28,94,1) 14%, rgba(51,50,114,1) 41%, rgba(96,94,205,1) 100%);
+    background-image: linear-gradient(180deg, rgba(29,28,94,1) 14%, rgba(51,50,114,1) 41%, rgba(96,94,205,1) 100%),     url(../assets/background-pic.jpg) ; ;
+        background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     width: 40%;
     height: 90%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 
@@ -130,15 +143,19 @@ methods: {
     justify-content: center;
 }
 
-.confirm-button, .submit-button {
+.submit-button {
     padding: .4rem 4rem;
     font-size: 15px;
-    border-radius: 15px;
-    background-color: transparent;
+    background-color: var(--topnav);
     color: white;
-    border-style: solid;
-    border-color: white;
+    border: solid 0.3rem white;
     margin-top: 3rem;
+    border-radius: 0.2rem;
+}
+
+.submit-button:hover {
+    background-color: transparent;
+    transition: 0.3s;
 }
 
 .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
@@ -156,21 +173,7 @@ methods: {
 }
 
 
-/* Set a style for all buttons */
-button {
-  background-color: transparent;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: solid;
-  cursor: pointer;
-  width: 100%;
-}
 
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
 
 /* Add padding to containers */
 .login-content-container, .create-account-container{
@@ -186,12 +189,12 @@ button:hover {
 
     .login-page-right {
         height: 45%;
-        width: 100%;
+        width: 80%;
     }
 
     .login-page-left {
         height: 45%;
-        width: 100%;
+        width: 80%;
     }
 
     .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
