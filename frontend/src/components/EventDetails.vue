@@ -15,27 +15,27 @@
             <h4 class="detail-service-text">Service Hours: 10</h4>
         </div>
     </div>
-
-    <div class="detail-image-container">
-    <EventImageView/>
-    </div>    
-
-    <div class="detail-info-container">
-        <div class="detail-info-column-1"> 
-            <div class="detail-info-row">
-                <h3>Park Cleanup Volunteering</h3>
-            </div>
-
-            <div class="detail-info-row">
-                <div class="detail-info-tags">
-                    <h5 class="detail-tag">Animals</h5>
-                    <h5 class="detail-tag">Parks</h5>
-                    <h5 class="detail-tag">Volunteer</h5>
-                </div>
-            </div>
+    <div class='top-tittle'>
+        <div class="detail-info-row">
+            <h3>Park Cleanup Volunteering</h3>
         </div>
 
-        <div class="detail-info-column-2">
+        <div class="detail-info-row">
+            <div class="detail-info-tags">
+                <h5 class="detail-tag">Animals</h5>
+                <h5 class="detail-tag">Parks</h5>
+                <h5 class="detail-tag">Volunteer</h5>
+            </div>
+        </div>
+    </div>  
+
+
+    <div class="detail-image-container">
+        <EventImageView/>
+    </div>  
+
+    <div class="detail-info-container">
+        <div class="detail-info-column">
             <div class="detail-info-text">
                 <h4 class="detail-info-time"> 2:00 PM - 4:00 PM</h4>
                 <h4 class="detail-info-address">485 Clawson St, Staten Island, NY 10306</h4>
@@ -80,6 +80,10 @@ export default {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+.top-tittle {
+    padding: 2rem;
 }
 
 .detail-event-info {
@@ -162,21 +166,18 @@ export default {
     font-weight: 500;
 }
 
-
-
-
 .detail-info-text {
     width: 90%;
 }
 
-.detail-info-column-1 {
+/* .detail-info-column-1 {
     width: 45%;
     display: flex;
     flex-direction: column;
 
-}
+} */
 
-.detail-info-column-2 {
+.detail-info-column {
     width: 55%;
     display: flex;
     align-items: center;
@@ -190,6 +191,7 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 1rem;
 }
 
 .detail-info-tags {
@@ -204,6 +206,7 @@ export default {
     padding: 0.5rem 1rem;
     background-color: var(--service);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 0rem 1rem;
 }
 
 
