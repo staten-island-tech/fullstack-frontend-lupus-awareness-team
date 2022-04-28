@@ -20,6 +20,7 @@ export default {
     width: 100%;
     height: 100vh;
     padding-top: 6rem;
+    background-color: var(--dbLight)
 }
 
 </style>

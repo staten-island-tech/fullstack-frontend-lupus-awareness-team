@@ -3,7 +3,9 @@
     <div class="modal">
       <header class="modal-header">
           <h2 class="header-text"> Create an Event!</h2>
-        <button type="button" class="btn-close" @click="close"> X </button>
+                <div class="btn-close">
+            <i class="far fa-times-circle" @click="close"></i>
+        </div>
       </header>
 
       <section class="modal-body">
@@ -126,18 +128,14 @@ border-radius: 7px;
   }
 
   .btn-close {
-    font-family: Montserrat, sans-serif;
     position: absolute;
     top: 0;
     right: 0;
-    border: none;
-    font-size: 3rem;
-    padding: 0rem;
+    font-size: 4rem;
     margin-right: 1rem;
     cursor: pointer;
     font-weight: bold;
     color: red;
-    background: transparent;
   }
 
 .upload-info {

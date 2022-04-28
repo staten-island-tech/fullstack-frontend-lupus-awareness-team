@@ -118,8 +118,11 @@ methods: {
 
 
 .login-page-right {
-    background-image: linear-gradient(180deg, rgba(29,28,94,1) 14%, rgba(51,50,114,1) 41%, rgba(96,94,205,1) 100%),     url(../assets/background-pic.jpg) ; ;
-        background-size: 100%;
+    background-image:
+    linear-gradient( rgba(103, 15, 139, 0.1), 
+    rgba(103, 27, 150, 0.5)), 
+    url(../assets/background-pic.jpg) ; 
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -144,8 +147,8 @@ methods: {
 }
 
 .submit-button {
-    padding: .4rem 4rem;
-    font-size: 15px;
+    padding: .4rem 2rem;
+    font-size: 1.8rem;
     background-color: var(--topnav);
     color: white;
     border: solid 0.3rem white;
@@ -177,7 +180,6 @@ methods: {
 
 /* Add padding to containers */
 .login-content-container, .create-account-container{
-  padding: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -198,16 +200,55 @@ methods: {
     }
 
     .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
-    font-size: 100%;
-}
+        font-size: 6rem;
+        margin: 0;
+    }
 
-.login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
-    font-size: 3rem;
-}
+    .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
+        font-size: 2.3rem;
+        margin: 0;
+    }
+
+    .login-title {
+        margin: 0;
+    }
+
+    .create-account-container {
+        padding: 0;
+    }
 }
 @media (min-width:481px)  { 
+            .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
+        font-size: 4rem;
+    }
+
+        .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
+        font-size: 1.8rem;
+        padding: 0.5rem 0rem;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+    }
+
+        .login-title {
+        font-size: 2.5rem;
+    }
  }
 @media (min-width:641px)  {
+        .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
+        font-size: 2rem;
+    }
+
+        .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
+        font-size: 1.5rem;
+        padding: 0.5rem 0rem;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .login-title {
+        font-size: 3rem;
+    }
+
 
  }
 @media (min-width:961px)  { 
@@ -226,14 +267,28 @@ methods: {
     }
 
     .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
         font-size: 1.5rem;
         padding: 1rem 3rem;
         padding-left: 1rem;
-}
+    }
+
+   .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
+        font-size: 2.5rem;
+        margin: 5px 0px;
+    }
+
+    .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
+        font-size: 2rem;
+        margin: 5px 0px;
+    }
+
+    .login-title {
+        margin-bottom: 2rem;
+    }
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { 
