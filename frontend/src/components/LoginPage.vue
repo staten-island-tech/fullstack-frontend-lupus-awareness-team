@@ -165,9 +165,8 @@ methods: {
     margin: 5px 0rem;
     font-size: 2rem;
     border-style: solid;
-    border-radius: 7px;
+    border-radius: 0.5rem;
     border-color: white;
-    padding: 3px;
 }
 
 .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
@@ -215,6 +214,10 @@ methods: {
 
     .create-account-container {
         padding: 0;
+    }
+
+    .submit-button {
+        margin-top: 6rem;
     }
 }
 @media (min-width:481px)  { 
@@ -272,7 +275,7 @@ methods: {
 
     .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
         font-size: 1.5rem;
-        padding: 1rem 3rem;
+        padding: 0.8rem 3rem;
         padding-left: 1rem;
     }
 
