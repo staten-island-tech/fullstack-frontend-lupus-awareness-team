@@ -1,4 +1,5 @@
 <template>
+<div class="event-section">
 <div class="event-details-container">
     <div class="top-event-container">
         <div class="detail-user">
@@ -45,6 +46,7 @@
     </div>
     
 </div>
+</div>
 </template>
 
 <script>
@@ -62,6 +64,20 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather+Sans:wght@700&display=swap');
 
 
+.event-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+      background-image: url("../assets/dogPark.jpg");
+  background-color: var(--background);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .event-details-container {
     background-color: var(--eventBody);
@@ -72,7 +88,6 @@ export default {
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
-    margin: 10rem auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
