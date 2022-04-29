@@ -77,6 +77,9 @@ components: {
     NavProfile,
 
 },
+created() {
+  this.auto();
+},
 methods: {
     toggle() {
         this.expand = true;
@@ -85,6 +88,13 @@ methods: {
     close() {
         this.expand = false;
         this.nav = true;
+    },
+    auto() {
+        document.onclick = function(e) {
+            if(e.target.class !== "#side_nav") {
+                console.log("hello")
+            }
+        }
     },
     theme() {
         this.active = !this.active
@@ -107,6 +117,10 @@ methods: {
 </script>
 
 <style scoped>
+
+.side_nav:active {
+    width: 0;
+}
 
 .circle {
     height: 2.5rem;

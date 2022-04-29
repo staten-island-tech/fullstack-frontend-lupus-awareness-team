@@ -106,7 +106,6 @@ border-radius: 7px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
   }
 
   .modal-header {
@@ -124,7 +123,10 @@ border-radius: 7px;
 
   .modal-body {
     position: relative;
-    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
   .btn-close {
@@ -143,7 +145,6 @@ border-radius: 7px;
   flex-direction: column;
   justify-content: center;
   width: 40rem;
-  margin: 0 auto;
 }
 
 .form-header {

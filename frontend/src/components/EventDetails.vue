@@ -71,12 +71,12 @@ export default {
     justify-content: center;
     padding-top: 8rem;
     padding-bottom: 4rem;
-      background-image: url("../assets/dogPark.jpg");
-  background-color: var(--background);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url("../assets/dogPark.jpg");
+    background-color: var(--background);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .event-details-container {
