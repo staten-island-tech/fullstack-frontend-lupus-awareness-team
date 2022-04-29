@@ -1,12 +1,21 @@
 <template>
   <div class="address_complete">
-      <div class="search_bar">
-          <!-- can change the @keyup.enter to just @keyup for speedy searches, but that puts out a lottttt of requests and i might hit my monthly quota (30000) -->
-        <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search...">
-        <div v-show="searchResults" v-for="(index) in searchResults" :key="index.properties.name" class="search_results">{{index.properties.label}}</div>
-        <button class="search_btn">Go</button>
+      <div class="search">
+          <!-- can change the @keyup.enter to just @keyup for speedy searches, but that puts out a lottttt of requests and i might hit my monthly quota (30000). might not have to worry ab it tho bc 30000 is a lot -->
+            <div class="search_bar">
+                <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search...">
+                <button @click="fetchAddress()" class="search_btn">Go</button>
+            </div>
+            <div @click="completeForm(e)" v-show="searchResults" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> <svg class="svg-icon" viewBox="0 0 20 20">
+							<path fill="none" d="M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z"></path>
+							<circle fill="none" cx="10" cy="5.67" r="1.608"></circle>
+						</svg>{{index.properties.label}}</div>
       </div>
-      <label for=""></label>
+      <label for="street_address">Street</label>
+      <input class="input" type="text" placeholder="address" v-model="selectedAddress.name">
+      <input class="input" type="text" placeholder="borough">
+      <input class="input" type="text" placeholder="city">
+      <input class="input" type="text" placeholder="state">
       <p>message : {{query}}</p>
   </div>
 </template>
@@ -15,25 +24,28 @@
 export default {
     data() {
         return {
-            query: null,
+            query: "",
             apiKey: 'dee8429ca17c397b5b1fb5c7b223c29927e5e580',
-            temp: ['@click="fetchAddress()"', '' ],
             searchResults: [],
+            selectedAddress: [{name: "", label: "", region: "", country: "", borough: ""}, 
+            ]
         }
     },
     methods: {
-    fetchAddress: async function () {
-        try {
-        const response = await fetch(`https://api.geocodify.com/v2/autocomplete?api_key=${this.apiKey}&q=${this.query}, USA`);
-        // only searches within america, but can be changed (idk why tho)
-        const data = await response.json();
-        this.searchResults = data.response.features;
-        console.log(this.searchResults)
-      } catch(error) {
-          console.log(error)
-      }
-    },
-    
+        fetchAddress: async function () {
+            try {
+            const response = await fetch(`https://api.geocodify.com/v2/autocomplete?api_key=${this.apiKey}&q=${this.query}, USA`);
+            // only searches within america, but can be changed (idk why we would tho)
+            const data = await response.json();
+            this.searchResults = data.response.features;
+            console.log(this.searchResults)
+        } catch(error) {
+            console.log(error)
+        }
+        },
+        completeForm: function(selected) {
+            this.selectedAddress.name = selected.properties.name
+        }
 },
 }
 </script>
@@ -46,32 +58,79 @@ export default {
         margin: 1rem auto;
     }
     #search_form {
-        width: 100%;
+        width: 90%;
         font-size: 3rem;
-        padding: 1rem 2rem;
+        height: 100%;
         border: none;
         outline: none;
+        border-bottom: .25rem solid gray;
     }
-    .search_bar {
+    .search {
         margin: 0 auto;
         width: 60%;
         display: flex;
         flex-direction: column;
+        justify-content: left;
         align-items: center;
-    }
-    #search_form:focus {
-        border: none;
+        padding: 0 3rem;
+        background-color: #fff;
     }
     p {
         font-size: 2rem;
         height: 2rem;
-        margin: 3;
+        margin: 3rem;
     }
     .search_results {
-        background-color: antiquewhite;
-        width: 100%;
+        background-color: #fff;
+        border-bottom: .25rem solid rgb(218, 218, 218);
+        width: 90%;
         font-size: 2.5rem;
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        color: rgb(77, 77, 77);
         
+    }
+    .search_results:hover {
+        background-color: var(--dbSecondary);
+    }
+    .search_bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1rem;
+        width: 100%;
+        height: 7vh;
+    }
+    .search_btn {
+        font-size: 2.75rem;
+        height: 100%;
+        width: 10%;
+        background-color: var(--purple);
+        border: none;
+        color: #fff;
+        
+    
+    }
+    .svg-icon {
+        width: 3rem;
+        height: 3rem;
+        margin: 0 1.5rem;
+    }
+
+    .svg-icon path,
+    .svg-icon polygon,
+    .svg-icon rect {
+        fill: #f01000;
+    }
+
+    .svg-icon circle {
+        stroke: #f01000;
+        stroke-width: 1;
+    }
+    .input {
+        font-size: 3rem;
     }
 </style>
