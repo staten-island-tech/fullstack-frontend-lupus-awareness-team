@@ -36,13 +36,21 @@
     </div>  
 
     <div class="detail-info-container">
-        <div class="detail-info-column">
+        <div class="detail-info-column-1">
             <div class="detail-info-text">
                 <h4 class="detail-info-time"> 2:00 PM - 4:00 PM</h4>
                 <h4 class="detail-info-address">485 Clawson St, Staten Island, NY 10306</h4>
                 <h4 class="detail-info-date"> Saturday, April 2nd </h4>
             </div>
         </div>
+
+        <div class="detail-info-column-2">
+            <div class="detail-info-description">
+                <h4 class="detail-info-description-label">Event Decription:</h4>
+                <h5 class="detail-decription">gjojosjosjgosjgsogjosjgsojgosgjsogjsogjs</h5>
+            </div>
+        </div>
+
     </div>
     
 </div>
@@ -65,13 +73,13 @@ export default {
 
 
 .event-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 8rem;
-    padding-bottom: 4rem;
-      background-image: url("../assets/dogPark.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  background-image: url("../assets/dogPark.jpg");
   background-color: var(--background);
   background-attachment: fixed;
   background-position: center;
@@ -185,19 +193,28 @@ export default {
     width: 90%;
 }
 
-/* .detail-info-column-1 {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
+.detail-info-decription {
+    width: 90%;
+}
 
-} */
-
-.detail-info-column {
+.detail-info-column-1 {
     width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.detail-info-column-2 {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detail-description {
+
 }
 
 .detail-info-row{
@@ -222,6 +239,10 @@ export default {
     background-color: var(--service);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin: 0rem 1rem;
+}
+
+.detail-info-decription-label {
+    font-size: 5rem;
 }
 
 
