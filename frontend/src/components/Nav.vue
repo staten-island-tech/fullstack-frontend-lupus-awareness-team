@@ -22,7 +22,7 @@
                 <router-link to="/about" class="nav_text">Dashboard</router-link>
             </li>
 
-            <li>
+            <li id="themeLi">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M7.08 11.25A4.84 4.84 0 0 1 8 9.05L4.43 5.49A9.88 9.88 0 0 0 2 11.25zM9.05 8a4.84 4.84 0 0 1 2.2-.91V2a9.88 9.88 0 0 0-5.76 2.43zM12.75 2v5A4.84 4.84 0 0 1 15 8l3.56-3.56A9.88 9.88 0 0 0 12.75 2zM8 15a4.84 4.84 0 0 1-.91-2.2H2a9.88 9.88 0 0 0 2.39 5.76zM11.25 16.92a4.84 4.84 0 0 1-2.2-.92l-3.56 3.57A9.88 9.88 0 0 0 11.25 22zM16 9.05a4.84 4.84 0 0 1 .91 2.2h5a9.88 9.88 0 0 0-2.39-5.76zM15 16a4.84 4.84 0 0 1-2.2.91v5a9.88 9.88 0 0 0 5.76-2.39zM16.92 12.75A4.84 4.84 0 0 1 16 15l3.56 3.56A9.88 9.88 0 0 0 22 12.75z"></path></svg>
                 <a href="#" @click="theme" class="nav_text">Theme</a>
             </li>
@@ -77,9 +77,6 @@ components: {
     NavProfile,
 
 },
-created() {
-  this.auto();
-},
 methods: {
     toggle() {
         this.expand = true;
@@ -88,13 +85,6 @@ methods: {
     close() {
         this.expand = false;
         this.nav = true;
-    },
-    auto() {
-        document.onclick = function(e) {
-            if(e.target.class !== "#side_nav") {
-                console.log("hello")
-            }
-        }
     },
     theme() {
         this.active = !this.active
@@ -117,10 +107,6 @@ methods: {
 </script>
 
 <style scoped>
-
-.side_nav:active {
-    width: 0;
-}
 
 .circle {
     height: 2.5rem;
@@ -151,6 +137,7 @@ methods: {
     align-items: center;
     padding: 0;
     margin: 0;
+    margin-bottom: 4rem;
 }
 
 #logout {
@@ -169,6 +156,7 @@ methods: {
     color: #DC3623;
     font-weight: 600;
     margin-right: 1rem;
+    font-size: 2rem;
 }
 
 .dropdown {
@@ -179,6 +167,10 @@ methods: {
   flex-direction: column;
   padding-left: 3rem;
   justify-content: center;
+}
+
+#themeLi {
+    position: relative;
 }
 
 .dropdown-item {
@@ -234,6 +226,7 @@ methods: {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 0.5rem;
     margin: 1rem;
     width: 80%;
@@ -294,17 +287,32 @@ transform: translateX(1rem);
 @media (min-width:320px) {
     .width {
         width: 100%;
-        height: 38%;
+        height: 40%;
     }
 
     .icon {
         transform: scale(0.5);
     }
 
+    .home {
+        transform: scale(0.5);
+    }
+
     .side_nav li {
         height: 5%;
         margin: 2rem;
-        justify-content: center;
+        width: 30%;
+
+    }
+
+    .side_nav li:hover {
+        transform: translateX(0rem);
+        background-color: var(--nav);
+    }
+
+    .side_nav li:hover .nav_text {
+        color: var(--navtext);
+        font-weight: 400;
     }
 
     .nav_profile_container {
@@ -316,6 +324,10 @@ transform: translateX(1rem);
         width: 30%;
         padding: 0rem 0rem;
         margin-top: 2rem;
+    }
+
+    .dropdown {
+        width: 20%;
     }
 
 }
@@ -336,10 +348,15 @@ transform: translateX(1rem);
         transform: scale(0.7);
     }
 
+        .home {
+        transform: scale(0.7);
+    }
+
     .side_nav li {
         height: 5%;
         margin: 1rem;
         justify-content: initial;
+        width: 80%;
     }
 
     .nav_profile_container {
@@ -351,7 +368,28 @@ transform: translateX(1rem);
         padding: 1rem 0rem;
         margin: auto;
     }
-}
+
+        .side_nav li:hover {
+    background-color: #Fff;
+    transition: all 0.3s;
+    transform: translateX(1rem);
+    }
+
+    .side_nav li:hover .nav_text {
+        color: var(--navdark);
+        font-weight: 600;
+    }
+
+    .side_nav li:hover .icon {
+        fill: #6357E3;
+    }
+
+            .dropdown {
+        width: 80%;
+    }
+
+        
+    }
 @media (min-width:961px) {
         .width {
         width: 25%;
@@ -361,11 +399,14 @@ transform: translateX(1rem);
         transform: scale(0.75);
     }
 
+        .home {
+        transform: scale(0.75);
+    }
+
     #logout {
         margin: auto;
         padding: 0.5rem 0rem;
     }
-
     
 }
 @media (min-width:1025px) {
@@ -379,6 +420,10 @@ transform: translateX(1rem);
     }
 
     .icon {
+        transform: scale(0.8);
+    }
+
+    .home {
         transform: scale(0.8);
     }
     

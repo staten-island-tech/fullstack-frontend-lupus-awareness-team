@@ -134,10 +134,11 @@ border-radius: 7px;
     top: 0;
     right: 0;
     font-size: 4rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     cursor: pointer;
     font-weight: bold;
     color: red;
+
   }
 
 .upload-info {
