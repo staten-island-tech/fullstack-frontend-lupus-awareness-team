@@ -47,7 +47,7 @@
         <div class="detail-info-column-2">
             <div class="detail-info-description">
                 <h4 class="detail-info-description-label">Event Decription:</h4>
-                <h5 class="detail-decription">gjojosjosjgosjgsogjosjgsojgosgjsogjsogjs</h5>
+                <h5 class="detail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
             </div>
         </div>
 
@@ -214,7 +214,7 @@ export default {
 }
 
 .detail-description {
-
+    font-weight: 500;
 }
 
 .detail-info-row{

@@ -125,14 +125,14 @@ export default {
 .image_view{
   background-color: var(--light);
   width: 100%;
-  height: 40vh;
-  border: .25rem solid gray;
-  border-radius: 5rem;
+  height: 100%;
+  border-radius: 1rem;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .view_container {
   height: 40vh;
@@ -153,9 +153,9 @@ export default {
   cursor: pointer;
   position: static;
   top: 40%;
-  width: 10%;
+  width: 5%;
   padding: 1rem;
-  height: 20%;
+  height: 15%;
   color: white;
   font-weight: bold;
   font-size: 3rem;
@@ -163,14 +163,9 @@ export default {
   text-decoration: none;
   user-select: none;
   border: none;
-  background-color: rgba(110, 110, 110,0.8);
+  background-color: rgba(162, 157, 159, 0.7);
 }
-.prev {
-    border-radius: 1rem 0 0 1rem;
-}
-.next {
-    border-radius: 0 1rem 1rem 0;
-}
+
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }

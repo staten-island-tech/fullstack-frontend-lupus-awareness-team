@@ -142,7 +142,7 @@ li {
   --calendarMonth: var(--pink);
   --calendarMonthBorder: var(--grey-300);
   --calendarDay: var(--white);
-  --calendarDayText: var(--grey-800);
+  --calendarDayText: var(--black);
   --calendarDayNot: #EBE9F2;
   --dayofweek: var(--white);
   --border-top: var(--grey-200);
@@ -150,6 +150,7 @@ li {
 
     --service: var(--background);
     --eventBody: var(--white);
+    --create: var(--navdark);
     
 }
 
@@ -181,7 +182,8 @@ li {
   --today: var(--grey-800);
 
   --service: var(--dbSecondary);
-  --eventBody: var(--dbPrimary)
+  --eventBody: var(--dbPrimary);
+  --create: #000;
 }
 
 

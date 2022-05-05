@@ -90,7 +90,7 @@ export default {
   bottom: 0;
   right: 0;
   font-size: 5rem;
-  background-color: var(--navdark);
+  background-color: var(--create);
   color: white;
   border: none;
   padding: 1rem 2.8rem;
