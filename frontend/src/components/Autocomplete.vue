@@ -12,14 +12,25 @@
 						</svg>{{index.properties.label}}</div>
       </div>
       <form action="" class="event_address">
+        <div class="address_line">
         <label for="street_address">Street</label>
-        <input id="event_street_address" class="input" type="text" placeholder="street address" v-model="selectedAddress.name">
+        <input id="event_street_address" class="input" type="text" v-model="selectedAddress.name">
+        </div>
+        <div class="address_line">
         <label for="event_borough">Borough</label>
-        <input id="event_borough" class="input" type="text" placeholder="borough"
+        <input id="event_borough" class="input" type="text" 
         v-model="selectedAddress.borough">
-        <input class="input" type="text" placeholder="city" v-model="selectedAddress.city">
-        <input class="input" type="text" placeholder="state" v-model="selectedAddress.region">
-        <input class="input" type="text" inputmode="numeric" placeholder="ZIP/Postal Code" v-model="selectedAddress.region">
+        </div>
+        <div class="address_line">
+        <label for="event_city">City</label>
+        <input id="event_city" class="input" type="text" v-model="selectedAddress.city">
+        </div>
+        <div class="address_line">
+        <label for="event_state">State</label>
+        <input id="event_state" class="input" type="text"  v-model="selectedAddress.region">
+        <label for="event_zip">ZIP/Postal Code</label>
+        <input id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
+        </div>
       </form>
       <p>message : {{query}}</p>
   </div>
@@ -144,13 +155,24 @@ export default {
     }
     .input {
         font-size: 2.5rem;
+        width: 60%;
+        
     }
     label {
         font-size: 3rem;
+        width: 40%;
     }
     .event_address {
-        width: 50%;
+        width: 40%;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .address_line {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+        align-items: center;
     }
 </style>
