@@ -294,9 +294,6 @@ transform: translateX(1rem);
         transform: scale(0.5);
     }
 
-    .home {
-        transform: scale(0.5);
-    }
 
     .side_nav li {
         height: 5%;
@@ -324,6 +321,7 @@ transform: translateX(1rem);
         width: 30%;
         padding: 0rem 0rem;
         margin-top: 2rem;
+        padding: 0rem;
     }
 
     .dropdown {

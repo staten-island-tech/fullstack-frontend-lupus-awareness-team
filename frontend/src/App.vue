@@ -273,6 +273,7 @@ li {
 }
 
 @media (min-width:320px)  {
+
   *,html,body {
     font-size: 25%;
   }
@@ -285,13 +286,27 @@ li {
     height: 60%;
   }
 
+  #logo-home {
+        transform: scale(0.6);
+        margin-left: 0;
+  }
+
 }
 @media (min-width:481px)  { 
    *,html,body {
      font-size: 35%;
    }
+
+    #logo-home {
+        transform: scale(0.7);
+        margin-left: 1rem;
+  }
  }
 @media (min-width:641px)  {
+    #logo-home {
+        transform: scale(0.9);
+        margin-left: 1rem;
+  }
     *, html,body {
     font-size: 50%;
   }
@@ -299,6 +314,10 @@ li {
 
  }
 @media (min-width:961px)  { 
+  #logo-home {
+        transform: scale(1);
+        margin-left: 2rem;
+  }
   .login-button {
     height: 70%;
   }
