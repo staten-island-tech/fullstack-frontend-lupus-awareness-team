@@ -12,10 +12,6 @@
             </div>   
         </div>
 
-        <div class="detail-service-container">
-            <h4 class="detail-service-text">Service Hours: 10</h4>
-        </div>
-    </div>
     <div class='top-tittle'>
         <div class="detail-info-row">
             <h3>Park Cleanup Volunteering</h3>
@@ -29,6 +25,14 @@
             </div>
         </div>
     </div>  
+
+        <div class="detail-service-wrapper">
+            <div class="detail-service-container">
+                <h4 class="detail-service-text">Service Hours: 10</h4>
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="detail-image-container">
@@ -134,15 +138,14 @@ export default {
 }
 
 .detail-user {
-    padding: 1.5rem 2rem;
-    width: 70%;
+    width: 30%;
     display: flex;
     align-items: center;
     margin-left: 3rem;
 }
 
 .detail-user-image{
-    width: 10%;
+    width: 20%;
 }
 
 .detail-user-text {
@@ -161,11 +164,17 @@ export default {
     font-weight: 600;
 }
 
+.detail-service-wrapper {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .detail-service-container {
     background-color: var(--service);
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
 }
 
 
@@ -194,7 +203,7 @@ export default {
 }
 
 .detail-info-decription {
-    width: 90%;
+    width: 80%;
 }
 
 .detail-info-column-1 {

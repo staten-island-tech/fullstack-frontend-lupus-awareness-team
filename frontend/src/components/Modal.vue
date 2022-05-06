@@ -14,29 +14,42 @@
         </div>
         <div class="upload-info">
           <form class="form">
+
+        <div class="label-wrapper">
           <label class="enter-event-name"
-          for="enter-event-name"><b>Enter Event Name</b></label>
+          for="enter-event-name"><b> Event Name:</b></label>
           <input class="event-name" type="text" placeholder="Event Name" name="event-name" required>
+        </div>
 
+        <div class="label-wrapper">
           <label class="enter-event-date"
-          for="enter-event-date"><b>Enter Event Date</b></label>
+          for="enter-event-date"><b> Event Date:</b></label>
           <input class="event-date" type="text" placeholder="Event Date" name="event-date" required>
+        </div>
 
+        <div class="label-wrapper">
           <label class="enter-event-time"
-          for="enter-event-time"><b>Enter Event Time</b></label>
+          for="enter-event-time"><b> Event Time:</b></label>
           <input class="event-time" type="text" placeholder="Event Time" name="event-time" required>
+        </div>
 
+        <div class="label-wrapper">
           <label class="enter-event-address"
-          for="enter-event-address"><b>Enter Event Address</b></label>
-          <input class="event-address" type="text" placeholder="Event Adress" name="event-address" required>
+          for="enter-event-address"><b> Event Address:</b></label>
+          <input class="event-address" type="text" placeholder="Event Address" name="event-address" required>
+        </div>
 
+        <div class="label-wrapper">
           <label class="enter-event-hours"
-          for="enter-event-hours"><b>Enter Event Hours</b></label>
+          for="enter-event-hours"><b> Event Hours:</b></label>
           <input class="event-hours" type="text" placeholder="Event Hours" name="event-hours" required>
+        </div>
 
+        <div class="label-wrapper">
           <label class="enter-event-tags"
-          for="enter-event-tags"><b>Enter Event Tags</b></label>
+          for="enter-event-tags"><b> Event Tags:</b></label>
           <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
+        </div>
 
           <label for="file-upload" class="custom-file-upload"> 
             <img class="upload-icon" src="../assets/upload-icon.png">
@@ -142,11 +155,10 @@ border-radius: 7px;
   }
 
 .upload-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 40rem;
+  width: 90%;
+  height: 100%;
 }
+
 
 .form-header {
   display: flex;
@@ -156,20 +168,31 @@ border-radius: 7px;
 
 .form-title {
   font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 .enter-event-tags, .enter-event-name, .enter-event-time, .enter-event-date, .enter-event-hours, .enter-event-address {
   font-size: 3rem;
+  font-weight: 500; 
+  width: 20%;
 }
 
 .event-tags, .event-name, .event-time, .event-date, .event-hours, .event-address {
-  margin: 5px 0rem;
-  font-size: 15px;
+  margin: 0.5rem 0rem;
+  font-size: 1.5rem;
   border-style: solid;
-  border-radius: 7px;
+  border-radius: 0.1rem;
   border-color: #c4c4c4;
-  padding: 3px;
-  width: 40rem;
+  background-color: #f1f1f1;
+  padding: 0.8rem;
+  width: 40%;
 } 
+
+.label-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
 
 
 .uplaod-file-button {
@@ -201,7 +224,12 @@ border-radius: 7px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
+
+
 
 .custom-file-upload {
   display: flex;
@@ -212,5 +240,7 @@ border-radius: 7px;
   width: 10%;
   margin-right: 2rem;
 }
+
+
 
 </style>
