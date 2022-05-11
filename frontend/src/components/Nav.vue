@@ -287,7 +287,7 @@ transform: translateX(1rem);
 @media (min-width:320px) {
     .width {
         width: 100%;
-        height: 40%;
+        height: 50%;
     }
 
     .icon {
@@ -298,7 +298,7 @@ transform: translateX(1rem);
     .side_nav li {
         height: 5%;
         margin: 2rem;
-        width: 30%;
+        width: 50%;
 
     }
 

@@ -132,6 +132,7 @@ border-radius: 7px;
 
   .header-text {
     padding: 2rem 0rem;
+    font-size: 4rem;
   }
 
   .modal-body {
@@ -155,7 +156,7 @@ border-radius: 7px;
   }
 
 .upload-info {
-  width: 90%;
+  width: 100%;
   height: 100%;
 }
 
@@ -174,6 +175,9 @@ border-radius: 7px;
   font-size: 3rem;
   font-weight: 500; 
   width: 20%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .event-tags, .event-name, .event-time, .event-date, .event-hours, .event-address {
@@ -195,7 +199,7 @@ border-radius: 7px;
 }
 
 
-.uplaod-file-button {
+.upload-file-button {
   font-size: 1rem;
   background-color: brown;
 }
@@ -240,6 +244,69 @@ border-radius: 7px;
   width: 10%;
   margin-right: 2rem;
 }
+
+@media (min-width:320px)  {
+      .modal {
+    width: 90%;
+    height: 40%;
+  }
+
+  .enter-event-tags, .enter-event-name, .enter-event-time, .enter-event-date, .enter-event-hours, .enter-event-address {
+  font-size: 7rem;
+
+}
+
+}
+@media (min-width:481px)  { 
+    .modal {
+    width: 90%;
+    height: 60%;
+  }
+
+ .enter-event-tags, .enter-event-name, .enter-event-time, .enter-event-date, .enter-event-hours, .enter-event-address {
+  font-size: 5rem;
+ }
+
+ }
+@media (min-width:641px)  {
+      .modal {
+    width: 80%;
+    height: 80%;
+  }
+
+    .enter-event-tags, .enter-event-name, .enter-event-time, .enter-event-date, .enter-event-hours, .enter-event-address {
+  font-size: 3rem;
+    }
+  
+
+ }
+@media (min-width:961px)  { 
+    .modal {
+    width: 80%;
+    height: 70%;
+  }
+
+  .enter-event-tags, .enter-event-name, .enter-event-time, .enter-event-date, .enter-event-hours, .enter-event-address {
+  font-size: 3rem;
+}
+
+}
+@media (min-width:1025px) { 
+    .modal {
+    width: 60%;
+    height: 80%;
+  }
+
+
+ }
+@media (min-width:1281px) { 
+
+  .modal {
+    width: 60%;
+    height: 80%;
+  }
+
+ }
 
 
 
