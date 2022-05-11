@@ -186,6 +186,37 @@ li {
   --create: #000;
 }
 
+.shrek {
+  --topnav: rgb(126,135,0);
+  --nav: rgb(126,135,0);
+  --navtext: var(--background);
+  --navhover: #585353;
+  --navdark: var(--darkgray);
+  --navopen: var(--white);
+  --login: #000;
+  --loginhover: var(--dbTertiary);
+
+  --dbPrimary: var(--black-primary);
+  --dbSecondary: var(--black-secondary);
+  --dbTertiary: var(--black-tertiary);
+  --dbAccent: var(--black-primary);
+  --dbLight: var(--black-tertiary);
+  --profiletext: rgba(255,255,255,.87);
+  --eventTab: var(--grey-100);
+
+  --calendarMonth: var(--black-primary);
+  --calendarMonthBorder: black;
+  --calendarDay: #353535;
+  --calendarDayText: var(--background);
+  --calendarDayNot: var(--black-secondary);
+  --dayofweek: var(--black-secondary);
+  --border-top: var(--black-primary);
+  --today: var(--grey-800);
+
+  --service: var(--dbSecondary);
+  --eventBody: var(--dbPrimary);
+  --create: #000;
+}
 
 .nav {
   font-size: 3rem;
