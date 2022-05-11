@@ -30,9 +30,13 @@ export default new Vuex.Store({
       // console.log(this.state.user);
     },
     async login({ commit }, credentials) {
-      const res = await HTTP.post("login", credentials);
-      console.log(res)
-      commit("SET_USER_DATA", res.data);
+      try {
+        const res = await HTTP.post("login", credentials);
+        console.log(res.headers['set-cookie'])
+        commit("SET_USER_DATA", res.data);
+      } catch (error) {
+        console.log(error)
+      }
     },
   },
   modules: {},
