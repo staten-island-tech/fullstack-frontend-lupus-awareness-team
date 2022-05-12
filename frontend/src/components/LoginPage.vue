@@ -148,18 +148,19 @@ methods: {
 }
 
 .submit-button {
-    padding: .4rem 2rem;
+    padding: .4rem 1rem;
+    width: 80%;
     font-size: 1.8rem;
     background-color: var(--topnav);
     color: white;
-    border: solid 0.3rem white;
+    border: 0.1rem solid white;
     margin-top: 3rem;
     border-radius: 0.2rem;
 }
 
 .submit-button:hover {
-    background-color: transparent;
     transition: 0.3s;
+    background-color: var(--loginhover)
 }
 
 .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
@@ -182,6 +183,7 @@ methods: {
 .login-content-container, .create-account-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width:320px)  {
@@ -200,13 +202,15 @@ methods: {
     }
 
     .login-email-label, .login-password-label, .create-email-label, .create-password-label, .confirm-password-label, .email-label {
-        font-size: 6rem;
+        font-size: 8rem;
         margin: 0;
     }
 
     .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
-        font-size: 2.3rem;
+        font-size: 2rem;
         margin: 0;
+        padding: 0.1rem 3rem;
+        padding-left: 0.1rem;
     }
 
     .login-title {
@@ -250,7 +254,11 @@ methods: {
     }
 
     .login-title {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .submit-button {
+        margin-top: 2rem;
     }
 
 
@@ -286,15 +294,16 @@ methods: {
     }
 
     .login-email, .login-password, .create-email, .create-password, .confirm-password, .email {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin: 5px 0px;
     }
 
     .login-title {
         margin-bottom: 2rem;
+        font-size: 3rem;
     }
 }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1025px) { }
 @media (min-width:1281px) { 
  }
 
