@@ -5,6 +5,7 @@ const HTTP = axios.create({
   headers: {
     Authorization: "Bearer {token}",
   },
+  withCredentials: true
 });
 
 export default HTTP;
