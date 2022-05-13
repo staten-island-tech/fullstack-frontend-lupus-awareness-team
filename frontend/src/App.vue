@@ -14,10 +14,11 @@
       </div>
       
       <div class="theme-container">
-        <button class="theme-button">
+        <button class="theme-button" @click="toggle">
           <h5 class="theme-text">Theme</h5>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="m11.998 17 7-8h-14z"></path></svg>
         </button>
+        <div class="theme-dropdown" v-if="active"></div>
       </div>
 
       <Navbar />
@@ -43,6 +44,14 @@ export default {
     //     console.log(error)
     //   }
     // }
+      toggle () {
+        this.active = !this.active
+      }
+  },
+  data() {
+    return {
+      active: false
+    }
   },
   components: {
     Navbar
@@ -230,7 +239,11 @@ li {
 .theme-text {
   margin-right: 0.5rem;
   color: var(--white);
-  font-weight: 600;
+  font-weight: 500;
+  padding: 0rem 1rem;
+  padding-right: 0rem;
+  font-family: san-serif, "Montserrat";
+  font-size: 1.5rem;
 }
 
 .theme-button {
@@ -238,8 +251,19 @@ li {
   display: flex;
   align-items: center;
   background-color: var(--create);
-  padding: 0.2rem 1rem;
-  padding-right: 0.2rem;
+  height: 70%;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.theme-dropdown {
+  width: 10%;
+  height: 15rem;
+  background-color: var(--create);
+  position: absolute;
+  
+  
 }
 
 .login-container:hover .login-button {
@@ -323,6 +347,10 @@ li {
     height: 60%;
   }
 
+  .theme-button {
+    height: 60%;
+  }
+
   #logo-home {
         transform: scale(0.6);
         margin-left: 0;
@@ -359,6 +387,10 @@ li {
     height: 70%;
   }
 
+  .theme-button {
+    height: 70%;
+  }
+
   *,html,body {
     font-size: 55%;
   }
@@ -370,7 +402,7 @@ li {
   }
   
   .nav {
-    height: 4vh;
+    height: 4rem;
   }
 
  }
