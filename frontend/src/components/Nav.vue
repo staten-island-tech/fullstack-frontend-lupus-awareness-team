@@ -94,12 +94,32 @@ methods: {
         this.$parent.$refs.theme.classList.remove("dark");
         this.$parent.$refs.theme.classList.add("main");
         }
+
+        if (this.$parent.$refs.theme.classList.contains("shrek")) {
+        this.$parent.$refs.theme.classList.remove("shrek");
+        this.$parent.$refs.theme.classList.add("main");
+        }
     },
     dark() {
         if (this.$parent.$refs.theme.classList.contains("main")) {
         this.$parent.$refs.theme.classList.remove("main");
         this.$parent.$refs.theme.classList.add("dark");
-        this.$root.$emit('changeIt',)
+        }
+
+        if (this.$parent.$refs.theme.classList.contains("shrek")) {
+        this.$parent.$refs.theme.classList.remove("shrek");
+        this.$parent.$refs.theme.classList.add("dark");
+        }
+    },
+    shrek() {
+        if (this.$parent.$refs.theme.classList.contains("main")) {
+        this.$parent.$refs.theme.classList.remove("main");
+        this.$parent.$refs.theme.classList.add("shrek");
+        }
+
+        if (this.$parent.$refs.theme.classList.contains("dark")) {
+        this.$parent.$refs.theme.classList.remove("dark");
+        this.$parent.$refs.theme.classList.add("shrek");
         }
     }
 }

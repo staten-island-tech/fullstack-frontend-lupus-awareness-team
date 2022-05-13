@@ -193,6 +193,11 @@ li {
   --create: #000;
 }
 
+.shrek {
+    --topnav: green;
+    --nav: red;
+}
+
 
 .nav {
   font-size: 3rem;
