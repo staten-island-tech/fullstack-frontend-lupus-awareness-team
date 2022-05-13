@@ -194,20 +194,20 @@ li {
 }
 
 .shrek {
-  --topnav: rgb(126,135,0);
-  --nav: rgb(126,135,0);
+  --topnav: rgb(174,186,0);
+  --nav: rgb(174,186,0);
   --navtext: var(--background);
   --navhover: #585353;
-  --navdark: var(--darkgray);
+  --navdark:rgb(152, 163, 1) ;
   --navopen: var(--white);
   --login: #000;
   --loginhover: var(--dbTertiary);
 
-  --dbPrimary: var(--black-primary);
-  --dbSecondary: var(--black-secondary);
-  --dbTertiary: var(--black-tertiary);
+  --dbPrimary: rgb(152, 163, 1) ;
+  --dbSecondary: rgb(152, 163, 1) ;
+  --dbTertiary: rgb(179, 190, 16);
   --dbAccent: var(--black-primary);
-  --dbLight: var(--black-tertiary);
+  --dbLight: rgb(203, 214, 52);
   --profiletext: rgba(255,255,255,.87);
   --eventTab: var(--grey-100);
 
@@ -220,8 +220,8 @@ li {
   --border-top: var(--black-primary);
   --today: var(--grey-800);
 
-  --service: var(--dbSecondary);
-  --eventBody: var(--dbPrimary);
+  --service: rgb(179, 190, 16);
+  --eventBody: rgb(179, 190, 16);
   --create: #000;
 }
 
