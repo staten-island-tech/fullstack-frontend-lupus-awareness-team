@@ -12,6 +12,13 @@
       <div class="login-container">
         <button class="login-button"><router-link to="/Login" class="login-text">Log in</router-link></button>
       </div>
+      
+      <div class="theme-container">
+        <button class="theme-button">
+          <h5 class="theme-text">Theme</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="m11.998 17 7-8h-14z"></path></svg>
+        </button>
+      </div>
 
       <Navbar />
       </div>
@@ -231,11 +238,34 @@ li {
 }
 
 .login-container {
-  margin-right: 6rem;
+  margin-right: 1rem;
   margin-left: auto;
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.theme-container {
+  height: 100%;
+  margin-right: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-text {
+  margin-right: 0.5rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.theme-button {
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: var(--create);
+  padding: 0.2rem 1rem;
+  padding-right: 0.2rem;
 }
 
 .login-container:hover .login-button {
@@ -267,7 +297,7 @@ li {
   text-transform: none;
   color: var(--navopen);
   font-weight: 500;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .logo-container {
