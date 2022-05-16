@@ -196,33 +196,33 @@ li {
 .shrek {
   --topnav: rgb(174,186,0);
   --nav: rgb(174,186,0);
-  --navtext: var(--background);
+  --navtext: black;
   --navhover: #585353;
   --navdark:rgb(152, 163, 1) ;
-  --navopen: var(--white);
-  --login: #000;
-  --loginhover: var(--dbTertiary);
+  --navopen: black;
+  --login: #795A2D;
+  --loginhover: #795A2D ;
 
   --dbPrimary: rgb(152, 163, 1) ;
   --dbSecondary: rgb(152, 163, 1) ;
   --dbTertiary: rgb(179, 190, 16);
-  --dbAccent: var(--black-primary);
+  --dbAccent: #795A2D;
   --dbLight: rgb(203, 214, 52);
-  --profiletext: rgba(255,255,255,.87);
+  --profiletext: black;
   --eventTab: var(--grey-100);
 
-  --calendarMonth: var(--black-primary);
+  --calendarMonth: #3f270e;
   --calendarMonthBorder: black;
-  --calendarDay: #353535;
+  --calendarDay: #523213;
   --calendarDayText: var(--background);
-  --calendarDayNot: var(--black-secondary);
-  --dayofweek: var(--black-secondary);
-  --border-top: var(--black-primary);
-  --today: var(--grey-800);
+  --calendarDayNot: #795A2D;
+  --dayofweek: #3f270e;
+  --border-top: black;
+  --today: #795b2de1 ;
 
   --service: rgb(179, 190, 16);
   --eventBody: rgb(179, 190, 16);
-  --create: #000;
+  --create: #795A2D;
 }
 
 .nav {
