@@ -1,11 +1,9 @@
 <template>
- <div class="modal-backdrop">
-    <div class="modal">
+<transition name="modal-fade">
+ <div class="modal-backdrop" @click="close">
+    <div class="modal" @click.stop="">
       <header class="modal-header">
           <h2 class="header-text"> Create an Event!</h2>
-                <div class="btn-close">
-            <i class="far fa-times-circle" @click="close"></i>
-        </div>
       </header>
 
       <section class="modal-body">
@@ -63,6 +61,7 @@
 
     </div>
   </div>
+</transition>
 </template>
 
 <script>
@@ -76,7 +75,7 @@
   };
 </script>
 
-<style>
+<style scoped>
 
 input[type="file"] {
   display: none;
@@ -84,7 +83,7 @@ input[type="file"] {
 
 .custom-file-upload {
 font-size: 2rem;
-background-color: var(--purple);
+background-color: var(--modal);
 border: 1px solid rgba(27, 31, 35, .15);
 border-radius: 0rem;
 box-sizing: border-box;
@@ -99,6 +98,17 @@ margin: 1.5rem 0rem;
 border-style: solid;
 border-radius: 7px;
 }
+
+  .modal-fade-enter,
+  .modal-fade-leave-to {
+    opacity: 0;
+  }
+
+  .modal-fade-enter-active,
+  .modal-fade-leave-active {
+    transition: opacity .5s ease;
+  }
+
 
  .modal-backdrop {
     position: fixed;
@@ -127,11 +137,11 @@ border-radius: 7px;
     justify-content: center;
     position: relative;
     border-bottom: 1px solid #eeeeee;
-    color: var(--purple);
+    color: var(--modal);
   }
 
   .header-text {
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
     font-size: 4rem;
   }
 
@@ -143,17 +153,6 @@ border-radius: 7px;
 
   }
 
-  .btn-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 4rem;
-    margin-right: 2rem;
-    cursor: pointer;
-    font-weight: bold;
-    color: red;
-
-  }
 
 .upload-info {
   width: 100%;
@@ -207,7 +206,7 @@ border-radius: 7px;
 
 .submit-button {
   font-size: 1.5rem;
-  background-color: var(--purple);
+  background-color: var(--modal);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0rem;
   box-sizing: border-box;

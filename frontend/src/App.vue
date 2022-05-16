@@ -14,11 +14,13 @@
       </div>
       
       <div class="theme-container">
-        <button class="theme-button" @click="toggle">
+        <button class="theme-button" @click="showModal">
           <h5 class="theme-text">Theme</h5>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="m11.998 17 7-8h-14z"></path></svg>
         </button>
-        <div class="theme-dropdown" v-if="active"></div>
+      <ThemeModal
+      v-show="isModalVisible"
+      @close="closeModal"
+      />
       </div>
 
       <Navbar />
@@ -32,6 +34,8 @@
 
 <script>
 import Navbar from "@/components/Nav.vue"
+import ThemeModal from "@/components/ThemeModal.vue"
+
 export default {
   name: 'App',
   methods: {
@@ -44,17 +48,21 @@ export default {
     //     console.log(error)
     //   }
     // }
-      toggle () {
-        this.active = !this.active
-      }
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
   },
   data() {
     return {
-      active: false
+      isModalVisible: false,
     }
   },
   components: {
-    Navbar
+    Navbar,
+    ThemeModal
   },
   created: function() {
     this.$store.dispatch('checkCookie')
@@ -167,6 +175,7 @@ li {
     --service: var(--background);
     --eventBody: var(--white);
     --create: var(--navdark);
+    --modal: var(--purple);
     
 }
 
@@ -200,6 +209,7 @@ li {
   --service: var(--dbSecondary);
   --eventBody: var(--dbPrimary);
   --create: #000;
+  --modal: var(--darkgray);
 }
 
 .shrek {
@@ -241,7 +251,6 @@ li {
   color: var(--white);
   font-weight: 500;
   padding: 0rem 1rem;
-  padding-right: 0rem;
   font-family: san-serif, "Montserrat";
   font-size: 1.5rem;
 }
@@ -255,16 +264,9 @@ li {
   cursor: pointer;
   outline: none;
   position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.theme-dropdown {
-  width: 10%;
-  height: 15rem;
-  background-color: var(--create);
-  position: absolute;
-  
-  
-}
 
 .login-container:hover .login-button {
      background-color: var(--loginhover);

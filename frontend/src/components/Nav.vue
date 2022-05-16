@@ -438,11 +438,11 @@ transform: translateX(1rem);
     }
 
     .icon {
-        transform: scale(0.8);
+        transform: scale(1);
     }
 
     .home {
-        transform: scale(0.8);
+        transform: scale(1);
     }
     
 }
