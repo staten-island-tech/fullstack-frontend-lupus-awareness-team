@@ -197,7 +197,7 @@ li {
   --topnav: rgb(174,186,0);
   --nav: rgb(174,186,0);
   --navtext: black;
-  --navhover: #585353;
+  --navhover: #795A2D;
   --navdark:rgb(152, 163, 1) ;
   --navopen: black;
   --login: #795A2D;

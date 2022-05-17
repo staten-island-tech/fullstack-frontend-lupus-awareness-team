@@ -264,7 +264,7 @@ methods: {
 
 
 .side_nav li:hover {
-background-color: #Fff;
+background-color: var(--navhover);
 transition: all 0.3s;
 transform: translateX(1rem);
 }
