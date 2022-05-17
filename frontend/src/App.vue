@@ -6,12 +6,23 @@
           <h4 id="logo-text">LOGO</h4>
           <svg id="logo-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: white;transform: ;msFilter:;"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path></svg>
         </router-link>
-        <i class="fa-regular fa-house"></i>
+  
       </div>
 
       <div class="login-container">
-        <button class="login-button">Log in</button>
+        <button class="login-button"><router-link to="/Login" class="login-text">Log in</router-link></button>
       </div>
+      
+      <div class="theme-container">
+        <button class="theme-button" @click="showModal">
+          <h5 class="theme-text">Theme</h5>
+        </button>
+      <ThemeModal
+      v-show="isModalVisible"
+      @close="closeModal"
+      />
+      </div>
+
       <Navbar />
       </div>
 
@@ -23,15 +34,40 @@
 
 <script>
 import Navbar from "@/components/Nav.vue"
+import ThemeModal from "@/components/ThemeModal.vue"
 
 export default {
   name: 'App',
   methods: {
-
+    // fetchData: async function() {
+    //   try {
+    //     const res = await fetch('http://localhost:3000')
+    //     const data = await res.json()
+    //     console.log(data)
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    // }
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
+  },
+  data() {
+    return {
+      isModalVisible: false,
+    }
   },
   components: {
-    Navbar
+    Navbar,
+    ThemeModal
   },
+  created: function() {
+    this.$store.dispatch('checkCookie')
+    // this.fetchData()
+  }
 }
 </script>
 
@@ -110,13 +146,14 @@ li {
 }
 
 .main {
-  --topnav: #512DA8;
+  --topnav: #542FAD;
   --nav: #512DA8;
   --navtext: var(--white);
   --navhover: #7A7ED5;
-  --navdark: #3E3998;
+  --navdark: #431F9B;
   --navopen: var(--white);
   --login: #7C4DFF;
+  --loginhover: #9153FE;
   
   --dbSecondary: var(--pink);
   --dbPrimary: #f6f4f2;
@@ -129,11 +166,16 @@ li {
   --calendarMonth: var(--pink);
   --calendarMonthBorder: var(--grey-300);
   --calendarDay: var(--white);
-  --calendarDayText: var(--grey-800);
+  --calendarDayText: var(--black);
   --calendarDayNot: #EBE9F2;
   --dayofweek: var(--white);
   --border-top: var(--grey-200);
   --today: var(--dark);
+
+    --service: var(--background);
+    --eventBody: var(--white);
+    --create: var(--navdark);
+    --modal: var(--purple);
     
 }
 
@@ -144,7 +186,8 @@ li {
   --navhover: #585353;
   --navdark: var(--darkgray);
   --navopen: var(--white);
-  --login: #7C4DFF;
+  --login: #000;
+  --loginhover: var(--dbTertiary);
 
   --dbPrimary: var(--black-primary);
   --dbSecondary: var(--black-secondary);
@@ -162,7 +205,18 @@ li {
   --dayofweek: var(--black-secondary);
   --border-top: var(--black-primary);
   --today: var(--grey-800);
+
+  --service: var(--dbSecondary);
+  --eventBody: var(--dbPrimary);
+  --create: #000;
+  --modal: var(--darkgray);
 }
+
+.shrek {
+    --topnav: green;
+    --nav: red;
+}
+
 
 .nav {
   font-size: 3rem;
@@ -172,43 +226,78 @@ li {
   width: 100%;
   background-color: var(--topnav);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+  z-index: 10;
 }
 
 .login-container {
-  margin-right: 6rem;
+  margin-right: 1rem;
   margin-left: auto;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
+.theme-container {
+  height: 100%;
+  margin-right: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-text {
+  margin-right: 0.5rem;
+  color: var(--white);
+  font-weight: 500;
+  padding: 0rem 1rem;
+  font-family: san-serif, "Montserrat";
+  font-size: 1.5rem;
+}
+
+.theme-button {
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: var(--create);
+  height: 70%;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+
 .login-container:hover .login-button {
-     background-color: #9153FE;
+     background-color: var(--loginhover);
    transition: 0.3s;
    transform: translateY(2px);
    font-weight: 600;
 }
 
 .login-button {
-  font-size: 1.75rem;
   background-color: var(--login);
   border-radius: 2px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
-  color: var(--navopen);
-  font-weight: 500;
   cursor: pointer;
   height: 70%;
-  line-height: 1.15;
   outline: none;
   overflow: hidden;
-  padding: 0 2.5rem;
+  padding: 0rem 2.5rem;
   position: relative;
   text-align: center;
-  text-transform: none;
   transform: translateZ(0);
   transition: all .2s;
+}
+
+.login-text {
+  text-decoration: none;
+  text-transform: none;
+  color: var(--navopen);
+  font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .logo-container {
@@ -245,5 +334,79 @@ li {
 #logo:hover #logo-home {
   display: block;
 }
+
+@media (min-width:320px)  {
+
+  *,html,body {
+    font-size: 25%;
+  }
+
+  .nav {
+    height: 4rem;
+  }
+
+  .login-button {
+    height: 60%;
+  }
+
+  .theme-button {
+    height: 60%;
+  }
+
+  #logo-home {
+        transform: scale(0.6);
+        margin-left: 0;
+  }
+
+}
+@media (min-width:481px)  { 
+   *,html,body {
+     font-size: 35%;
+   }
+
+    #logo-home {
+        transform: scale(0.7);
+        margin-left: 1rem;
+  }
+ }
+@media (min-width:641px)  {
+    #logo-home {
+        transform: scale(0.9);
+        margin-left: 1rem;
+  }
+    *, html,body {
+    font-size: 50%;
+  }
+
+
+ }
+@media (min-width:961px)  { 
+  #logo-home {
+        transform: scale(1);
+        margin-left: 2rem;
+  }
+  .login-button {
+    height: 70%;
+  }
+
+  .theme-button {
+    height: 70%;
+  }
+
+  *,html,body {
+    font-size: 55%;
+  }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+  *,html,body {
+    font-size: 62.5%;
+  }
+  
+  .nav {
+    height: 4rem;
+  }
+
+ }
 
 </style>

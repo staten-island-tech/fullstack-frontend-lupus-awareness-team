@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" ref="home">
     <div class="create-button" @click="showModal">+</div>
 
     <Modal v-show="isModalVisible" @close="closeModal" />
@@ -20,6 +20,7 @@
 import EventDetails from "../components/EventDetails.vue";
 import Autocomplete from "@/components/Autocomplete.vue"
 //import Login from '@/components/LoginPage.vue'
+//import EventDetails from "../components/EventDetails.vue";
 import Event from "@/components/Event.vue";
 import Modal from "@/components/Modal.vue";
 
@@ -31,6 +32,7 @@ export default {
     Modal,
     Autocomplete,
     //Login,
+    // Test,
   },
   data() {
     return {
@@ -49,8 +51,9 @@ export default {
 </script>
 
 <style>
-.home {
-  background-image: url("../assets/dogPark.jpg");
+
+.home-dark{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.4)), url("../assets/dogPark.jpg");
   background-color: var(--background);
   background-attachment: fixed;
   background-position: center;
@@ -60,6 +63,17 @@ export default {
   padding-top: 3rem;
 }
 
+.home {
+  background-image: url("../assets/dogPark.jpg");
+  background-color: var(--background);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding-top: 6rem;
+}
+
 .text-container {
   display: flex;
   align-items: center;
@@ -67,10 +81,12 @@ export default {
 }
 
 #browse {
-  background-color: var(--white);
+  background-color: var(--dbLight);
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    text-align: center;
+    color: var(--profiletext);
 }
 
 .create-button {
@@ -79,7 +95,7 @@ export default {
   bottom: 0;
   right: 0;
   font-size: 5rem;
-  background-color: var(--login);
+  background-color: var(--create);
   color: white;
   border: none;
   padding: 1rem 2.8rem;
@@ -96,4 +112,6 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
+
 </style>

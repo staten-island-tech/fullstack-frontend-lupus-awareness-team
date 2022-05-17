@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import DashboardAUTH from "../components/DashboardAUTH.vue";
+import EventInfo from "../views/EventInfo.vue";
+import LoginPageView from "../views/LoginPageView.vue";
 
 const routes = [
   {
@@ -16,6 +19,21 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ "../views/About.vue");
     },
+  },
+  {
+    path: "/Login",
+    name: "LoginPage",
+    component: LoginPageView,
+  },
+  {
+    path: "/event-details",
+    name: "EventInfo",
+    component: EventInfo,
+  },
+  {
+    path: "/user",
+    name: "Dashboard",
+    component: DashboardAUTH,
   },
 ];
 

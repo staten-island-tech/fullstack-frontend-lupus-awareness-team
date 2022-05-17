@@ -12,7 +12,7 @@
         </div>
 
         <div class="service-container">
-            <h4>Service Hours: 10</h4>
+            <h4 class="service-text">Service Hours: 10</h4>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
                     <h5 class="tag">Parks</h5>
                     <h5 class="tag">Volunteer</h5>
                 </div>
-                <button class="detail-button"> Details </button>
+                <router-link to="/event-details" id="details"> Details </router-link>
             </div>
         </div>
 
@@ -60,12 +60,12 @@ components: {
 }
 </script>
 
-<style scoped>
+<style>
 
 
 .event-container {
     margin: 5rem 0rem;
-    background-color: var(--dbTertiary);
+    background-color: var(--eventBody);
     color: var(--profiletext);
     display: flex;
     flex-direction: column;
@@ -134,7 +134,7 @@ components: {
 }
 
 .service-container {
-    background-color: var(--dbSecondary);
+    background-color: var(--service);
     padding: 1rem 1.5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
@@ -149,34 +149,38 @@ components: {
 }
 
 .info-time {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 .info-address {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .info-date {
     font-weight: 500;
+    font-size: 2.5rem;
 }
 
-.detail-button {
+#details {
   background-color: var(--purple);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0rem;
   box-sizing: border-box;
-  color: #fff;
   cursor: pointer;
-    font-size: 1.8rem;
-  font-weight: 600;
-  padding: 0.8rem 4rem;
   text-align: center;
-  text-decoration: none;
   margin: 1.5rem 0rem;
+  padding: 0.5rem 0rem;
+      font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 4rem;
 }
 
-.detail-button:hover {
+
+
+#details:hover {
    background-color: #9153FE;
    transition: 0.3s;
    transform: translateY(-3px);
@@ -219,9 +223,112 @@ components: {
 
 .tag {
     padding: 0.5rem 1rem;
-    background-color: var(--dbSecondary);
+    background-color: var(--service);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
+@media (min-width:320px)  { 
+
+    .event-container {
+        width: 80%;
+    }
+
+    #browse {
+        font-size: 3rem;
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+
+    .tag {
+        margin: 0rem 0.5rem;
+    }
+
+    .service-text {
+        font-size: 1.5rem;
+    }
+
+    .info-container {
+        flex-direction: column;
+    }
+
+    .info-column-1 {
+        width: 100%;
+        padding: 1rem 0rem;
+    }
+
+    .info-column-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-row {
+        flex-direction: row;
+    }
+
+    .info-tags {
+        width: 35%;
+    }
+
+
+ }
+@media (min-width:481px)  { 
+    .service-text {
+        font-size: 1.8rem;
+    }
+}
+@media (min-width:641px)  {
+    .event-container {
+        width: 90%;
+    }
+
+    .service-text {
+        font-size: 1.8rem;
+    }
+
+    #browse {
+        font-size: 4rem;
+    }
+
+    .info-row {
+    padding-top: 1.5rem;
+  }
+}
+@media (min-width:961px)  { 
+    .info-container {
+        flex-direction: row;
+    }
+
+    .info-column-1 {
+        width: 100%;
+        padding: 0rem;
+    }
+
+    .info-tags {
+        width: 50%;
+    }
+
+    .info-row {
+        flex-direction: row;
+        padding: 0rem;
+    }
+
+    .service-text {
+        font-size: 2.25rem;
+    }
+
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+
+    .event-container {
+        width:70%;
+    }
+
+
+ }
+
 
 
 </style>
