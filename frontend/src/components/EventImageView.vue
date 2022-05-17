@@ -7,7 +7,7 @@
    
       <div class="image_buttons">
         <button @click="prev" class="prev">&#10094;</button>
-        <button  @click="next" class="next">&#10095;</button>
+        <button  @click="next"  class="next">&#10095;</button>
       </div>
     </div>
     <ul class="event_image_bar">
@@ -15,7 +15,7 @@
           <button v-if="sliceBegin != 0" @click="sliceBackward">&#10094;</button>
         </li>
         <li class="event_image_preview" v-for="img in previewBarImages" :key="img">
-          <img @click="selectImg(img)" :src="img" alt=""/>
+          <img @click="selectImg(img), selectPreview(img,$event)" :class="{active: this.currentImg === this.selectedComponent}" :src="img" alt=""/>
         </li>
         <li>
           <button v-if="sliceBegin +4 < images.length" @click="sliceForward">&#10095;</button>
@@ -41,6 +41,7 @@ export default {
             currentIndex: 0,
             imgIndex:0,
             sliceBegin: 0,
+            selectedImg: "" ,
 
 
 
@@ -69,11 +70,19 @@ export default {
           this.sliceBegin = this.sliceBegin -3
  
         },
-       
-       
-    },
-    
+        selectPreview: function(e, event){
+          if(this.selectedImg){
+              this.selectedImg.classList.remove('active')
+          }
+          this.selectedImg = event.target;
+          console.log(this.selectedImg)
+          this.selectedImg.classList.add('active');
 
+          this.selectedComponent = e;
+          console.log(this.selectedComponent)
+        },
+        
+    },
     computed: {
         currentImg: function() {
         return this.images[Math.abs(this.currentIndex) % this.images.length];
@@ -81,11 +90,6 @@ export default {
         previewBarImages: function() {
           return this.images.slice(this.sliceBegin,this.sliceBegin +4)
         },
-        
-       
-        
-        
-
     }
 
 
@@ -208,7 +212,7 @@ export default {
   border-radius: 1rem;
   margin: .3rem;
 }
-.event_image_preview img:hover {
+.event_image_preview img:hover, .active {
   outline:  .45rem solid var(--dark);
   background-color: white;
 }

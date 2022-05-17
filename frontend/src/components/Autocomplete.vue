@@ -6,7 +6,7 @@
                 <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search...">
                 <button @click="fetchAddress()" class="search_btn">Go</button>
             </div>
-            <div @click="completeForm(index.properties)" v-show="searchResults" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> <svg class="svg-icon" viewBox="0 0 20 20">
+            <div @click="completeForm(index.properties)" v-show="searchResults && query" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> <svg class="svg-icon" viewBox="0 0 20 20">
 							<path fill="none" d="M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z"></path>
 							<circle fill="none" cx="10" cy="5.67" r="1.608"></circle>
 						</svg>{{index.properties.label}}</div>
@@ -32,7 +32,7 @@
         <input id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
         </div>
       </form>
-      <p>message : {{query}}</p>
+      <p>query : {{query}}</p>
   </div>
 </template>
 
@@ -63,7 +63,7 @@ export default {
             console.log(selected)
             this.selectedAddress.name = selected.name
             this.selectedAddress.label = selected.label
-            this.selectedAddress.region = selected.region
+            this.selectedAddress.region = selected.region_a
             this.selectedAddress.country = selected.country
             this.selectedAddress.borough = selected.borough
             this.selectedAddress.city = selected.locality
@@ -156,11 +156,13 @@ export default {
     .input {
         font-size: 2.5rem;
         width: 60%;
+        margin-right: 5vw;
         
     }
     label {
-        font-size: 3rem;
+        font-size: 2.75rem;
         width: 40%;
+        margin-right: 2vw;
     }
     .event_address {
         width: 40%;
