@@ -163,7 +163,7 @@ components: {
 }
 
 #details {
-  background-color: var(--purple);
+  background-color: var(--details);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0rem;
   box-sizing: border-box;

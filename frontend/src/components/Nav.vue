@@ -388,13 +388,13 @@ transform: translateX(1rem);
     }
 
         .side_nav li:hover {
-    background-color: #Fff;
+    background-color:var(--navhover);
     transition: all 0.3s;
     transform: translateX(1rem);
     }
 
     .side_nav li:hover .nav_text {
-        color: var(--navdark);
+        color: white;
         font-weight: 600;
     }
 

@@ -145,6 +145,7 @@ li {
   --dbLight: var(--white);
   --profiletext: black;
   --eventTab: black;
+  --details: #673AB7; 
 
   --calendarMonth: var(--pink);
   --calendarMonthBorder: var(--grey-300);
