@@ -3,7 +3,7 @@
       <div class="search">
           <!-- can change the @keyup.enter to just @keyup for speedy searches, but that puts out a lottttt of requests and i might hit my monthly quota (30000). might not have to worry ab it tho bc 30000 is a lot -->
             <div class="search_bar">
-                <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search...">
+                <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search Address...">
                 <button @click="fetchAddress()" class="search_btn">Go</button>
             </div>
             <div @click="completeForm(index.properties)" v-show="searchResults && query" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> <svg class="svg-icon" viewBox="0 0 20 20">
@@ -11,7 +11,6 @@
 							<circle fill="none" cx="10" cy="5.67" r="1.608"></circle>
 						</svg>{{index.properties.label}}</div>
       </div>
-      <form action="" class="event_address">
         <div class="address_line">
         <label for="street_address">Street</label>
         <input id="event_street_address" class="input" type="text" v-model="selectedAddress.name">
@@ -31,7 +30,6 @@
         <label for="event_zip">ZIP/Postal Code</label>
         <input id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
         </div>
-      </form>
       <p>query : {{query}}</p>
   </div>
 </template>
@@ -47,6 +45,7 @@ export default {
             ]
         }
     },
+    // feel free to change the way the address is laid out and collect from the form
     methods: {
         fetchAddress: async function () {
             try {
@@ -75,14 +74,14 @@ export default {
 
 <style scoped>
     .address_complete {
-        width: 100vw;
-        height: 20vh;
+        width: 80%;
+        height: 100%;
         background-color: aliceblue;
         margin: 1rem auto;
     }
     #search_form {
         width: 90%;
-        font-size: 3rem;
+        font-size: 2.25rem;
         height: 100%;
         border: none;
         outline: none;
@@ -99,7 +98,7 @@ export default {
         background-color: #fff;
     }
     p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         height: 2rem;
         margin: 3rem;
     }
@@ -107,7 +106,7 @@ export default {
         background-color: #fff;
         border-bottom: .25rem solid rgb(218, 218, 218);
         width: 90%;
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 1rem 1rem;
         margin: 0 auto;
         display: flex;
@@ -123,14 +122,15 @@ export default {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 1rem 1rem;
+        padding: 1rem .5rem;
         width: 100%;
-        height: 7vh;
+        height: 100%;
     }
     .search_btn {
-        font-size: 2.75rem;
+        font-size: 2rem;
         height: 100%;
-        width: 10%;
+        width: 15%;
+        padding: .25rem;
         background-color: var(--purple);
         border: none;
         color: #fff;
@@ -154,15 +154,16 @@ export default {
         stroke-width: 1;
     }
     .input {
-        font-size: 2.5rem;
+        font-size: 2rem;
         width: 60%;
-        margin-right: 5vw;
+        margin-right: 5%;
+        padding: .3rem;
         
     }
     label {
-        font-size: 2.75rem;
+        font-size: 2.3rem;
         width: 40%;
-        margin-right: 2vw;
+        margin-right: 10%;
     }
     .event_address {
         width: 40%;
