@@ -13,12 +13,11 @@
       <Event />
     </div>
     <EventDetails/>
-    <Autocomplete/>
   </div>
 </template>
 <script>
 import EventDetails from "../components/EventDetails.vue";
-import Autocomplete from "@/components/Autocomplete.vue"
+// import Autocomplete from "@/components/Autocomplete.vue"
 //import Login from '@/components/LoginPage.vue'
 //import EventDetails from "../components/EventDetails.vue";
 import Event from "@/components/Event.vue";
@@ -30,7 +29,7 @@ export default {
     EventDetails,
     Event,
     Modal,
-    Autocomplete,
+    // Autocomplete,
     //Login,
     // Test,
   },

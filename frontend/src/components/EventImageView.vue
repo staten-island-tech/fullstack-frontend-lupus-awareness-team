@@ -15,7 +15,7 @@
           <button v-if="sliceBegin != 0" @click="sliceBackward">&#10094;</button>
         </li>
         <li class="event_image_preview" v-for="img in previewBarImages" :key="img">
-          <img @click="selectImg(img), selectPreview(img,$event)" :class="{active: this.currentImg === this.selectedComponent}" :src="img" alt=""/>
+          <img @click="selectImg(img), selectPreview(img,$event)" :src="img" alt=""/>
         </li>
         <li>
           <button v-if="sliceBegin +4 < images.length" @click="sliceForward">&#10095;</button>
