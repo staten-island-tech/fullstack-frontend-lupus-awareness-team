@@ -14,10 +14,13 @@
       </div>
       
       <div class="theme-container">
-        <button class="theme-button">
+        <button class="theme-button" @click="showModal">
           <h5 class="theme-text">Theme</h5>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="m11.998 17 7-8h-14z"></path></svg>
         </button>
+      <ThemeModal
+      v-show="isModalVisible"
+      @close="closeModal"
+      />
       </div>
 
       <Navbar />
@@ -31,6 +34,8 @@
 
 <script>
 import Navbar from "@/components/Nav.vue"
+import ThemeModal from "@/components/ThemeModal.vue"
+
 export default {
   name: 'App',
   methods: {
@@ -43,9 +48,21 @@ export default {
     //     console.log(error)
     //   }
     // }
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
+  },
+  data() {
+    return {
+      isModalVisible: false,
+    }
   },
   components: {
-    Navbar
+    Navbar,
+    ThemeModal
   },
   created: function() {
     this.$store.dispatch('checkCookie')
@@ -273,9 +290,13 @@ li {
   display: flex;
   align-items: center;
   background-color: var(--create);
-  padding: 0.2rem 1rem;
-  padding-right: 0.2rem;
+  height: 70%;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
 
 .login-container:hover .login-button {
      background-color: var(--loginhover);
@@ -358,6 +379,10 @@ li {
     height: 60%;
   }
 
+  .theme-button {
+    height: 60%;
+  }
+
   #logo-home {
         transform: scale(0.6);
         margin-left: 0;
@@ -394,6 +419,10 @@ li {
     height: 70%;
   }
 
+  .theme-button {
+    height: 70%;
+  }
+
   *,html,body {
     font-size: 55%;
   }
@@ -405,7 +434,7 @@ li {
   }
   
   .nav {
-    height: 4vh;
+    height: 4rem;
   }
 
  }
