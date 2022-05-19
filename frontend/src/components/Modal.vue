@@ -36,6 +36,7 @@
           for="enter-event-address"><b> Event Address:</b></label>
           <input class="event-address" type="text" placeholder="Event Address" name="event-address" required>
         </div>
+          <Autocomplete/>
 
         <div class="label-wrapper">
           <label class="enter-event-hours"
@@ -65,8 +66,12 @@
 </template>
 
 <script>
+import Autocomplete from "../components/Autocomplete.vue"
   export default {
     name: 'Modal',
+    components: {
+      Autocomplete
+    },
     methods: {
       close() {
         this.$emit('close');
@@ -120,6 +125,7 @@ border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 50;
   }
 
   .modal {
