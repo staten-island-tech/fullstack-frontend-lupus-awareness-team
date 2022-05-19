@@ -1,56 +1,64 @@
 <template>
-  <div class="event_details_container">
-    <div class="left-column">
-      <h2 class="event_name">Volunteer</h2>
-      <EventImageView/>
-      <div class="event_details">
-        <h4 class="event_time">2:00 PM - 4:00 PM</h4>
-        <h4 class="event_location">Dog Park, Full Address</h4>
-        <h4 class="event_date">Saturday, April 2</h4>
-      </div>
+<div class="event-section">
+<div class="event-details-container">
+    <div class="top-event-container">
+        <div class="detail-user">
+            <div class="detail-user-image">
+                <img class="detail-user-pfp" src="../assets/placeholder.jpg">
+            </div>
+            <div class="detail-user-text">
+                <h4 class="detail-username">User1234</h4>
+                <h5 class="detail-user-type">Student</h5>
+            </div>   
+        </div>
+
+    <div class='top-tittle'>
+        <div class="detail-info-row">
+            <h3>Park Cleanup Volunteering</h3>
+        </div>
+
+        <div class="detail-info-row">
+            <div class="detail-info-tags">
+                <h5 class="detail-tag">Animals</h5>
+                <h5 class="detail-tag">Parks</h5>
+                <h5 class="detail-tag">Volunteer</h5>
+            </div>
+        </div>
+    </div>  
+
+        <div class="detail-service-wrapper">
+            <div class="detail-service-container">
+                <h4 class="detail-service-text">Service Hours: 10</h4>
+            </div>
+        </div>
     </div>
-    <div class="right-column">
-      <div class="user_info_brief">
-        <div class="user_profile_picture">
-          <img src="../assets/placeholder.jpg" alt="temporary" />
+
+
+
+    <div class="detail-image-container">
+        <EventImageView/>
+    </div>  
+
+    <div class="detail-info-container">
+        <div class="detail-info-column-1">
+            <div class="detail-info-text">
+                <h4 class="detail-info-time"> 2:00 PM - 4:00 PM</h4>
+                <h4 class="detail-info-address">485 Clawson St, Staten Island, NY 10306</h4>
+                <h4 class="detail-info-date"> Saturday, April 2nd </h4>
+            </div>
         </div>
-        <h3 class="user_name">user1123</h3>
-      </div>
-      <div class="organization_info">
-        <div class="organization_name organization_detail">
-          <h4>Organization:</h4>
-          <p>abc animals</p>
+
+        <div class="detail-info-column-2">
+            <div class="detail-info-description">
+                <h4 class="detail-info-description-label">Event Decription:</h4>
+                <h5 class="detail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+            </div>
         </div>
-        <div class="organization_contact organization_detail">
-          <h4>Contact Information</h4>
-          <p>example@email.com</p>
-          <p>111-111-1111</p>
-        </div>
-        <div class="organization_address organization_detail">
-          <h4>Organization Address</h4>
-          <p>99 place, new york, ny</p>
-        </div>
-      </div>
-      <div class="event_desc">
-        <h4>Event Description:</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          assumenda, rem fugiat ratione recusandae deleniti eveniet quae dolor
-          non quo quam aspernatur mollitia sapiente molestias eaque qui magni.
-          Qui, expedita.
-        </p>
-      </div>
-      <div class="interested_bar">
-        <img class="interested_svg" src="../assets/placeholder.jpg" alt="" />
-        <!-- it will be an svg latrer -->
-        <h5>3 Interested</h5>
-        <button class="interested_btn">
-          <h5>I'm Interested</h5>
-        </button>
-      </div>
-      
+
     </div>
-  </div>
+    
+</div>
+</div>
 </template>
 
 <script>
@@ -66,161 +74,187 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather+Sans:wght@700&display=swap');
-body {
-  background-color: var(--background);
-  box-sizing: border-box;
-}
-.event_name {
-  margin: 3rem;
-}
-.event_details_container {
-  font-family: "Merriweather Sans", sans-serif;
-  width: 100%;
-  height: 100%;
-  padding: 5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.left-column  {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  background-color: var(--pink);
-  padding: 3rem;
-}
 
-.right-column  {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  background-color: var(--pink);
-  padding: 3rem;
-  flex-direction: row;
-} 
-.event_image img {
-  margin: 2rem auto;
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  border-radius: 1.5rem;
-}
-.event_image_bar {
-  width: 85%;
-  height: 10%;
-  margin: 0.25rem auto;
-  display: flex;
-  justify-content: center;
-}
-.event_image_preview img {
-  width: 90%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem auto;
-  border-radius: 0.5rem;
-}
-.event_details {
-  font-family: 'Inter', sans-serif;
-  padding: 2rem;
-  padding-left: 3rem;
-  height: 20%;
-  width: 90%;
-  font-size: 2.5rem;
-  border-radius: 1.5rem;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-}
 
-.event_image_preview img:hover {
-  border: .25rem solid white;
-  outline: var(--dark) solid 0.35rem;
-}
-.user_info_brief {
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  margin: 0 auto;
-  align-items: center;
-}
-.user_profile_picture img {
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  clip-path: circle(40% at 50% 50%);
-}
-
-.organization_info {
-  font-size: 2rem;
-  padding: 2rem;
-  height: 40%;
-  width: 80%;
-  font-size: 2.5rem;
-  /* background-color: var(--accent); */
-  background-color: #673AB7  ;
-  border-radius: 1.5rem;
-  margin: 2rem auto;
-}
-.organization_detail {
-  padding: 1rem;
-  border-bottom: 0.1rem solid var(--dark);
-}
-.event_desc {
-  font-size: 2rem;
-  
-  padding: 2rem;
-  margin:  0rem 4rem 4rem;
-  border-radius: 1.5rem;
-}
-
-.interested_bar {
-  height: 5%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto;
-}
-.interested_svg {
-  height: 100%;
-}
-.interested_btn {
-  border: 0.25rem solid gray;
-  border-radius: 2rem;
-  padding: 0.5rem;
-  margin-left: 3rem;
-}
-.interested_btn:hover {
-  background-color: lightgray;
-}
-.event_time , .event_date {
-  font-style: italic;
-}
-
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-  
-  * {
-    font-size: 5%;
-  }
-  .event_details_container {
+.event-section {
+    display: flex;
     flex-direction: column;
-  }
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    background-image: url("../assets/dogPark.jpg");
+    background-color: var(--background);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-  .left-column {
+.event-details-container {
+    background-color: var(--eventBody);
+    color: var(--profiletext);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.top-event-container {
     width: 100%;
-  }
+    display: flex;
+    align-items: center;
+}
 
-  .right-column {
+.top-tittle {
+    padding: 2rem;
+}
+
+.detail-event-info {
     width: 100%;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-image-container {
+    width: 70%;  
+}
+
+.detail-event-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5rem;
+}
+
+.detail-user-pfp {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.detail-user {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.detail-user-image{
+    width: 20%;
+}
+
+.detail-user-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.detail-username {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.detail-user-type {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.detail-service-wrapper {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-service-container {
+    background-color: var(--service);
+    padding: 1rem 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
 
 
-  .image_buttons{
-    height: 5vh;
-  }
+.detail-info-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 4rem 0rem;
+}
+
+.detail-info-time {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.detail-info-address {
+    font-size: 3rem;
+}
+
+.detail-info-date {
+    font-weight: 500;
+}
+
+.detail-info-text {
+    width: 90%;
+}
+
+.detail-info-decription {
+    width: 80%;
+}
+
+.detail-info-column-1 {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detail-info-column-2 {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detail-description {
+    font-weight: 500;
+    padding-right: 7rem ;
+    padding-top: 2rem;
+}
+
+.detail-info-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.detail-info-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-right: 2rem;
+}
+
+.detail-tag {
+    padding: 0.5rem 1rem;
+    background-color: var(--service);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 0rem 1rem;
+}
+
+.detail-info-decription-label {
+    font-size: 5rem;
 }
 
 

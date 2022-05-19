@@ -68,6 +68,8 @@ export default {
   font-size: 3rem;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+    color: var(--calendarDayText)
 }
 
 </style>

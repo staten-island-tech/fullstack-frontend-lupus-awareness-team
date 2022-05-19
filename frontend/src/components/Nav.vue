@@ -18,12 +18,12 @@
             </li>
 
             <li>
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4V5zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6zm2-5h4v4h-4v-4z"></path></svg>    
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4V5zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6zm2-5h4v4h-4v-4z"></path></svg>
                 <router-link to="/about" class="nav_text">Dashboard</router-link>
             </li>
 
-            <li>
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M13.707 2.293a.999.999 0 0 0-1.414 0l-5.84 5.84c-.015-.001-.029-.009-.044-.009a.997.997 0 0 0-.707.293L4.288 9.831a2.985 2.985 0 0 0-.878 2.122c0 .802.313 1.556.879 2.121l.707.707-2.122 2.122A2.92 2.92 0 0 0 2 19.012a2.968 2.968 0 0 0 1.063 2.308c.519.439 1.188.68 1.885.68.834 0 1.654-.341 2.25-.937l2.04-2.039.707.706c1.134 1.133 3.109 1.134 4.242.001l1.415-1.414a.997.997 0 0 0 .293-.707c0-.026-.013-.05-.015-.076l5.827-5.827a.999.999 0 0 0 0-1.414l-8-8zm-.935 16.024a1.023 1.023 0 0 1-1.414-.001l-1.414-1.413a.999.999 0 0 0-1.414 0l-2.746 2.745a1.19 1.19 0 0 1-.836.352.91.91 0 0 1-.594-.208A.978.978 0 0 1 4 19.01a.959.959 0 0 1 .287-.692l2.829-2.829a.999.999 0 0 0 0-1.414L5.701 12.66a.99.99 0 0 1-.292-.706c0-.268.104-.519.293-.708l.707-.707 7.071 7.072-.708.706zm1.889-2.392L8.075 9.339 13 4.414 19.586 11l-4.925 4.925z"></path></svg>
+            <li id="themeLi">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M7.08 11.25A4.84 4.84 0 0 1 8 9.05L4.43 5.49A9.88 9.88 0 0 0 2 11.25zM9.05 8a4.84 4.84 0 0 1 2.2-.91V2a9.88 9.88 0 0 0-5.76 2.43zM12.75 2v5A4.84 4.84 0 0 1 15 8l3.56-3.56A9.88 9.88 0 0 0 12.75 2zM8 15a4.84 4.84 0 0 1-.91-2.2H2a9.88 9.88 0 0 0 2.39 5.76zM11.25 16.92a4.84 4.84 0 0 1-2.2-.92l-3.56 3.57A9.88 9.88 0 0 0 11.25 22zM16 9.05a4.84 4.84 0 0 1 .91 2.2h5a9.88 9.88 0 0 0-2.39-5.76zM15 16a4.84 4.84 0 0 1-2.2.91v5a9.88 9.88 0 0 0 5.76-2.39zM16.92 12.75A4.84 4.84 0 0 1 16 15l3.56 3.56A9.88 9.88 0 0 0 22 12.75z"></path></svg>
                 <a href="#" @click="theme" class="nav_text">Theme</a>
             </li>
 
@@ -49,10 +49,10 @@
                 <a href="#" class="nav_text">Settings</a>
             </li>
 
-            <li id="logout">
+            <div id="logout">
                 <a href="#" id="logout_button">Log out</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
-            </li>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
+            </div>
 
 
             <NavProfile />
@@ -94,11 +94,32 @@ methods: {
         this.$parent.$refs.theme.classList.remove("dark");
         this.$parent.$refs.theme.classList.add("main");
         }
+
+        if (this.$parent.$refs.theme.classList.contains("shrek")) {
+        this.$parent.$refs.theme.classList.remove("shrek");
+        this.$parent.$refs.theme.classList.add("main");
+        }
     },
     dark() {
         if (this.$parent.$refs.theme.classList.contains("main")) {
         this.$parent.$refs.theme.classList.remove("main");
         this.$parent.$refs.theme.classList.add("dark");
+        }
+
+        if (this.$parent.$refs.theme.classList.contains("shrek")) {
+        this.$parent.$refs.theme.classList.remove("shrek");
+        this.$parent.$refs.theme.classList.add("dark");
+        }
+    },
+    shrek() {
+        if (this.$parent.$refs.theme.classList.contains("main")) {
+        this.$parent.$refs.theme.classList.remove("main");
+        this.$parent.$refs.theme.classList.add("shrek");
+        }
+
+        if (this.$parent.$refs.theme.classList.contains("dark")) {
+        this.$parent.$refs.theme.classList.remove("dark");
+        this.$parent.$refs.theme.classList.add("shrek");
         }
     }
 }
@@ -136,7 +157,7 @@ methods: {
     align-items: center;
     padding: 0;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
 }
 
 #logout {
@@ -148,12 +169,14 @@ methods: {
     margin-top: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #logout_button {
     color: #DC3623;
     font-weight: 600;
     margin-right: 1rem;
+    font-size: 2rem;
 }
 
 .dropdown {
@@ -164,6 +187,10 @@ methods: {
   flex-direction: column;
   padding-left: 3rem;
   justify-content: center;
+}
+
+#themeLi {
+    position: relative;
 }
 
 .dropdown-item {
@@ -195,15 +222,18 @@ methods: {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    text-align: center;
 }
+
 
 .side_nav li:lastchild {
     margin-top: auto;
 }
 
 .width {
-    width: 18%;
+    width: 18vw;
 }
 
 
@@ -216,6 +246,7 @@ methods: {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 0.5rem;
     margin: 1rem;
     width: 80%;
@@ -233,13 +264,13 @@ methods: {
 
 
 .side_nav li:hover {
-background-color: #Fff;
+background-color: var(--navhover);
 transition: all 0.3s;
 transform: translateX(1rem);
 }
 
 .side_nav li:hover .nav_text {
-    color: #512DA8;
+    color: var(--navdark);
     font-weight: 600;
 }
 
@@ -264,16 +295,163 @@ transform: translateX(1rem);
 
 .fa-bars {
     color: var(--navopen);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 
 .fa-times-circle {
     color: var(--navopen);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
+@media (min-width:320px) {
+    .width {
+        width: 100%;
+        height: 50%;
+    }
 
+    .icon {
+        transform: scale(0.5);
+    }
+
+
+    .side_nav li {
+        height: 5%;
+        margin: 2rem;
+        width: 50%;
+
+    }
+
+    .side_nav li:hover {
+        transform: translateX(0rem);
+        background-color: var(--nav);
+    }
+
+    .side_nav li:hover .nav_text {
+        color: var(--navtext);
+        font-weight: 400;
+    }
+
+    .nav_profile_container {
+        width: 50%;
+        margin-top: 2rem;
+    }
+
+    #logout {
+        width: 30%;
+        padding: 0rem 0rem;
+        margin-top: 2rem;
+        padding: 0rem;
+    }
+
+    .dropdown {
+        width: 20%;
+    }
+
+}
+@media (min-width:481px) {
+        .width {
+        width: 100%;
+        height: 45%;
+    }
+    
+}
+@media (min-width:641px) {
+        .width {
+        width: 35%;
+        height: 100%;
+    }
+
+    .icon {
+        transform: scale(0.7);
+    }
+
+        .home {
+        transform: scale(0.7);
+    }
+
+    .side_nav li {
+        height: 5%;
+        margin: 1rem;
+        justify-content: initial;
+        width: 80%;
+    }
+
+    .nav_profile_container {
+        width: 100%;
+    }
+
+    #logout {
+        width: 100%;
+        padding: 1rem 0rem;
+        margin: auto;
+    }
+
+        .side_nav li:hover {
+    background-color:var(--navhover);
+    transition: all 0.3s;
+    transform: translateX(1rem);
+    }
+
+    .side_nav li:hover .nav_text {
+        color: white;
+        font-weight: 600;
+    }
+
+    .side_nav li:hover .icon {
+        fill: #6357E3;
+    }
+
+            .dropdown {
+        width: 80%;
+    }
+
+        
+    }
+@media (min-width:961px) {
+        .width {
+        width: 25%;
+    }
+
+        .icon {
+        transform: scale(0.75);
+    }
+
+        .home {
+        transform: scale(0.75);
+    }
+
+    #logout {
+        margin: auto;
+        padding: 0.5rem 0rem;
+    }
+    
+}
+@media (min-width:1025px) {
+    .width {
+        width: 20%;
+    }
+
+    
+    .side_nav li {
+        margin: 1rem;
+    }
+
+    .icon {
+        transform: scale(1);
+    }
+
+    .home {
+        transform: scale(1);
+    }
+    
+}
+@media (min-width:1281px) {
+    .width {
+        width: 18%;
+    }
+
+}
 
 
 </style>

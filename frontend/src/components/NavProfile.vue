@@ -36,7 +36,6 @@ methods: {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: var(--navdark);
 }
 
@@ -55,7 +54,7 @@ methods: {
 }
 
 .nav_profile_name_container {
-    width: 60%;
+    width: 40%;
     height: 80%;
     display: flex;
     flex-direction: column;

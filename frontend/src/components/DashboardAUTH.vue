@@ -43,12 +43,13 @@ import ToDoList from "@/components/ToDoList.vue";
 import Hosting from "@/components/Hosting.vue";
 import PastEvents from "@/components/PastEvents.vue";
 import HTTP from '../axiosConfig'
+import Previous from "@/components/PastEvents.vue";
 
 export default {
 name: "DashbardAUTH",
 data() {
   return {
-    tabs: ["Hosting", "PastEvents"],
+    tabs: ["Hosting", "Previous"],
     selected: "Hosting",
     eventArr: [],
     user: this.$store.state.user
@@ -84,7 +85,7 @@ components: {
   CalendarMonth,
   ToDoList,
   Hosting,
-  PastEvents,
+  Previous,
 }
 }
 </script>
@@ -126,12 +127,14 @@ components: {
   display: flex;
   flex-direction: column;
   align-items: center;
-    background-color: var(--dbTertiary);
+    background-color: var(--dbLight);
+    padding-top: 6rem;
 }
 
 .profile_container {
   width: 100%;
   background-color: var(--dbLight);
+
 }
 
 
@@ -164,30 +167,32 @@ align-items: center;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center
+  position: relative;
 }
 
 .events_tab ul{
   display: flex;
+  justify-content: center;
   z-index: 3;
-  width: 60%;
-  padding-left: 2rem;
+  width: 100%;
   margin-bottom: 2px;
+  
 }
 
 .event_tab_switch {
     cursor: pointer;
   border: none;
   color: var(--eventTab);
-  font-size: 2rem;
+  font-size: 1.8rem;
   z-index: 3;
   text-decoration: none;
   list-style: none;
-  padding: 1rem 1rem;
+  padding: 1rem 2.5rem;
   background-color: var(--dbAccent);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 6) 0px 0px 0px 0.5px;
- border-radius: 0.8rem 0.8rem 0rem 0rem;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px, rgba(0, 0, 1, 1) 0px 2px 4px -1px;
 }
+
 
 .calendar_container {
   width: 100%;
@@ -200,6 +205,99 @@ align-items: center;
 .calendar_wrapper {
   width: 40%;
 }
+
+@media (min-width:320px)  {
+    .calendar_container {
+    flex-direction: column;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  .calendar-month {
+    margin-bottom: 5rem;
+  }
+
+    .list_wrapper {
+    width: 80%;
+  }
+
+  .calendar_wrapper {
+    width: 80%;
+  }
+
+  .events_wrapper {
+   width: 70%;
+  }
+}
+@media (min-width:481px)  { 
+  .list_wrapper {
+    width: 75%;
+  }
+
+  .calendar_wrapper {
+    width: 70%;
+  }
+
+ }
+@media (min-width:641px)  {
+
+  .list_wrapper {
+    width: 70%;
+  }
+
+  .calendar_wrapper {
+    width: 70%;
+  }
+
+  .events_wrapper {
+    width: 80%;
+  }
+
+ }
+@media (min-width:961px)  { 
+    .calendar_container {
+    flex-direction: row;
+  }
+
+  .list_wrapper {
+    width: 50%;
+  }
+
+  .calendar_wrapper {
+    width: 40%;
+  }
+
+  .events_wrapper {
+    width: 60%;
+  }
+
+}
+@media (min-width:1025px) { 
+
+    .calendar-month {
+    margin-bottom: 0rem;
+  }
+
+  .list_wrapper {
+    width: 35%;
+  }
+
+  .calendar_wrapper {
+    width: 35%
+  }
+
+  span {
+    font-size: 1.25rem;
+  }
+ }
+@media (min-width:1281px) { 
+    .list_wrapper {
+    width: 40%;
+  }
+
+ }
 
 
 

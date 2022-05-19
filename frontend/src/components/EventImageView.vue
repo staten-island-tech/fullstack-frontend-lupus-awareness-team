@@ -7,7 +7,7 @@
    
       <div class="image_buttons">
         <button @click="prev" class="prev">&#10094;</button>
-        <button  @click="next" class="next">&#10095;</button>
+        <button  @click="next"  class="next">&#10095;</button>
       </div>
     </div>
     <ul class="event_image_bar">
@@ -15,7 +15,7 @@
           <button v-if="sliceBegin != 0" @click="sliceBackward">&#10094;</button>
         </li>
         <li class="event_image_preview" v-for="img in previewBarImages" :key="img">
-          <img @click="selectImg(img)" :src="img" alt=""/>
+          <img @click="selectImg(img), selectPreview(img,$event)" :class="{active: this.currentImg === this.selectedComponent}" :src="img" alt=""/>
         </li>
         <li>
           <button v-if="sliceBegin +4 < images.length" @click="sliceForward">&#10095;</button>
@@ -41,6 +41,8 @@ export default {
             currentIndex: 0,
             imgIndex:0,
             sliceBegin: 0,
+            selectedImg: "" ,
+
 
 
 
@@ -58,6 +60,7 @@ export default {
         selectImg: function(img) {
           this.imgIndex = this.images.indexOf(img),
           this.currentIndex = this.imgIndex
+
         },
         sliceForward: function() {
           this.sliceBegin = this.sliceBegin +3
@@ -66,12 +69,20 @@ export default {
         sliceBackward: function() {
           this.sliceBegin = this.sliceBegin -3
  
-        }
-        
-       
-    },
-    
+        },
+        selectPreview: function(e, event){
+          if(this.selectedImg){
+              this.selectedImg.classList.remove('active')
+          }
+          this.selectedImg = event.target;
+          console.log(this.selectedImg)
+          this.selectedImg.classList.add('active');
 
+          this.selectedComponent = e;
+          console.log(this.selectedComponent)
+        },
+        
+    },
     computed: {
         currentImg: function() {
         return this.images[Math.abs(this.currentIndex) % this.images.length];
@@ -79,11 +90,6 @@ export default {
         previewBarImages: function() {
           return this.images.slice(this.sliceBegin,this.sliceBegin +4)
         },
-        
-       
-        
-        
-
     }
 
 
@@ -123,14 +129,14 @@ export default {
 .image_view{
   background-color: var(--light);
   width: 100%;
-  height: 40vh;
-  border: .25rem solid gray;
-  border-radius: 5rem;
+  height: 100%;
+  border-radius: 1rem;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .view_container {
   height: 40vh;
@@ -151,9 +157,9 @@ export default {
   cursor: pointer;
   position: static;
   top: 40%;
-  width: 10%;
+  width: 5%;
   padding: 1rem;
-  height: 20%;
+  height: 15%;
   color: white;
   font-weight: bold;
   font-size: 3rem;
@@ -161,14 +167,9 @@ export default {
   text-decoration: none;
   user-select: none;
   border: none;
-  background-color: rgba(110, 110, 110,0.8);
+  background-color: rgba(162, 157, 159, 0.7);
 }
-.prev {
-    border-radius: 1rem 0 0 1rem;
-}
-.next {
-    border-radius: 0 1rem 1rem 0;
-}
+
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
@@ -190,23 +191,24 @@ export default {
   border: none;
   border-radius: 50%;
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   transition: 0.5s ease;
 }
 .event_image_bar button:hover {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(12,12,12,0.5);
 }
 .event_image_preview img {
   height: 80%;
   display: flex;
-  padding: .45rem;
+  padding: .35rem;
   border-radius: 1rem;
+  margin: .3rem;
 }
-.event_image_preview img:hover {
-  border:  .25rem solid var(--dark);
+.event_image_preview img:hover, .active {
+  outline:  .45rem solid var(--dark);
   background-color: white;
 }
 .event_image_preview {
@@ -214,5 +216,9 @@ export default {
   display: flex; 
   align-items: center;
   justify-content: center;
+}
+.selected {
+  outline:  .45rem solid var(--dark);
+  background-color: white;
 }
 </style>
