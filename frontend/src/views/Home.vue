@@ -12,21 +12,26 @@
       <Event />
       <Event />
     </div>
+    <EventDetails/>
+    <Autocomplete/>
   </div>
 </template>
 <script>
+import EventDetails from "../components/EventDetails.vue";
+import Autocomplete from "@/components/Autocomplete.vue"
+//import Login from '@/components/LoginPage.vue'
 //import EventDetails from "../components/EventDetails.vue";
 import Event from "@/components/Event.vue";
 import Modal from "@/components/Modal.vue";
 
-// import Test from "@/components/Testing.vue";
-
 export default {
   name: "Home",
   components: {
-    //EventDetails,
+    EventDetails,
     Event,
     Modal,
+    Autocomplete,
+    //Login,
     // Test,
   },
   data() {
