@@ -161,6 +161,9 @@ li {
     --eventBody: var(--white);
     --create: var(--navdark);
   --themeText: white; 
+  --modalBackground:white; 
+
+  --modalSubmit: var(--purple);
     
 }
 
@@ -196,6 +199,11 @@ li {
   --create: #000;
 
   --themeText: white; 
+  --modalBackground: var(--darkgray); 
+  --modalText: var(--background); 
+  --modalHeaderText: var(--background)
+  --modalSubmit: var(--purple); 
+
 }
 
 .shrek {
@@ -232,6 +240,11 @@ li {
   --create: #795A2D;
 
   --themeText: var(--black); 
+
+  --modalBackground: rgb(152, 163, 1) ; 
+  --modalText: black; 
+  --modalHeaderText: black; 
+
 }
 
 .nav {
