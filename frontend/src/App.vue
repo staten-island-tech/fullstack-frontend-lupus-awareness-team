@@ -182,11 +182,11 @@ li {
   --border-top: var(--grey-200);
   --today: var(--dark);
 
-  --service: var(--background);
-  --eventBody: var(--white);
-  --create: var(--navdark);
-  --modal: var(--purple);
-  --themeText: white;
+    --service: var(--background);
+    --eventBody: var(--white);
+    --create: var(--navdark);
+  --themeText: white; 
+    
 }
 
 .dark {
@@ -219,9 +219,8 @@ li {
   --service: var(--dbSecondary);
   --eventBody: var(--dbPrimary);
   --create: #000;
-  --modal: var(--darkgray);
 
-  --themeText: white;
+  --themeText: white; 
 }
 
 .shrek {
