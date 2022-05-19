@@ -146,6 +146,7 @@ li {
   --profiletext: black;
   --eventTab: black;
   --details: #673AB7; 
+  --detailsHover: #9153FE; 
 
   --calendarMonth: var(--pink);
   --calendarMonthBorder: var(--grey-300);
@@ -159,6 +160,7 @@ li {
     --service: var(--background);
     --eventBody: var(--white);
     --create: var(--navdark);
+  --themeText: white; 
     
 }
 
@@ -192,6 +194,8 @@ li {
   --service: var(--dbSecondary);
   --eventBody: var(--dbPrimary);
   --create: #000;
+
+  --themeText: white; 
 }
 
 .shrek {
@@ -211,6 +215,8 @@ li {
   --dbLight: rgb(203, 214, 52);
   --profiletext: black;
   --eventTab: var(--grey-100);
+  --details: #795A2D;
+  --detailsHover: #412f16; 
 
   --calendarMonth: #3f270e;
   --calendarMonthBorder: black;
@@ -221,9 +227,11 @@ li {
   --border-top: black;
   --today: #795b2de1 ;
 
-  --service: rgb(179, 190, 16);
+  --service: rgb(210, 223, 39);
   --eventBody: rgb(179, 190, 16);
   --create: #795A2D;
+
+  --themeText: var(--black); 
 }
 
 .nav {
@@ -256,7 +264,7 @@ li {
 
 .theme-text {
   margin-right: 0.5rem;
-  color: var(--white);
+  color: var(--themeText);
   font-weight: 600;
 }
 

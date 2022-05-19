@@ -181,7 +181,7 @@ components: {
 
 
 #details:hover {
-   background-color: #9153FE;
+   background-color: var(--detailsHover);
    transition: 0.3s;
    transform: translateY(-3px);
 }
