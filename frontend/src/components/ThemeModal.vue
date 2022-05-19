@@ -6,6 +6,15 @@
       </header>
 
       <section class="modal-body">
+        <div class="body-container">
+          <div class="circle" id="purple"></div>
+        </div>
+        <div class="body-container">
+          <div class="circle" id="black"></div>
+        </div>
+        <div class="body-container">
+          <div class="circle" id="shrek"></div>
+        </div>
        </section>
 
     </div>
@@ -64,7 +73,40 @@
 
   .modal-body {
     position: relative;
-    padding: 20px 10px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
+
+  .body-container {
+    width: 20%;
+    height: 100%;
+    border: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle {
+    height: auto;
+    width: 60%;
+    border-radius: 50%;
+    border: solid 0.1rem gray;
+    padding-top: 60%;
+    position: relative;
+}
+
+#purple {
+    background-color: var(--accent);
+}
+
+#black {
+    background-color: #1f1f1f;
+}
+
+#shrek {
+    background-color: #3A9F49;
+}
 
 </style>
