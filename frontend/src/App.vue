@@ -185,6 +185,7 @@ li {
     --service: var(--background);
     --eventBody: var(--white);
     --create: var(--navdark);
+     --modal: var(--purple);
   --themeText: white; 
     
 }
@@ -219,6 +220,7 @@ li {
   --service: var(--dbSecondary);
   --eventBody: var(--dbPrimary);
   --create: #000;
+  --modal: var(--darkgray);
 
   --themeText: white; 
 }
@@ -398,6 +400,10 @@ li {
     transform: scale(0.6);
     margin-left: 0;
   }
+
+  .theme-container {
+    margin-right: 1rem;
+  }
 }
 @media (min-width: 481px) {
   *,
@@ -420,6 +426,10 @@ li {
   html,
   body {
     font-size: 50%;
+  }
+
+   .theme-container {
+    margin-right: 6rem;
   }
 }
 @media (min-width: 961px) {

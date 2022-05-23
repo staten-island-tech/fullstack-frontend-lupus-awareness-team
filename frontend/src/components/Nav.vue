@@ -290,7 +290,6 @@ transform: translateX(1rem);
     top: 0.5rem;
     right: 2rem;
     z-index: 11;
-
 }
 
 .fa-bars {
@@ -308,6 +307,10 @@ transform: translateX(1rem);
     .width {
         width: 100%;
         height: 50%;
+    }
+
+    .side_nav {
+        display: none;
     }
 
     .icon {
@@ -348,17 +351,42 @@ transform: translateX(1rem);
         width: 20%;
     }
 
+    .nav_button {
+        display: none;
+    }
+
+    .close_button {
+        display: none;
+    }
+
 }
 @media (min-width:481px) {
         .width {
         width: 100%;
         height: 45%;
     }
+
+    .side_nav {
+        display: none;
+    }
+
+    .nav_button {
+        display: none;
+    }
+
+    .close_button {
+        display: none;
+    }
     
 }
 @media (min-width:641px) {
+        .side_nav {
+            display: flex;
+            flex-direction: column;
+        }
+
         .width {
-        width: 35%;
+        width: 40%;
         height: 100%;
     }
 
@@ -404,6 +432,14 @@ transform: translateX(1rem);
 
             .dropdown {
         width: 80%;
+    }
+
+    .nav_button {
+        display: block;
+    }
+
+    .close_button {
+        display: block;
     }
 
         
