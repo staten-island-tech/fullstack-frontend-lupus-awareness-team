@@ -7,7 +7,7 @@
    
       <div class="image_buttons">
         <button @click="prev" class="prev">&#10094;</button>
-        <button  @click="next"  class="next">&#10095;</button>
+        <button  @click="next" class="next">&#10095;</button>
       </div>
     </div>
     <ul class="event_image_bar">
@@ -80,6 +80,7 @@ export default {
 
           this.selectedComponent = e;
           console.log(this.selectedComponent)
+          //idk how to make this work when changing using the "next" buttons
         },
         
     },
@@ -103,29 +104,12 @@ export default {
     margin: 0 auto;
     
 }
-.adjust_width {
-  width: 100%;
-  margin: 0 auto;
-}
-.adjust_height {
-  height: 100%;
-  margin: 0 auto;
-}
+
 .event_images_container {
   width: 100%;
   position: relative;
 }
-.fade-transition {
-  transition: all 0.8s ease;
-  overflow: hidden;
-  visibility: visible;
-  opacity: 1;
-  position: absolute;
-}
-.fade-enter, .fade-leave {
-  opacity: 0;
-  visibility: hidden;
-}
+
 .image_view{
   background-color: var(--light);
   width: 100%;
@@ -138,9 +122,11 @@ export default {
   align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .view_container {
   height: 40vh;
 }
+
 .image_buttons{
   width: 100%;
   display: flex;
