@@ -1,4 +1,3 @@
-import VueCookies from "vue-cookies";
 // import VueJwtDecode from "vue-jwt-decode";
 import Vuex from "vuex";
 import HTTP from "../axiosConfig";
@@ -6,7 +5,6 @@ import HTTP from "../axiosConfig";
 export default new Vuex.Store({
   state: {
     user: null,
-    cookie: null,
   },
   mutations: {
     SET_USER_DATA(state, userData) {
@@ -20,20 +18,18 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    checkCookie() {
-      const cookie = VueCookies.get("auth-token");
-      console.log(cookie)
-      // if (cookie) {
-      //   const userPayload = VueJwtDecode.decode(cookie);
-      //   this.state.user = userPayload;
-      // }
-      // console.log(this.state.user);
-    },
     async login({ commit }, credentials) {
       try {
         const res = await HTTP.post("login", credentials);
-        console.log(res.headers['set-cookie'])
         commit("SET_USER_DATA", res.data);
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async checkCookie() {
+      try {
+        const res = await HTTP.get("auth");
+        this.state.user = res.data
       } catch (error) {
         console.log(error)
       }
