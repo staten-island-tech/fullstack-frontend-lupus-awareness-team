@@ -34,6 +34,9 @@
       <Navbar />
     </div>
 
+    <MobileNav />
+
+
     <router-view />
   </div>
 </template>
@@ -41,6 +44,7 @@
 <script>
 import Navbar from "@/components/Nav.vue";
 import ThemeModal from "@/components/ThemeModal.vue";
+import MobileNav from "@/components/MobileNav.vue";
 
 export default {
   name: "App",
@@ -69,6 +73,7 @@ export default {
   components: {
     Navbar,
     ThemeModal,
+    MobileNav,
   },
   created: function () {
     this.$store.dispatch("checkCookie");
@@ -182,12 +187,13 @@ li {
   --border-top: var(--grey-200);
   --today: var(--dark);
 
-    --service: var(--background);
-    --eventBody: var(--white);
-    --create: var(--navdark);
-     --modal: var(--purple);
+  --service: var(--background);
+  --eventBody: var(--white);
+  --create: var(--navdark);
+  --modal: var(--purple);
   --themeText: white; 
-    
+  --bottomnav: var(--purple);
+  
 }
 
 .dark {
@@ -223,6 +229,7 @@ li {
   --modal: var(--darkgray);
 
   --themeText: white; 
+  --bottomnav: var(--black-secondary);
 }
 
 .shrek {
@@ -259,6 +266,7 @@ li {
   --create: #795a2d;
 
   --themeText: var(--black);
+  --bottomnav: #795a2d;
 }
 
 .nav {

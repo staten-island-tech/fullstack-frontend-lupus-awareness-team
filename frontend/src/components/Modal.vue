@@ -127,9 +127,7 @@ border-radius: 7px;
 
   .modal {
     width: 60%;
-    height: 80%;
     background-color: white;
-    overflow-x: auto;
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
@@ -153,14 +151,14 @@ border-radius: 7px;
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
+    overflow: auto;
+    overflow-x: hidden;
 
   }
 
 
 .upload-info {
   width: 100%;
-  height: 100%;
-
 }
 
 
@@ -232,8 +230,6 @@ border-radius: 7px;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
-  overflow: scroll;
 }
 
 
