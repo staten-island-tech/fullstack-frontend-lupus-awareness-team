@@ -6,9 +6,9 @@
                     <div class="login-content-container">
                         <label class="login-email-label"
                         for="login-email"><b>Email</b></label>
-                        <input class="login-email" type="text" placeholder="Email" name="login-email" v-model="email" required>
+                        <input class="login-email" type="text" placeholder="Email" name="login-email" v-model="loginEmail" required>
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
-                        <input class="login-password" type="password" placeholder="Password" name="login-password" v-model="password" required>
+                        <input class="login-password" type="password" placeholder="Password" name="login-password" v-model="loginPassword" required>
                         <button class="submit-button" @click="login()">Login</button>
                     </div>
             </div>
@@ -19,15 +19,18 @@
                 <form method="post">
                     <div class="create-account-container">
                         <label class="create-email-label"
-                        for="create-email"><b>Email</b></label>
-                        <input class="create-email" type="text" placeholder="Enter Username" name="create-username" required>
+                        for="create-email"><b>First Name</b></label>
+                        <input class="create-email" type="text" placeholder="Enter First Name" name="create-username" v-model="firstName" required>
+                        <label class="create-email-label"
+                        for="create-email"><b>Last Name</b></label>
+                        <input class="create-email" type="text" placeholder="Enter Last Name" name="create-username" v-model="lastName" required>
                         <label class="email-label" for="email"><b>Email</b></label>
-                        <input class="email" type="email" placeholder="Enter Email" name="email" required>
+                        <input class="email" type="email" placeholder="Enter Email" name="email" v-model="registerEmail" required>
                         <label class="create-password-label" for="create-password"><b>Password</b></label>
-                        <input class="create-password" type="password" placeholder="Enter Password" name="create-password" required> 
+                        <input class="create-password" type="password" placeholder="Enter Password" name="create-password" v-model="password1" required> 
                         <label class="confirm-password-label" for="confirm-password"><b>Confirm Password</b></label>
-                        <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" required>
-                        <button class="submit-button" type="submit">Confirm</button>
+                        <input class="confirm-password" type="password" placeholder="Confirm Password" name="create-password" v-model="password2" required>
+                        <button class="submit-button" @click="register()">Register</button>
                     </div>
                 </form>
                 </div>
@@ -37,35 +40,49 @@
 </template>
 
 <script>
-
+import {HTTP} from '../axiosConfig'
 
 export default {
     data() {
         return {
-            email: null,
-            password: null
+            loginEmail: null,
+            loginPassword: null,
+            firstName: null,
+            lastName: null,
+            registerEmail: null,
+            password1: null,
+            password2: null,
         }
     },
-    // async created() {
-    //     try {
-    //         const res = await HTTP.get('/')
-    //         console.log(res.data)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // },
 name:"Login",
 methods: {
      login: async function() {
         try {
-            this.$store.dispatch('login', {
-                email: this.email,
-                password: this.password
-            })
-            // await HTTP.post('/login', {
+            // this.$store.dispatch('login', {
             //     email: this.email,
             //     password: this.password
             // })
+            await HTTP.post('/login', {
+                email: this.loginEmail,
+                password: this.loginPassword
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    },
+     register: async function() {
+        if(this.password1 != this.password2) {console.log('passwords do not match')}
+        try {
+            // this.$store.dispatch('register', {
+            //     email: this.email,
+            //     password: this.password
+            // })
+            await HTTP.post('/register', {
+                firstName: this.firstName,
+                lastName: this.lastName,
+                email: this.email,
+                password: this.password
+            })
         } catch (error) {
             console.log(error)
         }
