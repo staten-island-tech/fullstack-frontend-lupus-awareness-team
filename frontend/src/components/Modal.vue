@@ -87,7 +87,7 @@ input[type="file"] {
 }
 .custom-file-upload {
 font-size: 2rem;
-background-color: var(--purple);
+background-color: var(--uploadButton);
 border: 1px solid rgba(27, 31, 35, .15);
 border-radius: 0rem;
 box-sizing: border-box;

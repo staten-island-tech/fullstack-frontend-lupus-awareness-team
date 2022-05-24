@@ -164,6 +164,7 @@ li {
   --modalBackground:white; 
 
   --modalSubmit: var(--purple);
+  --uploadButton: var(--purple); 
     
 }
 
@@ -201,9 +202,9 @@ li {
   --themeText: white; 
   --modalBackground: var(--darkgray); 
   --modalText: var(--background); 
-  --modalHeaderText: var(--background)
+  --modalHeaderText: var(--background); 
   --modalSubmit: var(--purple); 
-
+  --uploadButton: var(--purple); 
 }
 
 .shrek {
@@ -241,10 +242,11 @@ li {
 
   --themeText: var(--black); 
 
-  --modalBackground: rgb(152, 163, 1) ; 
+  --modalBackground: rgb(191, 202, 31) ; 
   --modalText: black; 
   --modalHeaderText: black; 
-
+  --modalSubmit: #795A2D; 
+  --uploadButton: #795A2D; 
 }
 
 .nav {
