@@ -89,6 +89,7 @@ export default {
     }
     .search {
         margin: 0 auto;
+        margin-top: 2rem; 
         width: 60%;
         display: flex;
         flex-direction: column;
@@ -96,6 +97,7 @@ export default {
         align-items: center;
         padding: 0 3rem;
         background-color: #fff;
+        outline: black solid .25rem;
     }
     p {
         font-size: 1.5rem;
@@ -134,6 +136,7 @@ export default {
         background-color: var(--purple);
         border: none;
         color: #fff;
+        margin-bottom: 1rem;
         
     
     }
