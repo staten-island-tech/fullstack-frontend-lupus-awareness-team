@@ -225,6 +225,8 @@ export default {
 
 .detail-description {
     font-weight: 500;
+    padding-right: 7rem ;
+    padding-top: 2rem;
 }
 
 .detail-info-row{

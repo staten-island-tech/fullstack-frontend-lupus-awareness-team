@@ -12,12 +12,11 @@
       <Event />
       <Event />
     </div>
-    <EventDetails/>
   </div>
 </template>
 <script>
-import EventDetails from "../components/EventDetails.vue";
-// import Autocomplete from "@/components/Autocomplete.vue"
+//import EventDetails from "../components/EventDetails.vue";
+//import Autocomplete from "@/components/Autocomplete.vue"
 //import Login from '@/components/LoginPage.vue'
 //import EventDetails from "../components/EventDetails.vue";
 import Event from "@/components/Event.vue";
@@ -26,10 +25,10 @@ import Modal from "@/components/Modal.vue";
 export default {
   name: "Home",
   components: {
-    EventDetails,
+    //EventDetails,
     Event,
     Modal,
-    // Autocomplete,
+    //Autocomplete,
     //Login,
     // Test,
   },
@@ -50,9 +49,9 @@ export default {
 </script>
 
 <style>
-
-.home-dark{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.4)), url("../assets/dogPark.jpg");
+.home-dark {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.4)),
+    url("../assets/dogPark.jpg");
   background-color: var(--background);
   background-attachment: fixed;
   background-position: center;
@@ -84,8 +83,8 @@ export default {
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    text-align: center;
-    color: var(--profiletext);
+  text-align: center;
+  color: var(--profiletext);
 }
 
 .create-button {
@@ -112,5 +111,35 @@ export default {
   align-items: center;
 }
 
+@media (min-width: 320px) {
+  .create-button {
+    left: 50%;
+    margin-bottom: 2rem;
+    font-size: 7rem;
+    padding: 1.5rem 4rem;
+    right: initial;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
 
+@media (min-width: 481px) {
+}
+@media (min-width: 641px) {
+  .create-button {
+    left: initial;
+    font-size: 5rem;
+    padding: 1rem 2.8rem;
+    right: 0;
+    transform: translateX(0%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+}
+@media (min-width: 961px) {
+}
+@media (min-width: 1025px) {
+}
+@media (min-width: 1281px) {
+}
 </style>

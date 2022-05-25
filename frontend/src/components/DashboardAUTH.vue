@@ -41,6 +41,8 @@ import Profile from "@/components/Profile.vue";
 import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 import ToDoList from "@/components/ToDoList.vue";
 import Hosting from "@/components/Hosting.vue";
+import PastEvents from "@/components/PastEvents.vue";
+import HTTP from '../axiosConfig'
 import Previous from "@/components/PastEvents.vue";
 
 export default {
@@ -64,10 +66,19 @@ methods: {
           console.log(error)
       }
     },
-    
+    fetchEvents: async function() {
+      try {
+        const cookie = this.$store.state.cookie
+        const res = await HTTP.get("getEvents", {params: {cookie}})
+        console.log(res.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
 },
 created() {
   this.fetchData();
+  this.fetchEvents()
 },
 components: {
   Profile,

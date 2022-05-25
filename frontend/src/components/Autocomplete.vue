@@ -1,5 +1,5 @@
 <template>
-  <div class="address_complete">
+  <section class="address_complete">
       <div class="search">
           <!-- can change the @keyup.enter to just @keyup for speedy searches, but that puts out a lottttt of requests and i might hit my monthly quota (30000). might not have to worry ab it tho bc 30000 is a lot -->
             <div class="search_bar">
@@ -11,27 +11,28 @@
 							<circle fill="none" cx="10" cy="5.67" r="1.608"></circle>
 						</svg>{{index.properties.label}}</div>
       </div>
+
         <div class="address_line">
-        <label for="street_address">Street</label>
-        <input id="event_street_address" class="input" type="text" v-model="selectedAddress.name">
+            <label for="street_address">Street</label>
+            <input id="event_street_address" class="input" type="text" v-model="selectedAddress.name">
         </div>
         <div class="address_line">
-        <label for="event_borough">Borough</label>
-        <input id="event_borough" class="input" type="text" 
+            <label for="event_borough">Borough</label>
+            <input id="event_borough" class="input" type="text" 
         v-model="selectedAddress.borough">
         </div>
         <div class="address_line">
-        <label for="event_city">City</label>
-        <input id="event_city" class="input" type="text" v-model="selectedAddress.city">
+            <label for="event_city">City</label>
+            <input id="event_city" class="input" type="text" v-model="selectedAddress.city">
         </div>
         <div class="address_line">
-        <label for="event_state">State</label>
-        <input id="event_state" class="input" type="text"  v-model="selectedAddress.region">
-        <label for="event_zip">ZIP/Postal Code</label>
-        <input id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
+            <label for="event_state">State</label>
+            <input id="event_state" class="input" type="text"  v-model="selectedAddress.region">
+            <label for="event_zip">ZIP/Postal Code</label>
+            <input id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
         </div>
       <p>query : {{query}}</p>
-  </div>
+  </section>
 </template>
 
 <script>

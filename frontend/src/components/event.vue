@@ -163,7 +163,7 @@ components: {
 }
 
 #details {
-  background-color: var(--purple);
+  background-color: var(--details);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0rem;
   box-sizing: border-box;
@@ -181,7 +181,7 @@ components: {
 
 
 #details:hover {
-   background-color: #9153FE;
+   background-color: var(--detailsHover);
    transition: 0.3s;
    transform: translateY(-3px);
 }

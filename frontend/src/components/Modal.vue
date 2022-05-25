@@ -8,10 +8,9 @@
 
       <section class="modal-body">
         <div class="form-header">
-        <h2 class="form-title">Upload Your Information Here</h2>
         </div>
         <div class="upload-info">
-          <form class="form">
+        <form class="form">
 
         <div class="label-wrapper">
           <label class="enter-event-name"
@@ -31,12 +30,8 @@
           <input class="event-time" type="text" placeholder="Event Time" name="event-time" required>
         </div>
 
-        <div class="label-wrapper">
-          <label class="enter-event-address"
-          for="enter-event-address"><b> Event Address:</b></label>
-          <input class="event-address" type="text" placeholder="Event Address" name="event-address" required>
-        </div>
-          <Autocomplete/>
+                       <Autocomplete/>
+  
 
         <div class="label-wrapper">
           <label class="enter-event-hours"
@@ -57,6 +52,8 @@
           <input type="file" id="file-upload" name="filename" class="upload-file-button">
           <input class="submit-button" type="submit"> 
         </form>
+      
+
         </div>
         </section>
 
@@ -130,18 +127,16 @@ border-radius: 7px;
 
   .modal {
     width: 60%;
-    height: 80%;
     background-color: white;
-    overflow-x: auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
   }
 
   .modal-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     border-bottom: 1px solid #eeeeee;
     color: var(--modal);
   }
@@ -152,24 +147,25 @@ border-radius: 7px;
   }
 
   .modal-body {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2rem;
+    overflow: auto;
+    overflow-x: hidden;
 
   }
 
 
 .upload-info {
   width: 100%;
-  height: 100%;
 }
 
 
 .form-header {
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin-bottom: 4rem;
 }
 
 .form-title {
@@ -232,10 +228,8 @@ border-radius: 7px;
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
 
 
