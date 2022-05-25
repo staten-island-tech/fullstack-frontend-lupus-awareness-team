@@ -320,7 +320,6 @@ li {
 .login-container:hover .login-button {
   background-color: var(--loginhover);
   transition: 0.3s;
-  transform: translateY(2px);
   font-weight: 600;
 }
 

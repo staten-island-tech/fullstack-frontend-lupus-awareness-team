@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import DashboardAUTH from "../components/DashboardAUTH.vue";
 import EventInfo from "../views/EventInfo.vue";
 import LoginPageView from "../views/LoginPageView.vue";
+import RegisterPageView from "../views/RegisterPageView.vue";
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
     path: "/user",
     name: "Dashboard",
     component: DashboardAUTH,
+  },
+  {
+    path: "/Register",
+    name: "Dashboard",
+    component: RegisterPageView,
   },
 ];
 
