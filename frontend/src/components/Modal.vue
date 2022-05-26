@@ -184,7 +184,7 @@ border-radius: 7px;
   font-size: 3rem;
   font-weight: 500; 
   width: 20%;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
