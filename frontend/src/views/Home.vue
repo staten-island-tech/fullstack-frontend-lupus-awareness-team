@@ -71,6 +71,7 @@ export default {
   background-size: cover;
   height: 100%;
   padding-top: 6rem;
+  padding-bottom: 10rem;
 }
 
 .text-container {

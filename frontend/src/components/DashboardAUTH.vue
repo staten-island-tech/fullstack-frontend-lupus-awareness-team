@@ -86,6 +86,7 @@ components: {
   ToDoList,
   Hosting,
   Previous,
+  PastEvents,
 }
 }
 </script>
@@ -129,6 +130,7 @@ components: {
   align-items: center;
     background-color: var(--dbLight);
     padding-top: 6rem;
+    padding-bottom: 9rem;
 }
 
 .profile_container {

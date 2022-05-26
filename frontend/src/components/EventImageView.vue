@@ -103,14 +103,7 @@ export default {
     margin: 0 auto;
     
 }
-.adjust_width {
-  width: 100%;
-  margin: 0 auto;
-}
-.adjust_height {
-  height: 100%;
-  margin: 0 auto;
-}
+
 .event_images_container {
   width: 100%;
   position: relative;
@@ -128,11 +121,11 @@ export default {
 }
 
 .view_container {
-  height: 40vh;
+  height: 30vh;
+  width: 100%;
 }
 
 .image_view{
-  background-color: var(--light);
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -142,6 +135,7 @@ export default {
   display: flex;
   align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--eventBody);
 }
 .image_buttons{
   width: 100%;
@@ -150,7 +144,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   z-index: 5;
-  height: 40vh;
+  height: 100%;
   align-items: center;
   transform: translateY(-100%);
 }
@@ -182,7 +176,8 @@ export default {
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 10vh;
+  height: 8vh;
+  margin-top: 3rem;
 }
 
 .event_image_bar button {
@@ -224,4 +219,29 @@ export default {
   outline:  .45rem solid var(--dark);
   background-color: white;
 }
+
+@media (min-width:320px)  {
+
+}
+
+@media (min-width:481px)  { 
+
+
+}
+@media (min-width:641px)  {
+
+
+ }
+@media (min-width:961px)  { 
+
+
+}
+@media (min-width:1025px) { 
+
+
+ }
+@media (min-width:1281px) { 
+
+}
+
 </style>

@@ -39,6 +39,7 @@ name: "Register",
     color: white;
     width: 100vw;
     height: 100%;
+    padding-bottom: 8rem;
 }
 
 .login-title {

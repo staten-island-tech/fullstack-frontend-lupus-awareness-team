@@ -42,6 +42,7 @@
     <div class="detail-info-container">
         <div class="detail-info-column-1">
             <div class="detail-info-text">
+                <h4 class="detail-info-details-label">Event Details:</h4>
                 <h4 class="detail-info-time"> 2:00 PM - 4:00 PM</h4>
                 <h4 class="detail-info-address">485 Clawson St, Staten Island, NY 10306</h4>
                 <h4 class="detail-info-date"> Saturday, April 2nd </h4>
@@ -100,6 +101,7 @@ export default {
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
+    margin: 4rem 0rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -121,7 +123,7 @@ export default {
 }
 
 .detail-image-container {
-    width: 70%;  
+    width: 90%;  
 }
 
 .detail-event-image {
@@ -183,16 +185,18 @@ export default {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 4rem 0rem;
 }
 
+
 .detail-info-time {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 .detail-info-address {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .detail-info-date {
@@ -208,7 +212,7 @@ export default {
 }
 
 .detail-info-column-1 {
-    width: 55%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,7 +220,7 @@ export default {
 }
 
 .detail-info-column-2 {
-    width: 55%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,6 +231,7 @@ export default {
     font-weight: 500;
     padding-right: 7rem ;
     padding-top: 2rem;
+    font-size: 2rem;
 }
 
 .detail-info-row{
@@ -243,7 +248,6 @@ export default {
     align-items: center;
     justify-content: space-evenly;
     width: 50%;
-    margin-right: 2rem;
 }
 
 .detail-tag {
@@ -255,6 +259,79 @@ export default {
 
 .detail-info-decription-label {
     font-size: 5rem;
+}
+
+@media (min-width:320px)  {
+
+    .event-details-container {
+        width: 90%;
+    }
+
+    .detail-service-text {
+        font-size: 1.5rem;
+    }
+
+    .detail-info-container {
+    flex-direction: column;
+    }
+
+    .detail-info-column-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-info-column-2 {
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+
+@media (min-width:481px)  { 
+
+
+}
+@media (min-width:641px)  {
+
+    .event-details-container {
+        width: 80%;
+    }
+
+    .detail-service-text {
+        font-size: 2rem;
+    }
+
+    
+    .detail-info-container {
+    flex-direction: row;
+    }
+
+    .detail-info-column-1 {
+        width: 50%;
+        text-align: start;
+    }
+
+    .detail-info-column-2 {
+        margin-top: 4rem;
+        width: 50%;
+        text-align: start;
+    }
+
+    
+
+ }
+@media (min-width:961px)  { 
+    
+
+}
+@media (min-width:1025px) { 
+
+
+ }
+@media (min-width:1281px) { 
+
 }
 
 
