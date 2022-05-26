@@ -101,6 +101,11 @@ export default {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: all 0.3s;
+}
+
+.create-button:hover {
+  background-color: var(--navhover) ;
 }
 
 .event-wrapper {
