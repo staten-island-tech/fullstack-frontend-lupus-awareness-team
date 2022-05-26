@@ -10,9 +10,11 @@ export default new Vuex.Store({
   },
   actions: {
     async checkCookie() {
+      console.log(this.state.user)
       try {
         if(this.state.user != null) return
         const res = await HTTP.get("auth");
+        console.log(res)
         this.state.user = res.data
       } catch (error) {
         console.log(error)
