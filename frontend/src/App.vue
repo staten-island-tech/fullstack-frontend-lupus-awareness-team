@@ -34,6 +34,9 @@
       <Navbar />
     </div>
 
+    <MobileNav />
+
+
     <router-view />
   </div>
 </template>
@@ -41,6 +44,7 @@
 <script>
 import Navbar from "@/components/Nav.vue";
 import ThemeModal from "@/components/ThemeModal.vue";
+import MobileNav from "@/components/MobileNav.vue";
 
 export default {
   name: "App",
@@ -69,6 +73,7 @@ export default {
   components: {
     Navbar,
     ThemeModal,
+    MobileNav,
   },
   created: function () {
     this.$store.dispatch("checkCookie");
@@ -185,7 +190,9 @@ li {
   --eventBody: var(--white);
   --create: var(--navdark);
   --modal: var(--purple);
-  --themeText: white;
+  --themeText: white; 
+  --bottomnav: var(--purple);
+  
 }
 
 .dark {
@@ -220,7 +227,8 @@ li {
   --create: #000;
   --modal: var(--darkgray);
 
-  --themeText: white;
+  --themeText: white; 
+  --bottomnav: var(--black-secondary);
 }
 
 .shrek {
@@ -257,6 +265,7 @@ li {
   --create: #795a2d;
 
   --themeText: var(--black);
+  --bottomnav: #795a2d;
 }
 
 .nav {
@@ -310,7 +319,6 @@ li {
 .login-container:hover .login-button {
   background-color: var(--loginhover);
   transition: 0.3s;
-  transform: translateY(2px);
   font-weight: 600;
 }
 
@@ -398,6 +406,10 @@ li {
     transform: scale(0.6);
     margin-left: 0;
   }
+
+  .theme-container {
+    margin-right: 1rem;
+  }
 }
 @media (min-width: 481px) {
   *,
@@ -420,6 +432,10 @@ li {
   html,
   body {
     font-size: 50%;
+  }
+
+   .theme-container {
+    margin-right: 6rem;
   }
 }
 @media (min-width: 961px) {

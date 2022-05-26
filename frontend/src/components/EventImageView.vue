@@ -126,6 +126,11 @@ export default {
   opacity: 0;
   visibility: hidden;
 }
+
+.view_container {
+  height: 40vh;
+}
+
 .image_view{
   background-color: var(--light);
   width: 100%;
@@ -138,9 +143,6 @@ export default {
   align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.view_container {
-  height: 40vh;
-}
 .image_buttons{
   width: 100%;
   display: flex;
@@ -152,6 +154,7 @@ export default {
   align-items: center;
   transform: translateY(-100%);
 }
+
 
 .prev, .next {
   cursor: pointer;
