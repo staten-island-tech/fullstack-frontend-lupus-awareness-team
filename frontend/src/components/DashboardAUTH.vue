@@ -144,6 +144,7 @@ components: {
 display: flex;
 flex-direction: column;
 align-items: center;
+
 }
 
 .events_container {

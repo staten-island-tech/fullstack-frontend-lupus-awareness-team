@@ -42,7 +42,6 @@
     <div class="detail-info-container">
         <div class="detail-info-column-1">
             <div class="detail-info-text">
-                <h4 class="detail-info-details-label">Event Details:</h4>
                 <h4 class="detail-info-time"> 2:00 PM - 4:00 PM</h4>
                 <h4 class="detail-info-address">485 Clawson St, Staten Island, NY 10306</h4>
                 <h4 class="detail-info-date"> Saturday, April 2nd </h4>
@@ -50,8 +49,8 @@
         </div>
 
         <div class="detail-info-column-2">
+               <h4 class="detail-info-description-label">Event Decription:</h4>
             <div class="detail-info-description">
-                <h4 class="detail-info-description-label">Event Decription:</h4>
                 <h5 class="detail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
             </div>
         </div>
@@ -191,20 +190,26 @@ export default {
 
 
 .detail-info-time {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
 .detail-info-address {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .detail-info-date {
     font-weight: 500;
+    font-size: 2.5rem;
 }
 
 .detail-info-text {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
 }
 
 .detail-info-decription {
@@ -229,9 +234,8 @@ export default {
 
 .detail-description {
     font-weight: 500;
-    padding-right: 7rem ;
-    padding-top: 2rem;
     font-size: 2rem;
+    padding-top: 2rem;
 }
 
 .detail-info-row{
@@ -262,6 +266,11 @@ export default {
 }
 
 @media (min-width:320px)  {
+
+    .top-event-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
 
     .event-details-container {
         width: 90%;
@@ -295,8 +304,18 @@ export default {
 }
 @media (min-width:641px)  {
 
-    .event-details-container {
-        width: 80%;
+
+    
+
+ }
+@media (min-width:961px)  { 
+        .top-event-container {
+        flex-direction: row;
+        padding: 0;
+    }
+
+        .event-details-container {
+        width: 90%;
     }
 
     .detail-service-text {
@@ -318,12 +337,6 @@ export default {
         width: 50%;
         text-align: start;
     }
-
-    
-
- }
-@media (min-width:961px)  { 
-    
 
 }
 @media (min-width:1025px) { 
