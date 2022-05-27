@@ -22,12 +22,18 @@ data() {
 
     }
 },
-created() {
+methods: {
+},
+mounted() {
+
+},
+computed: {
+
 }
 }
 </script>
 
-<style scoped> 
+<style > 
 
 .flex  {
     display: flex;
@@ -52,7 +58,7 @@ created() {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--dbTertriary);
+    background-color: var(--dbAccent);
     color: var(--eventTab);
     width: 30%;
 }
