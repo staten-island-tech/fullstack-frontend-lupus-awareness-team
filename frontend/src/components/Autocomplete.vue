@@ -3,7 +3,9 @@
       <div class="search">
           <!-- can change the @keyup.enter to just @keyup for speedy searches, but that puts out a lottttt of requests and i might hit my monthly quota (30000). might not have to worry ab it tho bc 30000 is a lot -->
             <div class="search_bar">
-                <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search Address...">
+                <label class="search-bar-label"
+                for="search-bar"><b> Search Address:</b></label> 
+                <input @keyup.enter="fetchAddress()" v-model="query" class="search-bar-input" type="text" name="autocomplete" id="search_form" placeholder="Search Address...">
                 <button @click="fetchAddress()" class="search_btn">Go</button>
             </div>
            <div class="search-box">
@@ -77,30 +79,19 @@ export default {
 
 <style scoped>
     .address_complete {
-        width: 80%;
         height: 100%;
         margin: 1rem auto;
-        padding: 2rem;
-    }
-    #search_form {
-        width: 90%;
-        font-size: 2.25rem;
-        height: 100%;
-        border: none;
-        outline: none;
-        border-bottom: .25rem solid gray;
+        width: 100%;
     }
     .search {
         margin: 0 auto;
         margin-top: 2rem; 
-        width: 60%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: left;
         align-items: center;
-        padding: 0 3rem;
         background-color: #fff;
-        outline: black solid .25rem;
     }
     p {
         font-size: 1.5rem;
@@ -120,6 +111,26 @@ export default {
         
     }
 
+    .search-bar-label {
+    font-size: 3rem;
+    font-weight: 500; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin: 0 auto ; 
+    }
+
+.search-bar-input {
+margin: 0.5rem 0rem;
+  font-size: 1.5rem;
+  border-style: solid;
+  border-radius: 0.1rem;
+  border-color: #c4c4c4;
+  background-color: #f1f1f1;
+  padding: 0.8rem;
+  width: 40%;
+}
     .search-box{
         max-height: 15rem;
         overflow: auto;
@@ -132,19 +143,19 @@ export default {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 1rem .5rem;
         width: 100%;
         height: 100%;
     }
     .search_btn {
         font-size: 2rem;
         height: 100%;
-        width: 15%;
+        width: 6rem;
         padding: .25rem;
         background-color: var(--purple);
         border: none;
         color: #fff;
-        margin-bottom: 1rem;
+        margin: 1rem;
+        border-radius: .5rem;
         
     
     }
