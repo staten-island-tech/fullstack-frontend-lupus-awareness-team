@@ -54,9 +54,21 @@
 export default {
 name:"Event",
 methods: {
+    fetchData: async () => {
+      try {
+        const res = await fetch('http://localhost:3000/profile')
+        const data = await res.json()
+        console.log('adsfadfadf')
+        console.log(data)
+      } catch (error) {
+        console.log(error)
+      }
+    },
 },
-components: {
-}
+created: async function() { 
+    await this.fetchData()
+    console.log('asdf')
+  }
 }
 </script>
 

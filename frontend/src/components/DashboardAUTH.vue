@@ -3,6 +3,7 @@
       <div class="profile_container">
         <div class="profile_component">
             <Profile />
+            <h1>{{$store.state.user.firstName}}</h1>
         </div>
       </div>
   <div class="divider"></div>
@@ -41,7 +42,7 @@ import Profile from "@/components/Profile.vue";
 import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 import ToDoList from "@/components/ToDoList.vue";
 import Hosting from "@/components/Hosting.vue";
-import PastEvents from "@/components/PastEvents.vue";
+// import PastEvents from "@/components/PastEvents.vue";
 import HTTP from '../axiosConfig'
 import Previous from "@/components/PastEvents.vue";
 
@@ -68,8 +69,7 @@ methods: {
     },
     fetchEvents: async function() {
       try {
-        const cookie = this.$store.state.cookie
-        const res = await HTTP.get("getEvents", {params: {cookie}})
+        const res = await HTTP.get("getEvents")
         console.log(res.data)
       } catch (error) {
         console.log(error)

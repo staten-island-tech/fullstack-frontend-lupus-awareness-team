@@ -77,7 +77,6 @@ export default {
   },
   created: function () {
     this.$store.dispatch("checkCookie");
-    // this.fetchData()
   },
 };
 </script>
