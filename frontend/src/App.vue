@@ -334,7 +334,7 @@ li {
   height: 70%;
   outline: none;
   overflow: hidden;
-  padding: 0rem 2.5rem;
+  padding: 0rem 2rem;
   position: relative;
   text-align: center;
   transform: translateZ(0);
@@ -345,7 +345,7 @@ li {
   text-decoration: none;
   text-transform: none;
   color: var(--navopen);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
 }
 

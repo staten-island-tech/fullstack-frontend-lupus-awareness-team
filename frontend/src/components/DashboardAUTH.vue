@@ -130,7 +130,7 @@ components: {
   align-items: center;
     background-color: var(--dbLight);
     padding-top: 6rem;
-    padding-bottom: 9rem;
+    padding-bottom: 0rem;
 }
 
 .profile_container {
@@ -210,6 +210,7 @@ align-items: center;
 }
 
 @media (min-width:320px)  {
+
     .calendar_container {
     flex-direction: column;
   }
@@ -235,6 +236,7 @@ align-items: center;
   }
 }
 @media (min-width:481px)  { 
+
   .list_wrapper {
     width: 75%;
   }

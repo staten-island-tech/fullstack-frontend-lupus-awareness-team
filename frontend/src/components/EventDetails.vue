@@ -14,7 +14,7 @@
 
     <div class='top-tittle'>
         <div class="detail-info-row">
-            <h3>Park Cleanup Volunteering</h3>
+            <h3 class="detail-title">Park Cleanup Volunteering</h3>
         </div>
 
         <div class="detail-info-row">
@@ -113,6 +113,7 @@ export default {
 .top-tittle {
     padding: 2rem;
 }
+
 
 .detail-event-info {
     width: 100%;

@@ -9,6 +9,7 @@
         <button @click="prev" class="prev">&#10094;</button>
         <button  @click="next"  class="next">&#10095;</button>
       </div>
+      
     </div>
     <ul class="event_image_bar">
       <li>
