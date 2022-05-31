@@ -9,6 +9,7 @@
         <button @click="prev" class="prev">&#10094;</button>
         <button  @click="next"  class="next">&#10095;</button>
       </div>
+      
     </div>
     <ul class="event_image_bar">
       <li>
@@ -30,12 +31,13 @@ export default {
     data() {
         return {
             images:[
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg", "https://cdn.pixabay.com/photo/2020/03/09/17/51/narcis-4916584_960_720.jpg","https://images.unsplash.com/photo-1431965400057-a84b80cfdbff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80","https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg", "https://cdn.pixabay.com/photo/2020/03/09/17/51/narcis-4916584_960_720.jpg","https://images.unsplash.com/photo-1431965400057-a84b80cfdbff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-        
+        "https://images.unsplash.com/photo-1653629154029-265d18f0e1f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1653537649117-821e01f707c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1653629154400-58cf05813b06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1653185195219-9bd5dbfe1b44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+        "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80",
+
         ],
             
             currentIndex: 0,
@@ -103,14 +105,7 @@ export default {
     margin: 0 auto;
     
 }
-.adjust_width {
-  width: 100%;
-  margin: 0 auto;
-}
-.adjust_height {
-  height: 100%;
-  margin: 0 auto;
-}
+
 .event_images_container {
   width: 100%;
   position: relative;
@@ -128,11 +123,11 @@ export default {
 }
 
 .view_container {
-  height: 40vh;
+  height: 30vh;
+  width: 100%;
 }
 
 .image_view{
-  background-color: var(--light);
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -142,6 +137,7 @@ export default {
   display: flex;
   align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--eventBody);
 }
 .image_buttons{
   width: 100%;
@@ -150,7 +146,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   z-index: 5;
-  height: 40vh;
+  height: 100%;
   align-items: center;
   transform: translateY(-100%);
 }
@@ -182,7 +178,8 @@ export default {
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 10vh;
+  height: 8vh;
+  margin-top: 3rem;
 }
 
 .event_image_bar button {
@@ -211,7 +208,7 @@ export default {
   margin: .3rem;
 }
 .event_image_preview img:hover, .active {
-  outline:  .45rem solid var(--dark);
+  outline:  .1rem solid var(--dark);
   background-color: white;
 }
 .event_image_preview {
@@ -224,4 +221,37 @@ export default {
   outline:  .45rem solid var(--dark);
   background-color: white;
 }
+
+@media (min-width:320px)  {
+
+  .view_container {
+    height: 30vh;
+  }
+
+}
+
+@media (min-width:481px)  { 
+
+
+}
+@media (min-width:641px)  {
+
+  .view_container {
+    height: 40vh;
+  }
+
+
+ }
+@media (min-width:961px)  { 
+
+
+}
+@media (min-width:1025px) { 
+
+
+ }
+@media (min-width:1281px) { 
+
+}
+
 </style>

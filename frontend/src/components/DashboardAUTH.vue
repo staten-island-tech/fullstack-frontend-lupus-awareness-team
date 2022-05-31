@@ -86,6 +86,7 @@ components: {
   ToDoList,
   Hosting,
   Previous,
+  PastEvents,
 }
 }
 </script>
@@ -129,6 +130,7 @@ components: {
   align-items: center;
     background-color: var(--dbLight);
     padding-top: 6rem;
+    padding-bottom: 0rem;
 }
 
 .profile_container {
@@ -142,6 +144,7 @@ components: {
 display: flex;
 flex-direction: column;
 align-items: center;
+
 }
 
 .events_container {
@@ -207,6 +210,7 @@ align-items: center;
 }
 
 @media (min-width:320px)  {
+
     .calendar_container {
     flex-direction: column;
   }
@@ -232,6 +236,7 @@ align-items: center;
   }
 }
 @media (min-width:481px)  { 
+
   .list_wrapper {
     width: 75%;
   }
