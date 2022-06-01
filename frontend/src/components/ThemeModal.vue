@@ -1,24 +1,26 @@
 <template>
-  <div class="modal-backdrop" @click="close">
-    <div class="modal" @click.stop="">
-      <header class="modal-header">
-        <h3 class="header-text">Select a theme</h3>
-      </header>
+  <transition name="modal-fade">
+    <div class="modal-backdrop" @click="close">
+      <div class="modal" @click.stop="">
+        <header class="modal-header">
+          <h3 class="header-text">Select a theme</h3>
+        </header>
 
-      <section class="modal-body">
-        <div class="body-container">
-          <div class="circle" id="purple" @click="main"></div>
-        </div>
-        <div class="body-container">
-          <div class="circle" id="black" @click="dark"></div>
-        </div>
-        <div class="body-container">
-          <div class="circle" id="shrek" @click="shrek"></div>
-        </div>
-       </section>
+        <section class="modal-body">
+          <div class="body-container">
+            <div class="circle" id="purple" @click="main"></div>
+          </div>
+          <div class="body-container">
+            <div class="circle" id="black" @click="dark"></div>
+          </div>
+          <div class="body-container">
+            <div class="circle" id="shrek" @click="shrek"></div>
+          </div>
+        </section>
 
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -66,6 +68,17 @@
 </script>
 
 <style scoped>
+
+  .modal-fade-enter,
+  .modal-fade-leave-to {
+    opacity: 0;
+  }
+
+  .modal-fade-enter-active,
+  .modal-fade-leave-active {
+    transition: opacity .5s ease;
+  }
+
 .modal-backdrop {
     position: fixed;
     top: 0;

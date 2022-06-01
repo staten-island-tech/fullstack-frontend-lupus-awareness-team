@@ -64,6 +64,7 @@ methods: {
 .nav_profile_name {
     color:var(--navtext);
     font-weight: 600;
+    font-size: 2rem;
 }
 
 .nav_profile_text {

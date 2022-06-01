@@ -213,8 +213,9 @@ export default {
     padding-top: 2rem;
 }
 
-.detail-info-decription {
-    width: 80%;
+.detail-info-description {
+    display: flex;
+    justify-content: center;
 }
 
 .detail-info-column-1 {
@@ -237,6 +238,8 @@ export default {
     font-weight: 500;
     font-size: 2rem;
     padding-top: 2rem;
+    text-align: center;
+    width: 90%;
 }
 
 .detail-info-row{

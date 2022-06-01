@@ -6,20 +6,20 @@
       </div>
    
       <div class="image_buttons">
-        <button @click="prev" class="prev">&#10094;</button>
-        <button  @click="next"  class="next">&#10095;</button>
+        <button @click="prev" class="prev"><i class="fas fa-arrow-left"></i></button>
+        <button  @click="next"  class="next"><i class="fas fa-arrow-right"></i></button>
       </div>
       
     </div>
     <ul class="event_image_bar">
       <li>
-          <button v-if="sliceBegin != 0" @click="sliceBackward">&#10094;</button>
+          <button v-if="sliceBegin != 0" @click="sliceBackward"><i id="arrow-left" class="fas fa-arrow-left"></i></button>
         </li>
         <li class="event_image_preview" v-for="img in previewBarImages" :key="img">
           <img @click="selectImg(img), selectPreview(img,$event)" :class="{active: this.currentImg === this.selectedComponent}" :src="img" alt=""/>
         </li>
         <li>
-          <button v-if="sliceBegin +4 < images.length" @click="sliceForward">&#10095;</button>
+          <button v-if="sliceBegin +4 < images.length" @click="sliceForward"><i id="arrow-right" class="fas fa-arrow-right"></i></button>
         </li>
       </ul>
   </div>
@@ -146,7 +146,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   z-index: 5;
-  height: 100%;
+  height: 80%;
   align-items: center;
   transform: translateY(-100%);
 }
@@ -155,18 +155,21 @@ export default {
 .prev, .next {
   cursor: pointer;
   position: static;
-  top: 40%;
   width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   height: 15%;
   color: white;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 5rem;
   transition: 0.5s ease;
   text-decoration: none;
   user-select: none;
   border: none;
-  background-color: rgba(162, 157, 159, 0.7);
+  background-color: transparent;
+  border-radius: 30%;
 }
 
 .prev:hover, .next:hover {
@@ -189,7 +192,7 @@ export default {
   justify-content: center;
   text-decoration: none;
   border: none;
-  border-radius: 50%;
+  border-radius: 30%;
   padding: 1rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -207,9 +210,8 @@ export default {
   border-radius: 1rem;
   margin: .3rem;
 }
-.event_image_preview img:hover, .active {
-  outline:  .1rem solid var(--dark);
-  background-color: white;
+.event_image_preview img:hover {
+  filter: brightness(60%);
 }
 .event_image_preview {
   height: 100%;
@@ -222,11 +224,28 @@ export default {
   background-color: white;
 }
 
+  .fa-arrow-left {
+    font-size: 2.5rem;
+  }
+
+    .fa-arrow-right {
+    font-size: 2.5rem;
+  }
+
+  #arrow-left {
+    font-size: 1.5rem;
+  }
+
+  #arrow-right {
+    font-size: 1.5rem;
+  }
+
 @media (min-width:320px)  {
 
   .view_container {
     height: 30vh;
   }
+
 
 }
 
@@ -239,6 +258,7 @@ export default {
   .view_container {
     height: 40vh;
   }
+
 
 
  }
