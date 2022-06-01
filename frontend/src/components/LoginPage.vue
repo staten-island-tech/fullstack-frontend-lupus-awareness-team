@@ -38,7 +38,11 @@ methods: {
             await HTTP.post('/login', {
                 email: this.email,
                 password: this.password
-            })
+            }).then(
+                () => {
+                    window.location = "/"
+                }
+            )
         } catch (error) {
             console.log(error)
         }

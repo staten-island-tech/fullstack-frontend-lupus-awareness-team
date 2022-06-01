@@ -46,12 +46,13 @@ name: "Register",
                 return
             }
             try {
-                await HTTP.post('/register', {
+                await HTTP.post('http://localhost:3000/register', {
                     firstName: this.firstName,
                     lastName: this.lastName,
                     email: this.email,
                     password: this.password1
             })
+    
             } catch (error) {
                 console.log(error)
             }
