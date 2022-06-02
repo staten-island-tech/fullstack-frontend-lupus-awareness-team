@@ -85,6 +85,8 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Playfair+Display:wght@900&display=swap');
+
 #app {
   font-family: "Montserrat", sans-serif;
   background-color: var(--dbTertiary);
@@ -194,7 +196,10 @@ li {
   --modal: var(--purple);
   --themeText: white; 
   --bottomnav: var(--purple);
-  
+  --modalBackground:white; 
+  --modalSubmit: var(--purple);
+  --uploadButton: var(--purple); 
+    
 }
 
 .dark {
@@ -232,6 +237,11 @@ li {
 
   --themeText: white; 
   --bottomnav: var(--black-secondary);
+  --modalBackground: var(--darkgray); 
+  --modalText: var(--background); 
+  --modalHeaderText: var(--background); 
+  --modalSubmit: var(--purple); 
+  --uploadButton: var(--purple); 
 }
 
 .shrek {
@@ -267,8 +277,13 @@ li {
   --eventBody: rgb(179, 190, 16);
   --create: #795a2d;
 
-  --themeText: var(--black);
   --bottomnav: #795a2d;
+  --themeText: var(--black); 
+  --modalBackground: rgb(191, 202, 31) ; 
+  --modalText: black; 
+  --modalHeaderText: black; 
+  --modalSubmit: #795A2D; 
+  --uploadButton: #795A2D; 
 }
 
 .nav {
@@ -303,6 +318,11 @@ li {
   margin-right: 0.5rem;
   color: var(--themeText);
   font-weight: 600;
+  color: var(--white);
+  font-weight: 500;
+  padding: 0rem 1rem;
+  font-family: san-serif, "Montserrat";
+  font-size: 1.5rem;
 }
 
 .theme-button {

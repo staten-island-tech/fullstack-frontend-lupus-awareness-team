@@ -3,36 +3,41 @@
       <div class="search">
           <!-- can change the @keyup.enter to just @keyup for speedy searches, but that puts out a lottttt of requests and i might hit my monthly quota (30000). might not have to worry ab it tho bc 30000 is a lot -->
             <div class="search_bar">
-                <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search Address...">
+                <label class="search-bar-label"
+                for="search-bar"><b> Search Address:</b></label> 
+                <input @keyup.enter="fetchAddress()" v-model="query" class="search-bar-input" type="text" name="autocomplete" id="search_form" placeholder="Search Address...">
                 <button @click="fetchAddress()" class="search_btn">Go</button>
             </div>
+           <div class="search-box">
+                
             <div @click="completeForm(index.properties)" v-show="searchResults && query" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> <svg class="svg-icon" viewBox="0 0 20 20">
 							<path fill="none" d="M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z"></path>
 							<circle fill="none" cx="10" cy="5.67" r="1.608"></circle>
 						</svg>{{index.properties.label}}</div>
+           </div>
+
       </div>
 
         <div class="address_line">
-            <label for="street_address">Street</label>
-            <input id="event_street_address" class="input" type="text" v-model="selectedAddress.name">
+        <label class="address-label" for="street_address">Street</label>
+        <input placeholder="Event Street Address" id="event_street_address" class="input" type="text" v-model="selectedAddress.name">
         </div>
         <div class="address_line">
-            <label for="event_borough">Borough</label>
-            <input id="event_borough" class="input" type="text" 
+        <label class="address-label" for="event_borough">Borough</label>
+        <input placeholder="Event Borough" id="event_borough" class="input" type="text" 
         v-model="selectedAddress.borough">
         </div>
         <div class="address_line">
-            <label for="event_city">City</label>
-            <input id="event_city" class="input" type="text" v-model="selectedAddress.city">
+        <label class="address-label" for="event_city">City</label>
+        <input placeholder="Event City" id="event_city" class="input" type="text" v-model="selectedAddress.city">
         </div>
         <div class="address_line">
-            <label for="event_state">State</label>
-            <input id="event_state" class="input" type="text"  v-model="selectedAddress.region">
-            <label for="event_zip">ZIP/Postal Code</label>
-            <input id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
+        <label class="address-label" for="event_state">State</label>
+        <input placeholder="Event State" id="event_state" class="input" type="text"  v-model="selectedAddress.region">
+        <label class="address-label" for="event_zip">ZIP/Postal Code</label>
+        <input placeholder="Event Zip" id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
         </div>
-      <p>query : {{query}}</p>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -75,27 +80,18 @@ export default {
 
 <style scoped>
     .address_complete {
-        width: 80%;
         height: 100%;
-        background-color: aliceblue;
         margin: 1rem auto;
-    }
-    #search_form {
-        width: 90%;
-        font-size: 2.25rem;
-        height: 100%;
-        border: none;
-        outline: none;
-        border-bottom: .25rem solid gray;
+        width: 100%;
     }
     .search {
         margin: 0 auto;
-        width: 60%;
+        margin-top: 2rem; 
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: left;
         align-items: center;
-        padding: 0 3rem;
         background-color: #fff;
     }
     p {
@@ -115,6 +111,30 @@ export default {
         color: rgb(77, 77, 77);
         
     }
+
+    .search-bar-label {
+     font-size: 3rem;
+  font-weight: 500; 
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    }
+
+.search-bar-input {
+  margin: 0.5rem 0rem;
+  font-size: 1.5rem;
+  border-style: solid;
+  border-radius: 0.1rem;
+  border-color: #c4c4c4;
+  background-color: #f1f1f1;
+  padding: 0.8rem;
+  width: 40%;
+}
+    .search-box{
+        max-height: 15rem;
+        overflow: auto;
+    }
     .search_results:hover {
         background-color: var(--dbSecondary);
     }
@@ -123,18 +143,22 @@ export default {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 1rem .5rem;
         width: 100%;
         height: 100%;
+        margin-bottom: 2rem;
+        margin-left: 8rem; 
+
     }
     .search_btn {
         font-size: 2rem;
         height: 100%;
-        width: 15%;
+        width: 6rem;
         padding: .25rem;
         background-color: var(--purple);
         border: none;
         color: #fff;
+        margin: 1rem;
+        border-radius: .5rem;
         
     
     }
@@ -155,16 +179,18 @@ export default {
         stroke-width: 1;
     }
     .input {
-        font-size: 2rem;
-        width: 60%;
-        margin-right: 5%;
-        padding: .3rem;
-        
-    }
+    margin: 3rem 3rem 0 0;
+    font-size: 1.5rem;
+    border-style: solid;
+    border-radius: 0.1rem;
+    border-color: #c4c4c4;
+    background-color: #f1f1f1;
+    padding: 0.8rem;
+    width: 40%;
+}
     label {
         font-size: 2.3rem;
         width: 40%;
-        margin-right: 10%;
     }
     .event_address {
         width: 40%;
@@ -179,4 +205,13 @@ export default {
         margin: 1rem 0;
         align-items: center;
     }
+
+    .address-label {
+        margin: 3rem 3rem 0 3rem;
+        width: 20%;
+        display: flex;
+        justify-content: end;
+    }
+
+
 </style>
