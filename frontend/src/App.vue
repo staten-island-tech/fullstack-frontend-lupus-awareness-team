@@ -74,6 +74,8 @@ export default {
 <style >
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Playfair+Display:wght@900&display=swap');
+
 #app {
 font-family: 'Montserrat', sans-serif;
 background-color: var(--dbTertiary);

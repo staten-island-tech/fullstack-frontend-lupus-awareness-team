@@ -112,17 +112,16 @@ export default {
     }
 
     .search-bar-label {
-    font-size: 3rem;
-    font-weight: 500; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    margin: 0 auto ; 
+     font-size: 3rem;
+  font-weight: 500; 
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     }
 
 .search-bar-input {
-margin: 0.5rem 0rem;
+  margin: 0.5rem 0rem;
   font-size: 1.5rem;
   border-style: solid;
   border-radius: 0.1rem;
@@ -145,6 +144,9 @@ margin: 0.5rem 0rem;
         justify-content: center;
         width: 100%;
         height: 100%;
+        margin-bottom: 2rem;
+        margin-left: 8rem; 
+
     }
     .search_btn {
         font-size: 2rem;
@@ -188,7 +190,6 @@ margin: 0.5rem 0rem;
     label {
         font-size: 2.3rem;
         width: 40%;
-        margin-right: 10%;
     }
     .event_address {
         width: 40%;
@@ -210,4 +211,6 @@ margin: 0.5rem 0rem;
         display: flex;
         justify-content: end;
     }
+
+
 </style>

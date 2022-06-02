@@ -161,6 +161,7 @@ border-radius: 7px;
     flex-direction: column;
     align-items: center;
 
+
   }
 
 
@@ -240,6 +241,7 @@ border-radius: 7px;
   align-items: center;
   width: 100%;
   height: 100%;
+
 }
 
 
