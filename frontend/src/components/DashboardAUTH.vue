@@ -239,6 +239,10 @@ align-items: center;
   .subscribe_button {
   margin-left: 2rem;
 }
+
+#dashboard_section {
+    padding-bottom: 8rem;
+}
 }
 @media (min-width:481px)  { 
 
@@ -267,6 +271,9 @@ align-items: center;
 
   .events_wrapper {
     width: 80%;
+  }
+  .dashboard_section {
+    padding-bottom: 0rem;
   }
 
  }
