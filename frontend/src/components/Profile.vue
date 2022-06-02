@@ -66,7 +66,6 @@ created() {
   justify-content: center;
   width: 100%;
   margin: 3rem 0rem;
-  z-index: 2;
 }
 
 .profile_text_container {
@@ -75,14 +74,13 @@ created() {
   justify-content: center;
   width: 30%;
   margin-top: 1.5rem;
-  z-index: 3;
+
   margin-bottom: 2rem;
 
 }
 
 .profile_image {
   border-radius: 50%;
-  z-index: 3;
   width: 40%;
 }
 

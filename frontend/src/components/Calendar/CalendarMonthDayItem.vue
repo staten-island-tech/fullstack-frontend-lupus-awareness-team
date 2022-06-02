@@ -43,6 +43,7 @@ export default {
   font-size: 2.5rem;
   background-color: var(--calendarDay);
   color: var(--calendarDayText);
+  z-index: 0;
 }
 
 .calendar-day > span {

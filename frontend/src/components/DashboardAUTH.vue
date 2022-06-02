@@ -160,7 +160,6 @@ align-items: center;
   width: 60%;
   display: inline-flex;
   flex-direction: column;
-  z-index: 2;
   background-color: var(--dbSecondary);
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 0.5px;
@@ -170,13 +169,11 @@ align-items: center;
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .events_tab ul{
   display: flex;
   justify-content: center;
-  z-index: 3;
   width: 100%;
   margin-bottom: 2px;
   
@@ -187,7 +184,6 @@ align-items: center;
   border: none;
   color: var(--eventTab);
   font-size: 1.8rem;
-  z-index: 3;
   text-decoration: none;
   list-style: none;
   padding: 1rem 2.5rem;

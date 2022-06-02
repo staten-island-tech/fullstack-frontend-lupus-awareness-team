@@ -122,7 +122,7 @@ border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 50;
+    z-index: 30;
   }
 
   .modal {
@@ -131,6 +131,8 @@ border-radius: 7px;
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
+    position: relative;
+    z-index: 35;
   }
 
   .modal-header {
