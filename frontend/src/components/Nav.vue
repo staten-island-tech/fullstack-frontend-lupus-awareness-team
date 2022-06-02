@@ -121,7 +121,7 @@ methods: {
         this.$parent.$refs.theme.classList.remove("dark");
         this.$parent.$refs.theme.classList.add("shrek");
         }
-    }
+    },
 }
 }
 </script>

@@ -42,19 +42,23 @@ name: "Register",
     methods: {
         register: async function() {
             if(this.password1 != this.password2) {
-                console.log('passwords do not match')
+                alert('passwords do not match')
                 return
             }
             try {
-                await HTTP.post('http://localhost:3000/register', {
+                await HTTP.post('/register', {
                     firstName: this.firstName,
                     lastName: this.lastName,
                     email: this.email,
                     password: this.password1
             })
+            .then((response) => {
+      console.log(response)
+    //   window.location = '/'
+    });
     
             } catch (error) {
-                console.log(error)
+                alert(error)
             }
     },
     }

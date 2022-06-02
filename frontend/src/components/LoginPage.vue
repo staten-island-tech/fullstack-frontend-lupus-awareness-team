@@ -38,11 +38,14 @@ methods: {
             await HTTP.post('/login', {
                 email: this.email,
                 password: this.password
-            }).then(
-                () => {
-                    window.location = "/"
-                }
-            )
+            })
+ .then((response) => {
+      console.log(response);
+      
+    //   if(response.data === ''){
+    //       return this.$store.state.user = 
+    //   }
+    });
         } catch (error) {
             console.log(error)
         }

@@ -69,6 +69,11 @@ import Autocomplete from "../components/Autocomplete.vue"
     components: {
       Autocomplete
     },
+    data(){
+      return {
+
+      }
+    },
     methods: {
       close() {
         this.$emit('close');
