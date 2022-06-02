@@ -12,7 +12,6 @@
       <Event />
       <Event />
     </div>
-
   </div>
 </template>
 <script>
@@ -50,9 +49,9 @@ export default {
 </script>
 
 <style>
-
-.home-dark{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.4)), url("../assets/dogPark.jpg");
+.home-dark {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.4)),
+    url("../assets/dogPark.jpg");
   background-color: var(--background);
   background-attachment: fixed;
   background-position: center;
@@ -85,8 +84,8 @@ export default {
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    text-align: center;
-    color: var(--profiletext);
+  text-align: center;
+  color: var(--profiletext);
 }
 
 .create-button {
@@ -103,6 +102,11 @@ export default {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: all 0.3s;
+}
+
+.create-button:hover {
+  background-color: var(--navhover) ;
 }
 
 .event-wrapper {
@@ -113,7 +117,7 @@ export default {
   align-items: center;
 }
 
-@media (min-width:320px)  {
+@media (min-width: 320px) {
   .create-button {
     left: 50%;
     margin-bottom: 2rem;
@@ -123,35 +127,25 @@ export default {
     transform: translateX(-50%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
-
 }
 
-@media (min-width:481px)  { 
-
+@media (min-width: 481px) {
 }
-@media (min-width:641px)  {
-
+@media (min-width: 641px) {
   .create-button {
     left: initial;
     font-size: 5rem;
     padding: 1rem 2.8rem;
     right: 0;
     transform: translateX(0%);
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
-
- }
-@media (min-width:961px)  { 
-
-
 }
-@media (min-width:1025px) { 
-
-
- }
-@media (min-width:1281px) { 
-
+@media (min-width: 961px) {
 }
-
+@media (min-width: 1025px) {
+}
+@media (min-width: 1281px) {
+}
 </style>

@@ -394,7 +394,7 @@ li {
   }
 
   .nav {
-    height: 4rem;
+    height: 6rem;
   }
 
   .login-button {
