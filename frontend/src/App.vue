@@ -189,6 +189,7 @@ li {
 
   --service: var(--background);
   --eventBody: var(--white);
+  --eventBG: var(--accent);
   --create: var(--navdark);
   --modal: var(--purple);
   --themeText: white; 
@@ -225,6 +226,7 @@ li {
 
   --service: var(--dbSecondary);
   --eventBody: var(--dbPrimary);
+  --eventBG: var(--black-secondary);
   --create: #000;
   --modal: var(--darkgray);
 
