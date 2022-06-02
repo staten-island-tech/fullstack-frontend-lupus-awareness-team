@@ -3,7 +3,7 @@
     <div class="top-container">
         <div class="user">
             <div class="user-image">
-                <img class="user-pfp" src="../assets/placeholder.jpg" alt="profile picture">
+                <img class="user-pfp" src="../assets/placeholder.jpg">
             </div>
             <div class="user-text">
                 <h4 class="username">User1234</h4>

@@ -83,12 +83,9 @@ input[type="file"] {
   display: none;
 }
 
-.header-text{
-  color: var(--modalHeaderText);
-}
 .custom-file-upload {
 font-size: 2rem;
-background-color: var(--uploadButton);
+background-color: var(--modal);
 border: 1px solid rgba(27, 31, 35, .15);
 border-radius: 0rem;
 box-sizing: border-box;
@@ -130,12 +127,10 @@ border-radius: 7px;
 
   .modal {
     width: 60%;
-    height: 80%;
-    background-color: var(--modalBackground);
-    overflow-x: auto;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    color: var(--modalText);
+    padding-bottom: 2rem;
   }
 
   .modal-header {
@@ -159,7 +154,6 @@ border-radius: 7px;
     overflow: auto;
     overflow-x: hidden;
 
-
   }
 
 
@@ -182,7 +176,7 @@ border-radius: 7px;
   font-size: 3rem;
   font-weight: 500; 
   width: 20%;
-  display: flex;
+    display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -208,13 +202,13 @@ border-radius: 7px;
 
 .upload-file-button {
   font-size: 1rem;
-  
+  background-color: brown;
 }
 
 
 .submit-button {
   font-size: 1.5rem;
-  background-color: var(--modalSubmit);
+  background-color: var(--modal);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 0rem;
   box-sizing: border-box;
@@ -237,8 +231,6 @@ border-radius: 7px;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
-
 }
 
 
