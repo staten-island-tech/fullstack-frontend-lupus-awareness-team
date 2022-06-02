@@ -225,11 +225,11 @@ align-items: center;
   }
 
     .list_wrapper {
-    width: 80%;
+    width: 85%;
   }
 
   .calendar_wrapper {
-    width: 80%;
+    width: 85%;
   }
 
   .events_wrapper {

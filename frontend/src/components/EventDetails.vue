@@ -286,6 +286,7 @@ export default {
 
     .detail-info-container {
     flex-direction: column;
+    
     }
 
     .detail-info-column-1 {
@@ -300,7 +301,7 @@ export default {
     }
 
     .detail-user-image {
-    width: 30%;
+    width: 40%;
 }
 
     .detail-description {
@@ -308,11 +309,32 @@ export default {
     }
 
     .detail-info-description-label {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .detail-title {
         font-size: 5rem;
+    }
+
+    .detail-info-address {
+        font-size: 3rem;
+    }
+
+    .detail-info-time {
+        font-size: 3.5rem;
+    }
+
+    .detail-info-date {
+        font-size: 3rem;
+    }
+
+    .detail-tag {
+        font-size: 2.5rem;
+    }
+
+    .detail-service-text {
+        font-size: 2rem;
+        text-align: center;
     }
 
 }
@@ -326,8 +348,38 @@ export default {
         font-size: 2rem;
     }
 
-        .detail-title {
-        font-size: 4rem;
+
+        .detail-description {
+        font-size: 2rem;
+    }
+
+    .detail-info-description-label {
+        font-size: 2.5rem;
+    }
+
+    .detail-title {
+        font-size: 3rem;
+    }
+
+    .detail-info-address {
+        font-size: 3rem;
+    }
+
+    .detail-info-time {
+        font-size: 2.5rem;
+    }
+
+    .detail-info-date {
+        font-size: 2.5rem;
+    }
+
+    .detail-tag {
+        font-size: 1.75rem;
+    }
+
+    .detail-service-text {
+        font-size: 1.5rem;
+        text-align: center;
     }
 
 }

@@ -4,7 +4,7 @@
           <!-- can change the @keyup.enter to just @keyup for speedy searches, but that puts out a lottttt of requests and i might hit my monthly quota (30000). might not have to worry ab it tho bc 30000 is a lot -->
             <div class="search_bar">
                 <input @keyup.enter="fetchAddress()" v-model="query" type="text" name="autocomplete" id="search_form" placeholder="Search Address...">
-                <button @click="fetchAddress()" class="search_btn">Go</button>
+                <button @click="fetchAddress()" class="search_btn"><i class="fas fa-search"></i></button>
             </div>
             <div @click="completeForm(index.properties)" v-show="searchResults && query" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> <svg class="svg-icon" viewBox="0 0 20 20">
 							<path fill="none" d="M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z"></path>
@@ -31,7 +31,6 @@
             <label for="event_zip">ZIP/Postal Code</label>
             <input id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
         </div>
-      <p>query : {{query}}</p>
   </section>
 </template>
 
@@ -74,19 +73,22 @@ export default {
 </script>
 
 <style scoped>
+
     .address_complete {
         width: 80%;
         height: 100%;
-        background-color: aliceblue;
-        margin: 1rem auto;
+        background-color: var(--background);
+        margin: 2rem auto;
+        padding: 1.5rem 2rem;
     }
     #search_form {
         width: 90%;
-        font-size: 2.25rem;
+        font-size: 1.8rem;
         height: 100%;
         border: none;
         outline: none;
         border-bottom: .25rem solid gray;
+                  font-family: "Montserrat", sans-serif;
     }
     .search {
         margin: 0 auto;
@@ -123,7 +125,7 @@ export default {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 1rem .5rem;
+        padding: 0.5rem 0rem;
         width: 100%;
         height: 100%;
     }
@@ -132,9 +134,11 @@ export default {
         height: 100%;
         width: 15%;
         padding: .25rem;
-        background-color: var(--purple);
+        background-color: var(--white);
         border: none;
-        color: #fff;
+        color: black;
+        border-radius: 20%;
+        margin-lefT: 0.5rem;
         
     
     }
@@ -162,7 +166,7 @@ export default {
         
     }
     label {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
         width: 40%;
         margin-right: 10%;
     }
@@ -178,5 +182,9 @@ export default {
         flex-direction: row;
         margin: 1rem 0;
         align-items: center;
+    }
+
+    .fa-search {
+        font-size: 1.8rem;
     }
 </style>

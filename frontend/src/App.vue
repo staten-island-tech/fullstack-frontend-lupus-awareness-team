@@ -35,7 +35,7 @@
     </div>
 
     <MobileNav />
-
+    <Error/>
 
     <router-view />
   </div>
@@ -45,6 +45,7 @@
 import Navbar from "@/components/Nav.vue";
 import ThemeModal from "@/components/ThemeModal.vue";
 import MobileNav from "@/components/MobileNav.vue";
+import Error from "@/components/ErrorAlert.vue"
 
 export default {
   name: "App",
@@ -74,6 +75,7 @@ export default {
     Navbar,
     ThemeModal,
     MobileNav,
+    Error,
   },
   created: function () {
     this.$store.dispatch("checkCookie");
@@ -293,7 +295,7 @@ li {
 
 .theme-container {
   height: 100%;
-  margin-right: 6rem;
+  margin-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,7 +440,7 @@ li {
   }
 
    .theme-container {
-    margin-right: 6rem;
+    margin-right: 2rem;
   }
 }
 @media (min-width: 961px) {

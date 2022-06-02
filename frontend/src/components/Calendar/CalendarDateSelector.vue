@@ -71,6 +71,7 @@ export default {
   font-size: 2rem;
   border: none;
   cursor: pointer;
+  color: var(--calendarDayText)
 }
 
 .fa-arrow-left {
