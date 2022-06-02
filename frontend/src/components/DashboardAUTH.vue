@@ -3,7 +3,7 @@
       <div class="profile_container">
         <div class="profile_component">
             <Profile />
-            <h1>{{$store.state.user.firstName}}</h1>
+            <!-- <h1>{{$store.state.user.firstName}}</h1> -->
         </div>
       </div>
   <div class="divider"></div>
@@ -57,19 +57,20 @@ data() {
   }
 },
 methods: {
-    fetchData: async function () {
-        try {
-        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/eventList');
-        const data = await response.json();
-        this.eventArr = data;
-        console.log(this.eventArr)
-      } catch(error) {
-          console.log(error)
-      }
-    },
+    // fetchData: async function () {
+    //     try {
+    //     const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/eventList');
+    //     const data = await response.json();
+    //     this.eventArr = data;
+    //     console.log(this.eventArr)
+    //   } catch(error) {
+    //       console.log(error)
+    //   }
+    // },
     fetchEvents: async function() {
       try {
         const res = await HTTP.get("getEvents")
+        this.eventArr = res.data
         console.log(res.data)
       } catch (error) {
         console.log(error)
@@ -77,7 +78,7 @@ methods: {
     }
 },
 created() {
-  this.fetchData();
+  // this.fetchData();
   this.fetchEvents()
 },
 components: {
@@ -86,7 +87,7 @@ components: {
   ToDoList,
   Hosting,
   Previous,
-  PastEvents,
+  // PastEvents,
 }
 }
 </script>

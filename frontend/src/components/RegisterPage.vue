@@ -3,7 +3,6 @@
         <div class="login-page-right">
             <h3 class="login-title">Create Account</h3>
             <div class="create-account">
-                <form method="post">
                     <div class="create-account-container">
                         <label class="create-email-label"
                         for="create-email"><b>First Name</b></label>
@@ -19,7 +18,6 @@
                         <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" v-model="password2" required>
                         <button class="submit-button" @click="register()">Confirm</button>
                     </div>
-                </form>
                 </div>
         </div>
     </div>
