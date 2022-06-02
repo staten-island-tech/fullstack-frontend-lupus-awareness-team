@@ -299,11 +299,36 @@ export default {
         text-align: center;
     }
 
+    .detail-user-image {
+    width: 30%;
+}
+
+    .detail-description {
+        font-size: 2.5rem;
+    }
+
+    .detail-info-description-label {
+        font-size: 3rem;
+    }
+
+    .detail-title {
+        font-size: 5rem;
+    }
 
 }
 
 @media (min-width:481px)  { 
+    .detail-user-image {
+        width: 20%;
+    }
 
+        .detail-description {
+        font-size: 2rem;
+    }
+
+        .detail-title {
+        font-size: 4rem;
+    }
 
 }
 @media (min-width:641px)  {

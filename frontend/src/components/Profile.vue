@@ -57,6 +57,7 @@ created() {
   padding: 0.75rem 2rem;
   text-decoration: none;
   transition: all 250ms;
+  margin-left: 0;
 }
 
 .profile_container {

@@ -191,9 +191,10 @@ align-items: center;
   text-decoration: none;
   list-style: none;
   padding: 1rem 2.5rem;
-  background-color: var(--dbAccent);
+  background-color: var(--eventBG);
   margin-bottom: 1.5rem;
   box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px, rgba(0, 0, 1, 1) 0px 2px 4px -1px;
+  margin-right: 0.5rem;
 }
 
 
@@ -234,6 +235,14 @@ align-items: center;
   .events_wrapper {
    width: 70%;
   }
+
+  .subscribe_button {
+  margin-left: 2rem;
+}
+
+#dashboard_section {
+    padding-bottom: 8rem;
+}
 }
 @media (min-width:481px)  { 
 
@@ -243,6 +252,10 @@ align-items: center;
 
   .calendar_wrapper {
     width: 70%;
+  }
+
+  .subcribe_button {
+    margin-left: 0rem;
   }
 
  }
@@ -258,6 +271,9 @@ align-items: center;
 
   .events_wrapper {
     width: 80%;
+  }
+  .dashboard_section {
+    padding-bottom: 0rem;
   }
 
  }
