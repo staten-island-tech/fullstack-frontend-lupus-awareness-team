@@ -14,7 +14,7 @@
 
     <div class='top-tittle'>
         <div class="detail-info-row">
-            <h3>Park Cleanup Volunteering</h3>
+            <h3 class="detail-title">Park Cleanup Volunteering</h3>
         </div>
 
         <div class="detail-info-row">
@@ -49,8 +49,8 @@
         </div>
 
         <div class="detail-info-column-2">
+               <h4 class="detail-info-description-label">Event Decription:</h4>
             <div class="detail-info-description">
-                <h4 class="detail-info-description-label">Event Decription:</h4>
                 <h5 class="detail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
             </div>
         </div>
@@ -100,6 +100,7 @@ export default {
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
+    margin: 4rem 0rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -113,6 +114,7 @@ export default {
     padding: 2rem;
 }
 
+
 .detail-event-info {
     width: 100%;
     display: flex;
@@ -121,7 +123,7 @@ export default {
 }
 
 .detail-image-container {
-    width: 70%;  
+    width: 90%;  
 }
 
 .detail-event-image {
@@ -183,8 +185,10 @@ export default {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 4rem 0rem;
 }
+
 
 .detail-info-time {
     font-size: 2.5rem;
@@ -197,18 +201,25 @@ export default {
 
 .detail-info-date {
     font-weight: 500;
+    font-size: 2.5rem;
 }
 
 .detail-info-text {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
 }
 
-.detail-info-decription {
-    width: 80%;
+.detail-info-description {
+    display: flex;
+    justify-content: center;
 }
 
 .detail-info-column-1 {
-    width: 55%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,7 +227,7 @@ export default {
 }
 
 .detail-info-column-2 {
-    width: 55%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,8 +236,10 @@ export default {
 
 .detail-description {
     font-weight: 500;
-    padding-right: 7rem ;
+    font-size: 2rem;
     padding-top: 2rem;
+    text-align: center;
+    width: 90%;
 }
 
 .detail-info-row{
@@ -243,7 +256,6 @@ export default {
     align-items: center;
     justify-content: space-evenly;
     width: 50%;
-    margin-right: 2rem;
 }
 
 .detail-tag {
@@ -255,6 +267,88 @@ export default {
 
 .detail-info-decription-label {
     font-size: 5rem;
+}
+
+@media (min-width:320px)  {
+
+    .top-event-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .event-details-container {
+        width: 90%;
+    }
+
+    .detail-service-text {
+        font-size: 1.5rem;
+    }
+
+    .detail-info-container {
+    flex-direction: column;
+    }
+
+    .detail-info-column-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-info-column-2 {
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+
+@media (min-width:481px)  { 
+
+
+}
+@media (min-width:641px)  {
+
+
+    
+
+ }
+@media (min-width:961px)  { 
+        .top-event-container {
+        flex-direction: row;
+        padding: 0;
+    }
+
+        .event-details-container {
+        width: 90%;
+    }
+
+    .detail-service-text {
+        font-size: 2rem;
+    }
+
+    
+    .detail-info-container {
+    flex-direction: row;
+    }
+
+    .detail-info-column-1 {
+        width: 50%;
+        text-align: start;
+    }
+
+    .detail-info-column-2 {
+        margin-top: 4rem;
+        width: 50%;
+        text-align: start;
+    }
+
+}
+@media (min-width:1025px) { 
+
+
+ }
+@media (min-width:1281px) { 
+
 }
 
 

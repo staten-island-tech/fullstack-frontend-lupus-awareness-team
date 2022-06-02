@@ -217,6 +217,7 @@ border-radius: 7px;
   font-size: 1.8rem;
   font-weight: 600;
   padding: 0.8rem 4rem;
+  width: 20%;
   text-align: center;
   text-decoration: none;
   margin: 1.5rem 0rem;
@@ -238,9 +239,10 @@ border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 30%;
 }
 .upload-icon {
-  width: 10%;
+  width: 15%;
   margin-right: 2rem;
 }
 

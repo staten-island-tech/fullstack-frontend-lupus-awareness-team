@@ -7,6 +7,9 @@
         <h3 class="profile_name"> {{ this.userArr.userName }}</h3>
         <h4 class="profile_sub"> {{ this.userArr.userEmail }} </h4>
       </div>
+      <div class="profile_button_container">
+          <a class="subscribe_button">Subscribe</a>
+      </div>
 
   </div>
 </template>
@@ -40,6 +43,22 @@ created() {
 </script>
 
 <style scoped>
+
+.subscribe_button {
+  background-color: var(--login);
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  transition: all 250ms;
+}
+
 .profile_container {
   display: flex;
   align-items: center;
@@ -83,6 +102,12 @@ created() {
 .profile_sub {
   font-weight: 500;
   color: var(--profiletext)
+}
+
+.profile_button_container {
+  display: flex;
+  width: 10%;
+  height: 100%;
 }
 
 </style>

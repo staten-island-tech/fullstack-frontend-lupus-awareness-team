@@ -6,19 +6,20 @@
       </div>
    
       <div class="image_buttons">
-        <button @click="prev" class="prev">&#10094;</button>
-        <button  @click="next"  class="next">&#10095;</button>
+        <button @click="prev" class="prev"><i class="fas fa-arrow-left"></i></button>
+        <button  @click="next"  class="next"><i class="fas fa-arrow-right"></i></button>
       </div>
+      
     </div>
     <ul class="event_image_bar">
       <li>
-          <button v-if="sliceBegin != 0" @click="sliceBackward">&#10094;</button>
+          <button v-if="sliceBegin != 0" @click="sliceBackward"><i id="arrow-left" class="fas fa-arrow-left"></i></button>
         </li>
         <li class="event_image_preview" v-for="img in previewBarImages" :key="img">
           <img @click="selectImg(img), selectPreview(img,$event)" :class="{active: this.currentImg === this.selectedComponent}" :src="img" alt=""/>
         </li>
         <li>
-          <button v-if="sliceBegin +4 < images.length" @click="sliceForward">&#10095;</button>
+          <button v-if="sliceBegin +4 < images.length" @click="sliceForward"><i id="arrow-right" class="fas fa-arrow-right"></i></button>
         </li>
       </ul>
   </div>
@@ -30,12 +31,13 @@ export default {
     data() {
         return {
             images:[
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg", "https://cdn.pixabay.com/photo/2020/03/09/17/51/narcis-4916584_960_720.jpg","https://images.unsplash.com/photo-1431965400057-a84b80cfdbff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80","https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg", "https://cdn.pixabay.com/photo/2020/03/09/17/51/narcis-4916584_960_720.jpg","https://images.unsplash.com/photo-1431965400057-a84b80cfdbff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-        
+        "https://images.unsplash.com/photo-1653629154029-265d18f0e1f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1653537649117-821e01f707c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1653629154400-58cf05813b06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1653185195219-9bd5dbfe1b44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+        "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80",
+
         ],
             
             currentIndex: 0,
@@ -103,14 +105,7 @@ export default {
     margin: 0 auto;
     
 }
-.adjust_width {
-  width: 100%;
-  margin: 0 auto;
-}
-.adjust_height {
-  height: 100%;
-  margin: 0 auto;
-}
+
 .event_images_container {
   width: 100%;
   position: relative;
@@ -128,11 +123,11 @@ export default {
 }
 
 .view_container {
-  height: 40vh;
+  height: 30vh;
+  width: 100%;
 }
 
 .image_view{
-  background-color: var(--light);
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -142,6 +137,7 @@ export default {
   display: flex;
   align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--eventBody);
 }
 .image_buttons{
   width: 100%;
@@ -150,7 +146,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   z-index: 5;
-  height: 40vh;
+  height: 80%;
   align-items: center;
   transform: translateY(-100%);
 }
@@ -159,18 +155,21 @@ export default {
 .prev, .next {
   cursor: pointer;
   position: static;
-  top: 40%;
   width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   height: 15%;
   color: white;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 5rem;
   transition: 0.5s ease;
   text-decoration: none;
   user-select: none;
   border: none;
-  background-color: rgba(162, 157, 159, 0.7);
+  background-color: transparent;
+  border-radius: 30%;
 }
 
 .prev:hover, .next:hover {
@@ -182,7 +181,8 @@ export default {
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 10vh;
+  height: 8vh;
+  margin-top: 3rem;
 }
 
 .event_image_bar button {
@@ -192,7 +192,7 @@ export default {
   justify-content: center;
   text-decoration: none;
   border: none;
-  border-radius: 50%;
+  border-radius: 30%;
   padding: 1rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -210,9 +210,8 @@ export default {
   border-radius: 1rem;
   margin: .3rem;
 }
-.event_image_preview img:hover, .active {
-  outline:  .45rem solid var(--dark);
-  background-color: white;
+.event_image_preview img:hover {
+  filter: brightness(60%);
 }
 .event_image_preview {
   height: 100%;
@@ -224,4 +223,55 @@ export default {
   outline:  .45rem solid var(--dark);
   background-color: white;
 }
+
+  .fa-arrow-left {
+    font-size: 2.5rem;
+  }
+
+    .fa-arrow-right {
+    font-size: 2.5rem;
+  }
+
+  #arrow-left {
+    font-size: 1.5rem;
+  }
+
+  #arrow-right {
+    font-size: 1.5rem;
+  }
+
+@media (min-width:320px)  {
+
+  .view_container {
+    height: 30vh;
+  }
+
+
+}
+
+@media (min-width:481px)  { 
+
+
+}
+@media (min-width:641px)  {
+
+  .view_container {
+    height: 40vh;
+  }
+
+
+
+ }
+@media (min-width:961px)  { 
+
+
+}
+@media (min-width:1025px) { 
+
+
+ }
+@media (min-width:1281px) { 
+
+}
+
 </style>

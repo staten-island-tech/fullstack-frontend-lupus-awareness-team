@@ -1,7 +1,7 @@
 <template>
   <div class="calendar-date-selector">
-    <button class="calendar-button" @click="selectPrevious">﹤</button>
-    <button class="calendar-button" @click="selectNext">﹥</button>
+    <button class="calendar-button" @click="selectPrevious"><i class="fas fa-arrow-left"></i><h5>Previous</h5></button>
+    <button class="calendar-button" @click="selectNext"><h5>Next</h5><i class="fas fa-arrow-right"></i></button>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
     selectedDate: {
       type: Object,
       required: true
-    }
+    },
   },
 
   methods: {
@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 * {
@@ -56,6 +56,7 @@ export default {
   font-size: 5rem;
   font-weight: 400;
   color: var(--calendarDayText);
+  justify-content: space-between;
 }
 
 .calendar-date-selector {
@@ -64,12 +65,23 @@ export default {
 }
 
 .calendar-button {
+  display: flex;
+  align-items: center;
   background: none;
-  font-size: 3rem;
+  font-size: 2rem;
   border: none;
   cursor: pointer;
-  font-weight: bold;
-    color: var(--calendarDayText)
+}
+
+.fa-arrow-left {
+  font-size: 1.5rem;
+  margin: 1rem 0.5rem;
+  
+}
+
+.fa-arrow-right {
+  font-size: 1.5rem;
+    margin: 1rem 0.5rem;
 }
 
 </style>
