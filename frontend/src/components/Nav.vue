@@ -183,6 +183,7 @@ methods: {
     font-weight: 600;
     margin-right: 1rem;
     font-size: 2rem;
+   width: 30%; 
 }
 
 .dropdown {

@@ -153,6 +153,7 @@ align-items: center;
   display: flex; 
   flex-direction: column;
   align-items: center;
+  padding-bottom: 3rem;
 }
 
 
@@ -200,6 +201,7 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 3rem 0rem;
 }
 
 .calendar_wrapper {
@@ -232,9 +234,6 @@ align-items: center;
    width: 70%;
   }
 
-  .subscribe_button {
-  margin-left: 2rem;
-}
 
 #dashboard_section {
     padding-bottom: 8rem;

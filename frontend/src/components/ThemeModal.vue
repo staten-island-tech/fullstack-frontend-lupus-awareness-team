@@ -40,6 +40,7 @@
         this.$parent.$refs.theme.classList.remove("shrek");
         this.$parent.$refs.theme.classList.add("main");
         }
+        this.$emit('close')
     },
     dark() {
         if (this.$parent.$refs.theme.classList.contains("main")) {
@@ -51,6 +52,7 @@
         this.$parent.$refs.theme.classList.remove("shrek");
         this.$parent.$refs.theme.classList.add("dark");
         }
+        this.$emit('close')
     },
     shrek() {
         if (this.$parent.$refs.theme.classList.contains("main")) {
@@ -62,6 +64,7 @@
         this.$parent.$refs.theme.classList.remove("dark");
         this.$parent.$refs.theme.classList.add("shrek");
         }
+        this.$emit('close')
     }
     },
   };

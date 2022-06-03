@@ -89,6 +89,7 @@ export default {
         outline: none;
         border-bottom: .25rem solid gray;
                   font-family: "Montserrat", sans-serif;
+                  
     }
     .search {
         margin: 0 auto;

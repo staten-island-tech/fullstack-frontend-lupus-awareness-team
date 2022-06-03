@@ -1,7 +1,7 @@
 <template>
-    <div class="alert_container" ref="alert" :class="{ none: active }" v-if="isError">
+    <div class="alert_container" ref="alert" :class="{ none: active }" v-if="isSuccess">
         <div class="alert_title">
-            <h4 class="message">This is an Error Message This is an Error Message This is an Error Message This is an Error MessageThis is an Error Message</h4>
+            <h4 class="message">This is a Success message This is a Success message This is a Success message This is a Success message</h4>
         </div>
         <div class="close_button">
             <i class="far fa-times-circle" @click="close"></i>
@@ -11,12 +11,11 @@
 
 <script scoped>
 export default {
-name: "Error",
+name: "Success",
   props: {
-    isError: {
-      type: Boolean,
+    isSuccess: {
+        type: Boolean,
     },
-
     message: {
       type: String,
     },
@@ -43,7 +42,7 @@ methods: {
 
 .fa-times-circle {
     font-size: 3rem;
-    color: #90110e;
+    color: green;
     cursor: pointer;
 }
 
@@ -62,9 +61,9 @@ methods: {
     z-index: 10;
     width: 30%;
     padding: 1rem 0rem;
-    background-color: #f6a7a3;
+    background-color: greenyellow;
     border-radius: 0.5rem;
-    border-left: solid 0.5rem #90110e
+    border-left: solid 0.5rem green;
 }
 
 .alert_title {

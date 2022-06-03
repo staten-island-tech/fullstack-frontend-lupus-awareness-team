@@ -36,6 +36,7 @@
 
     <MobileNav />
     <Error/>
+    <Success/>
 
     <router-view />
   </div>
@@ -46,6 +47,7 @@ import Navbar from "@/components/Nav.vue";
 import ThemeModal from "@/components/ThemeModal.vue";
 import MobileNav from "@/components/MobileNav.vue";
 import Error from "@/components/ErrorAlert.vue"
+import Success from "@/components/SuccessAlert.vue";
 
 export default {
   name: "App",
@@ -76,6 +78,7 @@ export default {
     ThemeModal,
     MobileNav,
     Error,
+    Success,
   },
   created: function () {
     this.$store.dispatch("checkCookie");
@@ -224,7 +227,7 @@ li {
   --calendarDayNot: var(--black-secondary);
   --dayofweek: var(--black-secondary);
   --border-top: var(--black-primary);
-  --today: var(--grey-800);
+  --today: black;
 
   --service: var(--dbSecondary);
   --eventBody: var(--dbPrimary);
@@ -268,6 +271,7 @@ li {
   --service: rgb(210, 223, 39);
   --eventBody: rgb(179, 190, 16);
   --create: #795a2d;
+  --eventBG: var(--calendarDay);
 
   --themeText: var(--black);
   --bottomnav: #795a2d;
