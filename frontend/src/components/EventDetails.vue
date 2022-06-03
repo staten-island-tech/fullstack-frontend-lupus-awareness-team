@@ -58,15 +58,20 @@
     </div>
     
 </div>
+
+<Comment/>
 </div>
 </template>
 
 <script>
-import EventImageView from '../components/EventImageView.vue'
+import EventImageView from '../components/EventImageView.vue';
+import Comment from './Comment/Comment.vue';
+
 export default {
   name: "EventDetails",
   components: {
     EventImageView,
+    Comment,
   }
 };
 </script>
@@ -108,10 +113,15 @@ export default {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .top-tittle {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -143,7 +153,7 @@ export default {
     width: 30%;
     display: flex;
     align-items: center;
-    margin-left: 3rem;
+    justify-content: center;
 }
 
 .detail-user-image{
@@ -172,6 +182,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .detail-service-container {
