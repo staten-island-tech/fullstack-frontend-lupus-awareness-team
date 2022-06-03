@@ -100,7 +100,7 @@ export default {
         flex-direction: column;
         justify-content: left;
         align-items: center;
-        background-color: #fff;
+        
     }
     p {
         font-size: 1.5rem;
