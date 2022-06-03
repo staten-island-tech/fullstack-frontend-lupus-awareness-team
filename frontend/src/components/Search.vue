@@ -1,25 +1,27 @@
 <template>
     <div class="search">
         <button class="button" type="submit"><i class="fas fa-search"></i></button>
-        <input id="searchbar" type="text" placeholder="Search Users..." @keyup="searchEnter">
+        <input id="searchbar" type="text" v-model="query" placeholder="Search Users..." @keyup="searchEnter">
     </div>
 </template>
 
 <script>
+import HTTP from '../axiosConfig'
+
 export default {
     name: "Search",
+    data() {
+        return {
+            query: null,
+        }
+    },
     methods: {
         //When the enter button is clicked/released, it runs the fetch call
         searchEnter: async function(e) {
+            if(e.key !== "Enter") { return }
             try {
-                if(e.key === "Enter") {
-                    console.log("Hello");
-                const response = await fetch(
-                "https://my-json-server.typicode.com/Evany226/demo/hosted"
-                );
-                const data = await response.json();
-                console.log(data);
-                }
+                const res = await HTTP.get(`/searchUser/${this.query}`)
+                console.log(res.data)
             } 
             catch (error) {
                 console.log(error)
