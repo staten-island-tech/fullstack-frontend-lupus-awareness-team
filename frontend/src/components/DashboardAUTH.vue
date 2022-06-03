@@ -2,11 +2,11 @@
   <section id="dashboard_section">
       <div class="profile_container">
         <div class="profile_component">
-            <!-- <Profile
+            <Profile
             :image="$store.state.user.avatar"
             :name="`${ this.$store.state.user.firstName} ${ this.$store.state.user.lastName}`"
-            /> -->
-            <h1>{{$store.state.user.firstName}}</h1>
+            />
+            <!-- <h1>{{$store.state.user.firstName}}</h1> -->
         </div>
       </div>
   <div class="divider"></div>
