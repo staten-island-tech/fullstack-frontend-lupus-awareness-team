@@ -21,16 +21,22 @@
         <div class="label-wrapper">
           <label class="enter-event-date"
           for="enter-event-date"><b> Event Date:</b></label>
-          <input class="event-date" type="text" placeholder="Event Date" name="event-date" required>
+          <input class="event-date" type="date" value="2022-06-3"
+       min="2022-01-01" max="2025-12-31" placeholder="Event Date" name="event-date" required>
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-time"
-          for="enter-event-time"><b> Event Time:</b></label>
-          <input class="event-time" type="text" placeholder="Event Time" name="event-time" required>
+          for="enter-event-time"><b> Event Time Start:</b></label>
+          <input class="event-time" type="time" step="900" value="12:00" placeholder="Event Time" name="event-time" required>
+        </div>
+        <div class="label-wrapper">
+          <label class="enter-event-time"
+          for="enter-event-time"><b> Event Time End:</b></label>
+          <input class="event-time" type="time" step="900" value="12:00" placeholder="Event Time" name="event-time" required>
         </div>
 
-                       <Autocomplete/>
+           <Autocomplete/>
   
 
         <div class="label-wrapper">
