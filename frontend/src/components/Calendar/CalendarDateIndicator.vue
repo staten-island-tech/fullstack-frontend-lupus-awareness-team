@@ -34,9 +34,8 @@ export default {
   font-size: 2.5rem;
   font-weight: 500;
   margin-right: 1rem;
-  z-index: 3;
   padding: 1rem 1rem;
   color: var(--calendarDayText);
-      border-bottom: solid 0.1rem black;
+      border-bottom: solid 0.1rem var(--calendarDayText);
 }
 </style>

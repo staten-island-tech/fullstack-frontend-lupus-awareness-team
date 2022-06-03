@@ -16,7 +16,7 @@
           <button v-if="sliceBegin != 0" @click="sliceBackward"><i id="arrow-left" class="fas fa-arrow-left"></i></button>
         </li>
         <li class="event_image_preview" v-for="img in previewBarImages" :key="img">
-          <img @click="selectImg(img), selectPreview(img,$event)" :class="{active: this.currentImg === this.selectedComponent}" :src="img" alt=""/>
+          <img @click="selectImg(img), selectPreview(img,$event)" :src="img" alt=""/>
         </li>
         <li>
           <button v-if="sliceBegin +4 < images.length" @click="sliceForward"><i id="arrow-right" class="fas fa-arrow-right"></i></button>
@@ -82,6 +82,7 @@ export default {
 
           this.selectedComponent = e;
           console.log(this.selectedComponent)
+          //idk how to make this work when changing using the "next" buttons
         },
         
     },
@@ -139,13 +140,13 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--eventBody);
 }
+
 .image_buttons{
   width: 100%;
   display: flex;
   position: absolute;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 5;
   height: 80%;
   align-items: center;
   transform: translateY(-100%);

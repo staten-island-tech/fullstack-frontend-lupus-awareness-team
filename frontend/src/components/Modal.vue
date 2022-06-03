@@ -30,7 +30,7 @@
           <input class="event-time" type="text" placeholder="Event Time" name="event-time" required>
         </div>
 
-                       <Autocomplete/>
+        <Autocomplete/>
   
 
         <div class="label-wrapper">
@@ -99,6 +99,7 @@ text-decoration: none;
 margin: 1.5rem 0rem;
 border-style: solid;
 border-radius: 7px;
+position: relative;
 }
 
   .modal-fade-enter,
@@ -118,22 +119,26 @@ border-radius: 7px;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 50;
+    z-index: 1;
   }
 
   .modal {
+      z-index: 15;
     width: 60%;
     background-color: white;
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
+
+    
   }
 
   .modal-header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,6 +152,7 @@ border-radius: 7px;
   }
 
   .modal-body {
+        position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,6 +165,8 @@ border-radius: 7px;
 
 .upload-info {
   width: 100%;
+  position: relative;
+  z-index: 15;
 }
 
 

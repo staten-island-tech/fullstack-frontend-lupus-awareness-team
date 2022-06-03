@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 * {
@@ -71,6 +71,7 @@ export default {
   font-size: 2rem;
   border: none;
   cursor: pointer;
+  color: var(--calendarDayText)
 }
 
 .fa-arrow-left {

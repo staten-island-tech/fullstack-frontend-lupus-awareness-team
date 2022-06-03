@@ -1,11 +1,10 @@
 <template>
   <div class="profile_container">
       <div class="profile_image_container">
-        <img class="profile_image" src="../assets/placeholder.jpg">
+        <img class="profile_image" :src="image">
       </div>
       <div class="profile_text_container">
-        <h3 class="profile_name"> {{ this.userArr.userName }}</h3>
-        <h4 class="profile_sub"> {{ this.userArr.userEmail }} </h4>
+        <h3 class="profile_name"> {{ name }}</h3>
       </div>
       <div class="profile_button_container">
           <a class="subscribe_button">Subscribe</a>
@@ -15,30 +14,32 @@
 </template>
 
 <script>
+// import HTTP from '../axiosConfig'
+
 export default {
 name:"Profile",
 data() {
   return {
-    userArr: [],
-    name: "John Doe",
-    email: "johndoe17@gmail.com"
   }
 },
+props: {
+  name: String,
+  image: String,
+},
 methods: {
-    fetchUser: async function () {
-        try {
-          const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/users')
-          const data = await response.json();
-          this.userArr = data[1];
-          console.log(this.userArr)
-      } catch(error) {
-          console.log(error)
-      }
-    },
+    // fetchUser: async function () {
+    //    try {
+    //     const res = await HTTP.get("getEvents")
+    //     this.eventArr = res.data
+    //     console.log(res.data)
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    // },
 },
-created() {
-  this.fetchUser();
-},
+// created() {
+//   this.fetchUser();
+// },
 }
 </script>
 
@@ -57,32 +58,38 @@ created() {
   padding: 0.75rem 2rem;
   text-decoration: none;
   transition: all 250ms;
+  margin-left: 0;
+}
+
+.subscribe_button:hover {
+  background-color: var(--loginhover);
+  border: solid 1px black;
 }
 
 .profile_container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin: 3rem 0rem;
-  z-index: 2;
 }
 
 .profile_text_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 30%;
   margin-top: 1.5rem;
-  z-index: 3;
+
   margin-bottom: 2rem;
 
 }
 
 .profile_image {
   border-radius: 50%;
-  z-index: 3;
-  width: 40%;
+  width: 50%;
 }
 
 .profile_image_container {
@@ -106,7 +113,8 @@ created() {
 
 .profile_button_container {
   display: flex;
-  width: 10%;
+  justify-content: center;
+  width: 100%;
   height: 100%;
 }
 
