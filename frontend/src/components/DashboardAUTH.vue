@@ -2,8 +2,11 @@
   <section id="dashboard_section">
       <div class="profile_container">
         <div class="profile_component">
-            <Profile />
-            <!-- <h1>{{$store.state.user.firstName}}</h1> -->
+            <!-- <Profile
+            :image="$store.state.user.avatar"
+            :name="`${ this.$store.state.user.firstName} ${ this.$store.state.user.lastName}`"
+            /> -->
+            <h1>{{$store.state.user.firstName}}</h1>
         </div>
       </div>
   <div class="divider"></div>
@@ -70,16 +73,19 @@ methods: {
     fetchEvents: async function() {
       try {
         const res = await HTTP.get("getEvents")
-        this.eventArr = res.data
         console.log(res.data)
+        this.eventArr = res.data
       } catch (error) {
         console.log(error)
       }
-    }
+    },
+},
+computed: {
 },
 created() {
   // this.fetchData();
   this.fetchEvents()
+    // this.$store.dispatch("checkCookie");
 },
 components: {
   Profile,
