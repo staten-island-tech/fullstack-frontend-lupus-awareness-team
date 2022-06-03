@@ -19,13 +19,14 @@ export default {
   },
   data() {
     return {
-      hostArr: []
+      hostArr: [],
+      page: 1
     }
   },
   methods: {
         fetchHost: async function () {
         try {
-        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/hosted');
+        const response = await fetch(`https://localhost:3000`);
         const data = await response.json();
         this.hostArr = data;
         console.log(this.hostArr)

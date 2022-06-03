@@ -63,10 +63,30 @@
 
 <script>
 import EventImageView from '../components/EventImageView.vue'
+import HTTP from '../axiosConfig'
 export default {
   name: "EventDetails",
   components: {
     EventImageView,
+  },
+  data(){
+      return{
+          eventId: null
+      }
+  },
+  methods:{
+          fetchEvents: async function() {
+      try {
+        const res = await HTTP.get(`events?page=${this.page}`)
+        this.events = res.data
+        console.log(this.events)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  },
+  created() {
+    this.fetchEvents()
   }
 };
 </script>
