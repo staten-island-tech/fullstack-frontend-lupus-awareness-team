@@ -18,23 +18,32 @@
 
       </div>
         <div class="address_line">
-        <label class="address-label" for="street_address">Street</label>
+        <label class="label"
+        for="enter-street"><b>Street Address:</b></label>
         <input placeholder="Event Street Address" id="event_street_address" class="input" type="text" v-model="selectedAddress.name">
         </div>
+
         <div class="address_line">
-        <label class="address-label" for="event_borough">Borough</label>
+         <label class="label"
+        for="enter-borough"><b>Borough:</b></label>
         <input placeholder="Event Borough" id="event_borough" class="input" type="text" 
         v-model="selectedAddress.borough">
         </div>
+
         <div class="address_line">
-        <label class="address-label" for="event_city">City</label>
+        <label class="label"
+        for="enter-street"><b>City:</b></label>
         <input placeholder="Event City" id="event_city" class="input" type="text" v-model="selectedAddress.city">
         </div>
+
         <div class="address_line">
-        <label class="address-label" for="event_state">State</label>
-        <input placeholder="Event State" id="event_state" class="input" type="text"  v-model="selectedAddress.region">
-        <label class="address-label" for="event_zip">ZIP/Postal Code</label>
-        <input placeholder="Event Zip" id="event_zip" class="input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
+        <label class="label"
+        for="enter-state"><b>State:</b></label>
+        <input placeholder="Event State" id="event_state" class="search-input" type="text"  v-model="selectedAddress.region">
+
+        <label class="label"
+        for="enter-zip"><b>ZIP:</b></label>
+        <input placeholder="Event Zip" id="event_zip" class="search-input" type="text" inputmode="numeric" v-model="selectedAddress.zip">
         </div>
   </div>
 </template>
@@ -178,7 +187,7 @@ export default {
         stroke-width: 1;
     }
     .input {
-    margin: 3rem 3rem 0 0;
+    margin: 0.5rem 0rem;
     font-size: 1.5rem;
     border-style: solid;
     border-radius: 0.1rem;
@@ -187,10 +196,18 @@ export default {
     padding: 0.8rem;
     width: 40%;
 }
-    label {
-        font-size: 2.3rem;
-        width: 40%;
-    }
+
+    .search-input {
+    margin: 0.5rem 0rem;
+    font-size: 1.5rem;
+    border-style: solid;
+    border-radius: 0.1rem;
+    border-color: #c4c4c4;
+    background-color: #f1f1f1;
+    padding: 0.8rem;
+    width: 20%;
+}
+   
     .event_address {
         width: 40%;
         display: flex;
@@ -198,18 +215,20 @@ export default {
         margin: 0 auto;
     }
     .address_line {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        margin: 1rem 0;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+        
     }
 
-    .address-label {
-        margin: 3rem 3rem 0 3rem;
-        width: 20%;
-        display: flex;
-        justify-content: end;
+    .label {
+  font-size: 3rem;
+  font-weight: 500; 
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     }
 
 
