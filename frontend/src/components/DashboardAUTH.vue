@@ -160,6 +160,7 @@ align-items: center;
   display: flex; 
   flex-direction: column;
   align-items: center;
+  padding-bottom: 3rem;
 }
 
 
@@ -167,7 +168,6 @@ align-items: center;
   width: 60%;
   display: inline-flex;
   flex-direction: column;
-  z-index: 2;
   background-color: var(--dbSecondary);
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(0, 0, 5) 0px 0px 0px 0.5px;
@@ -177,13 +177,11 @@ align-items: center;
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .events_tab ul{
   display: flex;
   justify-content: center;
-  z-index: 3;
   width: 100%;
   margin-bottom: 2px;
   
@@ -194,13 +192,13 @@ align-items: center;
   border: none;
   color: var(--eventTab);
   font-size: 1.8rem;
-  z-index: 3;
   text-decoration: none;
   list-style: none;
   padding: 1rem 2.5rem;
-  background-color: var(--dbAccent);
+  background-color: var(--eventBG);
   margin-bottom: 1.5rem;
   box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px, rgba(0, 0, 1, 1) 0px 2px 4px -1px;
+  margin-right: 0.5rem;
 }
 
 
@@ -210,6 +208,7 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 3rem 0rem;
 }
 
 .calendar_wrapper {
@@ -231,16 +230,21 @@ align-items: center;
   }
 
     .list_wrapper {
-    width: 80%;
+    width: 85%;
   }
 
   .calendar_wrapper {
-    width: 80%;
+    width: 85%;
   }
 
   .events_wrapper {
    width: 70%;
   }
+
+
+#dashboard_section {
+    padding-bottom: 8rem;
+}
 }
 @media (min-width:481px)  { 
 
@@ -250,6 +254,10 @@ align-items: center;
 
   .calendar_wrapper {
     width: 70%;
+  }
+
+  .subcribe_button {
+    margin-left: 0rem;
   }
 
  }
@@ -265,6 +273,9 @@ align-items: center;
 
   .events_wrapper {
     width: 80%;
+  }
+  .dashboard_section {
+    padding-bottom: 0rem;
   }
 
  }

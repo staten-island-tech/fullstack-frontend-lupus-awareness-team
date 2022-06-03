@@ -183,6 +183,7 @@ methods: {
     font-weight: 600;
     margin-right: 1rem;
     font-size: 2rem;
+   width: 30%; 
 }
 
 .dropdown {
@@ -295,16 +296,14 @@ transform: translateX(1rem);
 }
 
 .nav_button {
-    position: absolute;
-    top: 0.5rem;
-    right: 2rem;
+    position: relative;
     z-index: 11;
+    margin-right: 2rem;
 }
 
 .close_button {
-    position: absolute;
-    top: 0.5rem;
-    right: 2rem;
+    position: relative;
+    margin-right: 2rem;
     z-index: 11;
 }
 
