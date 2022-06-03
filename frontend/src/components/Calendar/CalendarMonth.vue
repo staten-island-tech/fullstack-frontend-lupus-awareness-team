@@ -165,7 +165,8 @@ export default {
   background-color: var(--calendarMonth);
   border: solid 1px var(--calendarMonthBorder);
   width: 100%;
-  z-index: 3;
+  border-radius: 0.5rem;
+
 }
 
 .day-of-week {
@@ -174,14 +175,12 @@ export default {
   font-size: 20px;
   padding-bottom: 5px;
   padding-top: 10px;
-  z-index: 3;
 }
 
 .day-of-week,
 .days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  z-index: 3;
 }
 
 .day-of-week > * {
