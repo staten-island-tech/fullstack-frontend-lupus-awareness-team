@@ -43,7 +43,6 @@ export default {
   font-size: 2.5rem;
   background-color: var(--calendarDay);
   color: var(--calendarDayText);
-  padding: 5px;
 }
 
 .calendar-day > span {
@@ -51,9 +50,10 @@ export default {
   justify-content: center;
   align-items: center;
   position: absolute;
+  top: 2px;
   right: 2px;
-  width: var(--day-label-size);
-  height: var(--day-label-size);
+  padding: 0;
+  margin:0;
 }
 
 .calendar-day--not-current {
@@ -67,7 +67,7 @@ export default {
 
 .calendar-day--today > span {
   color: #fff;
-  padding: 1.2rem;
+  padding: 0.3rem 0.7rem;
   border-radius: 50%;
   background-color: var(--today);
 }

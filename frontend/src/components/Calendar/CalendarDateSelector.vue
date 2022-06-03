@@ -1,7 +1,7 @@
 <template>
   <div class="calendar-date-selector">
-    <span @click="selectPrevious">﹤</span>
-    <span @click="selectNext">﹥</span>
+    <button class="calendar-button" @click="selectPrevious"><i class="fas fa-arrow-left"></i><h5>Previous</h5></button>
+    <button class="calendar-button" @click="selectNext"><h5>Next</h5><i class="fas fa-arrow-right"></i></button>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
     selectedDate: {
       type: Object,
       required: true
-    }
+    },
   },
 
   methods: {
@@ -56,11 +56,32 @@ export default {
   font-size: 5rem;
   font-weight: 400;
   color: var(--calendarDayText);
+  justify-content: space-between;
 }
 
 .calendar-date-selector {
   cursor: pointer;
   user-select: none;
+}
+
+.calendar-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.fa-arrow-left {
+  font-size: 1.5rem;
+  margin: 1rem 0.5rem;
+  
+}
+
+.fa-arrow-right {
+  font-size: 1.5rem;
+    margin: 1rem 0.5rem;
 }
 
 </style>

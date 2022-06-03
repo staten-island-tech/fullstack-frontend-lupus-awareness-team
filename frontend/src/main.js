@@ -5,16 +5,17 @@ import router from "./router";
 import store from "./store";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-import authConfig from "../auth_config.json";
-import { setupAuth } from "./auth";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-let app = createApp(App).use(store).use(router).use(AOS.init());
+library.add(faPhone, faHouse);
 
-function callbackRedirect(appState) {
-  router.push(appState && appState.targetUrl ? appState.targetUrl : "/");
-}
-
-setupAuth(authConfig, callbackRedirect).then((auth) => {
-  app.use(auth).mount("#app");
-});
+createApp(App).use(store).use(router).use(AOS.init());
+createApp(App)
+  .use(store)
+  .use(router)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .mount("#app");

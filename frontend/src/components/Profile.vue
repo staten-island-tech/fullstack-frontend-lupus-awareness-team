@@ -1,12 +1,16 @@
 <template>
   <div class="profile_container">
-    <div class="profile_image_container">
-      <img class="profile_image" :src="this.user.picture">
-    </div>
-    <div class="profile_text_container">
-      <h3 class="profile_name"> {{ this.user.name }} </h3>
-      <h4 class="profile_sub"> {{this.user.email }}</h4>
-    </div>
+      <div class="profile_image_container">
+        <img class="profile_image" src="../assets/placeholder.jpg">
+      </div>
+      <div class="profile_text_container">
+        <h3 class="profile_name"> {{ this.userArr.userName }}</h3>
+        <h4 class="profile_sub"> {{ this.userArr.userEmail }} </h4>
+      </div>
+      <div class="profile_button_container">
+          <a class="subscribe_button">Subscribe</a>
+      </div>
+
   </div>
 </template>
 
@@ -15,31 +19,61 @@ export default {
 name:"Profile",
 data() {
   return {
-    user: []
+    userArr: [],
+    name: "John Doe",
+    email: "johndoe17@gmail.com"
   }
 },
-  mounted: function () {
-    this.user = this.$auth.user;
+methods: {
+    fetchUser: async function () {
+        try {
+          const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/users')
+          const data = await response.json();
+          this.userArr = data[1];
+          console.log(this.userArr)
+      } catch(error) {
+          console.log(error)
+      }
     },
+},
+created() {
+  this.fetchUser();
+},
 }
 </script>
 
 <style scoped>
+
+.subscribe_button {
+  background-color: var(--login);
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  transition: all 250ms;
+  margin-left: 0;
+}
+
 .profile_container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  padding-top: 5rem;
+  margin: 3rem 0rem;
   z-index: 2;
 }
 
 .profile_text_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 30%;
   margin-top: 1.5rem;
   z-index: 3;
   margin-bottom: 2rem;
@@ -48,9 +82,8 @@ data() {
 
 .profile_image {
   border-radius: 50%;
-  border: solid 0.5rem #C4C4C4;
   z-index: 3;
-  width: 10%;
+  width: 40%;
 }
 
 .profile_image_container {
@@ -58,9 +91,8 @@ data() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 20%;
 }
-
 
 .profile_name {
   font-weight: 700;
@@ -71,6 +103,12 @@ data() {
 .profile_sub {
   font-weight: 500;
   color: var(--profiletext)
+}
+
+.profile_button_container {
+  display: flex;
+  width: 10%;
+  height: 100%;
 }
 
 </style>

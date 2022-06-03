@@ -1,0 +1,96 @@
+<template>
+  <nav class="bottom_nav">
+    <div class="bottom_nav_icons">
+            <div>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path></svg>
+                <router-link to="/" class="nav_text">Home</router-link>
+            </div>
+
+            <div>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4V5zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6zm2-5h4v4h-4v-4z"></path></svg>
+                <router-link to="/about" class="nav_text">Dashboard</router-link>
+            </div>
+            <div id="logout">
+                <a href="#" id="logout_button">Log out</a>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
+            </div>
+    </div>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: "MobileNav", 
+}
+</script>
+
+<style scoped>
+
+.bottom_nav {
+    width: 100%;
+    height: 6vh;
+    background-color: var(--bottomnav);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+.bottom_nav_icons >* {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottom_nav_icons a { 
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: var(--navtext);
+  display: block;
+  margin: 0 auto;
+}
+.bottom_nav_icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom_nav_icons >*:hover {
+background-color: var(--navhover);
+transition: all 0.3s;
+}
+
+.bottom_nav_icons >*:hover .nav_text {
+    font-weight: 600;
+}
+
+
+@media (min-width:320px)  {
+  .bottom_nav {
+      display: flex;
+  }
+
+}
+
+@media (min-width:481px)  { 
+
+}
+@media (min-width:641px)  {
+
+    .bottom_nav {
+        display: none;
+    }
+
+
+ }
+@media (min-width:961px)  { 
+
+}
+@media (min-width:1025px) { 
+
+
+ }
+@media (min-width:1281px) { 
+
+}
+
+</style>

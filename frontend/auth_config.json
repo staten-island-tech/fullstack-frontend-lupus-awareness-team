@@ -1,6 +1,0 @@
-{
-  "domain": "dev-dryl5oh3.us.auth0.com",
-  "client_id": "39b5gZrMB1en09FTfQqtgtOyAufW7nQg",
-  "redirect_uri": "http://localhost:8080/callback",
-  "audience": "http://localhost:8080"
-}

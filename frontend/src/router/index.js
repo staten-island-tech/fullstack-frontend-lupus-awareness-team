@@ -1,10 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-
-import Callback from "@/views/Callback";
-import ErrorPage from "@/views/Error";
-
-import { authenticationGuard } from "@/auth";
+import DashboardAUTH from "../components/DashboardAUTH.vue";
+import EventInfo from "../views/EventInfo.vue";
+import LoginPageView from "../views/LoginPageView.vue";
+import RegisterPageView from "../views/RegisterPageView.vue";
 
 const routes = [
   {
@@ -15,7 +14,6 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    beforeEnter: authenticationGuard,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -24,14 +22,24 @@ const routes = [
     },
   },
   {
-    path: "/callback",
-    name: "Callback",
-    component: Callback,
+    path: "/Login",
+    name: "LoginPage",
+    component: LoginPageView,
   },
   {
-    path: "/error",
-    name: "Error",
-    component: ErrorPage,
+    path: "/event-details",
+    name: "EventInfo",
+    component: EventInfo,
+  },
+  {
+    path: "/user",
+    name: "Dashboard",
+    component: DashboardAUTH,
+  },
+  {
+    path: "/Register",
+    name: "Dashboard",
+    component: RegisterPageView,
   },
 ];
 
