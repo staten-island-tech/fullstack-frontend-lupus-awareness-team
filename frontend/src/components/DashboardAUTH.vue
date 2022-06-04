@@ -2,11 +2,11 @@
   <section id="dashboard_section">
       <div class="profile_container">
         <div class="profile_component">
-            <!-- <Profile
-            :image="$store.state.user.avatar"
-            :name="`${ this.$store.state.user.firstName} ${ this.$store.state.user.lastName}`"
-            /> -->
-            <h1>{{$store.state.user.firstName}}</h1>
+            <Profile
+            :image="user.avatar"
+            :name="`${ user.firstName} ${ user.lastName }`"
+            :id="user._id"
+            />
         </div>
       </div>
   <div class="divider"></div>
@@ -49,6 +49,7 @@ import Hosting from "@/components/Hosting.vue";
 import HTTP from '../axiosConfig'
 import Previous from "@/components/PastEvents.vue";
 
+
 export default {
 name: "DashbardAUTH",
 data() {
@@ -60,16 +61,6 @@ data() {
   }
 },
 methods: {
-    // fetchData: async function () {
-    //     try {
-    //     const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/eventList');
-    //     const data = await response.json();
-    //     this.eventArr = data;
-    //     console.log(this.eventArr)
-    //   } catch(error) {
-    //       console.log(error)
-    //   }
-    // },
     fetchEvents: async function() {
       try {
         const res = await HTTP.get("getEvents")
@@ -82,10 +73,10 @@ methods: {
 },
 computed: {
 },
-created() {
+created: async function() {
   // this.fetchData();
-  this.fetchEvents()
-    // this.$store.dispatch("checkCookie");
+  await this.fetchEvents()
+  console.log(this.$store.state.user)
 },
 components: {
   Profile,

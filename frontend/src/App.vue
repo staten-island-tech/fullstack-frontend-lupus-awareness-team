@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="main" ref="theme">
+  <div v-if="this.$store.state.user !== null" id="app" class="main" ref="theme">
     <div class="nav">
       <div class="logo-container">
         <router-link to="/" id="logo">
@@ -52,16 +52,8 @@ import Success from "@/components/SuccessAlert.vue";
 export default {
   name: "App",
   methods: {
-    // fetchData: async function() {
-    //   try {
-    //     const res = await fetch('http://localhost:3000')
-    //     const data = await res.json()
-    //     console.log(data)
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
-    showModal() {
+
+showModal() {
       this.isModalVisible = true;
     },
     closeModal() {
@@ -80,8 +72,8 @@ export default {
     Error,
     Success,
   },
-  created: function () {
-    this.$store.dispatch("checkCookie");
+  created: async function() {
+    await this.$store.dispatch("checkCookie");
   },
 };
 </script>

@@ -54,7 +54,7 @@
             </li>
 
             <div id="logout">
-                <a href="#" id="logout_button">Log out</a>
+                <button id="logout_button" @click="logout()">Log out</button>
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #DC3623;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>
             </div>
 
@@ -68,6 +68,7 @@
 <script>
 import NavProfile from "@/components/NavProfile.vue";
 import Search from "@/components/Search.vue"
+import HTTP from "../axiosConfig";
 
 export default {
 name: "Navbar",
@@ -84,6 +85,9 @@ components: {
 
 },
 methods: {
+    logout: async function() {
+        await HTTP.post("/logout")
+    },
     toggle() {
         this.expand = true;
         this.nav = false;
@@ -179,6 +183,8 @@ methods: {
 }
 
 #logout_button {
+    background: none;
+    border: none;
     color: #DC3623;
     font-weight: 600;
     margin-right: 1rem;
