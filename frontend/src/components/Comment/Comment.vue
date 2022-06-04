@@ -14,7 +14,7 @@
                 <h4 class="body_text">This is really great! I fully agree with what you wrote, and this is sure to help me out in the future. Thank you for posting this.</h4>
             </div>
             <div class="container_reply">
-                <button class="reply_button">Reply</button>
+                <button class="reply_button" @click="reply">Reply</button>
             </div>
         </div>
   </div>
@@ -23,6 +23,12 @@
 <script>
 export default {
 name: "Comment",
+methods: {
+    reply() {
+        console.log("hello")
+
+    }
+}
 }
 </script>
 

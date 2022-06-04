@@ -18,6 +18,12 @@
         </router-link>
       </div>
 
+      <div class="signup-container">
+        <button class="signup-button">
+          <router-link to="/Register" class="signup-text">Signup</router-link>
+        </button>
+      </div>
+
       <div class="login-container">
         <button class="login-button">
           <router-link to="/Login" class="login-text">Log in</router-link>
@@ -30,6 +36,7 @@
         </button>
         <ThemeModal v-show="isModalVisible" @close="closeModal" />
       </div>
+
 
       <Navbar />
     </div>
@@ -219,6 +226,8 @@ li {
   --dbLight: var(--black-tertiary);
   --profiletext: rgba(255, 255, 255, 0.87);
   --eventTab: var(--grey-100);
+    --details: black;
+  --detailsHover: var(--black-tertiary);
 
   --calendarMonth: var(--black-primary);
   --calendarMonthBorder: black;
@@ -291,7 +300,6 @@ li {
 
 .login-container {
   margin-right: 1rem;
-  margin-left: auto;
   height: 100%;
   display: flex;
   align-items: center;
@@ -303,6 +311,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.signup-container {
+  margin-right: 1rem;
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .theme-text {
@@ -331,6 +347,12 @@ li {
   font-weight: 600;
 }
 
+.signup-container:hover .signup-button {
+    background-color: var(--loginhover);
+  transition: 0.3s;
+  font-weight: 600;
+}
+
 .login-button {
   background-color: var(--login);
   border-radius: 2px;
@@ -351,6 +373,32 @@ li {
 
 .login-text {
   text-decoration: none;
+  text-transform: none;
+  color: var(--navopen);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.signup-button {
+    background-color: var(--login);
+  border-radius: 2px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 70%;
+  outline: none;
+  overflow: hidden;
+  padding: 0rem 2rem;
+  position: relative;
+  text-align: center;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+.signup-text {
+    text-decoration: none;
   text-transform: none;
   color: var(--navopen);
   font-weight: 600;

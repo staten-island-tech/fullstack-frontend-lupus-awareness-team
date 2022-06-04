@@ -24,8 +24,9 @@ export default {
     components: {
         PostComment,
         Comment,
-    }
-
+    },
+    methods: {
+    },
 }
 </script>
 

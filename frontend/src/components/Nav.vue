@@ -499,7 +499,7 @@ transform: translateX(1rem);
 }
 @media (min-width:1281px) {
     .width {
-        width: 18%;
+        width: 20%;
     }
 
 }

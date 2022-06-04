@@ -6,7 +6,7 @@
         </div>
         <div class="post_comment_container">
           <textarea type="text" class="input" placeholder="Add a comment..."></textarea>
-          <button class="submit_comment">Submit</button>
+          <button class="submit_comment" @click="post">Submit</button>
         </div>
     </div>
   </section>
@@ -15,6 +15,11 @@
 <script>
 export default {
 name:"PostComment",
+methods: {
+  post() {
+    console.log("Post")
+  }
+}
 }
 </script>
 
