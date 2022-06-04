@@ -43,7 +43,6 @@
 
     <MobileNav />
     <Error/>
-    <Success/>
 
     <router-view />
   </div>
@@ -54,7 +53,6 @@ import Navbar from "@/components/Nav.vue";
 import ThemeModal from "@/components/ThemeModal.vue";
 import MobileNav from "@/components/MobileNav.vue";
 import Error from "@/components/ErrorAlert.vue"
-import Success from "@/components/SuccessAlert.vue";
 
 export default {
   name: "App",
@@ -85,7 +83,6 @@ export default {
     ThemeModal,
     MobileNav,
     Error,
-    Success,
   },
   created: function () {
     this.$store.dispatch("checkCookie");
