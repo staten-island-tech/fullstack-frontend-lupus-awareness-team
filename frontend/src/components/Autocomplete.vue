@@ -107,8 +107,7 @@ export default {
         flex-direction: column;
         justify-content: left;
         align-items: center;
-        padding: 0 3rem;
-        background-color: #fff;
+        
     }
     p {
         font-size: 1.5rem;
