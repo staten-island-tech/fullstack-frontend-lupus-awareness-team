@@ -1,10 +1,11 @@
 <template>
   <div class="profile_container">
       <div class="profile_image_container">
-        <img class="profile_image" :src="image">
+        <img class="profile_image" src="../assets/placeholder.jpg">
       </div>
       <div class="profile_text_container">
-        <h3 class="profile_name"> {{ name }}</h3>
+        <h3 class="profile_name"> {{ this.userArr.userName }}</h3>
+        <h4 class="profile_sub"> {{ this.userArr.userEmail }} </h4>
       </div>
       <div class="profile_button_container">
           <a class="subscribe_button">Subscribe</a>
@@ -14,32 +15,30 @@
 </template>
 
 <script>
-// import HTTP from '../axiosConfig'
-
 export default {
 name:"Profile",
 data() {
   return {
+    userArr: [],
+    name: "John Doe",
+    email: "johndoe17@gmail.com"
   }
 },
-props: {
-  name: String,
-  image: String,
-},
 methods: {
-    // fetchUser: async function () {
-    //    try {
-    //     const res = await HTTP.get("getEvents")
-    //     this.eventArr = res.data
-    //     console.log(res.data)
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // },
+    fetchUser: async function () {
+        try {
+          const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/users')
+          const data = await response.json();
+          this.userArr = data[1];
+          console.log(this.userArr)
+      } catch(error) {
+          console.log(error)
+      }
+    },
 },
-// created() {
-//   this.fetchUser();
-// },
+created() {
+  this.fetchUser();
+},
 }
 </script>
 

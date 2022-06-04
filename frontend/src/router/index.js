@@ -22,7 +22,7 @@ const routes = [
     },
   },
   {
-    path: "/login",
+    path: "/Login",
     name: "LoginPage",
     component: LoginPageView,
   },
@@ -37,7 +37,7 @@ const routes = [
     component: DashboardAUTH,
   },
   {
-    path: "/register",
+    path: "/Register",
     name: "Dashboard",
     component: RegisterPageView,
   },

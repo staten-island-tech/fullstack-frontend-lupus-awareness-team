@@ -3,58 +3,30 @@
         <div class="login-page-right">
             <h3 class="login-title">Create Account</h3>
             <div class="create-account">
+                <form method="post">
                     <div class="create-account-container">
                         <label class="create-email-label"
-                        for="create-email"><b>First Name</b></label>
-                        <input class="create-email" type="text" placeholder="Enter First Name" name="create-username" v-model="firstName" required>
-                        <label class="create-email-label"
-                        for="create-email"><b>Last Name</b></label>
-                        <input class="create-email" type="text" placeholder="Enter Last Name" name="create-username" v-model="lastName" required>
+                        for="create-email"><b>Email</b></label>
+                        <input class="create-email" type="text" placeholder="Enter Username" name="create-username" required>
                         <label class="email-label" for="email"><b>Email</b></label>
-                        <input class="email" type="email" placeholder="Enter Email" name="email" v-model="email" required>
+                        <input class="email" type="email" placeholder="Enter Email" name="email" required>
                         <label class="create-password-label" for="create-password"><b>Password</b></label>
-                        <input class="create-password" type="password" placeholder="Enter Password" name="create-password" v-model="password1" required> 
+                        <input class="create-password" type="password" placeholder="Enter Password" name="create-password" required> 
                         <label class="confirm-password-label" for="confirm-password"><b>Confirm Password</b></label>
-                        <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" v-model="password2" required>
-                        <button class="submit-button" @click="register()">Confirm</button>
+                        <input class="confirm-password" type="password" placeholder="Enter Password" name="create-password" required>
+                        <button class="submit-button" type="submit">Confirm</button>
                     </div>
+                </form>
                 </div>
         </div>
     </div>
 </template>
 
 <script>
-import {HTTP} from '../axiosConfig'
-
 export default {
 name: "Register",
-    data() {
-        return {
-            firstName: null,
-            lastName: null,
-            email: null,
-            password1: null,
-            password2: null
-        }
-    },
-    methods: {
-        register: async function() {
-            if(this.password1 != this.password2) {
-                console.log('passwords do not match')
-                return
-            }
-            try {
-                await HTTP.post('/register', {
-                    firstName: this.firstName,
-                    lastName: this.lastName,
-                    email: this.email,
-                    password: this.password1
-            })
-            } catch (error) {
-                console.log(error)
-            }
-    },
-    }
+    
+
 }
 </script>
 

@@ -13,36 +13,45 @@
                     </div>
             </div>
         </div>  
+
     </div>
     
 </template>
 
 <script>
-import {HTTP} from '../axiosConfig'
+
 
 export default {
     data() {
         return {
             email: null,
-            password: null,
+            password: null
         }
     },
+    // async created() {
+    //     try {
+    //         const res = await HTTP.get('/')
+    //         console.log(res.data)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // },
 name:"Login",
 methods: {
      login: async function() {
         try {
-            // this.$store.dispatch('login', {
-            //     email: this.email,
-            //     password: this.password
-            // })
-            await HTTP.post('/login', {
+            this.$store.dispatch('login', {
                 email: this.email,
                 password: this.password
             })
+            // await HTTP.post('/login', {
+            //     email: this.email,
+            //     password: this.password
+            // })
         } catch (error) {
             console.log(error)
         }
-    },
+    } 
     
 }
 }

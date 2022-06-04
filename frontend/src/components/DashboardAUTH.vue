@@ -2,11 +2,7 @@
   <section id="dashboard_section">
       <div class="profile_container">
         <div class="profile_component">
-            <!-- <Profile
-            :image="$store.state.user.avatar"
-            :name="`${ this.$store.state.user.firstName} ${ this.$store.state.user.lastName}`"
-            /> -->
-            <h1>{{$store.state.user.firstName}}</h1>
+            <Profile />
         </div>
       </div>
   <div class="divider"></div>
@@ -45,7 +41,7 @@ import Profile from "@/components/Profile.vue";
 import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 import ToDoList from "@/components/ToDoList.vue";
 import Hosting from "@/components/Hosting.vue";
-// import PastEvents from "@/components/PastEvents.vue";
+import PastEvents from "@/components/PastEvents.vue";
 import HTTP from '../axiosConfig'
 import Previous from "@/components/PastEvents.vue";
 
@@ -60,32 +56,29 @@ data() {
   }
 },
 methods: {
-    // fetchData: async function () {
-    //     try {
-    //     const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/eventList');
-    //     const data = await response.json();
-    //     this.eventArr = data;
-    //     console.log(this.eventArr)
-    //   } catch(error) {
-    //       console.log(error)
-    //   }
-    // },
+    fetchData: async function () {
+        try {
+        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/eventList');
+        const data = await response.json();
+        this.eventArr = data;
+        console.log(this.eventArr)
+      } catch(error) {
+          console.log(error)
+      }
+    },
     fetchEvents: async function() {
       try {
-        const res = await HTTP.get("getEvents")
+        const cookie = this.$store.state.cookie
+        const res = await HTTP.get("getEvents", {params: {cookie}})
         console.log(res.data)
-        this.eventArr = res.data
       } catch (error) {
         console.log(error)
       }
-    },
-},
-computed: {
+    }
 },
 created() {
-  // this.fetchData();
+  this.fetchData();
   this.fetchEvents()
-    // this.$store.dispatch("checkCookie");
 },
 components: {
   Profile,
@@ -93,7 +86,7 @@ components: {
   ToDoList,
   Hosting,
   Previous,
-  // PastEvents,
+  PastEvents,
 }
 }
 </script>
