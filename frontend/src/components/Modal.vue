@@ -187,6 +187,7 @@ position: relative;
     display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .event-tags, .event-name, .event-time, .event-date, .event-hours, .event-address {
