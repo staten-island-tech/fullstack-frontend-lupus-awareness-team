@@ -77,7 +77,7 @@ methods: {
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   box-sizing: border-box;
-  color: black;
+  color: var(--commentbutton);
   cursor: pointer;
   font-size: 2rem;
   font-weight: 500;

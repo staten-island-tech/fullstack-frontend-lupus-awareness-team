@@ -206,6 +206,10 @@ li {
   --modal: var(--purple);
   --themeText: white; 
   --bottomnav: var(--purple);
+
+  -commentbutton: black;
+  --commentBG: var(--white);
+  --postComment: white;
   
 }
 
@@ -246,6 +250,10 @@ li {
 
   --themeText: white; 
   --bottomnav: var(--black-secondary);
+
+  --commentbutton: white;
+  --commentBG: var(--black-tertiary);
+  --postComment: var(--black-primary);
 }
 
 .shrek {
@@ -264,14 +272,14 @@ li {
   --dbAccent: #795a2d;
   --dbLight: rgb(203, 214, 52);
   --profiletext: black;
-  --eventTab: var(--grey-100);
+  --eventTab: black;
   --details: #795a2d;
   --detailsHover: #412f16;
 
   --calendarMonth: #3f270e;
   --calendarMonthBorder: black;
   --calendarDay: #523213;
-  --calendarDayText: var(--background);
+  --calendarDayText: black;
   --calendarDayNot: #795a2d;
   --dayofweek: #3f270e;
   --border-top: black;
@@ -281,9 +289,15 @@ li {
   --eventBody: rgb(179, 190, 16);
   --create: #795a2d;
   --eventBG: var(--calendarDay);
+  --modal: #795a2d;
+
 
   --themeText: var(--black);
   --bottomnav: #795a2d;
+
+  -commentbutton: black;
+    --commentBG: rgb(179, 190, 16);
+  --postComment: rgb(179, 190, 16);
 }
 
 .nav {

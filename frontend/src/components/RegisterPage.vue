@@ -89,7 +89,7 @@ name: "Register",
     padding: .4rem 1rem;
     width: 80%;
     font-size: 1.8rem;
-    background-color: var(--topnav);
+    background-color: var(--purple);
     color: white;
     border: 0.1rem solid white;
     margin-top: 3rem;

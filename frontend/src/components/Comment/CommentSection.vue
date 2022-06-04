@@ -53,13 +53,13 @@ export default {
 }
 
 .comment_section_header{
-    background-color: white;
+    background-color: var(--postComment);
     width: 90vw;
 }
 
 .comment_section_body {
     width: 90vw;
-    background-color: white;
+    background-color: var(--commentBG);
     padding: 4rem 0rem;
 }
 

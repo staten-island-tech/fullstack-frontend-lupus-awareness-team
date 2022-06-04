@@ -45,7 +45,7 @@ methods: {
     height: 80%;
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--commentbutton);
     margin-bottom: 3rem;
 }
 
@@ -81,12 +81,14 @@ methods: {
 
 .user_name {
     font-size: 2.5rem;
+    color: var(--commentbutton)
 }
 
 .post_date {
     font-size: 1.5rem;
     margin-top: 0.5rem;
     font-weight: 500;
+    color: var(--commentbutton)
 }
 
 .container_body {
@@ -98,6 +100,7 @@ methods: {
 
 .body_text {
     font-weight: 500;
+    color: var(--commentbutton)
 }
 
 .container_reply {
@@ -111,12 +114,12 @@ methods: {
 
 .reply_button {
   appearance: none;
-  background-color: var(--white);
+  background-color: var(--service);
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   box-sizing: border-box;
-  color: black;
+  color: var(--commentbutton);
   cursor: pointer;
   font-size: 2rem;
   font-weight: 500;
