@@ -3,34 +3,32 @@
     <div class="top-container">
         <div class="user">
             <div class="user-image">
-                <img class="user-pfp" src="../assets/placeholder.jpg">
+                <img class="user-pfp" :src="user.avatar">
             </div>
             <div class="user-text">
-                <h4 class="username">User1234</h4>
-                <h5 class="user-type">Student</h5>
+                <h4 class="username">{{`${user.firstName} ${user.lastName}`}}</h4>
+                <!-- <h5 class="user-type">Student</h5> -->
             </div>   
         </div>
 
         <div class="service-container">
-            <h4 class="service-text">Service Hours: 10</h4>
+            <h4 v-if="event.hours != null" class="service-text">Service Hours: {{event.hours}}</h4>
         </div>
     </div>
 
     <div class="image-container">
-        <img class="event-image" src="../assets/event-placeholder.jpg"> 
+        <img class="event-image" :src="event.media[0]"> 
     </div>    
 
     <div class="info-container">
         <div class="info-column-1"> 
             <div class="info-row">
-                <h3>Park Cleanup Volunteering</h3>
+                <h3>{{event.name}}</h3>
             </div>
 
             <div class="info-row">
                 <div class="info-tags">
-                    <h5 class="tag">Animals</h5>
-                    <h5 class="tag">Parks</h5>
-                    <h5 class="tag">Volunteer</h5>
+                    <h5 v-for="tag in event.tags" :key="tag" class="tag">{{tag}}</h5>
                 </div>
                 <router-link to="/event-details" id="details"> Details </router-link>
             </div>
@@ -39,8 +37,9 @@
         <div class="info-column-2">
             <div class="info-text">
                 <h4 class="info-time"> 2:00 PM - 4:00 PM</h4>
-                <h4 class="info-address">485 Clawson St, Staten Island, NY 10306</h4>
-                <h4 class="info-date"> Saturday, April 2nd </h4>
+                <h4 class="info-address">{{event.location}}</h4>
+                <h4 class="info-date"> Saturday, 06/04 </h4>
+                <!-- <h4 class="info-date"> {{event.date}} </h4> -->
             </div>
         </div>
     </div>
@@ -53,9 +52,9 @@
 
 export default {
 name:"Event",
-methods: {
-},
-components: {
+props: {
+    user: Object,
+    event: Object
 }
 }
 </script>

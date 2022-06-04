@@ -8,9 +8,11 @@
       <h2 id="browse">Browse Events</h2>
     </div>
     <div class="event-wrapper">
-      <Event />
-      <Event />
-      <Event />
+      <Event 
+      v-for="event in events" :key="event"
+      :user="event.user"
+      :event="event"
+      />
     </div>
   </div>
 </template>
@@ -21,6 +23,7 @@
 //import EventDetails from "../components/EventDetails.vue";
 import Event from "@/components/Event.vue";
 import Modal from "@/components/Modal.vue";
+import HTTP from "../axiosConfig";
 
 export default {
   name: "Home",
@@ -35,6 +38,7 @@ export default {
   data() {
     return {
       isModalVisible: false,
+      events: []
     };
   },
   methods: {
@@ -44,7 +48,19 @@ export default {
     closeModal() {
       this.isModalVisible = false;
     },
+    fetchEvents: async function() {
+      try {
+        const res = await HTTP.get("events")
+        this.events = res.data
+        console.log(res.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
   },
+  created() {
+    this.fetchEvents()
+  }
 };
 </script>
 
