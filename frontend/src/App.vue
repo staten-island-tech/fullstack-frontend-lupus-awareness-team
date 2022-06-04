@@ -207,7 +207,7 @@ li {
   --themeText: white; 
   --bottomnav: var(--purple);
 
-  -commentbutton: black;
+  --commentbutton: black;
   --commentBG: var(--white);
   --postComment: white;
   
