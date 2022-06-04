@@ -7,18 +7,18 @@ export default new Vuex.Store({
     user: null,
   },
   mutations: {
+    SET_USER_DATA(state, userData) {
+      state.user = userData
+    }
   },
   actions: {
-    async checkCookie() {
+    async checkCookie({commit}) {
       try {
-        // console.log(this.state.user)
-        // if(this.state.user != null) {console.log(this.state.user)}
         const res = await HTTP.get("auth");
-        this.state.user = res.data
+        commit('SET_USER_DATA', res.data)
       } catch (error) {
         console.log(error)
       }
-      // console.log(this.state.user)
     },
   },
   modules: {},
