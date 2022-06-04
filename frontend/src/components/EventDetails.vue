@@ -59,19 +59,19 @@
     
 </div>
 
-<Comment/>
+<CommentSection/>
 </div>
 </template>
 
 <script>
 import EventImageView from '../components/EventImageView.vue';
-import Comment from './Comment/Comment.vue';
+import CommentSection from './Comment/CommentSection.vue';
 
 export default {
   name: "EventDetails",
   components: {
     EventImageView,
-    Comment,
+    CommentSection,
   }
 };
 </script>
