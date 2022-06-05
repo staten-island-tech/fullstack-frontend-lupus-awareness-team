@@ -10,6 +10,9 @@
      <TransitionGroup name="bubble">
         <div class="tag-bubble" v-for="(tag, index) in tagArr.slice(0,3)" :key="tag.id" tag="div">
             <h5 class="tag-text" > {{tagArr[(index)]}}</h5>
+            <div class="remove-tag" @click="removeTag(index)"> 
+                X
+            </div>
         </div>
     </TransitionGroup>
     </div>
@@ -37,6 +40,10 @@ methods: {
         }
         
     },
+    removeTag(index) {
+        this.tagArr.splice(index, 1)
+
+    }
 },
 created() {
 }
@@ -47,7 +54,8 @@ created() {
 
 .bubble-enter-active,
 .bubble-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  transform: translateX(1rem)
 }
 
 .bubble-enter-from,
@@ -56,6 +64,15 @@ created() {
 
 }
 
+
+.remove-tag {
+    margin-left: 1rem;
+    height: 100%;
+    width: 20%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 
 .tag-section {
@@ -118,5 +135,49 @@ created() {
 .tag-text {
     font-size: 1.8rem;
 }
+
+@media (min-width:320px)  {
+
+  .enter-event-tags {
+  font-size: 7rem;
+
+}
+
+}
+@media (min-width:481px)  { 
+
+
+ .enter-event-tags {
+  font-size: 5rem;
+ }
+
+ }
+@media (min-width:641px)  {
+
+
+    .enter-event-tags{
+  font-size: 3rem;
+    }
+  
+
+ }
+@media (min-width:961px)  { 
+
+
+  .enter-event-tags {
+  font-size: 3rem;
+}
+
+}
+@media (min-width:1025px) { 
+
+
+ }
+@media (min-width:1281px) { 
+
+ }
+
+
+
 
 </style>
