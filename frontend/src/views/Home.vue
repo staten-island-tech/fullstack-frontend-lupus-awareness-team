@@ -39,7 +39,7 @@ export default {
     return {
       isModalVisible: false,
       events: [],
-      page: 2
+      page: 3
     };
   },
   methods: {

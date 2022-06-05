@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import {HTTP} from '../axiosConfig'
+
 
 export default {
     data() {
@@ -32,14 +32,14 @@ name:"Login",
 methods: {
      login: async function() {
         try {
-            // this.$store.dispatch('login', {
+           await this.$store.dispatch('login')
+           this.$router.push('/')
+            console.log(this.$store.state.user)
+            // await HTTP.post('/login', {
             //     email: this.email,
             //     password: this.password
             // })
-            await HTTP.post('/login', {
-                email: this.email,
-                password: this.password
-            })
+            console.log('hi')
         } catch (error) {
             console.log(error)
         }

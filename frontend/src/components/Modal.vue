@@ -14,26 +14,26 @@
 
         <div class="label-wrapper">
           <label class="enter-event-name"
-          for="enter-event-name"><b> Event Name:</b></label>
-          <input class="event-name" type="text" placeholder="Event Name" name="event-name" required>
+          for="enter-event-name" ><b> Event Name:</b></label>
+          <input class="event-name" type="text" placeholder="Event Name" name="event-name" v-model="name" required>
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-date"
           for="enter-event-date"><b> Event Date:</b></label>
-          <input class="event-date" type="date" value="2022-06-3"
-       min="2022-01-01" max="2025-12-31" placeholder="Event Date" name="event-date" required>
+          <input class="event-date" type="date" 
+       min="2022-01-01" max="2025-12-31" placeholder="Event Date" name="event-date" v-model="date" required>
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-time"
           for="enter-event-time"><b> Event Time Start:</b></label>
-          <input class="event-time" type="time" step="900" value="12:00" placeholder="Event Time" name="event-time" required>
+          <input class="event-time" type="time" step="900" placeholder="Event Time" name="event-time" v-model="startTime" required>
         </div>
         <div class="label-wrapper">
           <label class="enter-event-time"
           for="enter-event-time"><b> Event Time End:</b></label>
-          <input class="event-time" type="time" step="900" value="12:00" placeholder="Event Time" name="event-time" required>
+          <input class="event-time" type="time" step="900"  placeholder="Event Time" name="event-time" v-model="endTime" required>
         </div>
 
         <Autocomplete/>
@@ -42,13 +42,13 @@
         <div class="label-wrapper">
           <label class="enter-event-hours"
           for="enter-event-hours"><b> Event Hours:</b></label>
-          <input class="event-hours" type="text" placeholder="Event Hours" name="event-hours" required>
+          <input class="event-hours" type="text" placeholder="Event Hours" name="event-hours" v-model="hours" required>
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-tags"
           for="enter-event-tags"><b> Event Tags:</b></label>
-          <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
+          <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" v-model="tags" required>
         </div>
 
           <label for="file-upload" class="custom-file-upload"> 
@@ -56,7 +56,7 @@
              <i class="upload"></i> Upload File
           </label>
           <input type="file" id="file-upload" name="filename" class="upload-file-button">
-          <input class="submit-button" type="submit"> 
+          <input @click="create()" class="submit-button" type="submit"> 
         </form>
       
 
@@ -70,15 +70,50 @@
 
 <script>
 import Autocomplete from "../components/Autocomplete.vue"
+import HTTP from "../axiosConfig"
   export default {
     name: 'Modal',
     components: {
       Autocomplete
     },
+    data(){
+      return{
+        name: null,
+        date: null,
+        startTime: null,
+        endTime: null,
+        hours: null,
+        tags: null
+      }
+    },
     methods: {
       close() {
         this.$emit('close');
       },
+      create: async function() {
+        try {
+            await HTTP.post('/event', {
+                name: this.name,
+                date: this.date,
+                duration:this.hours,
+                tags:this.tags
+
+            })
+            // .then(() => [
+            //   window.location = "/"
+            // ])
+        } catch (error) {
+            alert(error)
+        }
+        // console.log(
+        //   this.name,
+        //   this.date,
+        //   this.startTime,
+        //   this.endTime,
+        //   this.hours,
+        //   this.tags
+        // )
+    },
     },
   };
 </script>

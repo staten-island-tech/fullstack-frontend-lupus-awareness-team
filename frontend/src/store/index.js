@@ -1,4 +1,5 @@
 // import VueJwtDecode from "vue-jwt-decode";
+import axios from "axios";
 import Vuex from "vuex";
 import HTTP from "../axiosConfig";
 
@@ -20,6 +21,11 @@ export default new Vuex.Store({
         console.log(error)
       }
     },
+    async login({commit}, User){
+      const res = await HTTP.get('auth')
+      await axios.post('login', User)
+      await commit('SET_USER_DATA', res.data)
+    }
   },
   modules: {},
 });

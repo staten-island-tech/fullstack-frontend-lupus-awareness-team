@@ -50,6 +50,11 @@ name: "Register",
                     email: this.email,
                     password: this.password1
             })
+            // .then(() => {
+            //     if(
+            //         this.firstName === null
+            //     )
+            // })
             } catch (error) {
                 console.log(error)
             }
