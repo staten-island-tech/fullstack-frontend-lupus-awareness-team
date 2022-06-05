@@ -40,7 +40,7 @@
           <input v-model="end" class="event-time" type="time" step="900" placeholder="Event Time" name="event-time" required>
         </div>
 
-        <Autocomplete v-model="location"/>
+        <!-- <Autocomplete v-model="location"/> -->
   
 
         <div class="label-wrapper">
@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import Autocomplete from "../components/Autocomplete.vue"
+// import Autocomplete from "../components/Autocomplete.vue"
 import EventTag from "../components/EventTag.vue"
 import HTTP from "../axiosConfig";
 
@@ -78,7 +78,7 @@ export default {
   data() {
     return {
       name: null,
-      location,
+      // location,
       description: null,
       date: null,
       start: null,
@@ -89,7 +89,7 @@ export default {
     }
   },
   components: {
-      Autocomplete,
+      // Autocomplete,
       EventTag
   },
   methods: {
@@ -111,7 +111,7 @@ export default {
       try {
           const res = await HTTP.post('/event', {
             user:this.$store.state.user,
-          location: this.location,
+          // location: location,
           name: this.name,
           date: this.date,
           start: start,

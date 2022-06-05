@@ -14,6 +14,10 @@
       :event="event"
       />
     </div>
+    <div class="navigate">
+      <button @click="back()" class="btn">Back</button>
+      <button @click="next()" class="btn">Next</button>
+    </div>
   </div>
 </template>
 <script>
@@ -39,7 +43,7 @@ export default {
     return {
       isModalVisible: false,
       events: [],
-      page: 2
+      page: 5
     };
   },
   methods: {
@@ -57,6 +61,14 @@ export default {
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)
       }
+    },
+    next(){
+      this.page++
+      this.fetchEvents()
+    },
+    back(){
+      this.page--
+      this.fetchEvents()
     }
   },
   created() {
@@ -152,5 +164,16 @@ export default {
 @media (min-width: 1025px) {
 }
 @media (min-width: 1281px) {
+}
+
+.navigate{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn{
+
+  font-size: 3rem;
 }
 </style>
