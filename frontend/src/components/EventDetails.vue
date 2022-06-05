@@ -77,7 +77,7 @@ export default {
   methods:{
           fetchEvents: async function() {
       try {
-        const res = await HTTP.get(`events?page=${this.page}`)
+        const res = await HTTP.get(`eventProfile/${this.eventId}`)
         this.events = res.data
         console.log(this.events)
       } catch (error) {

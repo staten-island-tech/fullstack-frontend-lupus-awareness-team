@@ -11,7 +11,8 @@ export default {
 name: "EventInfo",
 components: {
     EventDetails
-}
+},
+
 }
 </script>
 
