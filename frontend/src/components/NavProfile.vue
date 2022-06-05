@@ -4,7 +4,7 @@
             <img class="nav_profile_image" src="../assets/placeholder.jpg">
         </div>
         <div class="nav_profile_name_container">
-            <h4 class="nav_profile_name"> Full Name </h4>
+            <h4 class="nav_profile_name"> {{user.firstName}} </h4>
             <h5 class="nav_profile_text">Student</h5>
         </div>
     </div>
@@ -17,7 +17,7 @@ export default {
 name: "NavProfile",
 data() {
     return {
-        user: []
+        user: this.$store.state.user
     }
 },
   mounted: function () {

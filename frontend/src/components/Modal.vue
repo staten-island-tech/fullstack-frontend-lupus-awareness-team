@@ -41,8 +41,12 @@
         </div>
 
         <!-- <Autocomplete v-model="location"/> -->
-  
-
+<!--   
+         <div class="label-wrapper">
+          <label class="enter-event-hours"
+          for="enter-event-location"><b> Event Location:</b></label>
+          <input v-model="location" class="event-hours" type="text" placeholder="Event Location" name="event-hours" required>
+        </div> -->
         <div class="label-wrapper">
           <label class="enter-event-hours"
           for="enter-event-hours"><b> Event Hours:</b></label>

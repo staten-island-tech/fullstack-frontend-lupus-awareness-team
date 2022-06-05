@@ -49,6 +49,11 @@ import Error from "@/components/ErrorAlert.vue"
 
 export default {
   name: "App",
+  // computed:{
+  //   isLoggedIn(){
+  //     return this.$store.getters.isAuthenticated
+  //   }
+  // },
   methods: {
 
 showModal() {

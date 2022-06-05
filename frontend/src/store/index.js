@@ -16,6 +16,9 @@ export default new Vuex.Store({
       state.alert = alert.response
     }
   },
+  getters: {
+    isAuthenticated: state => !!state.user
+  },
   actions: {
     async CHECK_COOKIE({commit}) {
       try {

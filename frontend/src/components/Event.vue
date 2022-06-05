@@ -3,7 +3,7 @@
     <div class="top-container">
         <div class="user">
             <div class="user-image">
-                <img class="user-pfp" :src="user.avatar">
+          <router-link class="route" to="/about"><img class="user-pfp" :src="user.avatar"></router-link>      
             </div>
             <div class="user-text">
                 <h4 class="username">{{`${user.firstName} ${user.lastName}`}}</h4>
@@ -13,6 +13,9 @@
 
         <div class="service-container">
             <h4 v-if="event.hours != null" class="service-text">Service Hours: {{event.hours}}</h4>
+             <h4 v-if="event.numberComments != null" class="service-text">Comments: {{event.numberComments}}</h4>
+              <h4 v-if="event.numberInterested != null" class="service-text">Interested: {{event.numberInterested}}</h4>
+              <button class="service-text">Interested?</button>
         </div>
     </div>
 
@@ -37,8 +40,10 @@
         <div class="info-column-2">
             <div class="info-text">
                 <h4 class="info-time"> 2:00 PM - 4:00 PM</h4>
+                 <h4>Description: {{event.description}}</h4>
                 <h4 class="info-address">{{event.location}}</h4>
-                <h4 class="info-date"> Saturday, 06/04 </h4>
+                <h4 class="info-date"> Event Start: {{event.start}} </h4>
+                <h4 class="info-date"> Event End: {{event.end}} </h4>
                 <!-- <h4 class="info-date"> {{event.date}} </h4> -->
             </div>
         </div>
@@ -327,7 +332,6 @@ props: {
 
 
  }
-
 
 
 </style>
