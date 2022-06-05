@@ -252,7 +252,7 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
 }
 .upload-icon {
   width: 15%;
