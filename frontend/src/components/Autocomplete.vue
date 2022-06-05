@@ -67,7 +67,6 @@ export default {
             // only searches within america, but can be changed (idk why we would tho)
             const data = await response.json();
             this.searchResults = data.response.features;
-            console.log(this.searchResults)
         } catch(error) {
             console.log(error)
         }

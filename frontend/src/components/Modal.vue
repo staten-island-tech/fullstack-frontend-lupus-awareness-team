@@ -10,7 +10,7 @@
         <div class="form-header">
         </div>
         <div class="upload-info">
-        <form class="form">
+        <form class="form" v-on:keydown.enter.prevent='preventEnter'>
 
         <div class="label-wrapper">
           <label class="enter-event-name"
@@ -21,13 +21,13 @@
         <div class="label-wrapper">
           <label class="enter-event-date"
           for="enter-event-date"><b> Event Date:</b></label>
-          <input class="event-date" type="text" placeholder="Event Date" name="event-date" required>
+          <input class="event-date" type="text" placeholder="Event Date" name="event-date" required >
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-time"
           for="enter-event-time"><b> Event Time:</b></label>
-          <input class="event-time" type="text" placeholder="Event Time" name="event-time" required>
+          <input class="event-time" type="text" placeholder="Event Time" name="event-time" required >
         </div>
 
         <Autocomplete/>
@@ -40,9 +40,7 @@
         </div>
 
         <div class="label-wrapper">
-          <label class="enter-event-tags"
-          for="enter-event-tags"><b> Event Tags:</b></label>
-          <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
+          <EventTag/>
         </div>
 
           <label for="file-upload" class="custom-file-upload"> 
@@ -64,15 +62,22 @@
 
 <script>
 import Autocomplete from "../components/Autocomplete.vue"
+import EventTag from "../components/EventTag.vue"
+
   export default {
     name: 'Modal',
     components: {
-      Autocomplete
+      Autocomplete,
+      EventTag,
     },
     methods: {
       close() {
         this.$emit('close');
       },
+      //this makes it so you can't submit the form by pressing enter, only the submit button
+      preventEnter(e) {
+          if(e) e.preventDefault();
+      }
     },
   };
 </script>
