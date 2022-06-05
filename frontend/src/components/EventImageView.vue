@@ -147,7 +147,6 @@ export default {
   position: absolute;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 5;
   height: 80%;
   align-items: center;
   transform: translateY(-100%);

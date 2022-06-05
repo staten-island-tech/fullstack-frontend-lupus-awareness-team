@@ -58,15 +58,20 @@
     </div>
     
 </div>
+
+<CommentSection/>
 </div>
 </template>
 
 <script>
-import EventImageView from '../components/EventImageView.vue'
+import EventImageView from '../components/EventImageView.vue';
+import CommentSection from './Comment/CommentSection.vue';
+
 export default {
   name: "EventDetails",
   components: {
     EventImageView,
+    CommentSection,
   }
 };
 </script>
@@ -108,10 +113,15 @@ export default {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .top-tittle {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -143,7 +153,7 @@ export default {
     width: 30%;
     display: flex;
     align-items: center;
-    margin-left: 3rem;
+    justify-content: center;
 }
 
 .detail-user-image{
@@ -172,6 +182,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .detail-service-container {
@@ -286,6 +297,7 @@ export default {
 
     .detail-info-container {
     flex-direction: column;
+    
     }
 
     .detail-info-column-1 {
@@ -300,7 +312,7 @@ export default {
     }
 
     .detail-user-image {
-    width: 30%;
+    width: 40%;
 }
 
     .detail-description {
@@ -308,11 +320,32 @@ export default {
     }
 
     .detail-info-description-label {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .detail-title {
         font-size: 5rem;
+    }
+
+    .detail-info-address {
+        font-size: 3rem;
+    }
+
+    .detail-info-time {
+        font-size: 3.5rem;
+    }
+
+    .detail-info-date {
+        font-size: 3rem;
+    }
+
+    .detail-tag {
+        font-size: 2.5rem;
+    }
+
+    .detail-service-text {
+        font-size: 2rem;
+        text-align: center;
     }
 
 }
@@ -326,8 +359,38 @@ export default {
         font-size: 2rem;
     }
 
-        .detail-title {
-        font-size: 4rem;
+
+        .detail-description {
+        font-size: 2rem;
+    }
+
+    .detail-info-description-label {
+        font-size: 2.5rem;
+    }
+
+    .detail-title {
+        font-size: 3rem;
+    }
+
+    .detail-info-address {
+        font-size: 3rem;
+    }
+
+    .detail-info-time {
+        font-size: 2.5rem;
+    }
+
+    .detail-info-date {
+        font-size: 2.5rem;
+    }
+
+    .detail-tag {
+        font-size: 1.75rem;
+    }
+
+    .detail-service-text {
+        font-size: 1.5rem;
+        text-align: center;
     }
 
 }

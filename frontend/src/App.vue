@@ -18,6 +18,12 @@
         </router-link>
       </div>
 
+      <div class="signup-container">
+        <button class="signup-button">
+          <router-link to="/Register" class="signup-text">Signup</router-link>
+        </button>
+      </div>
+
       <div class="login-container">
         <button class="login-button">
           <router-link to="/Login" class="login-text">Log in</router-link>
@@ -31,11 +37,12 @@
         <ThemeModal v-show="isModalVisible" @close="closeModal" />
       </div>
 
+
       <Navbar />
     </div>
 
     <MobileNav />
-
+    <Error/>
 
     <router-view />
   </div>
@@ -45,6 +52,7 @@
 import Navbar from "@/components/Nav.vue";
 import ThemeModal from "@/components/ThemeModal.vue";
 import MobileNav from "@/components/MobileNav.vue";
+import Error from "@/components/ErrorAlert.vue"
 
 export default {
   name: "App",
@@ -74,6 +82,7 @@ export default {
     Navbar,
     ThemeModal,
     MobileNav,
+    Error,
   },
   created: function () {
     this.$store.dispatch("checkCookie");
@@ -194,6 +203,10 @@ li {
   --modal: var(--purple);
   --themeText: white; 
   --bottomnav: var(--purple);
+
+  --commentbutton: black;
+  --commentBG: var(--white);
+  --postComment: white;
   
 }
 
@@ -214,6 +227,8 @@ li {
   --dbLight: var(--black-tertiary);
   --profiletext: rgba(255, 255, 255, 0.87);
   --eventTab: var(--grey-100);
+    --details: black;
+  --detailsHover: var(--black-tertiary);
 
   --calendarMonth: var(--black-primary);
   --calendarMonthBorder: black;
@@ -222,7 +237,7 @@ li {
   --calendarDayNot: var(--black-secondary);
   --dayofweek: var(--black-secondary);
   --border-top: var(--black-primary);
-  --today: var(--grey-800);
+  --today: black;
 
   --service: var(--dbSecondary);
   --eventBody: var(--dbPrimary);
@@ -232,6 +247,10 @@ li {
 
   --themeText: white; 
   --bottomnav: var(--black-secondary);
+
+  --commentbutton: white;
+  --commentBG: var(--black-tertiary);
+  --postComment: var(--black-primary);
 }
 
 .shrek {
@@ -250,14 +269,14 @@ li {
   --dbAccent: #795a2d;
   --dbLight: rgb(203, 214, 52);
   --profiletext: black;
-  --eventTab: var(--grey-100);
+  --eventTab: black;
   --details: #795a2d;
   --detailsHover: #412f16;
 
   --calendarMonth: #3f270e;
   --calendarMonthBorder: black;
   --calendarDay: #523213;
-  --calendarDayText: var(--background);
+  --calendarDayText: black;
   --calendarDayNot: #795a2d;
   --dayofweek: #3f270e;
   --border-top: black;
@@ -266,9 +285,16 @@ li {
   --service: rgb(210, 223, 39);
   --eventBody: rgb(179, 190, 16);
   --create: #795a2d;
+  --eventBG: var(--calendarDay);
+  --modal: #795a2d;
+
 
   --themeText: var(--black);
   --bottomnav: #795a2d;
+
+  -commentbutton: black;
+    --commentBG: rgb(179, 190, 16);
+  --postComment: rgb(179, 190, 16);
 }
 
 .nav {
@@ -285,7 +311,6 @@ li {
 
 .login-container {
   margin-right: 1rem;
-  margin-left: auto;
   height: 100%;
   display: flex;
   align-items: center;
@@ -293,10 +318,18 @@ li {
 
 .theme-container {
   height: 100%;
-  margin-right: 6rem;
+  margin-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.signup-container {
+  margin-right: 1rem;
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .theme-text {
@@ -325,6 +358,12 @@ li {
   font-weight: 600;
 }
 
+.signup-container:hover .signup-button {
+    background-color: var(--loginhover);
+  transition: 0.3s;
+  font-weight: 600;
+}
+
 .login-button {
   background-color: var(--login);
   border-radius: 2px;
@@ -345,6 +384,32 @@ li {
 
 .login-text {
   text-decoration: none;
+  text-transform: none;
+  color: var(--navopen);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.signup-button {
+    background-color: var(--login);
+  border-radius: 2px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 70%;
+  outline: none;
+  overflow: hidden;
+  padding: 0rem 2rem;
+  position: relative;
+  text-align: center;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+.signup-text {
+    text-decoration: none;
   text-transform: none;
   color: var(--navopen);
   font-weight: 600;
@@ -438,7 +503,7 @@ li {
   }
 
    .theme-container {
-    margin-right: 6rem;
+    margin-right: 2rem;
   }
 }
 @media (min-width: 961px) {

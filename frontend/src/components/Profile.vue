@@ -60,30 +60,35 @@ created() {
   margin-left: 0;
 }
 
+.subscribe_button:hover {
+  background-color: var(--loginhover);
+  border: solid 1px black;
+}
+
 .profile_container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin: 3rem 0rem;
-  z-index: 2;
 }
 
 .profile_text_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 30%;
   margin-top: 1.5rem;
-  z-index: 3;
+
   margin-bottom: 2rem;
 
 }
 
 .profile_image {
   border-radius: 50%;
-  z-index: 3;
-  width: 40%;
+  width: 50%;
 }
 
 .profile_image_container {
@@ -107,7 +112,8 @@ created() {
 
 .profile_button_container {
   display: flex;
-  width: 10%;
+  justify-content: center;
+  width: 100%;
   height: 100%;
 }
 

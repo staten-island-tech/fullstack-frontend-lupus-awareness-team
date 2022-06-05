@@ -10,7 +10,7 @@
         <div class="form-header">
         </div>
         <div class="upload-info">
-        <form class="form">
+        <form class="form" v-on:keydown.enter.prevent='preventEnter'>
 
         <div class="label-wrapper">
           <label class="enter-event-name"
@@ -46,9 +46,7 @@
         </div>
 
         <div class="label-wrapper">
-          <label class="enter-event-tags"
-          for="enter-event-tags"><b> Event Tags:</b></label>
-          <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
+          <EventTag/>
         </div>
 
           <label for="file-upload" class="custom-file-upload"> 
@@ -70,15 +68,22 @@
 
 <script>
 import Autocomplete from "../components/Autocomplete.vue"
+import EventTag from "../components/EventTag.vue"
+
   export default {
     name: 'Modal',
     components: {
-      Autocomplete
+      Autocomplete,
+      EventTag,
     },
     methods: {
       close() {
         this.$emit('close');
       },
+      //this makes it so you can't submit the form by pressing enter, only the submit button
+      preventEnter(e) {
+          if(e) e.preventDefault();
+      }
     },
   };
 </script>
@@ -105,6 +110,7 @@ text-decoration: none;
 margin: 1.5rem 0rem;
 border-style: solid;
 border-radius: 7px;
+position: relative;
 }
 
   .modal-fade-enter,
@@ -124,22 +130,26 @@ border-radius: 7px;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 50;
+    z-index: 1;
   }
 
   .modal {
+      z-index: 15;
     width: 60%;
     background-color: white;
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
+
+    
   }
 
   .modal-header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,6 +163,7 @@ border-radius: 7px;
   }
 
   .modal-body {
+        position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,6 +176,8 @@ border-radius: 7px;
 
 .upload-info {
   width: 100%;
+  position: relative;
+  z-index: 15;
 }
 
 

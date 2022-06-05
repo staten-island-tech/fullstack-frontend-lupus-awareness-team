@@ -119,13 +119,7 @@ export default {
 
 @media (min-width: 320px) {
   .create-button {
-    left: 50%;
-    margin-bottom: 2rem;
-    font-size: 7rem;
-    padding: 1.5rem 4rem;
-    right: initial;
-    transform: translateX(-50%);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
   }
 }
 
@@ -133,13 +127,7 @@ export default {
 }
 @media (min-width: 641px) {
   .create-button {
-    left: initial;
-    font-size: 5rem;
-    padding: 1rem 2.8rem;
-    right: 0;
-    transform: translateX(0%);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: block;
   }
 }
 @media (min-width: 961px) {
