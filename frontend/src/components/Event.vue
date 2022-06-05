@@ -3,7 +3,7 @@
     <div class="top-container">
         <div class="user">
             <div class="user-image">
-          <router-link class="route" to="/about"><img class="user-pfp" :src="user.avatar"></router-link>      
+             <img class="user-pfp" :src="user.avatar">
             </div>
             <div class="user-text">
                 <h4 class="username">{{`${user.firstName} ${user.lastName}`}}</h4>
@@ -15,7 +15,7 @@
             <h4 v-if="event.hours != null" class="service-text">Service Hours: {{event.hours}}</h4>
              <h4 v-if="event.numberComments != null" class="service-text">Comments: {{event.numberComments}}</h4>
               <h4 v-if="event.numberInterested != null" class="service-text">Interested: {{event.numberInterested}}</h4>
-              <button class="service-text">Interested?</button>
+              <button class="service-text" @click="showInterest()">Interested?</button>
         </div>
     </div>
 
@@ -55,11 +55,26 @@
 
 <script>
 
+import HTTP from "../axiosConfig"
 export default {
 name:"Event",
 props: {
     user: Object,
     event: Object
+},
+
+methods:{
+            showInterest: async function() {
+                console.log(this.event._id)
+            try {
+                const eventID = this.event._id
+                const res = await HTTP.post(`event/${eventID}/showInterest`, {
+            })
+                this.$store.dispatch('GET_ALERT', res)
+            } catch (error) {
+                this.$store.dispatch('GET_ALERT', error)
+            }
+    },
 }
 }
 </script>

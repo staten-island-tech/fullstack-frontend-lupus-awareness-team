@@ -1,7 +1,7 @@
 <template>
     <div class="nav_profile_container">
         <div class="nav_profile_image_container">
-            <img class="nav_profile_image" src="../assets/placeholder.jpg">
+       <router-link class="route" to="/about">  <img class="nav_profile_image" src="../assets/placeholder.jpg"></router-link>      
         </div>
         <div class="nav_profile_name_container">
             <h4 class="nav_profile_name"> {{user.firstName}} </h4>

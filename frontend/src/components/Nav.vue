@@ -77,6 +77,7 @@ data() {
         nav: true,
         expand: false,
         active: false,
+        
     }
 }, 
 computed:{

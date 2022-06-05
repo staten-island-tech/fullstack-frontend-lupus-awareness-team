@@ -43,7 +43,7 @@ export default {
     return {
       isModalVisible: false,
       events: [],
-      page: 5
+      page: 1
     };
   },
   methods: {
@@ -63,10 +63,14 @@ export default {
       }
     },
     next(){
+
       this.page++
       this.fetchEvents()
     },
     back(){
+      // if(this.pages === 1){
+        
+      // }
       this.page--
       this.fetchEvents()
     }

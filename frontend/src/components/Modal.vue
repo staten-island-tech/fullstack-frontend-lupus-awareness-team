@@ -19,7 +19,7 @@
         </div>
         <div class="label-wrapper">
           <label class="enter-event-name"
-          for="enter-event-name"><b> Event Description:</b></label>
+          for="enter-event-name"><b> Event Description and Location:</b></label>
           <textarea v-model="description" class="event-name" type="text" placeholder="Event Description" name="event-name" required></textarea>
         </div>
 
@@ -124,6 +124,13 @@ export default {
           tags: tags,
           description: this.description,
           media: this.images
+      })
+      .then((result) => {
+        if(result.status === 200){
+          window.location = '/'
+        }else{
+          return
+        }
       })
         this.$store.dispatch('GET_ALERT', res)
       } catch (error) {

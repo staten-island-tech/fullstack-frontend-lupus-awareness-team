@@ -20,7 +20,7 @@
 
       <div class="login-container">
         <button class="login-button">
-          <router-link to="/Login" class="login-text">Log in</router-link>
+          <router-link  to="/Login" class="login-text">Log in</router-link>
         </button>
       </div>
 
@@ -49,11 +49,11 @@ import Error from "@/components/ErrorAlert.vue"
 
 export default {
   name: "App",
-  // computed:{
-  //   isLoggedIn(){
-  //     return this.$store.getters.isAuthenticated
-  //   }
-  // },
+  computed:{
+    isLoggedIn(){
+      return this.$store.getters.isAuthenticated
+    }
+  },
   methods: {
 
 showModal() {
