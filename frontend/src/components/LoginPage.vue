@@ -33,13 +33,13 @@ methods: {
      login: async function() {
         try {
            await this.$store.dispatch('login')
-           this.$router.push('/')
-            console.log(this.$store.state.user)
+        //    this.$router.push('/')
+        //     console.log(this.$store.state.user)
             // await HTTP.post('/login', {
             //     email: this.email,
             //     password: this.password
             // })
-            console.log('hi')
+            console.log(this.$store.state.user)
         } catch (error) {
             console.log(error)
         }
