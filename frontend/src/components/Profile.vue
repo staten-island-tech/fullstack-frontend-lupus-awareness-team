@@ -6,7 +6,7 @@
       <div class="profile_text_container">
         <h3 class="profile_name"> {{ name }}</h3>
       </div>
-      <div class="profile_button_container">
+      <div class="profile_button_container" v-if="userID !== id">
           <a class="subscribe_button">Subscribe</a>
       </div>
 
@@ -14,17 +14,18 @@
 </template>
 
 <script>
-// import HTTP from '../axiosConfig'
 
 export default {
 name:"Profile",
 data() {
   return {
+    userID: this.$store.state.user._id
   }
 },
 props: {
   name: String,
   image: String,
+  id: String,
 },
 methods: {
     // fetchUser: async function () {
