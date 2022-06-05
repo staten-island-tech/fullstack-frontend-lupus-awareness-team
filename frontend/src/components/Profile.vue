@@ -8,7 +8,7 @@
           <span>Change Image</span>
         </label>
         <input id="file" type="file" @change="loadFile($event)"/>
-        <img src="../assets/placeholder.jpg" id="output" width="200" ref="output" />
+        <img src="../assets/placeholder.jpg" id="output" width="200" ref="output"/>
 </div>
 
       </div>
@@ -132,7 +132,7 @@ created() {
     width:165px;
   }
   
-  :hover {
+  .-label:hover {
    
     display: flex;
       justify-content: center;
