@@ -6,6 +6,7 @@
       <div class="profile_text_container">
         <h3 class="profile_name"> {{ name }}</h3>
       </div>
+      <h4>{{role}}</h4>
       <div class="profile_button_container" v-if="userID !== id">
           <a class="subscribe_button">Subscribe</a>
       </div>
@@ -26,6 +27,7 @@ props: {
   name: String,
   image: String,
   id: String,
+  role: String
 },
 methods: {
     // fetchUser: async function () {
