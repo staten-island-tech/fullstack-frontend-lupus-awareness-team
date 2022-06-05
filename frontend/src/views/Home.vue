@@ -38,7 +38,8 @@ export default {
   data() {
     return {
       isModalVisible: false,
-      events: []
+      events: [],
+      page: 2
     };
   },
   methods: {
@@ -50,7 +51,7 @@ export default {
     },
     fetchEvents: async function() {
       try {
-        const res = await HTTP.get("events")
+        const res = await HTTP.get(`events?page=${this.page}`)
         this.events = res.data
         console.log(res.data)
       } catch (error) {

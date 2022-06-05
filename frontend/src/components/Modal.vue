@@ -110,6 +110,7 @@ export default {
       const end = new Date(new Date(new Date(this.date).setHours(endData[0])).setMinutes(endData[1]))
       try {
           const res = await HTTP.post('/event', {
+            user:this.$store.state.user,
           location: this.location,
           name: this.name,
           date: this.date,
