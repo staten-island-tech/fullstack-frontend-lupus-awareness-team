@@ -1,22 +1,24 @@
 <template>
 <div>
-    <div class="alert_container" ref="alert" v-if="isError"  @click="close">
+    <div v-if="alert">
+    <div class="alert_container" ref="alert" v-if="alert.status === 400"  @click="close">
         <div class="alert_title">
-            <h4 class="message">This is an Error Message This is an Error Message This is an Error Message This is an Error MessageThis is an Error Message</h4>
+            <h4 class="message">{{alert.data}}</h4>
         </div>
         <div class="close_button">
             <i class="far fa-times-circle" ></i>
         </div>
     </div>
 
-    <div class="success_container" ref="alert" @click="close">
+    <div class="success_container" ref="alert" v-if="alert.status !== 400" @click="close">
         <div class="success_title">
-            <h4 class="success_message">This is a Success message This is a Success message This is a Success message This is a Success message</h4>
+            <h4 class="success_message">{{alert.data}}</h4>
         </div>
         <div class="close_button">
             <i class="fas fa-check"></i>
         </div>
     </div>
+</div>
 </div>
 </template>
 
@@ -24,19 +26,18 @@
 export default {
 name: "Error",
   props: {
-    isError: {
-      type: Boolean,
-    },
-
-    message: {
-      type: String,
-    },
   },
 data() {
     return {
-        //isError: true,
+        alert: null,
     }
 },  
+watch: {
+    '$store.state.alert': function() {
+        this.alert = this.$store.state.alert
+        console.log(this.alert)
+    }
+},
 methods: {
    close() {
         this.$refs.alert.style.display = "none";

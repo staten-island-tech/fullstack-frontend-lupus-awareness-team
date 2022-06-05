@@ -24,8 +24,8 @@ export default {
                 console.log(res.data)
             } 
             catch (error) {
-                console.log(error)
-            }
+        this.$store.dispatch('GET_ALERT', error)
+      }
         }
     }
 

@@ -29,8 +29,8 @@ export default {
         const data = await response.json();
         this.hostArr = data;
         console.log(this.hostArr)
-      } catch(error) {
-          console.log(error)
+      } catch (error) {
+        this.$store.dispatch('GET_ALERT', error)
       }
     },
   },

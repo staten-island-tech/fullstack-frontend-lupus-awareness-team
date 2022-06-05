@@ -28,8 +28,8 @@ methods: {
         const data = await response.json();
         this.pastArr = data;
         console.log(this.pastArr)
-      } catch(error) {
-          console.log(error)
+      } catch (error) {
+        this.$store.dispatch('GET_ALERT', error)
       }
     },
 },

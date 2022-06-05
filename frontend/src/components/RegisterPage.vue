@@ -44,14 +44,15 @@ name: "Register",
                 return
             }
             try {
-                await HTTP.post('/register', {
+                const res = await HTTP.post('/register', {
                     firstName: this.firstName,
                     lastName: this.lastName,
                     email: this.email,
                     password: this.password1
             })
+                this.$store.dispatch('GET_ALERT', res)
             } catch (error) {
-                console.log(error)
+                this.$store.dispatch('GET_ALERT', error)
             }
     },
     }

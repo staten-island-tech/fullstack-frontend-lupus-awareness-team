@@ -70,7 +70,7 @@ showModal() {
     Error,
   },
   created: async function() {
-    await this.$store.dispatch("checkCookie");
+    await this.$store.dispatch("CHECK_COOKIE");
   },
 };
 </script>

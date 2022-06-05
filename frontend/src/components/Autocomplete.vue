@@ -62,8 +62,8 @@ export default {
             // only searches within america, but can be changed (idk why we would tho)
             const data = await response.json();
             this.searchResults = data.response.features;
-        } catch(error) {
-            console.log(error)
+        } catch (error) {
+            this.$store.dispatch('GET_ALERT', error)
         }
         },
         completeForm: function(selected) {

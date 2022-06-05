@@ -35,13 +35,14 @@ methods: {
             //     email: this.email,
             //     password: this.password
             // })
-            await HTTP.post('/login', {
+           const res = await HTTP.post('/login', {
                 email: this.email,
                 password: this.password
             })
+            this.$store.dispatch('GET_ALERT', res)
         } catch (error) {
-            console.log(error)
-        }
+        this.$store.dispatch('GET_ALERT', error)
+      }
     },
     
 }

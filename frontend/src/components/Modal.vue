@@ -109,7 +109,7 @@ export default {
       const start = new Date(new Date(new Date(this.date).setHours(startData[0])).setMinutes(startData[1]))
       const end = new Date(new Date(new Date(this.date).setHours(endData[0])).setMinutes(endData[1]))
       try {
-          await HTTP.post('/event', {
+          const res = await HTTP.post('/event', {
           location: this.location,
           name: this.name,
           date: this.date,
@@ -120,8 +120,9 @@ export default {
           description: this.description,
           media: this.images
       })
+        this.$store.dispatch('GET_ALERT', res)
       } catch (error) {
-        console.log(error)
+        this.$store.dispatch('GET_ALERT', error)
       }
     }
   },

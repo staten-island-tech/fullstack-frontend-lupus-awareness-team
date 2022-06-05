@@ -68,7 +68,7 @@ methods: {
         console.log(res.data)
         this.eventArr = res.data
       } catch (error) {
-        console.log(error)
+        this.$store.dispatch('GET_ALERT', error)
       }
     },
 },

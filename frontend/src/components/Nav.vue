@@ -86,7 +86,12 @@ components: {
 },
 methods: {
     logout: async function() {
-        await HTTP.post("/logout")
+        try {
+            const res = await HTTP.post("/logout")
+            this.$store.dispatch('GET_ALERT', res)
+        } catch (error) {
+            this.$store.dispatch('GET_ALERT', error)
+        }
     },
     toggle() {
         this.expand = true;
