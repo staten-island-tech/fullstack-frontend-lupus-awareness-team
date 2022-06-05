@@ -1,6 +1,6 @@
 <template>
   <div class="comment_wrapper">
-        <div class="comment_container">
+        <div class="comment_container" @keyup.esc="closeEnterReply">
             <div class="container_header">
                 <div class="pfp_container">
                     <img class="pfp_image" src="@/assets/placeholder.jpg">
@@ -15,19 +15,37 @@
             </div>
             <div class="container_reply">
                 <button class="reply_button" @click="reply">Reply</button>
+                <Reply/>
+                <PostReply v-show="enterReply"/>
             </div>
         </div>
   </div>
 </template>
 
 <script>
+import Reply from "./Reply.vue"
+import PostReply from "./PostReply.vue"
 export default {
 name: "Comment",
+components: {
+    Reply,
+    PostReply
+},
+ data() {
+    return {
+      enterReply: false,
+    };
+  },
 methods: {
     reply() {
         console.log("hello")
-
+        this.enterReply = true
+    },
+    closeEnterReply() {
+        this.enterReply = false
     }
+    
+
 }
 }
 </script>
@@ -110,6 +128,7 @@ methods: {
     display: flex;
     align-items: flex-start;
     margin-left: 2rem;
+    flex-direction: column;
 }
 
 .reply_button {
@@ -127,6 +146,7 @@ methods: {
   position: relative;
   text-align: center;
   text-decoration: none;
+  transition: all .3s;
 }
 
 

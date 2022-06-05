@@ -4,9 +4,10 @@
         <div class="pfp_container">
           <img class="pfp_image" src="@/assets/placeholder.jpg">
         </div>
-        <div class="post_comment_container">
-          <textarea type="text" class="input" placeholder="Add a comment..."></textarea>
-          <button class="submit_comment" @click="post">Submit</button>
+        <div class="post_reply_container">
+          <h4 class="reply_user">@User1234</h4>
+          <textarea type="text" class="input" placeholder="Reply..."></textarea>
+          <button class="submit_reply" @click="post">Submit</button>
         </div>
     </div>
   </section>
@@ -14,34 +15,32 @@
 
 <script>
 export default {
-name:"PostComment",
-methods: {
-  post() {
-    console.log("Post")
-  },
-  
-}
+    name: "PostReply",
 }
 </script>
 
 <style scoped>
-.post_section {
+    .post_section {
+    border-top: 2px solid lightgray ;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem 0rem;
+    margin-top: 4rem;
+    
 }
 
 .post_container {
   display: flex;
-    width: 60%;
+    width: 90%;
     padding: 1rem 0rem;
+    margin-left: 10%;
 }
 
 .pfp_container {
-  width: 15%;
+  width: 8%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,26 +51,27 @@ methods: {
   border-radius: 50%;
 }
 
-.post_comment_container {
-  width: 85%;
+.post_reply_container {
+  width: 90%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  
 }
 
 .input {
-  width: 90%;
-  height: 80%;
+  width: 60%;
+  height: 50%;
   border: solid 1px var(--black);
   font-size: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   resize: none;
   margin: 2rem 0rem;
 }
 
 
-.submit_comment {
+.submit_reply {
   appearance: none;
   background-color: var(--service);
   border: 1px solid rgba(27, 31, 35, .15);
@@ -86,27 +86,28 @@ methods: {
   position: relative;
   text-align: center;
   text-decoration: none;
-  width: 90%;
+  width: auto;
+  height: 50%;
   transition: all .3s;
 }
 
-.submit_comment:focus:not(:focus-visible):not(.focus-visible) {
+.submit_reply:focus:not(:focus-visible):not(.focus-visible) {
   box-shadow: none;
   outline: none;
 }
 
-.submit_comment:hover {
+.submit_reply:hover {
   background-color: black;
   color: white;
 }
 
-
-
-
-.submit_comment:active {
+.submit_reply:active {
   background-color: white;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
   transition: 0.3s;
 }
-
+.reply_user {
+    font-weight: bold;
+    margin: 0 2rem;
+}
 </style>
