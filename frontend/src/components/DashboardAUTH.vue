@@ -6,6 +6,7 @@
             :image="user.avatar"
             :name="`${ user.firstName} ${ user.lastName }`"
             :id="user._id"
+            :role="user.role"
             />
         </div>
       </div>

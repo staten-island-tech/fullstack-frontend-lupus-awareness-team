@@ -10,59 +10,61 @@
         <div class="form-header">
         </div>
         <div class="upload-info">
-        <form class="form">
+        <div class="form">
 
         <div class="label-wrapper">
           <label class="enter-event-name"
           for="enter-event-name"><b> Event Name:</b></label>
-          <input class="event-name" type="text" placeholder="Event Name" name="event-name" required>
+          <input v-model="name" class="event-name" type="text" placeholder="Event Name" name="event-name" required>
+        </div>
+        <div class="label-wrapper">
+          <label class="enter-event-name"
+          for="enter-event-name"><b> Event Description:</b></label>
+          <textarea v-model="description" class="event-name" type="text" placeholder="Event Description" name="event-name" required></textarea>
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-date"
           for="enter-event-date"><b> Event Date:</b></label>
-          <input class="event-date" type="date" value="2022-06-3"
-       min="2022-01-01" max="2025-12-31" placeholder="Event Date" name="event-date" required>
+          <input v-model="date" class="event-date" type="date" placeholder="Event Date" name="event-date" required>
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-time"
           for="enter-event-time"><b> Event Time Start:</b></label>
-          <input class="event-time" type="time" step="900" value="12:00" placeholder="Event Time" name="event-time" required>
+          <input v-model="start" class="event-time" type="time" step="900" placeholder="Event Time" name="event-time" required>
         </div>
         <div class="label-wrapper">
           <label class="enter-event-time"
           for="enter-event-time"><b> Event Time End:</b></label>
-          <input class="event-time" type="time" step="900" value="12:00" placeholder="Event Time" name="event-time" required>
+          <input v-model="end" class="event-time" type="time" step="900" placeholder="Event Time" name="event-time" required>
         </div>
 
-        <Autocomplete/>
+        <Autocomplete v-model="location"/>
   
 
         <div class="label-wrapper">
           <label class="enter-event-hours"
           for="enter-event-hours"><b> Event Hours:</b></label>
-          <input class="event-hours" type="text" placeholder="Event Hours" name="event-hours" required>
+          <input v-model="hours" class="event-hours" type="text" placeholder="Event Hours" name="event-hours" required>
         </div>
 
         <div class="label-wrapper">
           <label class="enter-event-tags"
           for="enter-event-tags"><b> Event Tags:</b></label>
-          <input class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
+          <input v-model="tags" class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
         </div>
-
+        <h6 v-for="image in images" :key="image">{{image.name}}</h6>
           <label for="file-upload" class="custom-file-upload"> 
             <img class="upload-icon" src="../assets/upload-icon.png">
              <i class="upload"></i> Upload File
           </label>
-          <input type="file" id="file-upload" name="filename" class="upload-file-button">
-          <input class="submit-button" type="submit"> 
-        </form>
-      
+          <input @change="setImage" type="file" id="file-upload" name="filename" class="upload-file-button">
+        <button class="submit-button" @click="createEvent()">Post Event</button> 
+        </div>
 
         </div>
         </section>
-
     </div>
   </div>
 </transition>
@@ -70,17 +72,60 @@
 
 <script>
 import Autocomplete from "../components/Autocomplete.vue"
-  export default {
-    name: 'Modal',
-    components: {
+import HTTP from "../axiosConfig";
+
+export default {
+  name: 'Modal',
+  data() {
+    return {
+      name: null,
+      location,
+      description: null,
+      date: null,
+      start: null,
+      end: null,
+      hours: null,
+      tags: null,
+      images: []
+    }
+  },
+  components: {
       Autocomplete
+  },
+  methods: {
+    close() {
+      this.$emit('close');
     },
-    methods: {
-      close() {
-        this.$emit('close');
-      },
+    setImage(e) {
+      const file = e.target.files || e.dataTransfer.files
+      this.images.push(file[0])
+      console.log(this.images)
     },
-  };
+    createEvent: async function() {
+      const tags = []
+      tags.push(this.tags)
+      const startData = this.start.split(':')
+      const endData = this.end.split(':')
+      const start = new Date(new Date(new Date(this.date).setHours(startData[0])).setMinutes(startData[1]))
+      const end = new Date(new Date(new Date(this.date).setHours(endData[0])).setMinutes(endData[1]))
+      try {
+          await HTTP.post('/event', {
+          location: this.location,
+          name: this.name,
+          date: this.date,
+          start: start,
+          end: end,
+          hours: this.hours,
+          tags: tags,
+          description: this.description,
+          media: this.images
+      })
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  },
+};
 </script>
 
 <style scoped>
