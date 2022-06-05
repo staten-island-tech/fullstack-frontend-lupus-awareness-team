@@ -50,9 +50,7 @@
         </div>
 
         <div class="label-wrapper">
-          <label class="enter-event-tags"
-          for="enter-event-tags"><b> Event Tags:</b></label>
-          <input v-model="tags" class="event-tags" type="text" placeholder="Event Tags" name="event-tags" required>
+          <EventTag/>
         </div>
         <h6 v-for="image in images" :key="image">{{image.name}}</h6>
           <label for="file-upload" class="custom-file-upload"> 
@@ -72,6 +70,7 @@
 
 <script>
 import Autocomplete from "../components/Autocomplete.vue"
+import EventTag from "../components/EventTag.vue"
 import HTTP from "../axiosConfig";
 
 export default {
@@ -90,7 +89,8 @@ export default {
     }
   },
   components: {
-      Autocomplete
+      Autocomplete,
+      EventTag
   },
   methods: {
     close() {
