@@ -1,11 +1,14 @@
 <template>
     <div class="nav_profile_container">
+        <div v-if="user === null">
+        <router-link to="login">Sign In</router-link>
+        </div>
         <div class="nav_profile_image_container">
-            <img class="nav_profile_image" src="../assets/placeholder.jpg">
+            <img class="nav_profile_image" :src="user.avatar">
         </div>
         <div class="nav_profile_name_container">
-            <h4 class="nav_profile_name"> Full Name </h4>
-            <h5 class="nav_profile_text">Student</h5>
+            <h4 class="nav_profile_name">{{user.firstName}} {{user.lastName}}</h4>
+            <h5 class="nav_profile_text">{{user.role}}</h5>
         </div>
     </div>
 </template>
@@ -17,7 +20,7 @@ export default {
 name: "NavProfile",
 data() {
     return {
-        user: []
+        user: this.$store.state.user
     }
 },
   mounted: function () {

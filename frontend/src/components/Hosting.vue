@@ -2,11 +2,11 @@
       <ul class="hosting_list">
         <li class="hosting_list_item" v-for="host in hostArr" :key="host.eventName">
           <div class="hosting_text">
-            <h4 class="hosting_name"> {{ host.eventName}} </h4>
-            <h5 class="hosting_date"> {{ host.eventDate}} </h5>
+            <h4 class="hosting_name"> {{ event.name}} </h4>
+            <h5 class="hosting_date"> {{ host.start}} </h5>
           </div>
           <div class="hosting_image">
-            <img :src="host.eventImage">
+            <img :src="host.media[0]">
           </div>
         </li>
       </ul>
@@ -16,27 +16,13 @@
 export default {
   name: 'Hosting',
   props: {
+    event: Object
   },
   data() {
     return {
       hostArr: []
     }
   },
-  methods: {
-        fetchHost: async function () {
-        try {
-        const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/hosted');
-        const data = await response.json();
-        this.hostArr = data;
-        console.log(this.hostArr)
-      } catch (error) {
-        this.$store.dispatch('GET_ALERT', error)
-      }
-    },
-  },
-  created() {
-    this.fetchHost();
-  }
 }
 </script>
 

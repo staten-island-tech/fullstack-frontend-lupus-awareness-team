@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import DashboardAUTH from "../components/DashboardAUTH.vue";
+
 import EventInfo from "../views/EventInfo.vue";
-import LoginPageView from "../views/LoginPageView.vue";
-import RegisterPageView from "../views/RegisterPageView.vue";
+
 
 const routes = [
   {
@@ -12,35 +11,34 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/dashboard",
+    name: "Dashboard",
     component: function () {
-      return import(/* webpackChunkName: "about" */ "../views/About.vue");
+      return import("../views/About.vue");
     },
   },
   {
     path: "/login",
     name: "LoginPage",
-    component: LoginPageView,
+    component: function () {
+      return import("../views/LoginPageView.vue");
+    },
   },
   {
     path: "/event-details",
     name: "EventInfo",
     component: EventInfo,
   },
-  {
-    path: "/user",
-    name: "Dashboard",
-    component: DashboardAUTH,
-  },
-  {
-    path: "/register",
-    name: "Dashboard",
-    component: RegisterPageView,
-  },
+  // {
+  //   path: "/user",
+  //   name: "Dashboard",
+  //   component: DashboardAUTH,
+  // },
+  // {
+  //   path: "/register",
+  //   name: "Dashboard",
+  //   component: RegisterPageView,
+  // },
 ];
 
 const router = createRouter({

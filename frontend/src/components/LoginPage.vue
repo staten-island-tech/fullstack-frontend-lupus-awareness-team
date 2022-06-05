@@ -39,6 +39,7 @@ methods: {
                 email: this.email,
                 password: this.password
             })
+            this.$router.push('dashboard')
             this.$store.dispatch('GET_ALERT', res)
         } catch (error) {
         this.$store.dispatch('GET_ALERT', error)

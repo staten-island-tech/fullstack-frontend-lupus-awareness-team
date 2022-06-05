@@ -20,7 +20,7 @@
 
       <div class="login-container">
         <button class="login-button">
-          <router-link to="/Login" class="login-text">Log in</router-link>
+          <router-link to="/login" class="login-text">Log in</router-link>
         </button>
       </div>
 

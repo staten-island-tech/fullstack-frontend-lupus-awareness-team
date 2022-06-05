@@ -28,7 +28,7 @@
         <CalendarMonth/>
       </div>
 
-      <div class="list_wrapper">
+      <div class="list_wrapper" v-if="user.role === 'Student'">
         <ul class="list_container">
             <li v-for="event in eventArr" :key="event.id" class="list_item">
               <ToDoList :eventInfo="eventArr" />
@@ -46,18 +46,17 @@ import Profile from "@/components/Profile.vue";
 import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 import ToDoList from "@/components/ToDoList.vue";
 import Hosting from "@/components/Hosting.vue";
-// import PastEvents from "@/components/PastEvents.vue";
 import HTTP from '../axiosConfig'
-import Previous from "@/components/PastEvents.vue";
 
 
 export default {
 name: "DashbardAUTH",
 data() {
   return {
-    tabs: ["Hosting", "Previous"],
+    tabs: ["Hosting"],
     selected: "Hosting",
-    eventArr: [],
+    past: [],
+    upcoming: [],
     user: this.$store.state.user
   }
 },
@@ -65,27 +64,28 @@ methods: {
     fetchEvents: async function() {
       try {
         const res = await HTTP.get("getEvents")
-        console.log(res.data)
-        this.eventArr = res.data
+        res.data.forEach((event) => {
+          const date = new Date(event.end)
+          if(date > Date.now()) {
+            this.upcoming.push(event)
+          } else {
+            this.past.push(event)
+          }
+        })
+        console.log(this.past, this.upcoming)
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)
       }
     },
 },
-computed: {
-},
 created: async function() {
-  // this.fetchData();
   await this.fetchEvents()
-  console.log(this.$store.state.user)
 },
 components: {
   Profile,
   CalendarMonth,
   ToDoList,
   Hosting,
-  Previous,
-  // PastEvents,
 }
 }
 </script>
