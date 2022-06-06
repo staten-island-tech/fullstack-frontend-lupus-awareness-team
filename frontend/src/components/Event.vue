@@ -41,7 +41,7 @@
             <div class="info-text">
                 <h4 class="info-time"> 2:00 PM - 4:00 PM</h4>
                  <h4>Description: {{event.description}}</h4>
-                <h4 class="info-address">{{event.location}}</h4>
+                <h4 class="info-address">Location: {{event.location}}</h4>
                 <h4 class="info-date"> Event Start: {{event.start}} </h4>
                 <h4 class="info-date"> Event End: {{event.end}} </h4>
                 <!-- <h4 class="info-date"> {{event.date}} </h4> -->
@@ -62,14 +62,25 @@ props: {
     user: Object,
     event: Object
 },
-
+data(){
+    return{
+        interested: null
+    }
+},
 methods:{
             showInterest: async function() {
                 console.log(this.event._id)
             try {
                 const eventID = this.event._id
                 const res = await HTTP.post(`event/${eventID}/showInterest`, {
-            })
+            }).then((result)=> {
+                if(result.data === "You've already shown interest to this event"){
+                    alert("You've already shown interest to this event")
+                }else{
+                    window.location ='/'
+                }
+            }
+            )
                 this.$store.dispatch('GET_ALERT', res)
             } catch (error) {
                 this.$store.dispatch('GET_ALERT', error)
