@@ -14,6 +14,10 @@
       :event="event"
       />
     </div>
+    <div class="navigate">
+      <button @click="back()" class="btn">Back</button>
+      <button @click="next()" class="btn">Next</button>
+    </div>
   </div>
 </template>
 <script>
@@ -38,7 +42,8 @@ export default {
   data() {
     return {
       isModalVisible: false,
-      events: []
+      events: [],
+      page: 1
     };
   },
   methods: {
@@ -50,12 +55,24 @@ export default {
     },
     fetchEvents: async function() {
       try {
-        const res = await HTTP.get("events")
+        const res = await HTTP.get(`events?page=${this.page}`)
         this.events = res.data
         console.log(res.data)
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)
       }
+    },
+    next(){
+
+      this.page++
+      this.fetchEvents()
+    },
+    back(){
+      // if(this.pages === 1){
+        
+      // }
+      this.page--
+      this.fetchEvents()
     }
   },
   created() {
@@ -151,5 +168,16 @@ export default {
 @media (min-width: 1025px) {
 }
 @media (min-width: 1281px) {
+}
+
+.navigate{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn{
+
+  font-size: 3rem;
 }
 </style>

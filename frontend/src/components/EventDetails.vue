@@ -65,8 +65,15 @@
 import EventImageView from '../components/EventImageView.vue'
 export default {
   name: "EventDetails",
+  props: {
+    user: Object,
+    event: Object
+},
   components: {
     EventImageView,
+  },
+  created(){
+      console.log(this.event)
   }
 };
 </script>

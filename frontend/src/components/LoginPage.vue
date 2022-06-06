@@ -10,6 +10,7 @@
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
                         <input class="login-password" type="password" placeholder="Password" name="login-password" v-model="password" required>
                         <button class="submit-button" @click="login()">Login</button>
+                        <router-link class="route" to="/register">Don't Have An Account? Sign Up!</router-link>
                     </div>
             </div>
         </div>  
@@ -271,5 +272,11 @@ methods: {
 @media (min-width:1025px) { }
 @media (min-width:1281px) { 
  }
+
+.route{
+    color: white;
+    font-size: 1.5rem;
+    margin: 2rem;
+}
 
 </style>
