@@ -13,6 +13,7 @@ export default {
     data() {
         return {
             query: null,
+            users: null
         }
     },
     methods: {
@@ -21,7 +22,8 @@ export default {
             if(e.key !== "Enter") { return }
             try {
                 const res = await HTTP.get(`/searchUser/${this.query}`)
-                console.log(res.data)
+                this.users = res
+                console.log(this.users)
             } 
             catch (error) {
         this.$store.dispatch('GET_ALERT', error)

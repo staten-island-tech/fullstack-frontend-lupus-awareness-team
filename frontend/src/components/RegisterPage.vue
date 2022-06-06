@@ -40,7 +40,10 @@ name: "Register",
     methods: {
         register: async function() {
             if(this.password1 != this.password2) {
-                console.log('passwords do not match')
+                this.$store.dispatch('GET_ALERT', {
+                    data: 'Passwords do not match',
+                    status: 400
+                })
                 return
             }
             try {

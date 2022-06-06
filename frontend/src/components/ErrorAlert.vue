@@ -1,7 +1,7 @@
 <template>
 <div>
     <div v-if="alert">
-    <div class="alert_container" ref="alert" v-if="alert.status === 400"  @click="close">
+    <div class="alert_container" ref="alert" v-if="alert.status >= 400"  @click="close">
         <div class="alert_title">
             <h4 class="message">{{alert.data}}</h4>
         </div>
@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="success_container" ref="alert" v-if="alert.status !== 400" @click="close">
+    <div class="success_container" ref="alert" v-if="alert.status < 400" @click="close">
         <div class="success_title">
             <h4 class="success_message">{{alert.data}}</h4>
         </div>
@@ -35,7 +35,6 @@ data() {
 watch: {
     '$store.state.alert': function() {
         this.alert = this.$store.state.alert
-        console.log(this.alert)
     }
 },
 methods: {

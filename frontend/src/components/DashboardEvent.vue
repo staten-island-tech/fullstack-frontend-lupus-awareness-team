@@ -1,12 +1,12 @@
 <template>
       <ul class="hosting_list">
-        <li class="hosting_list_item" v-for="host in hostArr" :key="host.eventName">
+        <li class="hosting_list_item">
           <div class="hosting_text">
-            <h4 class="hosting_name"> {{ event.name}} </h4>
-            <h5 class="hosting_date"> {{ host.start}} </h5>
+            <h4 class="hosting_name"> {{ eventData.name}} </h4>
+            <h5 class="hosting_date"> {{ eventData.start}} </h5>
           </div>
           <div class="hosting_image">
-            <img :src="host.media[0]">
+            <img :src="eventData.media[0]">
           </div>
         </li>
       </ul>
@@ -14,9 +14,9 @@
 
 <script>
 export default {
-  name: 'Hosting',
+  name: 'DashboardEvent',
   props: {
-    event: Object
+    eventData: Object
   },
   data() {
     return {

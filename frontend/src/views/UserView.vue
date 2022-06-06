@@ -25,47 +25,49 @@
       <DashboardEvent id="event" v-for="event in upcoming" :key="event" :eventData="event"/>
     </div>
   </div>
-
-   <div class="calendar_container">
-      <div class="calendar_wrapper">
-        <CalendarMonth/>
-      </div>
-
       <div class="list_wrapper" v-if="user.role === 'Student'">
         <ul class="list_container">
             <li v-for="event in eventArr" :key="event.id" class="list_item">
               <ToDoList :eventInfo="eventArr" />
             </li>
         </ul>
-      </div>
-    </div>
-
-
+   </div>
   </section>
 </template>
 
 <script>
 import Profile from "@/components/Profile.vue";
-import CalendarMonth from "@/components/Calendar/CalendarMonth.vue";
 import DashboardEvent from '../components/DashboardEvent.vue'
 import ToDoList from "@/components/ToDoList.vue";
 import HTTP from '../axiosConfig'
 
 
 export default {
-name: "DashbardAUTH",
+name: "UserView",
+props: {
+    id: {type: String, required: true}
+},
 data() {
   return {
     selected: 'upcoming',
     past: [],
     upcoming: [],
-    user: this.$store.state.user
+    user: null
   }
 },
 methods: {
+    getUser: async function() {
+      try {
+        const res = await HTTP.get(`getUser/${this.id}`)
+        this.user = res.data
+        console.log(this.user)
+      } catch (error) {
+        this.$store.dispatch('GET_ALERT', error)
+      }  
+    },
     adminEvents: async function() {
       try {
-        const res = await HTTP.get("getEvents")
+        const res = await HTTP.get(`getUserEvents/${this.id}`)
         res.data.forEach((event) => {
           const date = new Date(event.end)
           if(date > Date.now()) {
@@ -74,6 +76,7 @@ methods: {
             this.past.push(event)
           }
         })
+        console.log(this.past, this.upcoming)
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)
       }
@@ -88,15 +91,16 @@ methods: {
     // },
 },
 created: async function() {
-  if(this.user.role === 'Student') {
-    await this.studentEvents()
-    return
-  }
-  await this.adminEvents()
+    await this.getUser()
+    await this.adminEvents()
+//   if(this.user.role === 'Student') {
+//     await this.studentEvents()
+//     return
+//   }
+//   await this.adminEvents()
 },
 components: {
   Profile,
-  CalendarMonth,
   ToDoList,
   DashboardEvent
 }
@@ -326,10 +330,5 @@ align-items: center;
   }
 
  }
-
-
-
-
-
 
 </style>

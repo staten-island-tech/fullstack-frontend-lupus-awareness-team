@@ -18,6 +18,14 @@ const routes = [
     },
   },
   {
+    path: "/user/:id",
+    name: "User",
+    component: function () {
+      return import("../views/UserView.vue");
+    },
+    props: true
+  },
+  {
     path: "/login",
     name: "LoginPage",
     component: function () {
@@ -29,16 +37,13 @@ const routes = [
     name: "EventInfo",
     component: EventInfo,
   },
-  // {
-  //   path: "/user",
-  //   name: "Dashboard",
-  //   component: DashboardAUTH,
-  // },
-  // {
-  //   path: "/register",
-  //   name: "Dashboard",
-  //   component: RegisterPageView,
-  // },
+  {
+    path: "/register",
+    name: "Register",
+    component: function () {
+      return import("../views/RegisterPageView.vue");
+    },
+  },
 ];
 
 const router = createRouter({
