@@ -23,7 +23,7 @@
 
             <li>
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4V5zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6zm2-5h4v4h-4v-4z"></path></svg>
-                <router-link to="/dashboard" class="nav_text">Dashboard</router-link>
+                <router-link :to='`/${route}`' class="nav_text">Dashboard</router-link>
             </li>
 
             <li id="themeLi">
@@ -73,9 +73,14 @@ data() {
         nav: true,
         expand: false,
         active: false,
-        
+        route: 'dashboard'
     }
 }, 
+beforeCreate: function(){
+    if(this.$store.state.user === null) {
+      this.route = 'login'
+    } 
+},
 computed:{
     isLoggedIn(){
       return this.$store.getters.isAuthenticated

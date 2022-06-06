@@ -1,5 +1,5 @@
 <template>
-  <div v-if="this.$store.state.user !== null" id="app" class="main" ref="theme">
+  <div id="app" class="main" ref="theme">
     <div class="nav">
       <div class="logo-container">
         <router-link to="/" id="logo">
@@ -50,9 +50,6 @@ import Error from "@/components/ErrorAlert.vue"
 export default {
   name: "App",
   computed:{
-    isLoggedIn(){
-      return this.$store.getters.isAuthenticated
-    }
   },
   methods: {
 
@@ -74,8 +71,8 @@ showModal() {
     MobileNav,
     Error,
   },
-  created: async function() {
-    await this.$store.dispatch("CHECK_COOKIE");
+  beforeCreate: async function() {
+    await this.$store.dispatch("CHECK_COOKIE");   
   },
 };
 </script>

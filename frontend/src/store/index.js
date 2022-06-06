@@ -25,7 +25,7 @@ export default new Vuex.Store({
         const res = await HTTP.get("auth");
         commit('SET_USER_DATA', res.data)
       } catch (error) {
-        this.GET_ALERT(error)
+        console.log(error)
       }
     },
     GET_ALERT({commit}, alert) {

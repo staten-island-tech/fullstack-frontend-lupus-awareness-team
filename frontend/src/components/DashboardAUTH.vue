@@ -66,6 +66,7 @@ methods: {
     adminEvents: async function() {
       try {
         const res = await HTTP.get("getEvents")
+        console.log(res)
         res.data.forEach((event) => {
           const date = new Date(event.end)
           if(date > Date.now()) {

@@ -10,7 +10,8 @@
                         <label class="login-password-label" for="login-password"><b>Password</b></label>
                         <input class="login-password" type="password" placeholder="Password" name="login-password" v-model="password" required>
                         <button class="submit-button" @click="login()">Login</button>
-                        <router-link class="route" to="/register">Don't Have An Account? Sign Up!</router-link>
+                        <h5 id="account">Don't have an account?
+                        <router-link class="route" to="/register">Sign Up!</router-link></h5>
                     </div>
             </div>
         </div>  
@@ -53,6 +54,11 @@ methods: {
 </script>
 
 <style scoped>
+
+#account {
+    margin-top: 1rem;
+    color: lightgray;
+}
 
 .login-page {
     display: flex;
@@ -276,7 +282,7 @@ methods: {
 .route{
     color: white;
     font-size: 1.5rem;
-    margin: 2rem;
+    text-decoration: none;
 }
 
 </style>

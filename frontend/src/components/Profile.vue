@@ -8,7 +8,7 @@
           <span>Change Image</span>
         </label>
         <input id="file" type="file" @change="loadFile($event)"/>
-        <img src="../assets/placeholder.jpg" id="output" width="200" ref="output"/>
+        <img :src="image" id="output" width="200" ref="output"/>
 </div>
 
       </div>
@@ -41,29 +41,11 @@ props: {
   role: String
 },
 methods: {
-    fetchUser: async function () {
-        try {
-          const response = await fetch('https://my-json-server.typicode.com/Evany226/demo/users')
-          const data = await response.json();
-          this.userArr = data[1];
-          console.log(this.userArr)
-      } catch(error) {
-          console.log(error)
-      }
-    },
 
   loadFile: function(event) { let image = this.$refs.output; 
   image.src = URL.createObjectURL(event.target.files[0]);
 }
-
-
 },
-created() {
-  this.fetchUser();
-},
-// created() {
-//   this.fetchUser();
-// },
 }
 </script>
 

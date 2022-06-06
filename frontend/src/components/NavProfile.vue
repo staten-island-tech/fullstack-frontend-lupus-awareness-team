@@ -3,12 +3,14 @@
         <div v-if="user === null">
         <router-link to="login">Sign In</router-link>
         </div>
+        <div v-else>
         <div class="nav_profile_image_container">
             <img class="nav_profile_image" :src="user.avatar">
         </div>
         <div class="nav_profile_name_container">
             <h4 class="nav_profile_name">{{user.firstName}} {{user.lastName}}</h4>
             <h5 class="nav_profile_text">{{user.role}}</h5>
+        </div>
         </div>
     </div>
 </template>
