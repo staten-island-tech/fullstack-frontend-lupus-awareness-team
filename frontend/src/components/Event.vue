@@ -3,7 +3,7 @@
     <div class="top-container">
         <div class="user">
             <div class="user-image">
-             <img class="user-pfp" :src="user.avatar">
+             <img  class="user-pfp" :src="user.avatar">
             </div>
             <div class="user-text">
                 <h4 class="username">{{`${user.firstName} ${user.lastName}`}}</h4>
@@ -33,13 +33,13 @@
                 <div class="info-tags">
                     <h5 v-for="tag in event.tags" :key="tag" class="tag">{{tag}}</h5>
                 </div>
-                <router-link to="/event-details" id="details"> Details </router-link>
+                <router-link to="/event-details" @click="details()" id="details"> Details </router-link>
             </div>
         </div>
 
         <div class="info-column-2">
             <div class="info-text">
-                <h4 class="info-time"> 2:00 PM - 4:00 PM</h4>
+                <!-- <h4 class="info-time"> 2:00 PM - 4:00 PM</h4> -->
                  <h4>Description: {{event.description}}</h4>
                 <h4 class="info-address">Location: {{event.location}}</h4>
                 <h4 class="info-date"> Event Start: {{event.start}} </h4>
@@ -86,6 +86,25 @@ methods:{
                 this.$store.dispatch('GET_ALERT', error)
             }
     },
+         details: async function() {
+                console.log(this.event._id)
+            // try {
+            //     const eventID = this.event._id
+            //     const res = await HTTP.post(`event/${eventID}/showInterest`, {
+            // }).then((result)=> {
+            //     if(result.data === "You've already shown interest to this event"){
+            //         alert("You've already shown interest to this event")
+            //     }else{
+            //         window.location ='/'
+            //     }
+            // }
+            // )
+            //     this.$store.dispatch('GET_ALERT', res)
+            // } catch (error) {
+            //     this.$store.dispatch('GET_ALERT', error)
+            // }
+    },
+    
 }
 }
 </script>

@@ -5,7 +5,7 @@
         </div>
         <div class="nav_profile_name_container">
             <h4 class="nav_profile_name"> {{user.firstName}} </h4>
-            <h5 class="nav_profile_text">Student</h5>
+            <h5 class="nav_profile_text">{{user.role}}</h5>
         </div>
     </div>
 </template>

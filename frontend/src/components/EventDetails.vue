@@ -71,6 +71,9 @@ export default {
 },
   components: {
     EventImageView,
+  },
+  created(){
+      console.log(this.event)
   }
 };
 </script>
