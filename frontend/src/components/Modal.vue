@@ -197,13 +197,13 @@ export default {
           description: this.description,
           media: this.images
       })
-      // .then((result) => {
-      //   if(result.status === 200){
-      //     window.location = '/'
-      //   }else{
-      //     return
-      //   }
-      // })
+      .then((result) => {
+        if(result.data.name === this.name){
+          window.location = '/'
+        }else{
+          return
+        }
+      })
         this.$store.dispatch('GET_ALERT', res)
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)

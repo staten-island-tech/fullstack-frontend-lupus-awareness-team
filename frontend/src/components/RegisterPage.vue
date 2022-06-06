@@ -40,7 +40,7 @@ name: "Register",
     methods: {
         register: async function() {
             if(this.password1 != this.password2) {
-                console.log('passwords do not match')
+                alert('passwords do not match')
                 return
             }
             try {
