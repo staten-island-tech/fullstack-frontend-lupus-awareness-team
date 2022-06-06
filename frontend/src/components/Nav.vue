@@ -1,5 +1,5 @@
 <template>
-    <nav ref="main" id="main">
+    <nav ref="main" id="main" >
         <div class="nav_button" v-if="nav">
             <i class="fas fa-bars" @click="toggle"></i>
         </div> 
@@ -8,7 +8,7 @@
             <i class="far fa-times-circle" @click="close"></i>
         </div>
 
-        <ul ref="nav" class="side_nav" :class="{ width: expand }" >
+        <ul ref="nav" class="side_nav" :class="{ width: expand }">
             <div class="logo_container">
                 <h3 id="logo">LOGO</h3>
             </div>

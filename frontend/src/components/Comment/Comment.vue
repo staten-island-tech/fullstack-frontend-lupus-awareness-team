@@ -15,8 +15,10 @@
             </div>
             <div class="container_reply">
                 <button class="reply_button" @click="reply">Reply</button>
-                <Reply/>
                 <PostReply v-show="enterReply"/>
+                <Reply/>
+                <Reply/>
+                
             </div>
         </div>
   </div>

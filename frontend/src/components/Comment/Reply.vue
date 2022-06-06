@@ -14,14 +14,41 @@
                 <h4 class="reply_tag">@User1234</h4>
                 <h4 class="body_text">This is really great! I fully agree with what you wrote.</h4>
             </div>
+            <div class="container_reply">
+                <button class="reply_button" @click="reply">Reply</button>
+                <PostReply v-show="addReply"/>
+            </div>
             
         </div>
   </div>
 </template>
 
 <script>
+import PostReply from "./PostReply.vue"
 export default {
     name:"Reply",
+    props: {
+        enterReply: Boolean
+    },
+    components: {
+        PostReply
+    },
+    data() {
+    return {
+      addReply: false,
+    };
+  },
+methods: {
+    reply() {
+        console.log("hello")
+        this.addReply = true
+    },
+    closeEnterReply() {
+        this.addReply = false
+    }
+    
+
+}
 }
 </script>
 
@@ -85,5 +112,42 @@ export default {
 }
 .reply_tag {
     margin-right: 2rem;
+}
+.container_reply {
+    width: 100%;
+    height: 20%;
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 2rem;
+    flex-direction: column;
+}
+
+.reply_button {
+  appearance: none;
+  background-color: var(--service);
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: var(--commentbutton);
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+}
+.reply_button:hover {
+  background-color: black;
+  color: white;
+}
+
+.reply_button:active {
+  background-color: white;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  transition: 0.3s;
 }
 </style>

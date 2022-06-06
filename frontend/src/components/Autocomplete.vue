@@ -5,15 +5,18 @@
             <div class="search_bar">
                 <label class="search-bar-label"
                 for="search-bar"><b> Search Address:</b></label> 
-                <input @keyup.enter="fetchAddress()" v-model="query" class="search-bar-input" type="text" name="autocomplete" id="search_form" placeholder="Search Address...">
+                <input @keyup.enter="fetchAddress()" v-model="query" class="search-bar-input" type="text" name="autocomplete" id="search_form" placeholder="Search Address..." @click="toggleSearchResults()">
                 <button @click="fetchAddress()" class="search_btn">Go</button>
             </div>
+
+            
            <div class="search-box">
                 
-            <div @click="completeForm(index.properties)" v-show="searchResults && query" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> <svg class="svg-icon" viewBox="0 0 20 20">
-							<path fill="none" d="M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z"></path>
-							<circle fill="none" cx="10" cy="5.67" r="1.608"></circle>
-						</svg>{{index.properties.label}}</div>
+            <div @click="completeForm(index.properties), toggleSearchResults()" v-show="areResultsVisible && query" v-for="(index) in searchResults" :key="index.properties.name" class="search_results"> 
+                <svg class="svg-icon" viewBox="0 0 20 20">
+					<path fill="none" d="M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z"></path>
+					<circle fill="none" cx="10" cy="5.67" r="1.608"></circle>
+				</svg>{{index.properties.label}}</div>
            </div>
 
       </div>
@@ -55,6 +58,7 @@ export default {
             query: "",
             apiKey: 'dee8429ca17c397b5b1fb5c7b223c29927e5e580',
             searchResults: [],
+            areResultsVisible: false,
             selectedAddress: [{name: "", label: "", region: "", country: "", borough: "", city:"", zip: ""}, 
             ]
         }
@@ -67,6 +71,7 @@ export default {
             // only searches within america, but can be changed (idk why we would tho)
             const data = await response.json();
             this.searchResults = data.response.features;
+            this.areResultsVisible = true
         } catch(error) {
             console.log(error)
         }
@@ -80,6 +85,13 @@ export default {
             this.selectedAddress.borough = selected.borough
             this.selectedAddress.city = selected.locality
             this.selectedAddress.zip = selected.postalcode
+        },
+        toggleSearchResults: function () {
+            if (this.areResultsVisible === true) {
+                this.areResultsVisible = false
+            } else {
+                this.areResultsVisible = true
+            }
         }
 },
 }
@@ -222,7 +234,9 @@ export default {
   align-items: center;
   justify-content: center;
     }
-
+    .search_results_remove {
+        display: none;
+    }
     @media (min-width:320px)  {
 
   .label {
