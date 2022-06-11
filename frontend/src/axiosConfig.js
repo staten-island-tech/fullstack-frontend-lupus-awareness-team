@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const HTTP = axios.create({
-  baseURL: "https://lupus-awareness-backend.onrender.com",
+  baseURL: "http://localhost:3000",
   headers: {
     Authorization: "Bearer {token}",
   },
