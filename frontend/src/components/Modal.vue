@@ -190,13 +190,15 @@ export default {
           start: start,
           end: end,
           hours: this.hours,
-          tags: this.tags,
+          // tags: this.tags,
           description: this.description,
           media: this.images
       })
       .then((result) => {
+        console.log(result)
         if(result.data.name === this.name){
           window.location = '/'
+          this.images = []
         }else{
           return
         }
