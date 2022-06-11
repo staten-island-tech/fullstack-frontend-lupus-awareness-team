@@ -195,11 +195,13 @@ export default {
           media: this.images
       })
       .then((result) => {
-        if(result.data.name === this.name){
-          window.location = '/'
-        }else{
-          return
-        }
+        console.log(result)
+        // if(result.data.name === this.name){
+        //   window.location = '/'
+        //   this.images = []
+        // }else{
+        //   return
+        // }
       })
         this.$store.dispatch('GET_ALERT', res)
       } catch (error) {
