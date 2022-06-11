@@ -23,6 +23,11 @@
           <router-link to="/login" class="login-text">Log in</router-link>
         </button>
       </div>
+      <div class="register-container">
+        <button class="login-button">
+          <router-link to="/register" class="login-text">Register</router-link>
+        </button>
+      </div>
 
       <div class="theme-container">
         <button class="theme-button" @click="showModal">
@@ -285,6 +290,12 @@ li {
 
 .login-container {
   margin-right: 1rem;
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.login-container {
   margin-left: auto;
   height: 100%;
   display: flex;
