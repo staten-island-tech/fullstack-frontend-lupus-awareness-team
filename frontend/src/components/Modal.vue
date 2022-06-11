@@ -190,7 +190,7 @@ export default {
           start: start,
           end: end,
           hours: this.hours,
-          // tags: this.tags,
+          tags: this.tags,
           description: this.description,
           media: this.images
       })
