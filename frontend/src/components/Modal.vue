@@ -103,7 +103,7 @@
             <img class="upload-icon" src="../assets/upload-icon.png">
              <i class="upload"></i> Upload File
           </label>
-          <input @change="setImage" type="file" id="file-upload" name="filename" class="upload-file-button">
+          <input @change="setImage" type="file" ref="image" id="file-upload" key="image" name="image" class="upload-file-button">
         <button class="submit-button" @click="createEvent()">Post Event</button> 
         </div>
 
@@ -172,7 +172,8 @@ export default {
     setImage(e) {
       const file = e.target.files || e.dataTransfer.files
       this.images.push(file[0])
-      console.log(this.images)
+      console.log(this.images[0])
+      console.log(file)
     },
     createEvent: async function() {
       const startData = this.start.split(':')
@@ -192,8 +193,9 @@ export default {
           hours: this.hours,
           tags: this.tags,
           description: this.description,
-          media: this.images
+          image: this.images[0]
       })
+      
       .then((result) => {
         console.log(result)
         if(result.data.name === this.name){
@@ -203,6 +205,7 @@ export default {
           return
         }
       })
+      // console.log(result.data)
         this.$store.dispatch('GET_ALERT', res)
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)
