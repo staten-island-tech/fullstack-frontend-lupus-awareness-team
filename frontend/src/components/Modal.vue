@@ -173,7 +173,7 @@ export default {
       const file = e.target.files || e.dataTransfer.files
       this.images.push(file[0])
       console.log(this.images[0])
-      console.log(file)
+      console.log(this.$refs.files)
     },
     createEvent: async function() {
       const startData = this.start.split(':')
@@ -183,6 +183,18 @@ export default {
       try {
           const address = `${this.selectedAddress.name}  ${this.selectedAddress.city} 
           ${this.selectedAddress.borough} ${this.selectedAddress.region} ${this.selectedAddress.zip}`
+          // const formData = new formData()
+          // formData.append("user", this.$store.state.user);
+          // formData.append("location", address);
+          // formData.append("date", this.date);
+          // formData.append("start", start);
+          // formData.append("end", end);
+          // formData.append("hours", this.hours);
+          // formData.append("tags", this.tags);
+          // formData.append("description", this.description);
+          // formData.append("image", this.images[0]);
+          
+
           const res = await HTTP.post('/event', {
             user:this.$store.state.user,
           location: address,
@@ -193,7 +205,9 @@ export default {
           hours: this.hours,
           tags: this.tags,
           description: this.description,
-          image: this.images[0]
+          image: this.images[0],
+          // media: []
+          // formData
       })
       
       .then((result) => {
@@ -205,7 +219,7 @@ export default {
           return
         }
       })
-      // console.log(result.data)
+      console.log(res)
         this.$store.dispatch('GET_ALERT', res)
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)
