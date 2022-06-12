@@ -77,6 +77,7 @@ export default {
   },
   created() {
     this.fetchEvents()
+    console.log(this.$store.state.user)
   }
 };
 </script>

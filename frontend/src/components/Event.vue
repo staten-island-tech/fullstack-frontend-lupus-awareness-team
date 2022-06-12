@@ -10,7 +10,14 @@
                 <!-- <h5 class="user-type">Student</h5> -->
             </div>   
         </div>
-
+        <div class="upload">
+             <label for="file-upload" class="custom-file-upload"> 
+            <img class="upload-icon" src="../assets/upload-icon.png">
+             <i class="upload"></i> Upload File
+          </label>
+          <input @change="setImage" type="file" ref="file" id="file-upload" key="image" name="image" class="upload-file-button">
+          <button @click="postImage()" class="submit">Submit</button>
+        </div>
         <div class="service-container">
             <h4 v-if="event.hours != null" class="service-text">Service Hours: {{event.hours}}</h4>
              <h4 v-if="event.numberComments != null" class="service-text">Comments: {{event.numberComments}}</h4>
@@ -64,10 +71,36 @@ props: {
 },
 data(){
     return{
-        interested: null
+        interested: null,
+        images:[]
     }
 },
 methods:{
+        postImage: async function(){
+            // console.log(this.images)
+              try {
+                const eventID = this.event._id
+                let formData = new FormData()
+        //                 for( var i = 0; i < this.images.length; i++ ){
+        //   let file = this.images[i];
+
+        //   formData.append('image[' + i + ']', file);
+        // //   console.log(formData)
+        // }
+        formData.append('image', this.images[0])
+        console.log(formData.entries())
+                const res = await HTTP.post(`event/${eventID}/uploadEvent`, {
+                    formData,
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+            })
+            console.log(res)
+                this.$store.dispatch('GET_ALERT', res)
+            } catch (error) {
+                this.$store.dispatch('GET_ALERT', error)
+            }
+        },
             showInterest: async function() {
                 console.log(this.event._id)
             try {
@@ -85,6 +118,12 @@ methods:{
             } catch (error) {
                 this.$store.dispatch('GET_ALERT', error)
             }
+    },
+        setImage(e) {
+      const file = e.target.files || e.dataTransfer.files
+      this.images.push(file[0])
+      console.log(this.images)
+      console.log(this.$refs.files)
     },
          details: async function() {
                 console.log(this.event._id)
@@ -105,12 +144,50 @@ methods:{
             // }
     },
     
-}
+    
+},
+created(){
+    console.log('hi')
+},
 }
 </script>
 
 <style>
 
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-info {
+  width: 100%;
+  position: relative;
+  z-index: 15;
+}
+
+.submit{
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.custom-file-upload {
+font-size: 2rem;
+background-color: var(--modal);
+border: 1px solid rgba(27, 31, 35, .15);
+border-radius: 0rem;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+font-size: 1.8rem;
+font-weight: 600;
+padding: 0.8rem 4rem;
+text-align: center;
+text-decoration: none;
+margin: 1.5rem 0rem;
+border-style: solid;
+border-radius: 7px;
+position: relative;
+}
 
 .event-container {
     margin: 5rem 0rem;

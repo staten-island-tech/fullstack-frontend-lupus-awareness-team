@@ -99,11 +99,11 @@
         </div>
         
         <h6 v-for="image in images" :key="image">{{image.name}}</h6>
-          <label for="file-upload" class="custom-file-upload"> 
+          <!-- <label for="file-upload" class="custom-file-upload"> 
             <img class="upload-icon" src="../assets/upload-icon.png">
              <i class="upload"></i> Upload File
           </label>
-          <input @change="setImage" type="file" ref="image" id="file-upload" key="image" name="image" class="upload-file-button">
+          <input @change="setImage" type="file" ref="image" id="file-upload" key="image" name="image" class="upload-file-button"> -->
         <button class="submit-button" @click="createEvent()">Post Event</button> 
         </div>
 
@@ -183,7 +183,7 @@ export default {
       try {
           const address = `${this.selectedAddress.name}  ${this.selectedAddress.city} 
           ${this.selectedAddress.borough} ${this.selectedAddress.region} ${this.selectedAddress.zip}`
-          // const formData = new formData()
+          // const formData = new FormData()
           // formData.append("user", this.$store.state.user);
           // formData.append("location", address);
           // formData.append("date", this.date);
@@ -205,7 +205,7 @@ export default {
           hours: this.hours,
           tags: this.tags,
           description: this.description,
-          image: this.images[0],
+          // image: this.images[0]
           // media: []
           // formData
       })
