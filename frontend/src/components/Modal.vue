@@ -103,8 +103,8 @@
             <img class="upload-icon" src="../assets/upload-icon.png">
              <i class="upload"></i> Upload File and Submit
           </label>
-          <input @change="setImage" type="file" ref="image" id="file-upload" key="image" name="image" class="upload-file-button">
-        <button class="submit-button" @click="createEvent()">Post Event</button> 
+          <input @change="setImage" type="file" ref="image" id="file-upload" key="image" name="image" class="upload-file-button" accept="image/*">
+        <button class="submit-button" @click="test()">Post Event</button> 
         </div>
 
         </div>
@@ -131,7 +131,7 @@ export default {
       end: null,
       hours: null,
       tags: null,
-      images: null,
+      images: [],
 
        query: "",
             apiKey: 'dee8429ca17c397b5b1fb5c7b223c29927e5e580',
@@ -173,6 +173,18 @@ export default {
     
     test(){
       console.log(this.images)
+    },
+        readAsDataURL(file) {
+      return new Promise(function (resolve, reject) {
+        let fr = new FileReader();
+        fr.onload = function () {
+          resolve(fr.result);
+        };
+        fr.onerror = function () {
+          reject(fr);
+        };
+        fr.readAsDataURL(file);
+      });
     },
     createEvent: async function() {
       console.log(this.images)
@@ -227,10 +239,16 @@ export default {
     },
     setImage(e) {
       const file = e.target.files || e.dataTransfer.files
-      this.images = file[0]
+      this.images.push(this.readAsDataURL(file[0]))
+      // fileReader.readAsDataURL(file[0])
+      // this.images = file[0]
+            Promise.all(this.images).then((values) => {
+        console.log(values)
+      });
       console.log(this.images)
       // console.log(this.$refs.files)
     },
+    
   },
   
 };
