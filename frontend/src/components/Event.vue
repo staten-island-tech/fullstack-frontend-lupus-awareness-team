@@ -15,7 +15,7 @@
             <img class="upload-icon" src="../assets/upload-icon.png">
              <i class="upload"></i> Upload File
           </label>
-          <input @change="setImage" type="file" ref="file" id="file-upload" key="image" name="image" class="upload-file-button">
+          <input @change="setImage" type="file" ref="file" id="file-upload" key="image" name="file" class="upload-file-button">
           <button @click="postImage()" class="submit">Submit</button>
         </div>
         <div class="service-container">
@@ -79,6 +79,7 @@ methods:{
         postImage: async function(){
             // console.log(this.images)
               try {
+                  console.log(this.images[0])
                 const eventID = this.event._id
                 let formData = new FormData()
         //                 for( var i = 0; i < this.images.length; i++ ){
@@ -90,10 +91,8 @@ methods:{
         formData.append('image', this.images[0])
         console.log(formData.entries())
                 const res = await HTTP.post(`event/${eventID}/uploadEvent`, {
-                    formData,
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
+                    // formData,
+                    image: this.images[0],
             })
             console.log(res)
                 this.$store.dispatch('GET_ALERT', res)
@@ -122,8 +121,8 @@ methods:{
         setImage(e) {
       const file = e.target.files || e.dataTransfer.files
       this.images.push(file[0])
-      console.log(this.images)
-      console.log(this.$refs.files)
+      console.log(this.images[0])
+    //   console.log(this.$refs.files)
     },
          details: async function() {
                 console.log(this.event._id)

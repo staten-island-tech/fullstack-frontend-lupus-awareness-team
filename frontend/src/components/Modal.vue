@@ -99,11 +99,11 @@
         </div>
         
         <h6 v-for="image in images" :key="image">{{image.name}}</h6>
-          <!-- <label for="file-upload" class="custom-file-upload"> 
+          <label for="file-upload" class="custom-file-upload"> 
             <img class="upload-icon" src="../assets/upload-icon.png">
-             <i class="upload"></i> Upload File
+             <i class="upload"></i> Upload File and Submit
           </label>
-          <input @change="setImage" type="file" ref="image" id="file-upload" key="image" name="image" class="upload-file-button"> -->
+          <input @change="setImage" type="file" ref="image" id="file-upload" key="image" name="image" class="upload-file-button">
         <button class="submit-button" @click="createEvent()">Post Event</button> 
         </div>
 
@@ -131,7 +131,7 @@ export default {
       end: null,
       hours: null,
       tags: null,
-      images: [],
+      images: null,
 
        query: "",
             apiKey: 'dee8429ca17c397b5b1fb5c7b223c29927e5e580',
@@ -144,6 +144,7 @@ export default {
       // Autocomplete,
       EventTag
   },
+  
   methods: {
      fetchAddress: async function () {
             try {
@@ -159,7 +160,7 @@ export default {
             console.log(selected)
             this.selectedAddress.name = selected.name
             this.selectedAddress.label = selected.label
-            this.selectedAddress.region = selected.region_a
+            this.selectedAddress.region = selected.region
             this.selectedAddress.country = selected.country
             this.selectedAddress.borough = selected.borough
             this.selectedAddress.city = selected.locality
@@ -169,13 +170,12 @@ export default {
     close() {
       this.$emit('close');
     },
-    setImage(e) {
-      const file = e.target.files || e.dataTransfer.files
-      this.images.push(file[0])
-      console.log(this.images[0])
-      console.log(this.$refs.files)
+    
+    test(){
+      console.log(this.images)
     },
     createEvent: async function() {
+      console.log(this.images)
       const startData = this.start.split(':')
       const endData = this.end.split(':')
       const start = new Date(new Date(new Date(this.date).setHours(startData[0])).setMinutes(startData[1]))
@@ -194,7 +194,7 @@ export default {
           // formData.append("description", this.description);
           // formData.append("image", this.images[0]);
           
-
+          console.log(this.images)
           const res = await HTTP.post('/event', {
             user:this.$store.state.user,
           location: address,
@@ -205,28 +205,34 @@ export default {
           hours: this.hours,
           tags: this.tags,
           description: this.description,
-          // image: this.images[0]
+          image: this.images
           // media: []
           // formData
       })
       
-      .then((result) => {
-        console.log(result)
-        if(result.data.name === this.name){
-          window.location = '/'
-          this.images = []
-        }else{
-          return
-        }
-      })
+      // .then((result) => {
+      //   console.log(result)
+      //   if(result.data.name === this.name){
+      //     window.location = '/'
+      //     this.images = []
+      //   }else{
+      //     return
+      //   }
+      // })
       console.log(res)
         this.$store.dispatch('GET_ALERT', res)
       } catch (error) {
         this.$store.dispatch('GET_ALERT', error)
       }
-    }
-    
+    },
+    setImage(e) {
+      const file = e.target.files || e.dataTransfer.files
+      this.images = file[0]
+      console.log(this.images)
+      // console.log(this.$refs.files)
+    },
   },
+  
 };
 </script>
 
