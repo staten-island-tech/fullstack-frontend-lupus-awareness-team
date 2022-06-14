@@ -131,7 +131,7 @@ export default {
       end: null,
       hours: null,
       tags: null,
-      images: [],
+      images: null,
 
        query: "",
             apiKey: 'dee8429ca17c397b5b1fb5c7b223c29927e5e580',
@@ -171,7 +171,7 @@ export default {
     },
     setImage(e) {
       const file = e.target.files || e.dataTransfer.files
-      this.images.push(file[0])
+      this.images = file[0]
       console.log(this.images)
     },
     createEvent: async function() {
@@ -179,6 +179,7 @@ export default {
       const endData = this.end.split(':')
       const start = new Date(new Date(new Date(this.date).setHours(startData[0])).setMinutes(startData[1]))
       const end = new Date(new Date(new Date(this.date).setHours(endData[0])).setMinutes(endData[1]))
+      console.log(this.images)
       try {
           const address = `${this.selectedAddress.name}  ${this.selectedAddress.city} 
           ${this.selectedAddress.borough} ${this.selectedAddress.region} ${this.selectedAddress.zip}`
@@ -193,15 +194,6 @@ export default {
           tags: this.tags,
           description: this.description,
           media: this.images
-      })
-      .then((result) => {
-        console.log(result)
-        if(result.data.name === this.name){
-          window.location = '/'
-          this.images = []
-        }else{
-          return
-        }
       })
         this.$store.dispatch('GET_ALERT', res)
       } catch (error) {
